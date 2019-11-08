@@ -43,7 +43,7 @@ public class FPSInput : MonoBehaviour
             }
             else
             {
-                if (!Physics.Raycast(transform.position, Vector3.up, out hit, 2)) //Hindrar spelaren att stå upp om man crouchar under någonting
+                if (!Physics.Raycast(transform.position, Vector3.up, out hit, 2)) //Hindrar spelaren att stå upp om man crouchar under nogonting
                 {
                     controller.height = 2.5f;
                     FPSCamera.transform.localPosition = new Vector3(0f, 1.25f, 0f);
@@ -53,7 +53,7 @@ public class FPSInput : MonoBehaviour
                 else
                     Debug.Log("You cant stand up right now");
             }
-            // PRONE OM DET BEHÖVS!
+            // PRONE OM DET BEHOVS!
             /*if (Input.GetKey(KeyCode.Z))  
             {
                 controller.height = 0.4f;
@@ -64,6 +64,6 @@ public class FPSInput : MonoBehaviour
             }*/
         }
         moveDirection.y -= (gravity * Time.deltaTime);
-        controller.Move(moveDirection * Time.deltaTime);
+        controller.Move(Vector3.ClampMagnitude(moveDirection, speed) * Time.deltaTime); //Clamped to disallow quicker diagonal movement than straight - Simon Voss
     }
 }

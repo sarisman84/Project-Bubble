@@ -28,36 +28,34 @@ public class MouseLook : MonoBehaviour
         {
             body.freezeRotation = true;
         }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update() 
+    void Update()
     {
-        if (!GameManager.ins.inspecting)
+        if (axes == RotationAxis.MouseX)
         {
-            if (axes == RotationAxis.MouseX)
-            {
-                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
-            }
-            else if (axes == RotationAxis.MouseY)
-            {
-                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
-                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+        }
+        else if (axes == RotationAxis.MouseY)
+        {
+            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+            _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
-                float rotationY = transform.localEulerAngles.y;
+            float rotationY = transform.localEulerAngles.y;
 
-                transform.localEulerAngles = new Vector3(transform.localRotation.x, rotationY, 0);
-            }
-            else
-            {
-                _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
-                _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+            transform.localEulerAngles = new Vector3(transform.localRotation.x, rotationY, 0);
+        }
+        else
+        {
+            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+            _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
-                float delta = Input.GetAxis("Mouse X") * sensitivityHor;
-                float rotationY = transform.localEulerAngles.y + delta;
+            float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+            float rotationY = transform.localEulerAngles.y + delta;
 
-                transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationY, 0);
-                camera.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
-            }
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationY, 0);
+            camera.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
         }
     }
 }
