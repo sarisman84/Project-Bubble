@@ -15,4 +15,10 @@ public class SceneSwitch : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
     }
+
+    public void QuitGame()
+    {
+        // Insert the call for a save game method here, if we have one
+        Application.Quit();
+    }
 }
