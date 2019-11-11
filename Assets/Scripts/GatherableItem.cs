@@ -7,7 +7,10 @@ public class GatherableItem : MonoBehaviour, IInteractable //Dejan
 
     public void InteractWith()
     {
-        inventory.AddItemToInventory(itemID); //adds item to inventory
+        if (this != null)
+        {
+            inventory.AddItemToInventory(itemID); //adds item to inventory
+        }
         Destroy(gameObject);
     }
 
