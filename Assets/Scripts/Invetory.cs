@@ -38,12 +38,14 @@ public class Invetory : MonoBehaviour, IPointerClickHandler //Dejan
             inventory.SetActive(false);
             inventoryIsOpen = false;
             Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
         }
         else if (Input.GetKeyUp(KeyCode.Tab) && !inventoryIsOpen) //closes inventory and locks the mouse
         {
             inventory.SetActive(true);
             inventoryIsOpen = true;
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
 
         if (selectedObject != null) //make throw button not interactable when an item is not selected
