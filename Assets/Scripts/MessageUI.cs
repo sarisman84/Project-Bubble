@@ -33,6 +33,8 @@ public class MessageUI : MonoBehaviour
         isOn = true;
         yield return new WaitForSeconds(0.05f);
         messageText.text = input;
+        anim.ResetTrigger("Show");
+        anim.ResetTrigger("Hide");
         anim.SetTrigger("Show");
     }
 
@@ -50,6 +52,8 @@ public class MessageUI : MonoBehaviour
     {
         isOn = false;
         yield return new WaitForSeconds(0.05f);
+        anim.ResetTrigger("Show");
+        anim.ResetTrigger("Hide");
         anim.SetTrigger("Hide");
     }
 }

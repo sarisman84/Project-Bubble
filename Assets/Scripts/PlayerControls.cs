@@ -21,7 +21,7 @@ public class PlayerControls : MonoBehaviour
         //Display text from the last encountered interactable
         if (interactables.Count > 0 && messageUI)
         {
-            messageUI.DisplayText(interactables[interactables.Count-1].MessageOnDetection());
+            messageUI.DisplayText(interactables[interactables.Count - 1].MessageOnDetection());
         }
         else if (messageUI)
         {
@@ -44,7 +44,10 @@ public class PlayerControls : MonoBehaviour
         //Add interactable to the list
         if (other.gameObject.GetComponent<IInteractable>() != null)
         {
-            interactables.Add(other.gameObject.GetComponent<IInteractable>());
+            if (!interactables.Contains(other.gameObject.GetComponent<IInteractable>()))
+            {
+                interactables.Add(other.gameObject.GetComponent<IInteractable>());
+            }
         }
     }
 

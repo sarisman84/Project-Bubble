@@ -6,17 +6,25 @@ using UnityEngine;
 [AddComponentMenu("Control Script/FPS Input")]
 public class FPSInput : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float jumpSpeed = 6.0f;
+    private float speed = 5.0f;
+    private float jumpSpeed = 6.0f;
     private float gravity = 20.0f;
+
+    [SerializeField] float defaultMoveSpeed = 5f;
+    [SerializeField] float defaultJumpSpeed = 6f;
 
     private Vector3 moveDirection = Vector3.zero;
     private CharacterController controller;
     [SerializeField] Camera FPSCamera;
+    float headHeightDefault;
+    float headHeightCrouch = 0.4f;
+    float characterHeightDefault;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        headHeightDefault = FPSCamera.transform.localPosition.y;
+        characterHeightDefault = controller.height;
     }
     
     void Update()
@@ -35,20 +43,20 @@ public class FPSInput : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftControl)) //crouch
             {
-                controller.height = controller.height / 2;
-                FPSCamera.transform.localPosition = new Vector3(0f, 0.4f, 0f);
-                jumpSpeed = 4f;
-                speed = 3f;
+                controller.height = controller.height * 0.5f;
+                FPSCamera.transform.localPosition = new Vector3(0f, headHeightCrouch, 0f);
+                jumpSpeed = defaultJumpSpeed * 0.5f;
+                speed = defaultMoveSpeed * 0.5f;
                 moveDirection.y = -jumpSpeed * 5;
             }
             else
             {
                 if (!Physics.Raycast(transform.position, Vector3.up, out hit, 2)) //Hindrar spelaren att stå upp om man crouchar under nogonting
                 {
-                    controller.height = 2.5f;
-                    FPSCamera.transform.localPosition = new Vector3(0f, 1.25f, 0f);
-                    jumpSpeed = 6f;
-                    speed = 5f;
+                    controller.height = characterHeightDefault;
+                    FPSCamera.transform.localPosition = new Vector3(0f, headHeightDefault, 0f);
+                    jumpSpeed = defaultJumpSpeed;
+                    speed = defaultMoveSpeed;
                 }
                 else
                     Debug.Log("You cant stand up right now");

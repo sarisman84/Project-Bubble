@@ -13,12 +13,11 @@ public class MouseLook : MonoBehaviour
 
     public RotationAxis axes = RotationAxis.MouseXandY;
 
-    [HideInInspector]
-    [SerializeField]
-    GameObject camera;
+
+    [SerializeField] GameObject fpsCamera;
     public float minimumVert = -75.0f;
     public float maximumVert = 75.0f;
-    public float sensitivityHor = 9.0f, sensitivityVert = 9.0f;
+    public float sensitivityHor = 90f, sensitivityVert = 90f;
     public float _rotationX = 0;
 
     void Start()
@@ -48,14 +47,14 @@ public class MouseLook : MonoBehaviour
         }
         else
         {
-            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert * Time.deltaTime;
             _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
-            float delta = Input.GetAxis("Mouse X") * sensitivityHor;
+            float delta = Input.GetAxis("Mouse X") * sensitivityHor * Time.deltaTime;
             float rotationY = transform.localEulerAngles.y + delta;
 
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationY, 0);
-            camera.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
+            fpsCamera.transform.localEulerAngles = new Vector3(_rotationX, 0, 0);
         }
     }
 }
