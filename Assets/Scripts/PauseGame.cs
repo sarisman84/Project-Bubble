@@ -27,6 +27,7 @@ public class PauseGame : MonoBehaviour
             //pauseMenu.SetActive(true);
             canvas.gameObject.SetActive(true);
             isActive = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isActive == true)
         {
@@ -34,6 +35,7 @@ public class PauseGame : MonoBehaviour
             Time.timeScale = 1;
             canvas.gameObject.SetActive(false);
             isActive = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
