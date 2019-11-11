@@ -5,13 +5,15 @@ public class GatherableItem : MonoBehaviour, IInteractable //Dejan
     public Invetory inventory; //a reference to the inventory prefab
     public int itemID; //item id used in Inventory Items scriptable object
 
-    public void InteractWith()
+    public bool InteractWith()
     {
         if (this != null)
         {
             inventory.AddItemToInventory(itemID); //adds item to inventory
+            Destroy(gameObject);
+            return true;
         }
-        Destroy(gameObject);
+        return false;
     }
 
     public string MessageOnDetection()
