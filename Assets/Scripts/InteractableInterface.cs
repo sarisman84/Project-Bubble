@@ -1,6 +1,6 @@
 ﻿//Simon Voss
 public interface IInteractable
 {
-    void InteractWith();
+    bool InteractWith();
     string MessageOnDetection();
 }

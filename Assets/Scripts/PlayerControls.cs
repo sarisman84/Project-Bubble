@@ -34,7 +34,10 @@ public class PlayerControls : MonoBehaviour
             //Interact with the last added interactable in the list
             if (interactables.Count > 0)
             {
-                interactables[interactables.Count - 1].InteractWith();
+                if(interactables[interactables.Count - 1].InteractWith())
+                {
+                    interactables.RemoveAt(interactables.Count -1);
+                }
             }
         }
     }

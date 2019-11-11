@@ -1,27 +1,34 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
 
 //Simon Voss
 public class NPC : MonoBehaviour , IInteractable
 {
     [SerializeField] bool willingToTalk = true;
+    [SerializeField] string greetingText = "";
+    [SerializeField] List<Choice> choices = new List<Choice>();
 
-    public NPC TryStartTalking()
+    public bool TryStartTalking()
     {
+        
         if (willingToTalk)
         {
             Debug.Log("NPC talked with");
-            return this;
+            DialogueSystem.instance.StartDialogue(greetingText, choices);
+            return true;
         }
         else
         {
             Debug.Log("This NPC does not want to talk");
-            return null;
+            return false;
         }
     }
 
-    public void InteractWith()
+    public bool InteractWith()
     {
-        TryStartTalking();
+        return TryStartTalking();
     }
 
     public string MessageOnDetection()

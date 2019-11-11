@@ -25,6 +25,10 @@ public class ZoomCam : MonoBehaviour
 
     void LateUpdate()
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
         if (Input.GetAxis ("Mouse ScrollWheel") > 0)
         {
             cam.fieldOfView = minFov;
