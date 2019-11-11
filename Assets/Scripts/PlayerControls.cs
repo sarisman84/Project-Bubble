@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     List<IInteractable> interactables = new List<IInteractable>();
+    public int numberOfInteractables = 0;
     [SerializeField] MessageUI messageUI;
 
     private void Start()
@@ -18,6 +19,7 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        numberOfInteractables = interactables.Count;
         //Display text from the last encountered interactable
         if (interactables.Count > 0 && messageUI)
         {

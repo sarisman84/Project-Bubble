@@ -48,7 +48,6 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(string greeting, List<Choice> choices)
     {
-        Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         choicePanel.SetActive(true);
         subtitlesPanel.SetActive(true);
@@ -98,7 +97,6 @@ public class DialogueSystem : MonoBehaviour
         {
             choiceButtons[i].SetActive(false);
         }
-        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
     }
 

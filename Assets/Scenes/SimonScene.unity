@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 2021061}
   - component: {fileID: 2021062}
   m_Layer: 0
-  m_Name: Person
+  m_Name: ExampleNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,11 +215,13 @@ MonoBehaviour:
   willingToTalk: 1
   greetingText: Hello there!
   choices:
-  - choiceText: Hello you fool!
-    rewardObject: {fileID: 0}
+  - choiceType: 0
+    choiceText: Hello you fool!
+    rewardItemID: 0
     answerSubtitle: Your mother was a hamster!
-  - choiceText: Good day sir!
-    rewardObject: {fileID: 0}
+  - choiceType: 1
+    choiceText: Good day sir!
+    rewardItemID: 0
     answerSubtitle: I shall give you what you seek
 --- !u!136 &2021062
 CapsuleCollider:
@@ -235,6 +237,12 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2822600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8574914991215838690, guid: d253291357301e84a9635d84377576fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8574914991218267178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &210439413
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +341,7 @@ RectTransform:
   m_Children:
   - {fileID: 1371779381}
   - {fileID: 836864485}
+  - {fileID: 940694775}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -763,9 +772,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mychoice:
+    choiceType: 0
     choiceText: 
-    rewardObject: {fileID: 0}
+    rewardItemID: 0
     answerSubtitle: 
+  inventory: {fileID: 940694776}
 --- !u!114 &859798643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +867,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859798640}
   m_CullTransparentMesh: 0
+--- !u!224 &940694775 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+    type: 3}
+  m_PrefabInstance: {fileID: 1162971912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &940694776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 595184936344110921, guid: f6cb8f4209daede4f9786a8b64fc5260,
+    type: 3}
+  m_PrefabInstance: {fileID: 1162971912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebfa767f5a7d3a4abd652bd67d73382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &967130720
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,9 +938,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mychoice:
+    choiceType: 0
     choiceText: 
-    rewardObject: {fileID: 0}
+    rewardItemID: 0
     answerSubtitle: 
+  inventory: {fileID: 940694776}
 --- !u!114 &967130723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,9 +1086,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mychoice:
+    choiceType: 0
     choiceText: 
-    rewardObject: {fileID: 0}
+    rewardItemID: 0
     answerSubtitle: 
+  inventory: {fileID: 940694776}
 --- !u!114 &1125477913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,6 +1181,130 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125477910}
   m_CullTransparentMesh: 0
+--- !u!1001 &1162971912
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 233228988}
+    m_Modifications:
+    - target: {fileID: 595184936344110923, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_Name
+      value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110921, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 2822600}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6cb8f4209daede4f9786a8b64fc5260, type: 3}
 --- !u!1 &1272089330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,9 +2302,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mychoice:
+    choiceType: 0
     choiceText: 
-    rewardObject: {fileID: 0}
+    rewardItemID: 0
     answerSubtitle: 
+  inventory: {fileID: 940694776}
 --- !u!1 &2006532634
 GameObject:
   m_ObjectHideFlags: 0
