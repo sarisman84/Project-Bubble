@@ -5,7 +5,6 @@ using UnityEngine;
 public class DialogueChoice : MonoBehaviour
 {
     public Choice mychoice;
-    [SerializeField] Invetory inventory;
 
     public void UseChoice()
     {
@@ -21,7 +20,7 @@ public class DialogueChoice : MonoBehaviour
                 DialogueSystem.instance.ContinueDialogue(mychoice.answerSubtitle, newChoices);
                 break;
             case Choice.TypeOfChoice.GiveItem:
-                inventory.AddItemToInventory(mychoice.rewardItemID);
+                Inventory.instance.AddItemToInventory(mychoice.rewardItemID);
                 endChoice = new Choice();
                 endChoice.choiceText = "Goodbye";
                 endChoice.choiceType = Choice.TypeOfChoice.EndDialogue;

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Lock : MonoBehaviour, IInteractable
 {
-    public Invetory inventory;
     public GameObject passwordPanel;
     public TMP_InputField passwordInputField;
     public LockType lockType;
@@ -51,10 +50,10 @@ public class Lock : MonoBehaviour, IInteractable
         switch (lockType)
         {
             case LockType.key:
-                int children = inventory.itemSpaceTransform.childCount;
+                int children = Inventory.instance.itemSpaceTransform.childCount;
                 for (int i = 0; i < children; i++)
                 {
-                    if (inventory.itemSpaceTransform.GetChild(i).GetComponent<InventoryItem>().itemID == keyItem)
+                    if (Inventory.instance.itemSpaceTransform.GetChild(i).GetComponent<InventoryItem>().itemID == keyItem)
                     {
                         unlocked = true;
                         return true;

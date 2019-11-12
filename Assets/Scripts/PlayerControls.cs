@@ -73,12 +73,13 @@ public class PlayerControls : MonoBehaviour
             if (hit.transform.GetComponent<IInteractable>() != null)
             {
                 interactable = hit.transform.GetComponent<IInteractable>();
-                Debug.DrawRay(fpsCamera.transform.position, hit.point - transform.position, Color.green);
-                Debug.Log("Did Hit");
+                Debug.DrawRay(fpsCamera.transform.position, hit.transform.position - transform.position, Color.green);
+                Debug.Log("Did Hit:" + interactable.ToString());
 
                 if (!interactable.CanBeInteractedWith())
                 {
                     interactable = null;
+                    Debug.Log("Object can not be interacted with");
                 }
             }
         }

@@ -4,8 +4,25 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Invetory : MonoBehaviour, IPointerClickHandler //Dejan
+public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
 {
+    #region Singleton
+    public static Inventory instance;
+    private void Awake()
+    {
+        if (Inventory.instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Another instance of: " + this + " , was tried to be instantiated, but was destroyed! This instance was tried to be instantiated on: " + this.gameObject);
+            Destroy(this);
+        }
+    }
+    #endregion
+
+
     public GameObject inventory; //a refernce to the inventory parent component
     public GridLayoutGroup itemSpace; //a reference to the item space GridLayout
     public Transform itemSpaceTransform; //a reference to the item space transform
@@ -93,7 +110,7 @@ public class Invetory : MonoBehaviour, IPointerClickHandler //Dejan
         {
             Destroy(selectedObject);
             GameObject gameObject = Instantiate(itemList.list[selectedObject.GetComponent<InventoryItem>().itemID].pair[0], character.transform.position, Quaternion.identity);
-            gameObject.GetComponent<GatherableItem>().inventory = this;
+            //gameObject.GetComponent<GatherableItem>().inventory = this;
         }
     }
 }

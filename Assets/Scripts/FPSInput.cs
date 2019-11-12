@@ -70,6 +70,15 @@ public class FPSInput : MonoBehaviour
                 speed = 1f;
                 moveDirection.y = -jumpSpeed * 5;
             }*/
+
+        if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = defaultMoveSpeed * 1.5f;
+            }
+        else
+            {
+                speed = defaultMoveSpeed;
+            }
         }
         moveDirection.y -= (gravity * Time.deltaTime);
         controller.Move(Vector3.ClampMagnitude(moveDirection, speed) * Time.deltaTime); //Clamped to disallow quicker diagonal movement than straight - Simon Voss
