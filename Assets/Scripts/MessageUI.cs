@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class MessageUI : MonoBehaviour
 {
     bool isOn = false;
-    [SerializeField] Text messageText;
-    [SerializeField] Animator anim;
+    [SerializeField] Text messageText = null;
+    [SerializeField] Animator anim = null;
 
     private void Start()
     {

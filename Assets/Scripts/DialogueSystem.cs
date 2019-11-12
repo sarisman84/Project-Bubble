@@ -26,8 +26,8 @@ public class DialogueSystem : MonoBehaviour
 
     GameObject[] choiceButtons;
     Text[] choiceTexts;
-    [SerializeField] GameObject choicePanel;
-    [SerializeField] GameObject subtitlesPanel;
+    [SerializeField] GameObject choicePanel = null;
+    [SerializeField] GameObject subtitlesPanel = null;
     Text subtitleText;
     public bool dialogueOpen = false;
 

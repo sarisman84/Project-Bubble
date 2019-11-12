@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] FPSInput fpsControl;
-    [SerializeField] MouseLook mouseControl;
+    [SerializeField] FPSInput fpsControl = null;
+    [SerializeField] MouseLook mouseControl = null;
 
     private void Start()
     {

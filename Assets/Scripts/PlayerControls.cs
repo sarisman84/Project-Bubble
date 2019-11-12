@@ -4,8 +4,8 @@ using UnityEngine;
 //Simon Voss
 public class PlayerControls : MonoBehaviour
 {
-    [SerializeField] MessageUI messageUI;
-    [SerializeField] Transform fpsCamera;
+    [SerializeField] MessageUI messageUI = null;
+    [SerializeField] Transform fpsCamera = null;
 
     private void Start()
     {

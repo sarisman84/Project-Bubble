@@ -4,7 +4,7 @@
 public class PauseGame : MonoBehaviour
 {
     bool isActive = false;
-    [SerializeField] Canvas canvas;
+    [SerializeField] Canvas canvas = null;
 
     void Start()
     {

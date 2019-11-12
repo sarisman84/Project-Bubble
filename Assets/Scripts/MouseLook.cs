@@ -14,7 +14,7 @@ public class MouseLook : MonoBehaviour
     public RotationAxis axes = RotationAxis.MouseXandY;
 
 
-    [SerializeField] GameObject fpsCamera;
+    [SerializeField] GameObject fpsCamera = null;
     public float minimumVert = -75.0f;
     public float maximumVert = 75.0f;
     public float sensitivityHor = 90f, sensitivityVert = 90f;

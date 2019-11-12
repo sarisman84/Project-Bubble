@@ -15,7 +15,7 @@ public class FPSInput : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
     private CharacterController controller;
-    [SerializeField] Camera FPSCamera;
+    [SerializeField] Camera FPSCamera = null;
     float headHeightDefault;
     float headHeightCrouch = 0.4f;
     float characterHeightDefault;

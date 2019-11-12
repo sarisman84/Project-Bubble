@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ZoomCam : MonoBehaviour
 {
     [SerializeField]
-    Camera cam;
+    Camera cam = null;
     [SerializeField]
     float maxFov = 80, minFov = 31.5f, zoomPS;
     [SerializeField]
