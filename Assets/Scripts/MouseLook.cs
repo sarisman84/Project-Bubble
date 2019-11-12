@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Eliott & Gabriel
+//Eliott & Gabriel - SimonEDIT
 public class MouseLook : MonoBehaviour
 {
     public enum RotationAxis

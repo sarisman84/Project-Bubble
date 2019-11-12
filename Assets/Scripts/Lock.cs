@@ -20,7 +20,7 @@ public class Lock : MonoBehaviour, IInteractable
         {
             passwordPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1;
+            EndInteration();
             unlocked = true;
             passwordPanelOpen = false;
             InteractWith();
@@ -29,7 +29,7 @@ public class Lock : MonoBehaviour, IInteractable
         {
             passwordPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1;
+            EndInteration();
             passwordPanelOpen = false;
         }
     }
@@ -70,7 +70,8 @@ public class Lock : MonoBehaviour, IInteractable
                     passwordPanel.SetActive(true);
                     passwordPanelOpen = true;
                     Cursor.lockState = CursorLockMode.None;
-                    Time.timeScale = 0;
+                    GameManager.instance.SetFPSControlState(false);
+                    GameManager.instance.SetMouseControlState(false);
                     return false;
                 }
             default:
@@ -93,6 +94,12 @@ public class Lock : MonoBehaviour, IInteractable
         {
             return true;
         }
+    }
+
+    public void EndInteration()
+    {
+        GameManager.instance.SetFPSControlState(true);
+        GameManager.instance.SetMouseControlState(true);
     }
 }
 

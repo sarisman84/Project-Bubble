@@ -9,6 +9,10 @@ public class GatherableItem : MonoBehaviour, IInteractable //Dejan
         return true;
     }
 
+    public void EndInteration()
+    {
+    }
+
     public bool InteractWith()
     {
         if (this != null)
