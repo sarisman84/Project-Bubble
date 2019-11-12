@@ -139,4 +139,17 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         }
         return false;
     }
+
+    public bool CheckIfItemIsInInventory(int itemID)
+    {
+        InventoryItem[] items = inventory.GetComponentsInChildren<InventoryItem>();
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].itemID == itemID)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

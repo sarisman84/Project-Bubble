@@ -7,7 +7,8 @@ public class NPC : MonoBehaviour , IInteractable
 {
     [SerializeField] bool willingToTalk = true;
     [SerializeField] string greetingText = "";
-    [SerializeField] List<Choice> choices = new List<Choice>();
+    [SerializeField] List<DialogueChoice> choices = new List<DialogueChoice>();
+    public List<DialogueQuest> quests = new List<DialogueQuest>();
 
     public bool TryStartTalking()
     {
@@ -15,7 +16,7 @@ public class NPC : MonoBehaviour , IInteractable
         {
             GameManager.instance.SetFPSControlState(false);
             Debug.Log("NPC talked with");
-            DialogueSystem.instance.StartDialogue(greetingText, choices);
+            DialogueSystem.instance.StartDialogue(this, greetingText, choices);
             return true;
         }
         else
@@ -23,6 +24,13 @@ public class NPC : MonoBehaviour , IInteractable
             Debug.Log("This NPC does not want to talk");
             return false;
         }
+    }
+
+    public void CharacterCompleted()
+    {
+        choices = new List<DialogueChoice>();
+        DialogueChoice newChoice = new DialogueChoice();
+        greetingText = "Good day to you!";
     }
 
     public bool InteractWith()
