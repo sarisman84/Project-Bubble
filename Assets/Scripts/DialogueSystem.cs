@@ -29,6 +29,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] GameObject choicePanel;
     [SerializeField] GameObject subtitlesPanel;
     Text subtitleText;
+    public bool dialogueOpen = false;
 
     private void Start()
     {
@@ -48,6 +49,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(string greeting, List<Choice> choices)
     {
+        dialogueOpen = true;
         Cursor.lockState = CursorLockMode.None;
         choicePanel.SetActive(true);
         subtitlesPanel.SetActive(true);
@@ -98,6 +100,7 @@ public class DialogueSystem : MonoBehaviour
             choiceButtons[i].SetActive(false);
         }
         Cursor.lockState = CursorLockMode.Locked;
+        dialogueOpen = false;
     }
 
 }

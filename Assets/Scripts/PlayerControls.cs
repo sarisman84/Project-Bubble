@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour
     List<IInteractable> interactables = new List<IInteractable>();
     public int numberOfInteractables = 0;
     [SerializeField] MessageUI messageUI;
+    [SerializeField] Transform fpsCamera;
 
     private void Start()
     {
@@ -19,29 +20,69 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        numberOfInteractables = interactables.Count;
-        //Display text from the last encountered interactable
-        if (interactables.Count > 0 && messageUI)
+        //numberOfInteractables = interactables.Count;
+        ////Display text from the last encountered interactable
+        //if (interactables.Count > 0 && messageUI)
+        //{
+        //    messageUI.DisplayText(interactables[interactables.Count - 1].MessageOnDetection());
+        //}
+        //else if (messageUI)
+        //{
+        //    //Disable the message panel
+        //    messageUI.DisablePanel();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    //Interact with the last added interactable in the list
+        //    if (interactables.Count > 0)
+        //    {
+        //        if (interactables[interactables.Count - 1].InteractWith())
+        //        {
+        //            interactables.RemoveAt(interactables.Count - 1);
+        //        }
+        //    }
+        //}
+
+        Debug.DrawRay(fpsCamera.transform.position, fpsCamera.transform.forward * 10, Color.red);
+        IInteractable interactable = DetectInteractable();
+        if (interactable != null)
         {
-            messageUI.DisplayText(interactables[interactables.Count - 1].MessageOnDetection());
+            messageUI.DisplayText(interactable.MessageOnDetection());
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //Interact with the last added interactable in the list
+                interactable.InteractWith();
+            }
         }
-        else if (messageUI)
+        else
         {
-            //Disable the message panel
             messageUI.DisablePanel();
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.E))
+    float raycastThickness = 0.25f;
+    float raycastDetectionRange = 1f;
+    private IInteractable DetectInteractable()
+    {
+        RaycastHit hit;
+        IInteractable interactable = null;
+
+        if (Physics.SphereCast(fpsCamera.transform.position, raycastThickness, fpsCamera.transform.forward, out hit, raycastDetectionRange))
         {
-            //Interact with the last added interactable in the list
-            if (interactables.Count > 0)
+            if (hit.transform.GetComponent<IInteractable>() != null)
             {
-                if(interactables[interactables.Count - 1].InteractWith())
+                interactable = hit.transform.GetComponent<IInteractable>();
+                Debug.DrawRay(fpsCamera.transform.position, hit.point - transform.position, Color.green);
+                Debug.Log("Did Hit");
+
+                if (!interactable.CanBeInteractedWith())
                 {
-                    interactables.RemoveAt(interactables.Count -1);
+                    interactable = null;
                 }
             }
         }
+        return interactable;
     }
 
     private void OnTriggerEnter(Collider other)

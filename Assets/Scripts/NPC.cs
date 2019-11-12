@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-
 //Simon Voss
 public class NPC : MonoBehaviour , IInteractable
 {
@@ -12,7 +11,6 @@ public class NPC : MonoBehaviour , IInteractable
 
     public bool TryStartTalking()
     {
-        
         if (willingToTalk)
         {
             Debug.Log("NPC talked with");
@@ -34,5 +32,17 @@ public class NPC : MonoBehaviour , IInteractable
     public string MessageOnDetection()
     {
         return "Click E To Talk";
+    }
+
+    public bool CanBeInteractedWith()
+    {
+        if (DialogueSystem.instance.dialogueOpen)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
