@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 //Simon Voss
-public class DialogueChoice : MonoBehaviour
+public class DialogueChoiceHolder : MonoBehaviour
 {
-    public Choice mychoice;
+    public DialogueChoice mychoice;
 
     public void UseChoice()
     {
@@ -15,7 +15,7 @@ public class DialogueChoice : MonoBehaviour
 
 public enum Characteristics { Neutral, Charming, Intimidation, Logical }
 [System.Serializable]
-public class Choice
+public class DialogueChoice
 {
     public enum TypeOfChoice { Dialogue, GiveItem, TakeItem, EndDialogue }
 
@@ -26,5 +26,15 @@ public class Choice
     public int requestItemID;
     public string answerSubtitle;
 
-    public List<Choice> newChoices;
+    public bool isExpandable = false;
+    public bool isExpended { get; set; }
+    public int completeDialogueQuestID = 0;
+
+    public List<DialogueChoice> newChoices;
+}
+
+[System.Serializable]
+public class DialogueQuest
+{
+    public int id;
 }
