@@ -1,32 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Gabriel & Eliott
+//Simon Voss
 public class GameManager : MonoBehaviour
 {
-    public GameObject heldItem;
-    public static GameManager ins;
-    public bool inspecting = false;
 
-    void Start()
+    #region Singleton
+    public static GameManager instance;
+    private void Awake()
     {
-        if (ins == null) 
+        if (GameManager.instance == null)
         {
-            ins = this;
-            DontDestroyOnLoad(gameObject);
+            instance = this;
         }
-        else Destroy(gameObject);
+        else
+        {
+            Debug.LogWarning("Another instance of: " + this + " , was tried to be instantiated, but was destroyed! This instance was tried to be instantiated on: " + this.gameObject);
+            Destroy(this);
+        }
+    }
+    #endregion
+
+    [SerializeField] FPSInput fpsControl;
+    [SerializeField] MouseLook mouseControl;
+
+    private void Start()
+    {
+        if (!fpsControl || !mouseControl)
+        {
+            Debug.LogWarning("Missing connections in Game manager");
+        }
     }
 
-    private void Update()
+    public void SetFPSControlState(bool state)
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            GameManager gm = GameManager.ins;
-            if (GameManager.ins.heldItem != null)
-            {
-                gm.inspecting = !gm.inspecting;
-            }
-        }
+        fpsControl.enabled = state;
+    }
+
+    public void SetMouseControlState(bool state)
+    {
+        mouseControl.enabled = state;
     }
 }
