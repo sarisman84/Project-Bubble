@@ -22,8 +22,6 @@ public class DialogueSystem : MonoBehaviour
     }
     #endregion
 
-
-
     GameObject[] choiceButtons;
     Text[] choiceTexts;
     [SerializeField] GameObject choicePanel = null;
@@ -33,7 +31,6 @@ public class DialogueSystem : MonoBehaviour
 
     private void Start()
     {
-
         choiceButtons = new GameObject[choicePanel.transform.childCount];
         choiceTexts = new Text[choicePanel.transform.childCount];
 
@@ -47,45 +44,67 @@ public class DialogueSystem : MonoBehaviour
         EndDialogue();
     }
 
+    public void UseChoice(Choice choice)
+    {
+        switch (choice.choiceType)
+        {
+            case Choice.TypeOfChoice.Dialogue:
+                ContinueDialogue(choice.answerSubtitle, choice.newChoices);
+                PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                break;
+            case Choice.TypeOfChoice.GiveItem:
+                Inventory.instance.AddItemToInventory(choice.rewardItemID);
+                ContinueDialogue(choice.answerSubtitle, choice.newChoices);
+                PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                break;
+            case Choice.TypeOfChoice.TakeItem:
+                if (Inventory.instance.RemoveItemFromInventory(choice.requestItemID))
+                {
+                    ContinueDialogue(choice.answerSubtitle, choice.newChoices);
+                    PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                }
+                else
+                {
+                    ContinueDialogue("(You don't have the requested item)", null);
+                }
+                break;
+            case Choice.TypeOfChoice.EndDialogue:
+                PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                EndDialogue();
+                break;
+        }
+    }
+
+
     public void StartDialogue(string greeting, List<Choice> choices)
     {
         dialogueOpen = true;
         Cursor.lockState = CursorLockMode.None;
         choicePanel.SetActive(true);
         subtitlesPanel.SetActive(true);
-        if (choices != null)
-        {
-            for (int i = 0; i < choiceButtons.Length; i++)
-            {
-                choiceButtons[i].SetActive(false);
-            }
-
-            for (int i = 0; i < choices.Count; i++)
-            {
-                choiceButtons[i].SetActive(true);
-                choiceTexts[i].text = choices[i].choiceText;
-                choiceButtons[i].transform.GetComponent<DialogueChoice>().mychoice = choices[i];
-            }
-        }
-        subtitleText.text = greeting;
-
-        
+        ContinueDialogue(greeting, choices);
     }
 
     public void ContinueDialogue(string answer, List<Choice> furtherChoices)
     {
-        if (furtherChoices != null)
+        for (int i = 0; i < choiceButtons.Length; i++)
         {
-            for (int i = 0; i < choiceButtons.Length; i++)
-            {
-                choiceButtons[i].SetActive(false);
-            }
+            choiceButtons[i].SetActive(false);
+        }
 
+        choiceButtons[0].SetActive(true);
+        choiceTexts[0].text = "Goodbye";
+        Choice defaultEndChoice = new Choice();
+        defaultEndChoice.choiceType = Choice.TypeOfChoice.EndDialogue;
+        choiceButtons[0].transform.GetComponent<DialogueChoice>().mychoice = defaultEndChoice;
+
+        if (furtherChoices != null && furtherChoices.Count > 0)
+        {
             for (int i = 0; i < furtherChoices.Count; i++)
             {
-                choiceButtons[i].SetActive(true);
-                choiceTexts[i].text = furtherChoices[i].choiceText;
-                choiceButtons[i].transform.GetComponent<DialogueChoice>().mychoice = furtherChoices[i];
+                choiceButtons[i+1].SetActive(true);
+                choiceTexts[i+1].text = furtherChoices[i].choiceText;
+                choiceButtons[i+1].transform.GetComponent<DialogueChoice>().mychoice = furtherChoices[i];
             }
         }
         subtitleText.text = answer;

@@ -9,44 +9,22 @@ public class DialogueChoice : MonoBehaviour
     public void UseChoice()
     {
         Debug.Log("Choice was used: " + mychoice.choiceText);
-        switch (mychoice.choiceType)
-        {
-            case Choice.TypeOfChoice.Dialogue:
-                Choice endChoice = new Choice();
-                endChoice.choiceText = "Goodbye";
-                endChoice.choiceType = Choice.TypeOfChoice.EndDialogue;
-                List<Choice> newChoices = new List<Choice>();
-                newChoices.Add(endChoice);
-                DialogueSystem.instance.ContinueDialogue(mychoice.answerSubtitle, newChoices);
-                break;
-            case Choice.TypeOfChoice.GiveItem:
-                Inventory.instance.AddItemToInventory(mychoice.rewardItemID);
-                endChoice = new Choice();
-                endChoice.choiceText = "Goodbye";
-                endChoice.choiceType = Choice.TypeOfChoice.EndDialogue;
-                newChoices = new List<Choice>();
-                newChoices.Add(endChoice);
-                DialogueSystem.instance.ContinueDialogue(mychoice.answerSubtitle, newChoices);
-                break;
-            case Choice.TypeOfChoice.RequestItem:
-                break;
-            case Choice.TypeOfChoice.EndDialogue:
-                DialogueSystem.instance.EndDialogue();
-                break;
-        }
-
-        
-
-        
+        DialogueSystem.instance.UseChoice(mychoice);
     }
 }
 
+public enum Characteristics { Neutral, Charming, Intimidation, Logical }
 [System.Serializable]
 public class Choice
 {
-    public enum TypeOfChoice { Dialogue, GiveItem, RequestItem, EndDialogue}
+    public enum TypeOfChoice { Dialogue, GiveItem, TakeItem, EndDialogue }
+
+    public Characteristics choiceStyle;
     public TypeOfChoice choiceType;
     public string choiceText;
     public int rewardItemID;
+    public int requestItemID;
     public string answerSubtitle;
+
+    public List<Choice> newChoices = new List<Choice>();
 }

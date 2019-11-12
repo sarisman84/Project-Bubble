@@ -126,6 +126,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8574914991218267178}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2822601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1fc3c5a31bb1345878df27c42459ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charm: 0
+  intelligence: 0
+  intimidation: 0
 --- !u!114 &2822606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8574914991215838691, guid: d253291357301e84a9635d84377576fa,
@@ -1500,6 +1515,241 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b131c0e39851f084daca353ddf519b24, type: 2}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.data[0].newChoices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].newChoices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.data[0].newChoices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].choiceType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].choiceText
+      value: How are you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].answerSubtitle
+      value: I am missing the most wonderous key of all time!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[0].choiceType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[0].choiceText
+      value: Goodbye
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].choiceText
+      value: I am sorry!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].answerSubtitle
+      value: Hmmpf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.data[0].choiceType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.data[0].choiceText
+      value: Can I still has key?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.data[0].answerSubtitle
+      value: You can haveth thy key!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.data[0].newChoices.Array.data[0].choiceType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[1].newChoices.Array.data[0].newChoices.Array.data[0].choiceText
+      value: Thank you, goodbye!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].newChoices.Array.data[0].choiceType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].newChoices.Array.data[0].choiceText
+      value: I am so sorry, can I still has kei?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].choiceText
+      value: I am sorry!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].answerSubtitle
+      value: Hmmpf
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.data[0].choiceType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.data[0].choiceText
+      value: Can I still has key?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.data[0].answerSubtitle
+      value: You can haveth thy key!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.data[0].newChoices.Array.data[0].choiceType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].newChoices.Array.data[2].newChoices.Array.data[0].newChoices.Array.data[0].choiceText
+      value: Thank you, goodbye!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].choiceText
+      value: Hello good sir!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].answerSubtitle
+      value: You shall have the key of glory!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].choiceType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].choiceText
+      value: Hi you fool!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].answerSubtitle
+      value: Your mother was a hamster!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].choiceType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].newChoices.Array.data[0].answerSubtitle
+      value: It is okey, you can haveth thy key!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[0].choiceText
+      value: I have the key you seek!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[0].choiceType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[0].answerSubtitle
+      value: Thank you so much my friend!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[1].choiceType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[1].choiceText
+      value: You are not worthy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[0].choiceStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].choiceStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[1].newChoices.Array.data[0].choiceStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].choiceStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[0].choiceStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618505855052175282, guid: 7316c357bae91cf4cb5a4692905953ae,
+        type: 3}
+      propertyPath: choices.Array.data[2].newChoices.Array.data[1].choiceStyle
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7316c357bae91cf4cb5a4692905953ae, type: 3}
 --- !u!1001 &9116313937079822263
