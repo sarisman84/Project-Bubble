@@ -61,8 +61,8 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    float raycastThickness = 0.25f;
-    float raycastDetectionRange = 1f;
+    [SerializeField] float raycastThickness = 0.25f;
+    [SerializeField] float raycastDetectionRange = 3;
     private IInteractable DetectInteractable()
     {
         RaycastHit hit;
