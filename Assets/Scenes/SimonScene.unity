@@ -126,6 +126,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8574914991218267178}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2822606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8574914991215838691, guid: d253291357301e84a9635d84377576fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8574914991218267178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c716b3a80f4244cb6be5f04be4176f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2822607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8574914991215838688, guid: d253291357301e84a9635d84377576fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 8574914991218267178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cfdffa166f1d44a89f63f4cb02d290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2822612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8574914991215838714, guid: d253291357301e84a9635d84377576fa,
@@ -758,6 +782,51 @@ PrefabInstance:
       objectReference: {fileID: 2822600}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cb8f4209daede4f9786a8b64fc5260, type: 3}
+--- !u!1 &1195621460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195621462}
+  - component: {fileID: 1195621461}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1195621461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195621460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf42894e91f020f418345bdd60340297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsControl: {fileID: 2822607}
+  mouseControl: {fileID: 2822606}
+--- !u!4 &1195621462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195621460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262678049
 GameObject:
   m_ObjectHideFlags: 0

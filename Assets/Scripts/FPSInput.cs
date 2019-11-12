@@ -20,6 +20,8 @@ public class FPSInput : MonoBehaviour
     float headHeightCrouch = 0.4f;
     float characterHeightDefault;
 
+    public bool canMove = true;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -31,7 +33,7 @@ public class FPSInput : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (controller.isGrounded)
+        if (controller.isGrounded && canMove)
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);

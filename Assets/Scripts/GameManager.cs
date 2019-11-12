@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void SetFPSControlState(bool state)
     {
-        fpsControl.enabled = state;
+        fpsControl.canMove = state;
     }
 
     public void SetMouseControlState(bool state)
