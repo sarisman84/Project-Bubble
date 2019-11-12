@@ -50,19 +50,13 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Tab) && inventoryIsOpen) //opens inventory and unlocks the mouse
+        if (Input.GetKeyUp(KeyCode.Tab) && inventoryIsOpen) //closes inventory and locks the mouse
         {
-            inventory.SetActive(false);
-            inventoryIsOpen = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Time.timeScale = 1;
+            CloseInvetory();
         }
-        else if (Input.GetKeyUp(KeyCode.Tab) && !inventoryIsOpen) //closes inventory and locks the mouse
+        else if (Input.GetKeyUp(KeyCode.Tab) && !inventoryIsOpen) //opens inventory and unlocks the mouse
         {
-            inventory.SetActive(true);
-            inventoryIsOpen = true;
-            Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0;
+            OpenInventory();   
         }
 
         if (selectedObject != null) //make throw button not interactable when an item is not selected
@@ -92,11 +86,22 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         }
     }
 
+    public void OpenInventory()
+    {
+        inventory.SetActive(true);
+        inventoryIsOpen = true;
+        Cursor.lockState = CursorLockMode.None;
+        GameManager.instance.SetFPSControlState(false);
+        GameManager.instance.SetMouseControlState(false);
+    }
+
     public void CloseInvetory() //used to close invetory through the close button
     {
         inventory.SetActive(false);
         inventoryIsOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameManager.instance.SetFPSControlState(true);
+        GameManager.instance.SetMouseControlState(true);
     }
 
     public void AddItemToInventory(int itemID) //used to add item of itemID to the invetory
@@ -122,6 +127,16 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
     //Used when giving item to NPCs
     public bool RemoveItemFromInventory(int itemID)
     {
+        InventoryItem[] items = inventory.GetComponentsInChildren<InventoryItem>();
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].itemID == itemID)
+            {
+                Destroy(items[i].gameObject);
+                return true;
+            }
+        }
         return false;
     }
 }

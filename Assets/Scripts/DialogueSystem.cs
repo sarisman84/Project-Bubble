@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//Simon Voss
 public class DialogueSystem : MonoBehaviour
 {
     #region Singleton

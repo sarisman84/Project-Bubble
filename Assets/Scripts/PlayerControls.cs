@@ -47,7 +47,7 @@ public class PlayerControls : MonoBehaviour
             {
                 interactable = hit.transform.GetComponent<IInteractable>();
                 Debug.DrawRay(fpsCamera.transform.position, hit.transform.position - transform.position, Color.green);
-                Debug.Log("Did Hit:" + interactable.ToString());
+                //Debug.Log("Did Hit:" + interactable.ToString());
             }
         }
         else

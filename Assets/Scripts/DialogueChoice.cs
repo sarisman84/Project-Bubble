@@ -8,7 +8,7 @@ public class DialogueChoice : MonoBehaviour
 
     public void UseChoice()
     {
-        Debug.Log("Choice was used: " + mychoice.choiceText);
+        //Debug.Log("Choice was used: " + mychoice.choiceText);
         DialogueSystem.instance.UseChoice(mychoice);
     }
 }
@@ -26,5 +26,5 @@ public class Choice
     public int requestItemID;
     public string answerSubtitle;
 
-    public List<Choice> newChoices = new List<Choice>();
+    public List<Choice> newChoices;
 }

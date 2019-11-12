@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Simon Voss
 public class PlayerCharacteristics : MonoBehaviour
 {
     #region Singleton
@@ -49,7 +50,7 @@ public class PlayerCharacteristics : MonoBehaviour
         if (statIncreased)
         {
             Debug.Log("Stats are now at: \n " +
-                " Charm: " + charm +
+                "Charm: " + charm +
                 " Intelligence: " + intelligence +
                 " Intimidation: " + intimidation);
         }
