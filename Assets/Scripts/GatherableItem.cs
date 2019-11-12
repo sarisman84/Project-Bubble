@@ -5,6 +5,11 @@ public class GatherableItem : MonoBehaviour, IInteractable //Dejan
     public Invetory inventory; //a reference to the inventory prefab
     public int itemID; //item id used in Inventory Items scriptable object
 
+    public bool CanBeInteractedWith()
+    {
+        return true;
+    }
+
     public bool InteractWith()
     {
         if (this != null)

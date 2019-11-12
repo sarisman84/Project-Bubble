@@ -14,12 +14,6 @@ public class Lock : MonoBehaviour, IInteractable
     public bool unlocked;
 
     private bool passwordPanelOpen;
-    private BoxCollider boxCollider;
-
-    void Start()
-    {
-        boxCollider = GetComponent<BoxCollider>();
-    }
 
     void Update()
     {
@@ -30,7 +24,6 @@ public class Lock : MonoBehaviour, IInteractable
             Time.timeScale = 1;
             unlocked = true;
             passwordPanelOpen = false;
-            boxCollider.enabled = false;
             InteractWith();
         }
         else if (passwordPanelOpen && Input.GetKeyDown(KeyCode.Return))
@@ -88,7 +81,19 @@ public class Lock : MonoBehaviour, IInteractable
 
     public string MessageOnDetection()
     {
-        return "Open Door";
+        return "Unlock!";
+    }
+
+    public bool CanBeInteractedWith()
+    {
+        if (unlocked)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
 

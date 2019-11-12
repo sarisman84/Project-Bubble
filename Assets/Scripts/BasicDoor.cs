@@ -33,4 +33,9 @@ public class BasicDoor : MonoBehaviour, IInteractable
     {
         return "Open Door";
     }
+
+    public bool CanBeInteractedWith()
+    {
+        return true;
+    }
 }
