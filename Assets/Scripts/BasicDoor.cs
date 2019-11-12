@@ -38,4 +38,8 @@ public class BasicDoor : MonoBehaviour, IInteractable
     {
         return true;
     }
+
+    public void EndInteration()
+    {
+    }
 }
