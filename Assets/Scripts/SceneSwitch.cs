@@ -7,6 +7,7 @@ public class SceneSwitch : MonoBehaviour //Dejan
     public float delay; //should be the same as FadeTransition effectDuration
     public void SwitchScene(string sceneName) //loads given scene
     {
+        Time.timeScale = 1;
         StartCoroutine("DelayedSceneSwitch", sceneName);
     }
 
