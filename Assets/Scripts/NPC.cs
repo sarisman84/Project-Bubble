@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour , IInteractable
     {
         if (willingToTalk)
         {
+            GameManager.instance.SetFPSControlState(false);
             Debug.Log("NPC talked with");
             DialogueSystem.instance.StartDialogue(greetingText, choices);
             return true;
@@ -44,5 +45,10 @@ public class NPC : MonoBehaviour , IInteractable
         {
             return true;
         }
+    }
+
+    public void EndInteration()
+    {
+        //Is done through the dialogue system
     }
 }
