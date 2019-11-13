@@ -63,6 +63,13 @@ public class NPCNavigation : MonoBehaviour //Dejan, this script is used together
         else //if a players is detected, stop the npc
         {
             agent.isStopped = true;
+
+            float timeCount = 0.05f;
+            Vector3 direction = guard.player.transform.position - transform.position;
+            direction.y = 0;
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, timeCount);
+            timeCount = timeCount + Time.deltaTime;
         }
     }
 
