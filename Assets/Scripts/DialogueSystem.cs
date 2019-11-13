@@ -31,6 +31,7 @@ public class DialogueSystem : MonoBehaviour
     Text subtitleText;
     public bool dialogueOpen = false;
 
+    //Sets up the references needed
     private void Start()
     {
         choiceButtons = new GameObject[choicePanel.transform.childCount];
@@ -44,38 +45,39 @@ public class DialogueSystem : MonoBehaviour
         subtitleText = subtitlesPanel.GetComponentInChildren<Text>();
     }
 
+    //Handles our dialogue input
     public void UseChoice(Choice choice)
     {
-        if (choice.isExpandable)
+        if (choice.canBeReused)
         {
-            choice.isExpended = true;
+            choice.isUsed = true;
         }
 
         for (int i = 0; i < npcTalkedTo.quests.Count; i++)
         {
-            if (npcTalkedTo.quests[i].id == choice.connectedQuestID)
+            if (npcTalkedTo.quests[i].id == choice.connectedQuest.id)
             {
                 npcTalkedTo.quests.RemoveAt(i);
                 i--;
             }
         }
 
-        switch (choice.choiceType)
+        switch (choice.optionAction)
         {
             case Choice.TypeOfChoice.Dialogue:
-                ContinueDialogue(choice.answerSubtitle, choice.newChoices);
-                PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                ContinueDialogue(choice.responseText, choice.continuedChoices);
+                PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 break;
-            case Choice.TypeOfChoice.GiveItem:
-                Inventory.instance.AddItemToInventory(choice.rewardItemID);
-                ContinueDialogue(choice.answerSubtitle, choice.newChoices);
-                PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+            case Choice.TypeOfChoice.PlayerGetsItem:
+                Inventory.instance.AddItemToInventory(choice.getItemID);
+                ContinueDialogue(choice.responseText, choice.continuedChoices);
+                PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 break;
-            case Choice.TypeOfChoice.TakeItem:
-                if (Inventory.instance.RemoveItemFromInventory(choice.requestItemID))
+            case Choice.TypeOfChoice.PlayerLosesItem:
+                if (Inventory.instance.RemoveItemFromInventory(choice.loseItemID))
                 {
-                    ContinueDialogue(choice.answerSubtitle, choice.newChoices);
-                    PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                    ContinueDialogue(choice.responseText, choice.continuedChoices);
+                    PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 }
                 else
                 {
@@ -83,13 +85,18 @@ public class DialogueSystem : MonoBehaviour
                 }
                 break;
             case Choice.TypeOfChoice.EndDialogue:
-                PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
+                PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 EndDialogue();
                 break;
         }
+
+        if (choice.attributeChanges != null && choice.attributesToChange != null)
+        {
+            npcTalkedTo.AffectAttribute(choice.attributesToChange, choice.attributeChanges);
+        }
     }
 
-
+    //Opens te dialogue UI
     public void StartDialogue(NPC npcTalking, string greeting, List<Choice> choices)
     {
         npcTalkedTo = npcTalking;
@@ -100,6 +107,7 @@ public class DialogueSystem : MonoBehaviour
         ContinueDialogue(greeting, choices);
     }
 
+    //Shows choices to the player and activates buttons to answer
     public void ContinueDialogue(string answer, List<Choice> furtherChoices)
     {
         for (int i = 0; i < choiceButtons.Length; i++)
@@ -110,19 +118,19 @@ public class DialogueSystem : MonoBehaviour
         choiceButtons[0].SetActive(true);
         choiceTexts[0].text = "(End conversation)";
         Choice defaultEndChoice = new Choice();
-        defaultEndChoice.choiceType = Choice.TypeOfChoice.EndDialogue;
+        defaultEndChoice.optionAction = Choice.TypeOfChoice.EndDialogue;
         choiceButtons[0].transform.GetComponent<DialogueChoiceHolder>().mychoice = defaultEndChoice;
         choiceButtons[0].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CalculateSquareWidth(choiceTexts[0].text));
 
 
         for (int i = 0; i < furtherChoices.Count; i++)
         {
-            if (furtherChoices[i].isExpended)
+            if (furtherChoices[i].isUsed)
             {
                 furtherChoices.RemoveAt(i);
                 continue;
             }
-            if (furtherChoices[i].choiceType == Choice.TypeOfChoice.TakeItem && !Inventory.instance.CheckIfItemIsInInventory(furtherChoices[i].requestItemID))
+            if (furtherChoices[i].optionAction == Choice.TypeOfChoice.PlayerLosesItem && !Inventory.instance.CheckIfItemIsInInventory(furtherChoices[i].loseItemID))
             {
                 furtherChoices.RemoveAt(i);
                 continue;
@@ -143,6 +151,7 @@ public class DialogueSystem : MonoBehaviour
         subtitlesPanel.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CalculateSquareWidth(answer));
     }
 
+    //Ends the dialogue and closes the UI windows
     public void EndDialogue()
     {
         choicePanel.SetActive(false);
@@ -162,6 +171,7 @@ public class DialogueSystem : MonoBehaviour
         npcTalkedTo = null;
     }
 
+    //Calculates width for UI elements
     float pixelsPerLetter = 15;
     private float CalculateSquareWidth(string input)
     {
@@ -169,4 +179,34 @@ public class DialogueSystem : MonoBehaviour
 
         return chars.Length * pixelsPerLetter;
     }
+}
+
+public enum Characteristics { Neutral, Charming, Intimidation, Logical }
+[System.Serializable]
+public class Choice
+{
+    public string choiceText;
+    public enum TypeOfChoice { Dialogue, PlayerGetsItem, PlayerLosesItem, EndDialogue }
+    public TypeOfChoice optionAction;
+
+    public Characteristics characteristics;
+    public int getItemID;
+    public int loseItemID;
+    public string responseText;
+
+    public List<Attribute> attributesToChange;
+    public List<int> attributeChanges;
+
+    public bool canBeReused = false;
+    public bool isUsed { get; set; }
+    public Quest connectedQuest;
+
+    public List<Choice> continuedChoices;
+}
+
+[System.Serializable]
+public class Quest
+{
+    public string description = "";
+    public int id;
 }
