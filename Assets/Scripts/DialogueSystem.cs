@@ -44,7 +44,7 @@ public class DialogueSystem : MonoBehaviour
         subtitleText = subtitlesPanel.GetComponentInChildren<Text>();
     }
 
-    public void UseChoice(DialogueChoice choice)
+    public void UseChoice(Choice choice)
     {
         if (choice.isExpandable)
         {
@@ -53,7 +53,7 @@ public class DialogueSystem : MonoBehaviour
 
         for (int i = 0; i < npcTalkedTo.quests.Count; i++)
         {
-            if (npcTalkedTo.quests[i].id == choice.completeDialogueQuestID)
+            if (npcTalkedTo.quests[i].id == choice.connectedQuestID)
             {
                 npcTalkedTo.quests.RemoveAt(i);
                 i--;
@@ -62,16 +62,16 @@ public class DialogueSystem : MonoBehaviour
 
         switch (choice.choiceType)
         {
-            case DialogueChoice.TypeOfChoice.Dialogue:
+            case Choice.TypeOfChoice.Dialogue:
                 ContinueDialogue(choice.answerSubtitle, choice.newChoices);
                 PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
                 break;
-            case DialogueChoice.TypeOfChoice.GiveItem:
+            case Choice.TypeOfChoice.GiveItem:
                 Inventory.instance.AddItemToInventory(choice.rewardItemID);
                 ContinueDialogue(choice.answerSubtitle, choice.newChoices);
                 PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
                 break;
-            case DialogueChoice.TypeOfChoice.TakeItem:
+            case Choice.TypeOfChoice.TakeItem:
                 if (Inventory.instance.RemoveItemFromInventory(choice.requestItemID))
                 {
                     ContinueDialogue(choice.answerSubtitle, choice.newChoices);
@@ -82,7 +82,7 @@ public class DialogueSystem : MonoBehaviour
                     ContinueDialogue("(You don't have the requested item)", null);
                 }
                 break;
-            case DialogueChoice.TypeOfChoice.EndDialogue:
+            case Choice.TypeOfChoice.EndDialogue:
                 PlayerCharacteristics.instance.IncreaseStat(choice.choiceStyle);
                 EndDialogue();
                 break;
@@ -90,7 +90,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
 
-    public void StartDialogue(NPC npcTalking, string greeting, List<DialogueChoice> choices)
+    public void StartDialogue(NPC npcTalking, string greeting, List<Choice> choices)
     {
         npcTalkedTo = npcTalking;
         dialogueOpen = true;
@@ -100,7 +100,7 @@ public class DialogueSystem : MonoBehaviour
         ContinueDialogue(greeting, choices);
     }
 
-    public void ContinueDialogue(string answer, List<DialogueChoice> furtherChoices)
+    public void ContinueDialogue(string answer, List<Choice> furtherChoices)
     {
         for (int i = 0; i < choiceButtons.Length; i++)
         {
@@ -109,8 +109,8 @@ public class DialogueSystem : MonoBehaviour
 
         choiceButtons[0].SetActive(true);
         choiceTexts[0].text = "(End conversation)";
-        DialogueChoice defaultEndChoice = new DialogueChoice();
-        defaultEndChoice.choiceType = DialogueChoice.TypeOfChoice.EndDialogue;
+        Choice defaultEndChoice = new Choice();
+        defaultEndChoice.choiceType = Choice.TypeOfChoice.EndDialogue;
         choiceButtons[0].transform.GetComponent<DialogueChoiceHolder>().mychoice = defaultEndChoice;
         choiceButtons[0].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CalculateSquareWidth(choiceTexts[0].text));
 
@@ -122,7 +122,7 @@ public class DialogueSystem : MonoBehaviour
                 furtherChoices.RemoveAt(i);
                 continue;
             }
-            if (furtherChoices[i].choiceType == DialogueChoice.TypeOfChoice.TakeItem && !Inventory.instance.CheckIfItemIsInInventory(furtherChoices[i].requestItemID))
+            if (furtherChoices[i].choiceType == Choice.TypeOfChoice.TakeItem && !Inventory.instance.CheckIfItemIsInInventory(furtherChoices[i].requestItemID))
             {
                 furtherChoices.RemoveAt(i);
                 continue;

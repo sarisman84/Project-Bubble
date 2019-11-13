@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1923020947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539676750073875545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed8193253b76dd4992986e10baa9349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  willingToTalk: 1
+  greetingText: Go back to bed honey!
+  choices:
+  - choiceStyle: 1
+    choiceType: 0
+    choiceText: Why can't you join me?
+    rewardItemID: 0
+    requestItemID: 0
+    answerSubtitle: Please I need to do something.
+    isExpandable: 1
+    connectedQuestID: 0
+    newChoices: []
+  - choiceStyle: 3
+    choiceType: 0
+    choiceText: You seem troubled....
+    rewardItemID: 0
+    requestItemID: 0
+    answerSubtitle: Don't worry, I am fine.
+    isExpandable: 1
+    connectedQuestID: 0
+    newChoices: []
+  quests: []
+--- !u!1001 &6691060003706916705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439930838890480440, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_Name
+      value: Gilad Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: greeting
+      value: Hi playername what are you doing up?
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: connectedNPC
+      value: 
+      objectReference: {fileID: 1923020947}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[0].choiceText
+      value: I can't sleep!
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[0].answerSubtitle
+      value: Go to bed I'll join you later!
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[0].choiceStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[1].choiceStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[2].choiceStyle
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[1].choiceText
+      value: How you doin'? Come back to bed...
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[1].answerSubtitle
+      value: I'll join you soon, honey
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[2].choiceText
+      value: What are YOU doing up!?
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: choices.Array.data[2].answerSubtitle
+      value: 'Don''t mind me, go back to bed, I''ll explain later. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256559997247822420, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466529134941078565, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc79e138f265d124fafc15690cbae04c, type: 3}
+--- !u!1 &6539676750073875545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 439930838890480440, guid: cc79e138f265d124fafc15690cbae04c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6691060003706916705}
+  m_PrefabAsset: {fileID: 0}

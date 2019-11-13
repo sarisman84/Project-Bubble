@@ -4,7 +4,7 @@ using UnityEngine;
 //Simon Voss
 public class DialogueChoiceHolder : MonoBehaviour
 {
-    public DialogueChoice mychoice;
+    public Choice mychoice;
 
     public void UseChoice()
     {
@@ -15,7 +15,7 @@ public class DialogueChoiceHolder : MonoBehaviour
 
 public enum Characteristics { Neutral, Charming, Intimidation, Logical }
 [System.Serializable]
-public class DialogueChoice
+public class Choice
 {
     public enum TypeOfChoice { Dialogue, GiveItem, TakeItem, EndDialogue }
 
@@ -28,9 +28,9 @@ public class DialogueChoice
 
     public bool isExpandable = false;
     public bool isExpended { get; set; }
-    public int completeDialogueQuestID = 0;
+    public int connectedQuestID = 0;
 
-    public List<DialogueChoice> newChoices;
+    public List<Choice> newChoices;
 }
 
 [System.Serializable]

@@ -7,7 +7,7 @@ public class NPC : MonoBehaviour , IInteractable
 {
     [SerializeField] bool willingToTalk = true;
     [SerializeField] string greetingText = "";
-    [SerializeField] List<DialogueChoice> choices = new List<DialogueChoice>();
+    [SerializeField] List<Choice> choices = new List<Choice>();
     public List<DialogueQuest> quests = new List<DialogueQuest>();
 
     public bool TryStartTalking()
@@ -28,8 +28,8 @@ public class NPC : MonoBehaviour , IInteractable
 
     public void CharacterCompleted()
     {
-        choices = new List<DialogueChoice>();
-        DialogueChoice newChoice = new DialogueChoice();
+        choices = new List<Choice>();
+        Choice newChoice = new Choice();
         greetingText = "Good day to you!";
     }
 
