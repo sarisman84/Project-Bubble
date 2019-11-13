@@ -12,7 +12,6 @@ public class NPCNavigation : MonoBehaviour //Dejan, this script is used together
     private int destinationIndex = 0; //used to go through the destinations in correct order
     private bool hasWaited; //weather or not the npc has executed the given delay time
     private bool readyToGo; //weather or not the npc is allowed to proceed to the next position
-    private bool destinationReset; //weather or not the npc destination was reset to the correct next one after stopping to detect the player
     private Guard guard; //a reference to the guard script
 
     private void Start()
@@ -32,7 +31,7 @@ public class NPCNavigation : MonoBehaviour //Dejan, this script is used together
     {
         if ((guard != null && !guard.playerIsVisible && !agent.pathPending) || (guard == null && !agent.pathPending)) //sets the next destination if the previous one is done, includes delay sequance for every destination
         {
-            destinationReset = false;
+            agent.isStopped = false;
 
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
@@ -63,18 +62,7 @@ public class NPCNavigation : MonoBehaviour //Dejan, this script is used together
         }
         else //if a players is detected, stop the npc
         {
-            agent.destination = gameObject.transform.position;
-
-            if (!destinationReset && destinationIndex > 0)
-            {
-                destinationIndex = destinationIndex - 1;
-                destinationReset = true;
-            }
-            else if (!destinationReset)
-            {
-                destinationIndex = destinations.Count - 1;
-                destinationReset = true;
-            }
+            agent.isStopped = true;
         }
     }
 
