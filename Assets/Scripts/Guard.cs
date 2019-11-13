@@ -10,8 +10,9 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     RaycastHit rayHit;
 
     float nextTime = 0; //next time detection can increase/decrease
-    int currentDetectionLevel = 0; //current detection level
+    public float currentDetectionLevel = 0; //current detection level
     [SerializeField] float interval = 1; //interval at which detection can rise/fall
+    [SerializeField] float detectionPerInterval = 1;
     [SerializeField] int detectionLevel = 2; //detection level at which player will be uncovered
     public bool playerdUncovered; //indicates the player has been uncovered
 
@@ -27,17 +28,19 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     {
         if (player != null && playerIsDetected)
         {
+            player.GetComponent<DetectionLevelGUI>().AddGuard(this);
+
             if (Physics.Raycast(transform.position, (player.transform.position - transform.position), out rayHit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Collide) && rayHit.transform.tag.Equals("Player")) //casts a ray and checks if player has been hit
             {
                 if (nextTime < Time.time && currentDetectionLevel < detectionLevel) //increases detection level
                 {
-                    currentDetectionLevel++;
+                    currentDetectionLevel += detectionPerInterval;
                     nextTime = Time.time + interval;
                 }
             }
             else if (nextTime < Time.time && currentDetectionLevel > 0) //decreases detection level
             {
-                currentDetectionLevel--;
+                currentDetectionLevel -= detectionPerInterval;
                 nextTime = Time.time + interval;
             }
         }
@@ -45,7 +48,7 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
         {
             if (nextTime < Time.time && currentDetectionLevel > 0) //decreases detection level
             {
-                currentDetectionLevel--;
+                currentDetectionLevel -= detectionPerInterval;
                 nextTime = Time.time + interval;
             }
         }
