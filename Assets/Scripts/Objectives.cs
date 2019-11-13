@@ -1,19 +1,26 @@
 ﻿using TMPro;
 using UnityEngine;
 
+// Erik Neuhofer
 public class Objectives : MonoBehaviour
 {
-    [SerializeField] TextMeshPro objectiveTextField;
+    [SerializeField] TextMeshProUGUI objectiveTextField;
     [SerializeField] string[] objectives;
 
-    void Start()
+    int currentIndex = 0;
+
+    private void Start()
     {
-        objectiveTextField = GetComponent<TextMeshPro>();
+        PrintCurrentObjective();
     }
 
-    public void PrintCurrentObjective(string currentObjectiveToPrint)
+    void PrintCurrentObjective()
     {
-        objectiveTextField.text = currentObjectiveToPrint;
+        objectiveTextField.text = objectives[currentIndex].ToString();
     }
 
+    public void IncreaseCurrentIndex(int index)
+    {
+        currentIndex = index;
+    }
 }
