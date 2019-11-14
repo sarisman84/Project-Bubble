@@ -822,6 +822,11 @@ PrefabInstance:
       propertyPath: doorLock
       value: 
       objectReference: {fileID: 1592271468}
+    - target: {fileID: 6513959161827914000, guid: 7c149c218ec45ae4888d4b599d21fe51,
+        type: 3}
+      propertyPath: m_Name
+      value: f
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c149c218ec45ae4888d4b599d21fe51, type: 3}
 --- !u!4 &440890357 stripped
@@ -1172,6 +1177,36 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5003185585183876812, guid: 0f51a94af35662c4a97bee7dc3b81509,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003185585183876812, guid: 0f51a94af35662c4a97bee7dc3b81509,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003185585727020104, guid: 0f51a94af35662c4a97bee7dc3b81509,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003185585727020104, guid: 0f51a94af35662c4a97bee7dc3b81509,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003185585102729584, guid: 0f51a94af35662c4a97bee7dc3b81509,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003185585102729584, guid: 0f51a94af35662c4a97bee7dc3b81509,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5003185585950943164, guid: 0f51a94af35662c4a97bee7dc3b81509,
         type: 3}
       propertyPath: objectives.Array.size
@@ -1236,7 +1271,7 @@ MonoBehaviour:
     requestItemID: 0
     answerSubtitle: Here you got key
     isExpandable: 0
-    completeDialogueQuestID: 0
+    connectedQuestID: 0
     newChoices: []
   quests: []
 --- !u!136 &903582181
