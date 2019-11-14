@@ -70,7 +70,7 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     }
 
     bool detectionActionTaken = false;
-    [SerializeField] List<Choice> choices = null;
+    [SerializeField] List<DialogueChoice> choices = null;
     [SerializeField] string greeting = "";
     private void DoDetectionAction()
     {

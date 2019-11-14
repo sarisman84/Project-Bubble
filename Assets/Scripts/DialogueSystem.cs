@@ -46,34 +46,37 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //Handles our dialogue input
-    public void UseChoice(Choice choice)
+    public void UseChoice(DialogueChoice choice)
     {
         if (choice.canBeReused)
         {
             choice.isUsed = true;
         }
 
-        for (int i = 0; i < npcTalkedTo.quests.Count; i++)
+        if (choice.connectedQuest != null)
         {
-            if (npcTalkedTo.quests[i].id == choice.connectedQuest.id)
+            for (int i = 0; i < npcTalkedTo.quests.Count; i++)
             {
-                npcTalkedTo.quests.RemoveAt(i);
-                i--;
+                if (npcTalkedTo.quests[i].id == choice.connectedQuest.id)
+                {
+                    npcTalkedTo.quests.RemoveAt(i);
+                    i--;
+                }
             }
         }
 
         switch (choice.optionAction)
         {
-            case Choice.TypeOfChoice.Dialogue:
+            case DialogueChoice.TypeOfChoice.Dialogue:
                 ContinueDialogue(choice.responseText, choice.continuedChoices);
                 PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 break;
-            case Choice.TypeOfChoice.PlayerGetsItem:
+            case DialogueChoice.TypeOfChoice.PlayerGetsItem:
                 Inventory.instance.AddItemToInventory(choice.getItemID);
                 ContinueDialogue(choice.responseText, choice.continuedChoices);
                 PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 break;
-            case Choice.TypeOfChoice.PlayerLosesItem:
+            case DialogueChoice.TypeOfChoice.PlayerLosesItem:
                 if (Inventory.instance.RemoveItemFromInventory(choice.loseItemID))
                 {
                     ContinueDialogue(choice.responseText, choice.continuedChoices);
@@ -84,7 +87,7 @@ public class DialogueSystem : MonoBehaviour
                     ContinueDialogue("(You don't have the requested item)", null);
                 }
                 break;
-            case Choice.TypeOfChoice.EndDialogue:
+            case DialogueChoice.TypeOfChoice.EndDialogue:
                 PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
                 EndDialogue();
                 break;
@@ -97,7 +100,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //Opens te dialogue UI
-    public void StartDialogue(NPC npcTalking, string greeting, List<Choice> choices)
+    public void StartDialogue(NPC npcTalking, string greeting, List<DialogueChoice> choices)
     {
         npcTalkedTo = npcTalking;
         dialogueOpen = true;
@@ -108,7 +111,7 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //Shows choices to the player and activates buttons to answer
-    public void ContinueDialogue(string answer, List<Choice> furtherChoices)
+    public void ContinueDialogue(string answer, List<DialogueChoice> furtherChoices)
     {
         for (int i = 0; i < choiceButtons.Length; i++)
         {
@@ -117,8 +120,8 @@ public class DialogueSystem : MonoBehaviour
 
         choiceButtons[0].SetActive(true);
         choiceTexts[0].text = "(End conversation)";
-        Choice defaultEndChoice = new Choice();
-        defaultEndChoice.optionAction = Choice.TypeOfChoice.EndDialogue;
+        DialogueChoice defaultEndChoice = new DialogueChoice();
+        defaultEndChoice.optionAction = DialogueChoice.TypeOfChoice.EndDialogue;
         choiceButtons[0].transform.GetComponent<DialogueChoiceHolder>().mychoice = defaultEndChoice;
         choiceButtons[0].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CalculateSquareWidth(choiceTexts[0].text));
 
@@ -130,7 +133,7 @@ public class DialogueSystem : MonoBehaviour
                 furtherChoices.RemoveAt(i);
                 continue;
             }
-            if (furtherChoices[i].optionAction == Choice.TypeOfChoice.PlayerLosesItem && !Inventory.instance.CheckIfItemIsInInventory(furtherChoices[i].loseItemID))
+            if (furtherChoices[i].optionAction == DialogueChoice.TypeOfChoice.PlayerLosesItem && !Inventory.instance.CheckIfItemIsInInventory(furtherChoices[i].loseItemID))
             {
                 furtherChoices.RemoveAt(i);
                 continue;
@@ -183,7 +186,7 @@ public class DialogueSystem : MonoBehaviour
 
 public enum Characteristics { Neutral, Charming, Intimidation, Logical }
 [System.Serializable]
-public class Choice
+public class DialogueChoice
 {
     public string choiceText;
     public enum TypeOfChoice { Dialogue, PlayerGetsItem, PlayerLosesItem, EndDialogue }
@@ -201,7 +204,7 @@ public class Choice
     public bool isUsed { get; set; }
     public Quest connectedQuest;
 
-    public List<Choice> continuedChoices;
+    public List<DialogueChoice> continuedChoices;
 }
 
 [System.Serializable]

@@ -8,9 +8,9 @@ public enum RelationshipLevel { None, Familiar, Friend, Ally }
 //Simon Voss
 public class NPC : MonoBehaviour, IInteractable
 {
-    [SerializeField] bool willingToTalk = true;
     [SerializeField] string greetingText = "";
-    [SerializeField] List<Choice> dialogueChoices = new List<Choice>();
+    [SerializeField] bool willingToTalk = true;
+    [SerializeField] List<DialogueChoice> dialogueChoices = new List<DialogueChoice>();
     public List<Quest> quests = new List<Quest>();
     
 
@@ -32,8 +32,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void CharacterCompleted()
     {
-        dialogueChoices = new List<Choice>();
-        Choice newChoice = new Choice();
+        dialogueChoices = new List<DialogueChoice>();
+        DialogueChoice newChoice = new DialogueChoice();
         greetingText = "Good day to you!";
     }
 

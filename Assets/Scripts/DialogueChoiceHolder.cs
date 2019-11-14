@@ -4,7 +4,7 @@ using UnityEngine;
 //Simon Voss
 public class DialogueChoiceHolder : MonoBehaviour
 {
-    public Choice mychoice;
+    public DialogueChoice mychoice;
 
     public void UseChoice()
     {
