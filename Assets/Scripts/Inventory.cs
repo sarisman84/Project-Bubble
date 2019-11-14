@@ -109,18 +109,13 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         Instantiate(itemList.list[itemID].pair[1], itemSpaceTransform);
     }
 
-    public bool MoveItemOutOfInventory() //used to discard item of itemID from the invetory and return the item to the real world
+    public void MoveItemOutOfInventory() //used to discard item of itemID from the invetory and return the item to the real world
     {
         if (selectedObject != null)
         {
             Destroy(selectedObject);
             GameObject gameObject = Instantiate(itemList.list[selectedObject.GetComponent<InventoryItem>().itemID].pair[0], character.transform.position, Quaternion.identity);
             //gameObject.GetComponent<GatherableItem>().inventory = this;
-            return true;
-        }
-        else
-        {
-            return false;
         }
     }
 
