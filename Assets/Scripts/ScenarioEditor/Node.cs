@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public abstract class Node
+[System.Serializable]
+ abstract public class Node
 {
     //Main box
     public Rect rect;
@@ -90,6 +91,7 @@ public abstract class Node
     }
 }
 
+[System.Serializable]
 public class EventNode : Node
 {
     public Event myEvent;
@@ -155,10 +157,10 @@ public class EventNode : Node
     public override void Draw()
     {
         EditorStyles.textField.wordWrap = true;
-        inPoint.Draw();
+        inPoint.Draw(this);
         for (int i = 0; i < outPoints.Count; i++)
         {
-            outPoints[i].Draw();
+            outPoints[i].Draw(this);
         }
         GUI.Box(rect, "", style);
 
@@ -171,6 +173,7 @@ public class EventNode : Node
     }
 }
 
+[System.Serializable]
 public class ChoiceNode : Node
 {
     public Choice myChoice;
@@ -196,10 +199,10 @@ public class ChoiceNode : Node
     public override void Draw()
     {
         EditorStyles.textField.wordWrap = true;
-        inPoint.Draw();
+        inPoint.Draw(this);
         for (int i = 0; i < outPoints.Count; i++)
         {
-            outPoints[i].Draw();
+            outPoints[i].Draw(this);
         }
         GUI.Box(rect, "", style);
 

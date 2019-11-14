@@ -6,9 +6,10 @@ using UnityEngine;
 public class Scenario : ScriptableObject
 {
     public Event startEvent = null;
-    public List<Node> editorNodes = new List<Node>();
+    //public List<Node> editorNodes = new List<Node>();
+    public List<ChoiceNode> editorChoiceNodes = new List<ChoiceNode>();
+    public List<EventNode> editorEventNodes = new List<EventNode>();
     public List<Connection> editorConnections = new List<Connection>();
-    //List<DialogueChoice> choices;
 }
 
 [System.Serializable]

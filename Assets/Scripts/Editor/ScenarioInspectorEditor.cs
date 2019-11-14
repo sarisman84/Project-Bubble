@@ -10,5 +10,7 @@ public class ScenarioInspectorEditor : Editor
         {
             EventEditor.OpenWindow((Scenario)target);
         }
+
+        base.OnInspectorGUI();
     }
 }

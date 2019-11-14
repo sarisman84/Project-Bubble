@@ -26,25 +26,36 @@ public class EventEditor : EditorWindow
 
     public static Scenario openScenario;
 
+    //private static EventEditor instance;
+
 
     public static void OpenWindow(Scenario input)
     {
         EventEditor window = GetWindow<EventEditor>();
         window.titleContent = new GUIContent("Event Window - " + input.name);
         openScenario = input;
-        if (input.editorNodes.Count != 0)
-        {
-            LoadEvent();
-            GUI.changed = true;
-        }
-        else
-        {
-            allNodes.Clear();
-            allConnections.Clear();
-            GUI.changed = true;
-        }
+        //if (input.editorEventNodes.Count != 0)
+        //{
+        //    LoadEvent();
+        //    GUI.changed = true;
+        //}
+        //else
+        //{
+        //    allNodes.Clear();
+        //    allConnections.Clear();
+        //    GUI.changed = true;
+        //}
     }
+
+
     private void OnEnable()
+    {
+        //instance = this;
+
+        SetStyles();
+    }
+
+    private void SetStyles()
     {
         nodeStyle = new GUIStyle();
         nodeStyle.normal.background = EditorGUIUtility.Load("builtin skins/darkskin/images/node1.png") as Texture2D;
@@ -92,7 +103,17 @@ public class EventEditor : EditorWindow
         {
             for (int i = 0; i < allNodes.Count; i++)
             {
-                allNodes[i].Draw();
+                if (allNodes[i] is EventNode)
+                {
+                    EventNode node = allNodes[i] as EventNode;
+                    node.Draw();
+                }
+                else if (allNodes[i] is ChoiceNode)
+                {
+                    ChoiceNode node = allNodes[i] as ChoiceNode;
+                    node.Draw();
+                }
+                //allNodes[i].Draw();
             }
         }
     }
@@ -170,7 +191,22 @@ public class EventEditor : EditorWindow
         {
             SaveEvent();
         }
+
+        if (GUILayout.Button("Load Data"))
+        {
+            LoadEvent();
+        }
+
+        //if (GUILayout.Button("Check if saved to disk"))
+        //{
+        //    CheckIfDirty();
+        //}
     }
+
+    //public void CheckIfDirty()
+    //{
+    //    Debug.Log("Is it dirty" + EditorUtility.IsDirty(openScenario));
+    //}
 
     private void ProcessEvents(UnityEngine.Event e)
     {
@@ -380,7 +416,7 @@ public class EventEditor : EditorWindow
             if (allNodes[i] is EventNode)
             {
                 EventNode test = allNodes[i] as EventNode;
-                
+
                 if (test.isStartNode)
                 {
                     if (startNode == null)
@@ -406,38 +442,138 @@ public class EventEditor : EditorWindow
         //SAVE
 
         //Clear old lists and add the active nodes and connections to them instead
-        openScenario.editorNodes.Clear();
         openScenario.editorConnections.Clear();
+        //openScenario.editorNodes.Clear();
+        openScenario.editorChoiceNodes.Clear();
+        openScenario.editorEventNodes.Clear();
+
+
         for (int i = 0; i < allNodes.Count; i++)
         {
-            openScenario.editorNodes.Add(allNodes[i]);
+            if (allNodes[i] is EventNode)
+            {
+                EventNode node = allNodes[i] as EventNode;
+                openScenario.editorEventNodes.Add(node);
+            }
+            else if (allNodes[i] is ChoiceNode)
+            {
+                ChoiceNode node = allNodes[i] as ChoiceNode;
+                openScenario.editorChoiceNodes.Add(node);
+            }
         }
         for (int i = 0; i < allConnections.Count; i++)
         {
             openScenario.editorConnections.Add(allConnections[i]);
         }
 
-        //Save the information in the nodes/events
-        
+        EditorUtility.SetDirty(openScenario);
 
-        ////Save the information from the connections/choices
-        //for (int i = 0; i < allConnections.Count; i++)
-        //{
-        //    for (int j = 0; j < allNodes.Count; j++)
-        //    {
-        //        if (allConnections[i].inPoint.node == allNodes[j])
-        //        {
-        //            allNodes[j].myEvent.choices.add
-        //        }
-        //    }
-        //}
+
+
+        //AssetDatabase.SaveAssets();
+        //AssetDatabase.Refresh();
+        Debug.Log("Save successfull");
     }
 
-    private static void LoadEvent()
+    
+
+    //private static void LoadEvent()
+    //{
+    //    allNodes.Clear();
+    //    allConnections.Clear();
+
+    //    //Add all nodes from editor event nodes
+    //    for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
+    //    {
+    //        allNodes.Add(openScenario.editorEventNodes[i]);
+    //    }
+
+    //    //Add all nodes from editor choice nodes
+    //    for (int i = 0; i < openScenario.editorChoiceNodes.Count; i++)
+    //    {
+    //        allNodes.Add(openScenario.editorChoiceNodes[i]);
+    //    }
+
+
+    //    //Add all editor connections
+    //    for (int i = 0; i < openScenario.editorConnections.Count; i++)
+    //    {
+    //        allConnections.Add(openScenario.editorConnections[i]);
+    //    }
+
+    //    //Add connectionpoints to editor connections
+    //    for (int i = 0; i < allConnections.Count; i++)
+    //    {
+    //        for (int j = 0; j < allNodes.Count; j++)
+    //        {
+    //            //Set inpoints
+    //            if (allConnections[i].inPoint.id == allNodes[j].inPoint.id)
+    //            {
+    //                allConnections[i].inPoint = allNodes[j].inPoint;
+    //            }
+
+    //            //Set outpoints
+    //            for (int k = 0; k < allNodes[j].outPoints.Count; k++)
+    //            {
+    //                if (allConnections[i].outPoint.id == allNodes[j].outPoints[k].id)
+    //                {
+    //                    allConnections[i].outPoint = allNodes[j].outPoints[k];
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
+    private void LoadEvent()
     {
         allNodes.Clear();
         allConnections.Clear();
-        allNodes.AddRange(openScenario.editorNodes);
-        allConnections.AddRange(openScenario.editorConnections);
+
+        //Add all nodes from editor event nodes
+        for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
+        {
+            allNodes.Add(openScenario.editorEventNodes[i]);
+        }
+
+        //Add all nodes from editor choice nodes
+        for (int i = 0; i < openScenario.editorChoiceNodes.Count; i++)
+        {
+            allNodes.Add(openScenario.editorChoiceNodes[i]);
+        }
+
+
+        //Add all editor connections
+        for (int i = 0; i < openScenario.editorConnections.Count; i++)
+        {
+            allConnections.Add(openScenario.editorConnections[i]);
+        }
+
+        //Add connectionpoints to editor connections
+        for (int i = 0; i < allConnections.Count; i++)
+        {
+            allConnections[i].OnClickRemoveConnection = OnClickRemoveConnection;
+            for (int j = 0; j < allNodes.Count; j++)
+            {
+                //Set inpoints
+                if (allConnections[i].inPoint.id == allNodes[j].inPoint.id)
+                {
+                    allConnections[i].inPoint = allNodes[j].inPoint;
+                    allConnections[i].inPoint.OnClickConnectionPoint = OnClickInPoint;
+                }
+
+                //Set outpoints
+                for (int k = 0; k < allNodes[j].outPoints.Count; k++)
+                {
+                    if (allConnections[i].outPoint.id == allNodes[j].outPoints[k].id)
+                    {
+                        allConnections[i].outPoint = allNodes[j].outPoints[k];
+                        allConnections[i].outPoint.OnClickConnectionPoint = OnClickOutPoint;
+                    }
+                }
+            }
+        }
+
+        GUI.changed = true;
+
     }
 }

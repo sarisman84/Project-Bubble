@@ -1026,7 +1026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &843264676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856872bfc33a798498afe9e5173a72e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenario: {fileID: 11400000, guid: 63da5063bf91da944ab1ec11b0dae8fb, type: 2}
+  scenario: {fileID: 0}
   currentEvent:
     title: 
     description: 
@@ -1047,6 +1047,11 @@ MonoBehaviour:
     choices: []
   background: {fileID: 1950502290}
   description: {fileID: 1684712053}
+  choiceButtons:
+  - {fileID: 1977084936}
+  - {fileID: 30396435}
+  - {fileID: 1605898311}
+  - {fileID: 335020419}
   choiceButtonTexts:
   - {fileID: 1120422976}
   - {fileID: 1843703137}

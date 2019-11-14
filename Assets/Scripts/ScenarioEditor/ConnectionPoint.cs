@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class ConnectionPoint
 {
+    public int id;
     public Rect rect;
 
     public ConnectionPointType type;
@@ -19,6 +21,8 @@ public class ConnectionPoint
 
     public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint, float YOffset)
     {
+        System.Random rng = new System.Random();
+        id = rng.Next();
         this.node = node;
         this.type = type;
         this.style = style;
@@ -27,8 +31,9 @@ public class ConnectionPoint
         rect = new Rect(0, 0, 10f, 20f);
     }
 
-    public void Draw()
+    public void Draw(Node _node)
     {
+        node = _node;
         rect.y = node.rect.y + (node.rect.height * 0.5f) - rect.height * 0.5f;
 
         switch (type)
