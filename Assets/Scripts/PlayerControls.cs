@@ -25,8 +25,15 @@ public class PlayerControls : MonoBehaviour
         {
             messageUI.DisplayText(interactable.MessageOnDetection());
             
-            //highlight
-            highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+            //Highlight
+            if (highLightObject.GetComponent<Renderer>() != null)
+            {
+                highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+            }
+            else
+            {
+                highLightObject.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+            }
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -38,7 +45,14 @@ public class PlayerControls : MonoBehaviour
         {   //Tar bort highlight
             if (highLightObject != null)
             {
-                highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0f);
+                if (highLightObject.GetComponent<Renderer>() != null)
+                {
+                    highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0f);
+                }
+                else
+                {
+                    highLightObject.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0f);
+                }
             }
             messageUI.DisablePanel();
         }
