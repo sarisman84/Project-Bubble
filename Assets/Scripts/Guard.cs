@@ -15,6 +15,7 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     [SerializeField] float detectionPerInterval = 1;
     [SerializeField] int detectionLevel = 2; //detection level at which player will be uncovered
     public bool playerdUncovered; //indicates the player has been uncovered
+    public bool playerIsVisible; //Used by navmesh
     [SerializeField] NPC connectedNPC = null; //Eventual connected NPC
 
     int layerMask; //mask for raycasting
@@ -29,20 +30,23 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     {
         if (player != null && playerIsDetected)
         {
-            player.GetComponent<DetectionLevelGUI>().AddGuard(this);
+            player.GetComponent<DetectionLevelGUI>().AddGuard(this); //Adds guard to players list of guards who have been alert
 
             if (Physics.Raycast(transform.position, (player.transform.position - transform.position), out rayHit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Collide) && rayHit.transform.tag.Equals("Player")) //casts a ray and checks if player has been hit
             {
+
                 if (nextTime < Time.time && currentDetectionLevel < detectionLevel) //increases detection level
                 {
                     currentDetectionLevel += detectionPerInterval;
                     nextTime = Time.time + interval;
+                    playerIsVisible = true;
                 }
             }
             else if (nextTime < Time.time && currentDetectionLevel > 0) //decreases detection level
             {
                 currentDetectionLevel -= detectionPerInterval;
                 nextTime = Time.time + interval;
+                playerIsVisible = false;
             }
         }
         else
@@ -51,6 +55,7 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
             {
                 currentDetectionLevel -= detectionPerInterval;
                 nextTime = Time.time + interval;
+                playerIsVisible = false;
             }
         }
 

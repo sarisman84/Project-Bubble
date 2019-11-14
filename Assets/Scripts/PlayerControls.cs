@@ -7,6 +7,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] MessageUI messageUI = null;
     [SerializeField] Transform fpsCamera = null;
 
+    private GameObject highLightObject;
+
     private void Start()
     {
         if (!messageUI)
@@ -22,6 +24,17 @@ public class PlayerControls : MonoBehaviour
         if (interactable != null && interactable.CanBeInteractedWith())
         {
             messageUI.DisplayText(interactable.MessageOnDetection());
+            
+            //Highlight
+            if (highLightObject.GetComponent<Renderer>() != null)
+            {
+                highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+            }
+            else
+            {
+                highLightObject.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+            }
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //Interact with the last added interactable in the list
@@ -29,7 +42,18 @@ public class PlayerControls : MonoBehaviour
             }
         }
         else
-        {
+        {   //Tar bort highlight
+            if (highLightObject != null)
+            {
+                if (highLightObject.GetComponent<Renderer>() != null)
+                {
+                    highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0f);
+                }
+                else
+                {
+                    highLightObject.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0f);
+                }
+            }
             messageUI.DisablePanel();
         }
     }
@@ -46,6 +70,7 @@ public class PlayerControls : MonoBehaviour
             if (hit.transform.GetComponent<IInteractable>() != null)
             {
                 interactable = hit.transform.GetComponent<IInteractable>();
+                highLightObject = hit.transform.gameObject;
                 Debug.DrawRay(fpsCamera.transform.position, hit.transform.position - transform.position, Color.green);
                 //Debug.Log("Did Hit:" + interactable.ToString());
             }
@@ -54,7 +79,6 @@ public class PlayerControls : MonoBehaviour
         {
             Debug.DrawRay(fpsCamera.transform.position, fpsCamera.transform.forward * raycastDetectionRange, Color.red);
         }
-
         return interactable;
     }
 }
