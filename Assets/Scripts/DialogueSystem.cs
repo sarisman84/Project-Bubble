@@ -165,7 +165,7 @@ public class DialogueSystem : MonoBehaviour
         }
         Cursor.lockState = CursorLockMode.Locked;
         dialogueOpen = false;
-        GameManager.instance.SetFPSControlState(true);
+        GameManager.Instance().SetFPSInput(true);
 
         if (npcTalkedTo.quests.Count == 0)
         {

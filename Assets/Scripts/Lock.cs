@@ -70,8 +70,8 @@ public class Lock : MonoBehaviour, IInteractable
                     passwordPanel.SetActive(true);
                     passwordPanelOpen = true;
                     Cursor.lockState = CursorLockMode.None;
-                    GameManager.instance.SetFPSControlState(false);
-                    GameManager.instance.SetMouseControlState(false);
+                    GameManager.Instance().SetFPSInput(false);
+                    GameManager.Instance().SetMouseLook(false);
                     return false;
                 }
             default:
@@ -98,8 +98,8 @@ public class Lock : MonoBehaviour, IInteractable
 
     public void EndInteration()
     {
-        GameManager.instance.SetFPSControlState(true);
-        GameManager.instance.SetMouseControlState(true);
+        GameManager.Instance().SetFPSInput(true);
+        GameManager.Instance().SetMouseLook(true);
     }
 }
 

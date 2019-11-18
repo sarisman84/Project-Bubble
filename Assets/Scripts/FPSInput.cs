@@ -39,7 +39,7 @@ public class FPSInput : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection = moveDirection * speed;
 
-            if (Input.GetKeyDown("space"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 moveDirection.y = jumpSpeed;
             }

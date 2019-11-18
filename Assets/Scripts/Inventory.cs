@@ -91,8 +91,8 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         inventory.SetActive(true);
         inventoryIsOpen = true;
         Cursor.lockState = CursorLockMode.None;
-        GameManager.instance.SetFPSControlState(false);
-        GameManager.instance.SetMouseControlState(false);
+        GameManager.Instance().SetFPSInput(false);
+        GameManager.Instance().SetMouseLook(false);
     }
 
     public void CloseInvetory() //used to close invetory through the close button
@@ -100,8 +100,8 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         inventory.SetActive(false);
         inventoryIsOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
-        GameManager.instance.SetFPSControlState(true);
-        GameManager.instance.SetMouseControlState(true);
+        GameManager.Instance().SetFPSInput(true);
+        GameManager.Instance().SetMouseLook(true);
     }
 
     public void AddItemToInventory(int itemID) //used to add item of itemID to the invetory

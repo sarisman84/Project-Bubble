@@ -18,7 +18,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         if (willingToTalk)
         {
-            GameManager.instance.SetFPSControlState(false);
+            GameManager.Instance().SetFPSInput(false);
             Debug.Log("NPC talked with");
             DialogueSystem.instance.StartDialogue(this, greetingText, dialogueChoices);
             return true;
