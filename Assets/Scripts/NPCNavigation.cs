@@ -84,7 +84,7 @@ public class NPCNavigation : MonoBehaviour //Dejan, this script is used together
 }
 
 [System.Serializable]
-struct Destination
+public struct Destination
 {
     public float delay; //delay before going to next destination
     public Transform destination; //next destination
