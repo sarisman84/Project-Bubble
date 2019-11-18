@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicDoor : MonoBehaviour, IInteractable
+public class BasicDoor : MonoBehaviour, IInteractable //Dejan, animates (opens and closes) the door based on if the lock is unlocked (must have a lock)
 {
-    public Lock doorLock;
+    public Lock doorLock; //a reference to the lock object
 
-    private Animator animator;
-    private bool doorIsOpen;
+    private Animator animator; //a reference to the animator
+    private bool doorIsOpen; //weather the door is open or not
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); //get the animator
     }
 
-    public bool InteractWith()
+    public bool InteractWith() //opens and close the door
     {
         if (doorLock.unlocked && !doorIsOpen)
         {
@@ -29,17 +29,17 @@ public class BasicDoor : MonoBehaviour, IInteractable
         return false;
     }
 
-    public string MessageOnDetection()
+    public string MessageOnDetection() //displays message
     {
         return "Open Door";
     }
 
-    public bool CanBeInteractedWith()
+    public bool CanBeInteractedWith() //the door can always be interacted with
     {
         return true;
     }
 
-    public void EndInteration()
+    public void EndInteration() //not needed since the door can always be interacted with
     {
     }
 }

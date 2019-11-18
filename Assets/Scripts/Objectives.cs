@@ -6,9 +6,7 @@ public class Objectives : MonoBehaviour
 {
     QuestLog questLog;
 
-    [SerializeField] TextMeshProUGUI objectiveTextField;
-
-    int currentIndex = 0;
+    [SerializeField] TextMeshProUGUI objectiveTextField = null;
 
     private void Start()
     {

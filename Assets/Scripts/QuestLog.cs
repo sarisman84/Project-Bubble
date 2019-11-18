@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class QuestLog : MonoBehaviour
+public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests and updates the GUI Objectives.cs
 {
     #region
     private static QuestLog instance;
@@ -28,16 +28,16 @@ public class QuestLog : MonoBehaviour
     }
     #endregion
 
-    public Objectives objectivesWindow;
-    [SerializeField] TextMeshProUGUI questAdded;
-    public List<QuestInstance> quests = new List<QuestInstance>();
+    public Objectives objectivesWindow; //a reference to the Objectives.cs
+    [SerializeField] TextMeshProUGUI questAdded = null; //a reference to the canvas text showing added or finished quests
+    public List<QuestInstance> quests = new List<QuestInstance>(); //a list of all the quests
 
     private void Start()
     {
-        questAdded.CrossFadeAlpha(0, 0, true);
+        questAdded.CrossFadeAlpha(0, 0, true); //sets the quests added/finished text to transparent
     }
 
-    public void ActivateQuest(int questID)
+    public void ActivateQuest(int questID) //activates quest with given questID and updates GUI
     {
         foreach (QuestInstance quest in quests)
         {
@@ -53,7 +53,7 @@ public class QuestLog : MonoBehaviour
         }
     }
 
-    public void EndQuest(int questID)
+    public void EndQuest(int questID) //ends quest with given quest ID and updates GUI
     {
         foreach (QuestInstance quest in quests)
         {
@@ -69,7 +69,7 @@ public class QuestLog : MonoBehaviour
         }
     }
 
-    public QuestInstance QuestWithID(int questID)
+    public QuestInstance QuestWithID(int questID) //returns QuestInstance with given quest ID
     {
         QuestInstance questToReturn = null;
         foreach (QuestInstance quest in quests)
@@ -82,7 +82,7 @@ public class QuestLog : MonoBehaviour
         return questToReturn;
     }
 
-    public void UpdateObjectives()
+    public void UpdateObjectives() //updates Objectives.cs
     {
         if (objectivesWindow != null)
         {
@@ -90,7 +90,7 @@ public class QuestLog : MonoBehaviour
         }
     }
 
-    IEnumerator FadeInText(TextMeshProUGUI textMeshProUGUI)
+    IEnumerator FadeInText(TextMeshProUGUI textMeshProUGUI) //fades in/fades out quest added/finished text
     {
         textMeshProUGUI.CrossFadeAlpha(1, 1, true);
         yield return new WaitForSeconds(3);
@@ -98,10 +98,8 @@ public class QuestLog : MonoBehaviour
     }
 }
 
-
-
 [System.Serializable]
-public class QuestInstance
+public class QuestInstance //holds all nececcary information for a quest
 {
     public int questID;
     public string questName;

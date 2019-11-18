@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneSwitch : MonoBehaviour //Dejan
+public class SceneSwitch : MonoBehaviour //Dejan, Erik
 {
     public float delay; //should be the same as FadeTransition effectDuration
     public void SwitchScene(string sceneName) //loads given scene
