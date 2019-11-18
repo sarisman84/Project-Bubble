@@ -8,19 +8,44 @@ public enum RelationshipLevel { None, Familiar, Friend, Ally }
 //Simon Voss
 public class NPC : MonoBehaviour, IInteractable
 {
-    [SerializeField] string greetingText = "";
+    private string currentGreeting = "";
+    [SerializeField] string firstGreeting = "";
+    [SerializeField] string defaultGreeting = "";
+    [SerializeField] List<string> greetings = new List<string>();
+
     [SerializeField] bool willingToTalk = true;
     [SerializeField] List<DialogueChoice> dialogueChoices = new List<DialogueChoice>();
     public List<Quest> quests = new List<Quest>();
+
+    bool firstTimeTalkingWith = true;
     
 
     public bool TryStartTalking()
     {
         if (willingToTalk)
         {
+            //Set greeting
+            if (firstTimeTalkingWith)
+            {
+                currentGreeting = firstGreeting;
+                firstTimeTalkingWith = false;
+            }
+            else
+            {
+                if (quests.Count > 0)
+                {
+                    currentGreeting = defaultGreeting;
+                }
+                else
+                {
+                    currentGreeting = greetings[Random.Range(0, greetings.Count)];
+                }
+            }
+
+
             GameManager.Instance().SetFPSInput(false);
             Debug.Log("NPC talked with");
-            DialogueSystem.instance.StartDialogue(this, greetingText, dialogueChoices);
+            DialogueSystem.instance.StartDialogue(this, currentGreeting, dialogueChoices);
             return true;
         }
         else
@@ -34,7 +59,6 @@ public class NPC : MonoBehaviour, IInteractable
     {
         dialogueChoices = new List<DialogueChoice>();
         DialogueChoice newChoice = new DialogueChoice();
-        greetingText = "Good day to you!";
     }
 
     public bool InteractWith()

@@ -75,15 +75,12 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     }
 
     bool detectionActionTaken = false;
-    [SerializeField] List<DialogueChoice> choices = null;
-    [SerializeField] string greeting = "";
     private void DoDetectionAction()
     {
-        //Example
         if (connectedNPC)
         {
             detectionActionTaken = true;
-            DialogueSystem.instance.StartDialogue(connectedNPC, greeting, choices);
+            connectedNPC.InteractWith();
         }
     }
 }

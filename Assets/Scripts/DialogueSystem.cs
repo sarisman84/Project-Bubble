@@ -93,7 +93,7 @@ public class DialogueSystem : MonoBehaviour
                 break;
         }
 
-        if (choice.attributeChanges != null && choice.attributesToChange != null)
+        if (choice.attributeChanges != null && choice.attributesToChange != null && choice.attributeChanges.Count > 0 && choice.attributesToChange.Count > 0)
         {
             npcTalkedTo.AffectAttribute(choice.attributesToChange, choice.attributeChanges);
         }
