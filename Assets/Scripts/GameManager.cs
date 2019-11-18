@@ -6,39 +6,44 @@ public class GameManager : MonoBehaviour
 {
 
     #region Singleton
-    public static GameManager instance;
+    private static GameManager instance;
+    public static GameManager Instance()
+    {
+        if (instance == null)
+        {
+            instance = Instantiate(Resources.Load("Game Manager") as GameObject).GetComponent<GameManager>();
+        }
+        return instance;
+    }
     private void Awake()
     {
-        if (GameManager.instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
+            Destroy(gameObject);
         }
         else
         {
-            Debug.LogWarning("Another instance of: " + this + " , was tried to be instantiated, but was destroyed! This instance was tried to be instantiated on: " + this.gameObject);
-            Destroy(this);
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
     #endregion
 
-    [SerializeField] FPSInput fpsControl = null;
-    [SerializeField] MouseLook mouseControl = null;
+    public PlayerCharacter playerCharacter;
 
-    private void Start()
+    public void SetFPSInput(bool enabled)
     {
-        if (!fpsControl || !mouseControl)
+        if (playerCharacter != null)
         {
-            Debug.LogWarning("Missing connections in Game manager");
+            playerCharacter.FPSInput.enabled = enabled;
         }
     }
 
-    public void SetFPSControlState(bool state)
+    public void SetMouseLook(bool enabled)
     {
-        fpsControl.canMove = state;
-    }
-
-    public void SetMouseControlState(bool state)
-    {
-        mouseControl.enabled = state;
+        if (playerCharacter != null)
+        {
+            playerCharacter.mouseLook.enabled = enabled;
+        }
     }
 }
