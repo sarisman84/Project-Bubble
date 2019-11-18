@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1923020947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539676750073875545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed8193253b76dd4992986e10baa9349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstGreeting: Oh! You scared me! What are you doing up?
+  defaultGreeting: What are you doing up?
+  greetings:
+  - Go to bed honey,
+  - Go to bed...
+  willingToTalk: 1
+  dialogueChoices:
+  - choiceText: I heard a noise. What are YOU doing up?
+    optionAction: 0
+    characteristics: 2
+    getItemID: 0
+    loseItemID: 0
+    responseText: Don't worry. Go and sleep and I'll join you soon.
+    attributesToChange: 
+    attributeChanges: 
+    canBeReused: 0
+    connectedQuest:
+      description: 
+      id: 1
+    continuedChoices: []
+  - choiceText: I am sorry. You should sleep, sweetie.
+    optionAction: 0
+    characteristics: 1
+    getItemID: 0
+    loseItemID: 0
+    responseText: I will, I just need to take care of some things first.
+    attributesToChange: 
+    attributeChanges: 
+    canBeReused: 0
+    connectedQuest:
+      description: 
+      id: 1
+    continuedChoices: []
+  quests:
+  - description: Answer gilad
+    id: 1
+  relationship: 0
+  trust: 0
+  fear: 0
+--- !u!1001 &6691060003706916705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 439930838890480440, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_Name
+      value: Gilad
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -565.70953
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -372.1009
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 98.43262
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480388, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 439930838890480389, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: connectedNPC
+      value: 
+      objectReference: {fileID: 1923020947}
+    - target: {fileID: 1256559997247822420, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466529134941078565, guid: cc79e138f265d124fafc15690cbae04c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc79e138f265d124fafc15690cbae04c, type: 3}
+--- !u!1 &6539676750073875545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 439930838890480440, guid: cc79e138f265d124fafc15690cbae04c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6691060003706916705}
+  m_PrefabAsset: {fileID: 0}
