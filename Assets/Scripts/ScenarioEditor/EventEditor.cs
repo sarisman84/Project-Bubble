@@ -18,8 +18,8 @@ public class EventEditor : EditorWindow
     private GUIStyle inPointStyle;
     private GUIStyle outPointStyle;
 
-    private static ConnectionPoint selectedInPoint;
-    private static ConnectionPoint selectedOutPoint;
+    private static ConnectionPoint selectedNodeInPoint;
+    private static ConnectionPoint selectedNodeOutPoint;
 
     private Vector2 offset;
     private Vector2 drag;
@@ -34,6 +34,8 @@ public class EventEditor : EditorWindow
         EventEditor window = GetWindow<EventEditor>();
         window.titleContent = new GUIContent("Event Window - " + input.name);
         openScenario = input;
+        allNodes.Clear();
+        allConnections.Clear();
         //if (input.editorEventNodes.Count != 0)
         //{
         //    LoadEvent();
@@ -129,12 +131,12 @@ public class EventEditor : EditorWindow
     }
     private void DrawConnectionLine(UnityEngine.Event e)
     {
-        if (selectedInPoint != null && selectedOutPoint == null)
+        if (selectedNodeInPoint != null && selectedNodeOutPoint == null)
         {
             Handles.DrawBezier(
-                selectedInPoint.rect.center,
+                selectedNodeInPoint.rect.center,
                 e.mousePosition,
-                selectedInPoint.rect.center + Vector2.left * 50f,
+                selectedNodeInPoint.rect.center + Vector2.left * 50f,
                 e.mousePosition - Vector2.left * 50f,
                 Color.white,
                 null,
@@ -144,12 +146,12 @@ public class EventEditor : EditorWindow
             GUI.changed = true;
         }
 
-        if (selectedOutPoint != null && selectedInPoint == null)
+        if (selectedNodeOutPoint != null && selectedNodeInPoint == null)
         {
             Handles.DrawBezier(
-                selectedOutPoint.rect.center,
+                selectedNodeOutPoint.rect.center,
                 e.mousePosition,
-                selectedOutPoint.rect.center - Vector2.left * 50f,
+                selectedNodeOutPoint.rect.center - Vector2.left * 50f,
                 e.mousePosition + Vector2.left * 50f,
                 Color.white,
                 null,
@@ -279,11 +281,12 @@ public class EventEditor : EditorWindow
 
     private void OnClickInPoint(ConnectionPoint inPoint)
     {
-        selectedInPoint = inPoint;
+        Debug.Log("Clicked on Inpoint");
+        selectedNodeInPoint = inPoint;
 
-        if (selectedOutPoint != null)
+        if (selectedNodeOutPoint != null)
         {
-            if (selectedOutPoint.node != selectedInPoint.node)
+            if (selectedNodeOutPoint.node != selectedNodeInPoint.node)
             {
                 CreateConnection();
                 ClearConnectionSelection();
@@ -297,11 +300,12 @@ public class EventEditor : EditorWindow
 
     private void OnClickOutPoint(ConnectionPoint outPoint)
     {
-        selectedOutPoint = outPoint;
+        Debug.Log("Clicked on Outpoint");
+        selectedNodeOutPoint = outPoint;
 
-        if (selectedInPoint != null)
+        if (selectedNodeInPoint != null)
         {
-            if (selectedOutPoint.node != selectedInPoint.node)
+            if (selectedNodeOutPoint.node != selectedNodeInPoint.node)
             {
                 CreateConnection();
                 ClearConnectionSelection();
@@ -323,14 +327,15 @@ public class EventEditor : EditorWindow
     private void CreateConnection()
     {
         //If it is of the same type, dont allow connection
-        if (selectedInPoint.node is EventNode && selectedOutPoint.node is EventNode)
+        //if (selectedInPoint.node is EventNode && selectedOutPoint.node is EventNode)
+        if (selectedNodeInPoint.node.typeOfNode == selectedNodeOutPoint.node.typeOfNode)
         {
             return;
         }
-        if (selectedInPoint.node is ChoiceNode && selectedOutPoint.node is ChoiceNode)
-        {
-            return;
-        }
+        //if (selectedInPoint.node is ChoiceNode && selectedOutPoint.node is ChoiceNode)
+        //{
+        //    return;
+        //}
 
         if (allConnections == null)
         {
@@ -338,28 +343,28 @@ public class EventEditor : EditorWindow
         }
 
 
-        allConnections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
+        allConnections.Add(new Connection(selectedNodeOutPoint, selectedNodeInPoint, OnClickRemoveConnection));
 
-        if (selectedOutPoint.node is EventNode)
-        {
-            EventNode eventNode = selectedOutPoint.node as EventNode;
-            ChoiceNode choiceNode = selectedInPoint.node as ChoiceNode;
+        //if (selectedOutPoint.node is EventNode)
+        //{
+        //    EventNode eventNode = selectedOutPoint.node as EventNode;
+        //    ChoiceNode choiceNode = selectedInPoint.node as ChoiceNode;
 
-            eventNode.myEvent.choices.Add(choiceNode.myChoice);
-        }
-        else if (selectedOutPoint.node is ChoiceNode)
-        {
-            ChoiceNode choiceNode = selectedOutPoint.node as ChoiceNode;
-            EventNode eventNode = selectedInPoint.node as EventNode;
+        //    eventNode.myEvent.choices.Add(choiceNode.myChoice);
+        //}
+        //else if (selectedOutPoint.node is ChoiceNode)
+        //{
+        //    ChoiceNode choiceNode = selectedOutPoint.node as ChoiceNode;
+        //    EventNode eventNode = selectedInPoint.node as EventNode;
 
-            choiceNode.myChoice.nextEvent = eventNode.myEvent;
-        }
+        //    choiceNode.myChoice.nextEvent = eventNode.myEvent;
+        //}
     }
 
     private void ClearConnectionSelection()
     {
-        selectedInPoint = null;
-        selectedOutPoint = null;
+        selectedNodeInPoint = null;
+        selectedNodeOutPoint = null;
     }
     private void OnClickRemoveNode(Node node)
     {
@@ -390,6 +395,19 @@ public class EventEditor : EditorWindow
             connectionsToRemove = null;
         }
 
+        //if (node is EventNode)
+        //{
+        //    EventNode removalNode = node as EventNode;
+
+        //    //removalnode.remove choice
+        //}
+        //else if (node is ChoiceNode)
+        //{
+        //    ChoiceNode removalNode = node as ChoiceNode;
+
+        //    //removalnode remove myevent
+        //}
+
         allNodes.Remove(node);
     }
     private void OnDrag(Vector2 delta)
@@ -409,8 +427,14 @@ public class EventEditor : EditorWindow
 
     public void SaveEvent()
     {
-        Node startNode = null;
+        if (!openScenario)
+        {
+            Debug.LogError("No open scenario");
+            return;
+        }
 
+        //Find startnode and secure that there is only one
+        EventNode startNode = null;
         for (int i = 0; i < allNodes.Count; i++)
         {
             if (allNodes[i] is EventNode)
@@ -421,8 +445,7 @@ public class EventEditor : EditorWindow
                 {
                     if (startNode == null)
                     {
-                        startNode = allNodes[i];
-                        openScenario.startEvent = test.myEvent;
+                        startNode = test;
                     }
                     else
                     {
@@ -440,13 +463,18 @@ public class EventEditor : EditorWindow
         }
 
         //SAVE
+        //NEW TRY START FROM STARTNODE IN EDITOR AND GO FORTH
+        openScenario.startEvent = startNode.myEvent;
+        openScenario.startEvent.choices.Clear();
+
+        SaveOutputsFromEvent(openScenario.startEvent, startNode as EventNode);
+        //END NEW TRY
+
 
         //Clear old lists and add the active nodes and connections to them instead
         openScenario.editorConnections.Clear();
-        //openScenario.editorNodes.Clear();
         openScenario.editorChoiceNodes.Clear();
         openScenario.editorEventNodes.Clear();
-
 
         for (int i = 0; i < allNodes.Count; i++)
         {
@@ -466,16 +494,88 @@ public class EventEditor : EditorWindow
             openScenario.editorConnections.Add(allConnections[i]);
         }
 
+
+
+        
+
+
+
         EditorUtility.SetDirty(openScenario);
-
-
 
         //AssetDatabase.SaveAssets();
         //AssetDatabase.Refresh();
         Debug.Log("Save successfull");
     }
 
-    
+    //New method that saves the output from events
+    private void SaveOutputsFromEvent(Event inputEvent, EventNode eventNode)
+    {
+        List<ChoiceNode> newChoiceNodes = new List<ChoiceNode>();
+
+        for (int i = 0; i < allConnections.Count; i++)
+        {
+            for (int j = 0; j < eventNode.outPoints.Count; j++)
+            {
+                if (allConnections[i].inPoint.id == eventNode.outPoints[j].id)
+                {
+                    switch (allConnections[i].outPoint.node.typeOfNode)
+                    {
+                        case Node.NodeType.ChoiceNode:
+                            ChoiceNode newChhoiceNode = allConnections[i].outPoint.node as ChoiceNode;
+                            newChoiceNodes.Add(newChhoiceNode);
+                            inputEvent.choices.Add(newChhoiceNode.myChoice);
+                            Debug.Log("Choice added and saved");
+                            break;
+                        case Node.NodeType.EventNode:
+                            Debug.LogError("EventNode connected to EventNode in Save");
+                            break;
+                    }
+                }
+            }
+        }
+
+        //Continue save if found outputs
+        for (int i = 0; i < newChoiceNodes.Count; i++)
+        {
+            SaveOutputsFromChoiceNode(inputEvent.choices[i], newChoiceNodes[i]);
+        }
+    }
+
+    //New method that saves the output from choicenodes
+    private void SaveOutputsFromChoiceNode(Choice inputChoice, ChoiceNode choiceNode)
+    {
+        EventNode newNode = null;
+        Event newEvent = null;
+        for (int i = 0; i < allConnections.Count; i++)
+        {
+            for (int j = 0; j < choiceNode.outPoints.Count; j++)
+            {
+                if (allConnections[i].inPoint.id == choiceNode.outPoints[j].id)
+                {
+                    switch (allConnections[i].outPoint.node.typeOfNode)
+                    {
+                        case Node.NodeType.ChoiceNode:
+                            Debug.LogError("Choicenode connected to Choicenode in Save");
+                            break;
+                        case Node.NodeType.EventNode:
+                            newNode = allConnections[i].outPoint.node as EventNode;
+                            newNode.myEvent.choices.Clear();
+                            newEvent = newNode.myEvent;
+                            inputChoice.nextEvent = newEvent;
+                            Debug.Log("Event added and saved");
+                            break;
+                    }
+                }
+            }
+        }
+
+        //Continue save if found output
+        if (newNode != null && newEvent != null)
+        {
+            SaveOutputsFromEvent(newEvent, newNode);
+        }
+    }
+
 
     //private static void LoadEvent()
     //{
@@ -554,20 +654,20 @@ public class EventEditor : EditorWindow
             allConnections[i].OnClickRemoveConnection = OnClickRemoveConnection;
             for (int j = 0; j < allNodes.Count; j++)
             {
-                //Set inpoints
-                if (allConnections[i].inPoint.id == allNodes[j].inPoint.id)
+                //Setup inpoints
+                if (allConnections[i].outPoint.id == allNodes[j].inPoint.id)
                 {
-                    allConnections[i].inPoint = allNodes[j].inPoint;
-                    allConnections[i].inPoint.OnClickConnectionPoint = OnClickInPoint;
+                    allConnections[i].outPoint = allNodes[j].inPoint;
+                    allNodes[j].inPoint.OnClickConnectionPoint = OnClickInPoint;
                 }
 
                 //Set outpoints
                 for (int k = 0; k < allNodes[j].outPoints.Count; k++)
                 {
-                    if (allConnections[i].outPoint.id == allNodes[j].outPoints[k].id)
+                    if (allConnections[i].inPoint.id == allNodes[j].outPoints[k].id)
                     {
-                        allConnections[i].outPoint = allNodes[j].outPoints[k];
-                        allConnections[i].outPoint.OnClickConnectionPoint = OnClickOutPoint;
+                        allConnections[i].inPoint = allNodes[j].outPoints[k];
+                        allNodes[j].outPoints[k].OnClickConnectionPoint = OnClickOutPoint;
                     }
                 }
             }
