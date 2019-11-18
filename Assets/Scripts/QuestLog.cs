@@ -41,14 +41,11 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
     {
         foreach (QuestInstance quest in quests)
         {
-            if (quest.questID == questID)
+            if (quest.questID == questID && !quest.started)
             {
-                if (!quest.started)
-                {
-                    questAdded.text = $"Quest Added: {quest.questName}";
-                    StartCoroutine("FadeInText", questAdded);
-                }
                 quest.started = true;
+                questAdded.text = $"Quest Added: {quest.questName}";
+                StartCoroutine("FadeInText", questAdded);
             }
         }
     }
@@ -57,14 +54,11 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
     {
         foreach (QuestInstance quest in quests)
         {
-            if (quest.questID == questID)
+            if (quest.questID == questID && quest.started && !quest.ended)
             {
-                if (!quest.ended)
-                {
-                    questAdded.text = $"Quest Finished: {quest.questName}";
-                    StartCoroutine("FadeInText", questAdded);
-                }
                 quest.ended = true;
+                questAdded.text = $"Quest Finished: {quest.questName}";
+                StartCoroutine("FadeInText", questAdded);
             }
         }
     }
