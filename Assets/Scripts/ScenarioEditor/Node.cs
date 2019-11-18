@@ -9,7 +9,9 @@ using UnityEditor;
 {
     //Main box
     public Rect rect;
+    public enum NodeType { ChoiceNode, EventNode}
 
+    public NodeType typeOfNode;
 
     public const int
         PADDING = 15,
@@ -97,6 +99,7 @@ public class EventNode : Node
     public Event myEvent;
     public bool isStartNode = false;
 
+    
 
     //Positions and sizes
     public const int
@@ -139,6 +142,7 @@ public class EventNode : Node
         selectedNodeStyle = selectedStyle;
         OnRemoveNode = OnClickRemoveNode;
 
+        typeOfNode = NodeType.EventNode;
 
         myEvent = new Event("Title Text", "Event Text");
     }
@@ -228,7 +232,15 @@ public class ChoiceNode : Node
         selectedNodeStyle = selectedStyle;
         OnRemoveNode = OnClickRemoveNode;
 
+        typeOfNode = NodeType.ChoiceNode;
+
 
         myChoice = new Choice("New Choice");
     }
 }
+
+//[System.Serializable]
+//public class ScenarioEndNode : Node
+//{
+
+//}

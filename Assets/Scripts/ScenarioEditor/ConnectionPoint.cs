@@ -6,7 +6,9 @@ using UnityEngine;
 [System.Serializable]
 public class ConnectionPoint
 {
-    public int id;
+    public static List<double> usedIDs = new List<double>();
+
+    public double id;
     public Rect rect;
 
     public ConnectionPointType type;
@@ -19,10 +21,24 @@ public class ConnectionPoint
 
     public Action<ConnectionPoint> OnClickConnectionPoint;
 
-    public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint, float YOffset)
+    public static double GetUniqueID()
     {
         System.Random rng = new System.Random();
-        id = rng.Next();
+        double newID = rng.NextDouble();
+        if (!usedIDs.Contains(newID))
+        {
+            usedIDs.Add(newID);
+            return newID;
+        }
+        else
+        {
+            return GetUniqueID();
+        }
+    }
+
+    public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint, float YOffset)
+    {
+        id = GetUniqueID();
         this.node = node;
         this.type = type;
         this.style = style;

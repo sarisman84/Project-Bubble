@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Lock : MonoBehaviour, IInteractable
+public class Lock : MonoBehaviour, IInteractable //Dejan, updates unlocked boolean according to either a password or key item
 {
-    public GameObject passwordPanel;
-    public TMP_InputField passwordInputField;
-    public LockType lockType;
-    public int keyItem;
-    public int password;
-    public bool unlocked;
+    public GameObject passwordPanel; //a reference to the canvas element password panel
+    public TMP_InputField passwordInputField; //a reference to the canvas element input field
+    public LockType lockType; //a reference to enum LockType ( key, password)
+    public int keyItem; //item ID that unlocks the lock
+    public int password; //password that unlockd the door
+    public bool unlocked; //check this boolean for locks status
 
-    private bool passwordPanelOpen;
+    private bool passwordPanelOpen; //keeps track of the password panel canvas element, if its active or not
 
     void Update()
     {
-        if (passwordPanelOpen && passwordInputField.text == password.ToString() && Input.GetKeyDown(KeyCode.Return))
+        if (passwordPanelOpen && passwordInputField.text == password.ToString() && Input.GetKeyDown(KeyCode.Return)) //closes/open password panel, locks/unlocks cursor. if code is correct unlocks the lock
         {
             passwordPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
@@ -34,18 +34,18 @@ public class Lock : MonoBehaviour, IInteractable
         }
     }
 
-    public void OpenPasswordPannel()
+    public void OpenPasswordPannel() //enables password panel canvas element
     {
         passwordPanel.SetActive(true);
         passwordPanelOpen = true;
     }
-    public void ClosePasswordPannel()
+    public void ClosePasswordPannel() //disables password panel canvas element
     {
         passwordPanel.SetActive(false);
         passwordPanelOpen = false;
     }
 
-    public bool InteractWith()
+    public bool InteractWith() //if LockType = key and inventory contains correct item, opens door. if LockType password, opens password panel
     {
         switch (lockType)
         {
@@ -79,12 +79,12 @@ public class Lock : MonoBehaviour, IInteractable
         }
     }
 
-    public string MessageOnDetection()
+    public string MessageOnDetection() //displays message on crosshair hover
     {
         return "Unlock!";
     }
 
-    public bool CanBeInteractedWith()
+    public bool CanBeInteractedWith() //if the lock can be interacted with
     {
         if (unlocked)
         {
@@ -96,11 +96,11 @@ public class Lock : MonoBehaviour, IInteractable
         }
     }
 
-    public void EndInteration()
+    public void EndInteration() //reenables players controls
     {
         GameManager.Instance().SetFPSInput(true);
         GameManager.Instance().SetMouseLook(true);
     }
 }
 
-public enum LockType { key, password }
+public enum LockType { key, password } //enum holding different types of locks

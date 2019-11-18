@@ -35,7 +35,8 @@ public class Choice
     public Event nextEvent = null;
     public Characteristics skillType;
 
-    //NPC
+    //public NPC npc;
+    
     //ATTRIBUTECHANGE TYPE
     //ATTRIBUTE CHANGE NUMBER
 
