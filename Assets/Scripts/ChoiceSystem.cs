@@ -21,6 +21,7 @@ public class ChoiceSystem : MonoBehaviour
 
     public void MakeChoice(int index)
     {
+        Choice usedChoice = currentEvent.choices[index];
         if (currentEvent.choices[index].nextEvent.choices.Count > 0)
         {
             Debug.Log("Changing event");
@@ -41,7 +42,17 @@ public class ChoiceSystem : MonoBehaviour
         {
             Debug.LogError("No further events or endnodes found, check setup of scenario from node: " + currentEvent.title);
         }
+        AffectPlayer(usedChoice);
         DisplayGUI(currentEvent);
+    }
+
+    private void AffectPlayer(Choice usedChoice)
+    {
+        PlayerCharacteristics.instance.IncreaseStat(usedChoice.skillType);
+        //CONNECTED NPC ?
+        //AFFECT Relationship
+
+        //Give take item
     }
 
     private void DisplayGUI(Event input)

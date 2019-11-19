@@ -28,21 +28,22 @@ public class Event
     }
 }
 
-
-//Contains functions
+public enum ItemTransfer { Off, PlayerGetItem, PlayerLoseItem}
+//Contains data of choices and it's effects on the world
 [System.Serializable]
 public class Choice
 {
     public string choiceText = "";
-    public Event nextEvent = null;
     public Characteristics skillType;
 
+    public NPC_DataContainer affectedNPC;
+    public RelationshipAttribute relationshipAttributeToChange;
+    public int relationshipAttributeChangeNumber = 0;
 
-    //public NPC npc;
+    public ItemTransfer itemtransfer;
+    public int itemID;
 
-    //ATTRIBUTECHANGE TYPE
-    //ATTRIBUTE CHANGE NUMBER
-
+    public Event nextEvent = null;
     public Scenario nextScenario = null;
     public SceneAsset nextScene;
 

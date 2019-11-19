@@ -186,7 +186,6 @@ public class DialogueSystem : MonoBehaviour
     }
 }
 
-public enum Characteristics { Neutral, Charming, Intimidation, Logical }
 [System.Serializable]
 public class DialogueChoice
 {
@@ -199,7 +198,7 @@ public class DialogueChoice
     public int loseItemID;
     public string responseText;
 
-    public List<Attribute> attributesToChange;
+    public List<RelationshipAttribute> attributesToChange;
     public List<int> attributeChanges;
 
     public bool canBeReused = false;
