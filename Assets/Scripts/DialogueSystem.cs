@@ -175,12 +175,13 @@ public class DialogueSystem : MonoBehaviour
     }
 
     //Calculates width for UI elements
-    float pixelsPerLetter = 15;
+    float pixelsPerLetter = 12;
+    float baseWidth = 50;
     private float CalculateSquareWidth(string input)
     {
         char[] chars = input.ToCharArray();
 
-        return chars.Length * pixelsPerLetter;
+        return chars.Length * pixelsPerLetter + baseWidth;
     }
 }
 
