@@ -22,7 +22,6 @@ public class Objectives : MonoBehaviour
         {
             if (quest.started && !quest.ended)
             {
-                Debug.Log("Quest Found");
                 objectiveTextField.text = $"{objectiveTextField.text}{quest.questName.ToUpper()}:\n{quest.questDescription}\n";
             }
         }
