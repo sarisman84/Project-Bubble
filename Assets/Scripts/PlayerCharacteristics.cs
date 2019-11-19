@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Characteristics { None, Charming, Intimidation, Logical }
+
+
 //Simon Voss
 public class PlayerCharacteristics : MonoBehaviour
 {
@@ -31,7 +34,7 @@ public class PlayerCharacteristics : MonoBehaviour
         bool statIncreased = false;
         switch (typeOfStat)
         {
-            case Characteristics.Neutral:
+            case Characteristics.None:
                 Debug.Log("No increase in player stat");
                 break;
             case Characteristics.Charming:

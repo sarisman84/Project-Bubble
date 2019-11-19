@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public enum Attribute { Trust, Fear }
+public enum RelationshipAttribute { Trust, Fear }
 public enum RelationshipLevel { None, Familiar, Friend, Ally }
 
 //Simon Voss
@@ -92,21 +92,21 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField] RelationshipLevel relationship;
     [SerializeField] int trust = 0;
     [SerializeField] int fear = 0;
-    public void AffectAttribute(Attribute attribute, int change)
+    public void AffectAttribute(RelationshipAttribute attribute, int change)
     {
         switch (attribute)
         {
-            case Attribute.Trust:
+            case RelationshipAttribute.Trust:
                 trust += change;
                 break;
-            case Attribute.Fear:
+            case RelationshipAttribute.Fear:
                 fear += change;
                 break;
         }
         CalculateAndCheckRelationshipLevel();
     }
 
-    public void AffectAttribute(List<Attribute> attributes, List<int> changes)
+    public void AffectAttribute(List<RelationshipAttribute> attributes, List<int> changes)
     {
         if(attributes.Count != changes.Count)
         {
@@ -117,10 +117,10 @@ public class NPC : MonoBehaviour, IInteractable
         {
             switch (attributes[i])
             {
-                case Attribute.Trust:
+                case RelationshipAttribute.Trust:
                     trust += changes[i];
                     break;
-                case Attribute.Fear:
+                case RelationshipAttribute.Fear:
                     fear += changes[i];
                     break;
             }

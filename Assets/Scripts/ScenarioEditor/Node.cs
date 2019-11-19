@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 
 
 [System.Serializable]
- abstract public class Node
+abstract public class Node
 {
     //Main box
     public Rect rect;
-    public enum NodeType { ChoiceNode, EventNode, ScenarioEndNode}
+    public enum NodeType { ChoiceNode, EventNode, ScenarioEndNode }
     public NodeType typeOfNode;
     public List<NodeType> allowedConnectionTypes = new List<NodeType>();
 
@@ -120,17 +120,17 @@ public class EventNode : Node
     public EventNode(Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
     {
         rect = new Rect(position.x, position.y, boxWidth, boxHeight);
-        isStartNodeRect = new Rect(position.x + PADDING, position.y + PADDING, boxWidth/2 - PADDING -SPACING, TEXTSQUAREHEIGHT);
-        titleRect = new Rect(position.x + PADDING, isStartNodeRect.y + isStartNodeRect.height + SPACING, boxWidth/2 - PADDING - SPACING, TEXTSQUAREHEIGHT*3);
-        imageRect = new Rect(position.x + boxWidth/2, isStartNodeRect.y, boxWidth/2 - PADDING, titleRect.height+isStartNodeRect.height + SPACING + SPACING);
+        isStartNodeRect = new Rect(position.x + PADDING, position.y + PADDING, boxWidth / 2 - PADDING - SPACING, TEXTSQUAREHEIGHT);
+        titleRect = new Rect(position.x + PADDING, isStartNodeRect.y + isStartNodeRect.height + SPACING, boxWidth / 2 - PADDING - SPACING, TEXTSQUAREHEIGHT * 3);
+        imageRect = new Rect(position.x + boxWidth / 2, isStartNodeRect.y, boxWidth / 2 - PADDING, titleRect.height + isStartNodeRect.height + SPACING + SPACING);
 
         descriptionRect = new Rect(position.x + PADDING, imageRect.y + imageRect.height + SPACING, boxWidth - PADDING * 2, TEXTSQUAREHEIGHT * 5);
-    
+
         style = nodeStyle;
         inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint, 0f);
 
 
-        ConnectionPoint choiceA = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, boxHeight/5);
+        ConnectionPoint choiceA = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, boxHeight / 5);
         ConnectionPoint choiceB = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, boxHeight / 5 * 2);
         ConnectionPoint choiceC = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, boxHeight / 5 * 3);
         ConnectionPoint choiceD = new ConnectionPoint(this, ConnectionPointType.Out, outPointStyle, OnClickOutPoint, boxHeight / 5 * 4);
@@ -190,20 +190,36 @@ public class ChoiceNode : Node
     //Sizes and Positions
     public const float
         boxWidth = 250,
-        boxHeight = 100;
+        boxHeight = 150;
 
 
     Rect choiceTextRect;
-    Rect skillTypeInfoRect;
+
     Rect skillTypeRect;
+
+    Rect npcRect;
+    Rect relationshipTypeChangeRect;
+    Rect relationshipNumberChangeRect;
+
+    Rect itemTransferTypeRect;
+    Rect itemTransferIDRect;
+
 
 
     public override void Drag(Vector2 delta)
     {
         rect.position += delta;
+
         choiceTextRect.position += delta;
-        skillTypeInfoRect.position += delta;
+
         skillTypeRect.position += delta;
+
+        npcRect.position += delta;
+        relationshipTypeChangeRect.position += delta;
+        relationshipNumberChangeRect.position += delta;
+
+        itemTransferTypeRect.position += delta;
+        itemTransferIDRect.position += delta;
     }
 
     public override void Draw()
@@ -217,17 +233,61 @@ public class ChoiceNode : Node
         GUI.Box(rect, "", style);
 
         myChoice.choiceText = EditorGUI.TextField(choiceTextRect, myChoice.choiceText);
-        EditorGUI.DrawRect(skillTypeInfoRect, Color.grey);
-        EditorGUI.LabelField(skillTypeInfoRect, "Skill increase");
-        myChoice.skillType = (Characteristics)EditorGUI.EnumPopup(skillTypeRect, myChoice.skillType);
+
+        myChoice.skillType = (Characteristics)EditorGUI.EnumPopup(skillTypeRect, "Skill increase", myChoice.skillType);
+
+        myChoice.itemtransfer = (ItemTransfer)EditorGUI.EnumPopup(itemTransferTypeRect, "Give/Take item", myChoice.itemtransfer);
+        if (myChoice.itemtransfer != ItemTransfer.Off)
+        {
+            myChoice.itemID = EditorGUI.IntField(itemTransferIDRect, "Item ID", myChoice.itemID);
+        }
+
+
+        myChoice.affectedNPC = (NPC_DataContainer)EditorGUI.ObjectField(npcRect, "AffectedNPC", myChoice.affectedNPC, typeof(NPC_DataContainer), false);
+        if (myChoice.affectedNPC)
+        {
+            myChoice.relationshipAttributeToChange = (RelationshipAttribute)EditorGUI.EnumPopup(relationshipTypeChangeRect, "Change", myChoice.relationshipAttributeToChange);
+            myChoice.relationshipAttributeChangeNumber = EditorGUI.IntField(relationshipNumberChangeRect, "Change Number", myChoice.relationshipAttributeChangeNumber);
+        }
     }
 
     public ChoiceNode(Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
     {
         rect = new Rect(position.x, position.y, boxWidth, boxHeight);
-        choiceTextRect = new Rect(position.x + PADDING, position.y + PADDING, boxWidth - PADDING * 2, TEXTSQUAREHEIGHT*2);
-        skillTypeInfoRect = new Rect(choiceTextRect.x, choiceTextRect.y + choiceTextRect.height + SPACING, boxWidth / 2 - PADDING, TEXTSQUAREHEIGHT);
-        skillTypeRect = new Rect(skillTypeInfoRect.x + boxWidth / 2 - PADDING, skillTypeInfoRect.y, boxWidth / 2 - PADDING, TEXTSQUAREHEIGHT);
+
+        float adaptiveY = rect.y + PADDING;
+        float xLeft = rect.x + PADDING;
+        float xMiddle = rect.x + boxWidth / 2;
+        float halfWidth = boxWidth / 2 - (PADDING * 2);
+        float fullWidth = boxWidth - (PADDING * 2);
+
+        choiceTextRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT * 2);
+        adaptiveY += TEXTSQUAREHEIGHT * 2;
+
+        //skillTypeInfoRect = new Rect(xLeft, choiceTextRect.y + choiceTextRect.height + SPACING, boxWidth / 2 - PADDING, TEXTSQUAREHEIGHT);
+        //adaptiveY += TEXTSQUAREHEIGHT;
+
+        skillTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        itemTransferTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        itemTransferIDRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        npcRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        relationshipTypeChangeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        relationshipNumberChangeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+
+
+
 
 
         style = nodeStyle;
