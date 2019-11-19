@@ -1938,13 +1938,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed8193253b76dd4992986e10baa9349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  willingToTalk: 1
   greetingText: Hello, you want key?
-  choices:
-  - choiceType: 1
-    choiceText: give me key!
-    rewardItemID: 0
-    answerSubtitle: Here you got key
+  willingToTalk: 1
+  dialogueChoices:
+  - choiceText: Yes give me!!!
+    optionAction: 1
+    characteristics: 0
+    getItemID: 0
+    loseItemID: 0
+    responseText: OK here u go!
+    attributesToChange: 
+    attributeChanges: 
+    canBeReused: 0
+    connectedQuest:
+      description: 
+      id: 0
+    continuedChoices: []
+  quests: []
+  relationship: 0
+  trust: 0
+  fear: 0
 --- !u!136 &2005359509
 CapsuleCollider:
   m_ObjectHideFlags: 0
