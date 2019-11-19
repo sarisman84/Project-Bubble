@@ -7,6 +7,8 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] MessageUI messageUI = null;
     [SerializeField] Transform fpsCamera = null;
 
+    [SerializeField] float interactableOutlineWidth = 0.02f;
+
     private GameObject highLightObject;
 
     private void Start()
@@ -28,11 +30,11 @@ public class PlayerControls : MonoBehaviour
             //Highlight
             if (highLightObject.GetComponent<Renderer>() != null)
             {
-                highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+                highLightObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", interactableOutlineWidth);
             }
             else
             {
-                highLightObject.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", 0.05f);
+                highLightObject.GetComponentInChildren<Renderer>().sharedMaterial.SetFloat("_FirstOutlineWidth", interactableOutlineWidth);
             }
 
             if (Input.GetKeyDown(KeyCode.E))

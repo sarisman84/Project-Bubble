@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [CreateAssetMenu(menuName = "Event Scenario/Scenario")]
 public class Scenario : ScriptableObject
@@ -10,6 +11,7 @@ public class Scenario : ScriptableObject
     public List<ChoiceNode> editorChoiceNodes = new List<ChoiceNode>();
     public List<EventNode> editorEventNodes = new List<EventNode>();
     public List<Connection> editorConnections = new List<Connection>();
+    public List<ScenarioEndNode> editorScenarioEndNodes = new List<ScenarioEndNode>();
 }
 
 [System.Serializable]
@@ -27,7 +29,7 @@ public class Event
 }
 
 
-
+//Contains functions
 [System.Serializable]
 public class Choice
 {
@@ -35,10 +37,14 @@ public class Choice
     public Event nextEvent = null;
     public Characteristics skillType;
 
+
     //public NPC npc;
-    
+
     //ATTRIBUTECHANGE TYPE
     //ATTRIBUTE CHANGE NUMBER
+
+    public Scenario nextScenario = null;
+    public SceneAsset nextScene;
 
     public Choice(string choiceText)
     {

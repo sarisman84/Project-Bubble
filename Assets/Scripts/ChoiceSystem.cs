@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class ChoiceSystem : MonoBehaviour
 {
@@ -21,7 +21,26 @@ public class ChoiceSystem : MonoBehaviour
 
     public void MakeChoice(int index)
     {
-        currentEvent = currentEvent.choices[index].nextEvent;
+        if (currentEvent.choices[index].nextEvent.choices.Count > 0)
+        {
+            Debug.Log("Changing event");
+            currentEvent = currentEvent.choices[index].nextEvent;
+        }
+        else if (currentEvent.choices[index].nextScenario != null)
+        {
+            Debug.Log("Changing scenario");
+            scenario = currentEvent.choices[index].nextScenario;
+            currentEvent = scenario.startEvent;
+        }
+        else if (currentEvent.choices[index].nextScene != null)
+        {
+            Debug.Log("Changing scene");
+            SceneManager.LoadScene(currentEvent.choices[index].nextScene.name);
+        }
+        else
+        {
+            Debug.LogError("No further events or endnodes found, check setup of scenario from node: " + currentEvent.title);
+        }
         DisplayGUI(currentEvent);
     }
 

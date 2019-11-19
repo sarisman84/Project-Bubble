@@ -26,34 +26,20 @@ public class EventEditor : EditorWindow
 
     public static Scenario openScenario;
 
-    //private static EventEditor instance;
 
 
     public static void OpenWindow(Scenario input)
     {
         EventEditor window = GetWindow<EventEditor>();
-        window.titleContent = new GUIContent("Event Window - " + input.name);
+        window.titleContent = new GUIContent("Scenario-Window - " + input.name);
         openScenario = input;
         allNodes.Clear();
         allConnections.Clear();
-        //if (input.editorEventNodes.Count != 0)
-        //{
-        //    LoadEvent();
-        //    GUI.changed = true;
-        //}
-        //else
-        //{
-        //    allNodes.Clear();
-        //    allConnections.Clear();
-        //    GUI.changed = true;
-        //}
     }
 
 
     private void OnEnable()
     {
-        //instance = this;
-
         SetStyles();
     }
 
@@ -99,6 +85,7 @@ public class EventEditor : EditorWindow
         }
     }
 
+    //Draw the graphics of nodes
     private void DrawNodes()
     {
         if (allNodes != null)
@@ -115,10 +102,15 @@ public class EventEditor : EditorWindow
                     ChoiceNode node = allNodes[i] as ChoiceNode;
                     node.Draw();
                 }
-                //allNodes[i].Draw();
+                else if (allNodes[i] is ScenarioEndNode)
+                {
+                    ScenarioEndNode node = allNodes[i] as ScenarioEndNode;
+                    node.Draw();
+                }
             }
         }
     }
+    //Draw the graphics of connections
     private void DrawConnections()
     {
         if (allConnections != null)
@@ -129,6 +121,7 @@ public class EventEditor : EditorWindow
             }
         }
     }
+    //Draw the graphics of connection lines
     private void DrawConnectionLine(UnityEngine.Event e)
     {
         if (selectedNodeInPoint != null && selectedNodeOutPoint == null)
@@ -161,7 +154,7 @@ public class EventEditor : EditorWindow
             GUI.changed = true;
         }
     }
-
+    //Draw the graphics of the grid
     private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
     {
         int widthDivs = Mathf.CeilToInt(position.width / gridSpacing);
@@ -186,30 +179,21 @@ public class EventEditor : EditorWindow
         Handles.color = Color.white;
         Handles.EndGUI();
     }
-
+    //Draw buttons WITH functions
     private void DrawButtons()
     {
-        if (GUILayout.Button("Save"))
+        if (GUILayout.Button("Save Scenario"))
         {
-            SaveEvent();
+            SaveScenario();
         }
 
-        if (GUILayout.Button("Load Data"))
+        if (GUILayout.Button("Load Scenario-Data"))
         {
-            LoadEvent();
+            LoadScenario();
         }
-
-        //if (GUILayout.Button("Check if saved to disk"))
-        //{
-        //    CheckIfDirty();
-        //}
     }
 
-    //public void CheckIfDirty()
-    //{
-    //    Debug.Log("Is it dirty" + EditorUtility.IsDirty(openScenario));
-    //}
-
+    //Process mouse input and mouseevents
     private void ProcessEvents(UnityEngine.Event e)
     {
         drag = Vector2.zero;
@@ -246,12 +230,13 @@ public class EventEditor : EditorWindow
         }
     }
 
-    //Rightclicking
+    //Rightclicking creates menues to create nodes and such
     private void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Add event node"), false, () => OnClickAddEventNode(mousePosition));
-        genericMenu.AddItem(new GUIContent("Add choice node"), false, () => OnCLickAddChoiceNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add choice node"), false, () => OnClickAddChoiceNode(mousePosition));
+        genericMenu.AddItem(new GUIContent("Add scenario-end-node"), false, () => OnClickAddScenarioEndNode(mousePosition));
 
         genericMenu.ShowAsContext();
     }
@@ -268,7 +253,7 @@ public class EventEditor : EditorWindow
     }
 
     //Create Choicenode
-    private void OnCLickAddChoiceNode(Vector2 mousePosition)
+    private void OnClickAddChoiceNode(Vector2 mousePosition)
     {
         if (allNodes == null)
         {
@@ -276,6 +261,17 @@ public class EventEditor : EditorWindow
         }
 
         allNodes.Add(new ChoiceNode(mousePosition, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+    }
+
+    //Create EndScenarioNode
+    private void OnClickAddScenarioEndNode(Vector2 mousePosition)
+    {
+        if (allNodes == null)
+        {
+            allNodes = new List<Node>();
+        }
+
+        allNodes.Add(new ScenarioEndNode(mousePosition, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
     }
 
 
@@ -326,39 +322,18 @@ public class EventEditor : EditorWindow
     //Create connection
     private void CreateConnection()
     {
-        //If it is of the same type, dont allow connection
-        //if (selectedInPoint.node is EventNode && selectedOutPoint.node is EventNode)
-        if (selectedNodeInPoint.node.typeOfNode == selectedNodeOutPoint.node.typeOfNode)
+        //Return and dont allow connection if the inpoint selected node is not allowed by the selected outpoint node
+        if (!selectedNodeOutPoint.node.allowedConnectionTypes.Contains(selectedNodeInPoint.node.typeOfNode))
         {
             return;
         }
-        //if (selectedInPoint.node is ChoiceNode && selectedOutPoint.node is ChoiceNode)
-        //{
-        //    return;
-        //}
 
         if (allConnections == null)
         {
             allConnections = new List<Connection>();
         }
 
-
         allConnections.Add(new Connection(selectedNodeOutPoint, selectedNodeInPoint, OnClickRemoveConnection));
-
-        //if (selectedOutPoint.node is EventNode)
-        //{
-        //    EventNode eventNode = selectedOutPoint.node as EventNode;
-        //    ChoiceNode choiceNode = selectedInPoint.node as ChoiceNode;
-
-        //    eventNode.myEvent.choices.Add(choiceNode.myChoice);
-        //}
-        //else if (selectedOutPoint.node is ChoiceNode)
-        //{
-        //    ChoiceNode choiceNode = selectedOutPoint.node as ChoiceNode;
-        //    EventNode eventNode = selectedInPoint.node as EventNode;
-
-        //    choiceNode.myChoice.nextEvent = eventNode.myEvent;
-        //}
     }
 
     private void ClearConnectionSelection()
@@ -394,20 +369,6 @@ public class EventEditor : EditorWindow
 
             connectionsToRemove = null;
         }
-
-        //if (node is EventNode)
-        //{
-        //    EventNode removalNode = node as EventNode;
-
-        //    //removalnode.remove choice
-        //}
-        //else if (node is ChoiceNode)
-        //{
-        //    ChoiceNode removalNode = node as ChoiceNode;
-
-        //    //removalnode remove myevent
-        //}
-
         allNodes.Remove(node);
     }
     private void OnDrag(Vector2 delta)
@@ -425,7 +386,9 @@ public class EventEditor : EditorWindow
         GUI.changed = true;
     }
 
-    public void SaveEvent()
+
+    //Main function to call when saving the scenario from the window
+    public void SaveScenario()
     {
         if (!openScenario)
         {
@@ -455,26 +418,40 @@ public class EventEditor : EditorWindow
                 }
             }
         }
-
         if (startNode == null)
         {
             Debug.LogError("No startnode found, Save Failed");
             return;
         }
 
-        //SAVE
-        //NEW TRY START FROM STARTNODE IN EDITOR AND GO FORTH
+        bool endNodeFound = false;
+        //Secure that we have atleast one endnode
+        for (int i = 0; i < allNodes.Count; i++)
+        {
+            if (allNodes[i].typeOfNode == Node.NodeType.ScenarioEndNode)
+            {
+                endNodeFound = true;
+                break;
+            }
+        }
+        if (!endNodeFound)
+        {
+            Debug.LogError("No end node found. Atleast 1 is needed to save");
+            return;
+        }
+
         openScenario.startEvent = startNode.myEvent;
         openScenario.startEvent.choices.Clear();
 
+        //Iterative method of saving information to the scenario
         SaveOutputsFromEvent(openScenario.startEvent, startNode as EventNode);
-        //END NEW TRY
 
 
         //Clear old lists and add the active nodes and connections to them instead
         openScenario.editorConnections.Clear();
         openScenario.editorChoiceNodes.Clear();
         openScenario.editorEventNodes.Clear();
+        openScenario.editorScenarioEndNodes.Clear();
 
         for (int i = 0; i < allNodes.Count; i++)
         {
@@ -488,22 +465,18 @@ public class EventEditor : EditorWindow
                 ChoiceNode node = allNodes[i] as ChoiceNode;
                 openScenario.editorChoiceNodes.Add(node);
             }
+            else if (allNodes[i] is ScenarioEndNode)
+            {
+                ScenarioEndNode node = allNodes[i] as ScenarioEndNode;
+                openScenario.editorScenarioEndNodes.Add(node);
+            }
         }
         for (int i = 0; i < allConnections.Count; i++)
         {
             openScenario.editorConnections.Add(allConnections[i]);
         }
 
-
-
-        
-
-
-
         EditorUtility.SetDirty(openScenario);
-
-        //AssetDatabase.SaveAssets();
-        //AssetDatabase.Refresh();
         Debug.Log("Save successfull");
     }
 
@@ -544,7 +517,7 @@ public class EventEditor : EditorWindow
     //New method that saves the output from choicenodes
     private void SaveOutputsFromChoiceNode(Choice inputChoice, ChoiceNode choiceNode)
     {
-        EventNode newNode = null;
+        EventNode newEventNode = null;
         Event newEvent = null;
         for (int i = 0; i < allConnections.Count; i++)
         {
@@ -558,11 +531,16 @@ public class EventEditor : EditorWindow
                             Debug.LogError("Choicenode connected to Choicenode in Save");
                             break;
                         case Node.NodeType.EventNode:
-                            newNode = allConnections[i].outPoint.node as EventNode;
-                            newNode.myEvent.choices.Clear();
-                            newEvent = newNode.myEvent;
+                            newEventNode = allConnections[i].outPoint.node as EventNode;
+                            newEventNode.myEvent.choices.Clear();
+                            newEvent = newEventNode.myEvent;
                             inputChoice.nextEvent = newEvent;
                             Debug.Log("Event added and saved");
+                            break;
+                        case Node.NodeType.ScenarioEndNode:
+                            ScenarioEndNode newEndNode = allConnections[i].outPoint.node as ScenarioEndNode;
+                            inputChoice.nextScenario = newEndNode.nextScenario;
+                            inputChoice.nextScene = newEndNode.nextScene;
                             break;
                     }
                 }
@@ -570,75 +548,41 @@ public class EventEditor : EditorWindow
         }
 
         //Continue save if found output
-        if (newNode != null && newEvent != null)
+        if (newEventNode != null && newEvent != null)
         {
-            SaveOutputsFromEvent(newEvent, newNode);
+            SaveOutputsFromEvent(newEvent, newEventNode);
         }
     }
 
 
-    //private static void LoadEvent()
-    //{
-    //    allNodes.Clear();
-    //    allConnections.Clear();
-
-    //    //Add all nodes from editor event nodes
-    //    for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
-    //    {
-    //        allNodes.Add(openScenario.editorEventNodes[i]);
-    //    }
-
-    //    //Add all nodes from editor choice nodes
-    //    for (int i = 0; i < openScenario.editorChoiceNodes.Count; i++)
-    //    {
-    //        allNodes.Add(openScenario.editorChoiceNodes[i]);
-    //    }
-
-
-    //    //Add all editor connections
-    //    for (int i = 0; i < openScenario.editorConnections.Count; i++)
-    //    {
-    //        allConnections.Add(openScenario.editorConnections[i]);
-    //    }
-
-    //    //Add connectionpoints to editor connections
-    //    for (int i = 0; i < allConnections.Count; i++)
-    //    {
-    //        for (int j = 0; j < allNodes.Count; j++)
-    //        {
-    //            //Set inpoints
-    //            if (allConnections[i].inPoint.id == allNodes[j].inPoint.id)
-    //            {
-    //                allConnections[i].inPoint = allNodes[j].inPoint;
-    //            }
-
-    //            //Set outpoints
-    //            for (int k = 0; k < allNodes[j].outPoints.Count; k++)
-    //            {
-    //                if (allConnections[i].outPoint.id == allNodes[j].outPoints[k].id)
-    //                {
-    //                    allConnections[i].outPoint = allNodes[j].outPoints[k];
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
-
-    private void LoadEvent()
+    //Main function for loading data
+    private void LoadScenario()
     {
         allNodes.Clear();
         allConnections.Clear();
 
-        //Add all nodes from editor event nodes
+        //Load all editor event nodes
         for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
         {
             allNodes.Add(openScenario.editorEventNodes[i]);
         }
 
-        //Add all nodes from editor choice nodes
+        //Load all editor schoice nodes
         for (int i = 0; i < openScenario.editorChoiceNodes.Count; i++)
         {
             allNodes.Add(openScenario.editorChoiceNodes[i]);
+        }
+
+        //Load all editor scenarioEndNodes
+        for (int i = 0; i < openScenario.editorScenarioEndNodes.Count; i++)
+        {
+            allNodes.Add(openScenario.editorScenarioEndNodes[i]);
+        }
+
+        //Add RemoveMethods to all Nodes
+        for (int i = 0; i < allNodes.Count; i++)
+        {
+            allNodes[i].OnRemoveNode = OnClickRemoveNode;
         }
 
 
@@ -646,7 +590,10 @@ public class EventEditor : EditorWindow
         for (int i = 0; i < openScenario.editorConnections.Count; i++)
         {
             allConnections.Add(openScenario.editorConnections[i]);
+            //Add method for removing connections
+            allConnections[i].OnClickRemoveConnection = OnClickRemoveConnection;
         }
+
 
         //Add connectionpoints to editor connections
         for (int i = 0; i < allConnections.Count; i++)
@@ -658,8 +605,8 @@ public class EventEditor : EditorWindow
                 if (allConnections[i].outPoint.id == allNodes[j].inPoint.id)
                 {
                     allConnections[i].outPoint = allNodes[j].inPoint;
-                    allNodes[j].inPoint.OnClickConnectionPoint = OnClickInPoint;
                 }
+                allNodes[j].inPoint.OnClickConnectionPoint = OnClickInPoint;
 
                 //Set outpoints
                 for (int k = 0; k < allNodes[j].outPoints.Count; k++)
@@ -667,13 +614,12 @@ public class EventEditor : EditorWindow
                     if (allConnections[i].inPoint.id == allNodes[j].outPoints[k].id)
                     {
                         allConnections[i].inPoint = allNodes[j].outPoints[k];
-                        allNodes[j].outPoints[k].OnClickConnectionPoint = OnClickOutPoint;
                     }
+                    allNodes[j].outPoints[k].OnClickConnectionPoint = OnClickOutPoint;
                 }
             }
         }
 
         GUI.changed = true;
-
     }
 }

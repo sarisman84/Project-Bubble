@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //Simon Voss
 //Displays messages sent to it
 public class MessageUI : MonoBehaviour
 {
     bool isOn = false;
-    [SerializeField] Text messageText = null;
+    [SerializeField] TextMeshProUGUI messageText = null;
     [SerializeField] Animator anim = null;
 
     private void Start()
