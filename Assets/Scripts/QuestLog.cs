@@ -46,6 +46,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
                 quest.started = true;
                 questAdded.text = $"Quest Added: {quest.questName}";
                 StartCoroutine("FadeInText", questAdded);
+                UpdateObjectives();
             }
         }
     }
@@ -59,6 +60,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
                 quest.ended = true;
                 questAdded.text = $"Quest Finished: {quest.questName}";
                 StartCoroutine("FadeInText", questAdded);
+                UpdateObjectives();
             }
         }
     }
