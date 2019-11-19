@@ -3,15 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
  abstract public class Node
 {
     //Main box
     public Rect rect;
-    public enum NodeType { ChoiceNode, EventNode}
-
+    public enum NodeType { ChoiceNode, EventNode, ScenarioEndNode}
     public NodeType typeOfNode;
+    public List<NodeType> allowedConnectionTypes = new List<NodeType>();
+
 
     public const int
         PADDING = 15,
@@ -93,16 +96,16 @@ using UnityEditor;
     }
 }
 
+
+//Eventnode
 [System.Serializable]
 public class EventNode : Node
 {
     public Event myEvent;
     public bool isStartNode = false;
 
-    
-
     //Positions and sizes
-    public const int
+    public const float
         boxWidth = 300,
         boxHeight = 180;
 
@@ -143,6 +146,7 @@ public class EventNode : Node
         OnRemoveNode = OnClickRemoveNode;
 
         typeOfNode = NodeType.EventNode;
+        allowedConnectionTypes.Add(NodeType.ChoiceNode);
 
         myEvent = new Event("Title Text", "Event Text");
     }
@@ -177,14 +181,16 @@ public class EventNode : Node
     }
 }
 
+//Choicenode
 [System.Serializable]
 public class ChoiceNode : Node
 {
     public Choice myChoice;
 
     //Sizes and Positions
-    float boxWidth = 250;
-    float boxHeight = 100;
+    public const float
+        boxWidth = 250,
+        boxHeight = 100;
 
 
     Rect choiceTextRect;
@@ -233,14 +239,72 @@ public class ChoiceNode : Node
         OnRemoveNode = OnClickRemoveNode;
 
         typeOfNode = NodeType.ChoiceNode;
+        allowedConnectionTypes.Add(NodeType.EventNode);
+        allowedConnectionTypes.Add(NodeType.ScenarioEndNode);
 
 
         myChoice = new Choice("New Choice");
     }
 }
 
-//[System.Serializable]
-//public class ScenarioEndNode : Node
-//{
+//ScenarioEndNode
+[System.Serializable]
+public class ScenarioEndNode : Node
+{
+    //Base need
+    //Sizes and Positions
+    public const float
+        boxWidth = 200,
+        boxHeight = 70;
 
-//}
+    //More squares
+    Rect newScenarioRect;
+    Rect newSceneRect;
+
+
+    //Connected class or logic
+    public Scenario nextScenario = null;
+    public SceneAsset nextScene;
+
+    public override void Drag(Vector2 delta)
+    {
+        //Base need
+        rect.position += delta;
+
+        newScenarioRect.position += delta;
+        newSceneRect.position += delta;
+    }
+
+    public override void Draw()
+    {
+        //Base need
+        EditorStyles.textField.wordWrap = true;
+        inPoint.Draw(this);
+        GUI.Box(rect, "", style);
+
+        nextScenario = (Scenario)EditorGUI.ObjectField(newScenarioRect, nextScenario, typeof(Scenario), false);
+        nextScene = (SceneAsset)EditorGUI.ObjectField(newSceneRect, nextScene, typeof(SceneAsset), false);
+    }
+
+
+    public ScenarioEndNode(Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    {
+        //Base need
+        rect = new Rect(position.x, position.y, boxWidth, boxHeight);
+
+        newScenarioRect = new Rect(rect.x + PADDING, rect.y + PADDING, rect.width - PADDING * 2, TEXTSQUAREHEIGHT);
+        newSceneRect = new Rect(rect.x + PADDING, newScenarioRect.y + newScenarioRect.height + SPACING, rect.width - PADDING * 2, TEXTSQUAREHEIGHT);
+
+        //Base need
+        style = nodeStyle;
+        inPoint = new ConnectionPoint(this, ConnectionPointType.In, inPointStyle, OnClickInPoint, 0f);
+
+        //Base need
+        defaultNodeStyle = nodeStyle;
+        selectedNodeStyle = selectedStyle;
+        OnRemoveNode = OnClickRemoveNode;
+
+        //Base need
+        typeOfNode = NodeType.ScenarioEndNode;
+    }
+}
