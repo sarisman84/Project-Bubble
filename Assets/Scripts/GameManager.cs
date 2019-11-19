@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Simon Voss, Dejan
+//Simon Voss
 public class GameManager : MonoBehaviour
 {
 

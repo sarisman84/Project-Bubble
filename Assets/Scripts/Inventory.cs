@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -30,8 +29,6 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
     public GameObjectList itemList; //a reference to the Inventory Items scriptable object
     public GameObject character; //a reference to the main character who is to use inventory
     public Button throwButton; //a reference to the menu button used for discarding items
-    public Button useButton; //a reference to the menu button used for discarding items
-    public TextMeshProUGUI itemName;
 
     private bool inventoryIsOpen;
     private float screenWidth;
@@ -59,20 +56,16 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         }
         else if (Input.GetKeyUp(KeyCode.Tab) && !inventoryIsOpen) //opens inventory and unlocks the mouse
         {
-            OpenInventory();
+            OpenInventory();   
         }
 
         if (selectedObject != null) //make throw button not interactable when an item is not selected
         {
             throwButton.interactable = true;
-            useButton.interactable = true;
-            itemName.text = selectedObject.GetComponent<IItemIcon>().ItemName();
         }
         else
         {
             throwButton.interactable = false;
-            useButton.interactable = false;
-            itemName.text = "";
         }
     }
 
@@ -95,14 +88,11 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
 
     public void OpenInventory()
     {
-        if (character.GetComponent<FPSInput>().enabled)
-        {
-            inventory.SetActive(true);
-            inventoryIsOpen = true;
-            Cursor.lockState = CursorLockMode.None;
-            GameManager.Instance().SetFPSInput(false);
-            GameManager.Instance().SetMouseLook(false);
-        }
+        inventory.SetActive(true);
+        inventoryIsOpen = true;
+        Cursor.lockState = CursorLockMode.None;
+        GameManager.Instance().SetFPSInput(false);
+        GameManager.Instance().SetMouseLook(false);
     }
 
     public void CloseInvetory() //used to close invetory through the close button
@@ -124,7 +114,8 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         if (selectedObject != null)
         {
             Destroy(selectedObject);
-            GameObject gameObject = Instantiate(itemList.list[selectedObject.GetComponent<IItemIcon>().ItemID()].pair[0], character.transform.position, Quaternion.identity);
+            GameObject gameObject = Instantiate(itemList.list[selectedObject.GetComponent<InventoryItem>().itemID].pair[0], character.transform.position, Quaternion.identity);
+            //gameObject.GetComponent<GatherableItem>().inventory = this;
         }
     }
 
@@ -156,23 +147,4 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         }
         return false;
     }
-
-    public void UseInventoryItem()
-    {
-        if (selectedObject != null)
-        {
-            if (selectedObject.GetComponent<IItemIcon>().UseItem())
-            {
-                inventory.SetActive(false);
-                inventoryIsOpen = false;
-            }
-        }
-    }
-}
-
-public interface IItemIcon
-{
-    int ItemID();
-    string ItemName();
-    bool UseItem();
 }
