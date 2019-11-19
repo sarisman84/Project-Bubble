@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8109846931471577349
+--- !u!1 &304657664410069519
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8109846931471577348}
-  - component: {fileID: 8109846931471577354}
-  - component: {fileID: 8109846931471577355}
-  - component: {fileID: 8109846931471577353}
+  - component: {fileID: 4773124475323128015}
+  - component: {fileID: 203577672452805079}
+  - component: {fileID: 3209012885571099785}
+  - component: {fileID: 4382245542212414974}
   m_Layer: 5
   m_Name: Monologue
   m_TagString: Untagged
@@ -19,40 +19,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8109846931471577348
+--- !u!224 &4773124475323128015
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8109846931471577349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 304657664410069519}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72107, y: 0.72107, z: 0.72107}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8, y: -183}
-  m_SizeDelta: {x: 295.48, y: 73.87}
+  m_AnchoredPosition: {x: -7.999897, y: -417}
+  m_SizeDelta: {x: 800, y: 73.87}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8109846931471577354
+--- !u!222 &203577672452805079
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8109846931471577349}
+  m_GameObject: {fileID: 304657664410069519}
   m_CullTransparentMesh: 0
---- !u!114 &8109846931471577355
+--- !u!114 &3209012885571099785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8109846931471577349}
+  m_GameObject: {fileID: 304657664410069519}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.9811321, g: 0.8420452, b: 0.023139905, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
-    textComponent: {fileID: 8109846931471577355}
+    textComponent: {fileID: 3209012885571099785}
     characterCount: 0
     spriteCount: 0
     spaceCount: 0
@@ -156,19 +156,19 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8109846931471577353
+--- !u!114 &4382245542212414974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8109846931471577349}
+  m_GameObject: {fileID: 304657664410069519}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b46a7ae0f22c056479b3c7141c07012f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monologueField: {fileID: 8109846931471577355}
+  monologueField: {fileID: 3209012885571099785}
   Lines:
   - I hate mondays.
   - Like why do they even exist?
