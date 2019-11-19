@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //Simon Voss
 public class DialogueSystem : MonoBehaviour
@@ -25,24 +26,24 @@ public class DialogueSystem : MonoBehaviour
 
     NPC npcTalkedTo;
     GameObject[] choiceButtons;
-    Text[] choiceTexts;
+    TextMeshProUGUI[] choiceTexts;
     [SerializeField] GameObject choicePanel = null;
     [SerializeField] GameObject subtitlesPanel = null;
-    Text subtitleText;
+    TextMeshProUGUI subtitleText;
     public bool dialogueOpen = false;
 
     //Sets up the references needed
     private void Start()
     {
         choiceButtons = new GameObject[choicePanel.transform.childCount];
-        choiceTexts = new Text[choicePanel.transform.childCount];
+        choiceTexts = new TextMeshProUGUI[choicePanel.transform.childCount];
 
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             choiceButtons[i] = choicePanel.transform.GetChild(i).gameObject;
-            choiceTexts[i] = choicePanel.transform.GetChild(i).GetComponentInChildren<Text>();
+            choiceTexts[i] = choicePanel.transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>();
         }
-        subtitleText = subtitlesPanel.GetComponentInChildren<Text>();
+        subtitleText = subtitlesPanel.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     //Handles our dialogue input
