@@ -5,21 +5,17 @@ using UnityEngine;
 public class SleepCheck : MonoBehaviour
 {
     [SerializeField]
-    public GameObject gilad;
-    [SerializeField]
     public GameObject buttons;
     bool canISleep = false;
 
-    void Update()
+    private void Update()
     {
-        //if () //INSERT "IS QUEST COMPLETE" HERE TO MAKE canISleep TRUE!
-        //{
-        //    canISleep = true;
-        //}
+        Debug.Log("canISleep = " + canISleep);
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        CanISleep();
         if (canISleep == true && other.gameObject.CompareTag("Player"))
         {
             GameManager.Instance().SetFPSInput(false);
@@ -28,13 +24,26 @@ public class SleepCheck : MonoBehaviour
         }
     }
 
-    //public bool CanISleep()
-    //{
-    //    for (int i = 0; i < QuestLog.Instance().quests.Count; i++)
-    //    {
-    //        if ()
-    //    }
-    //}
+    public bool CanISleep()
+    {
+        //for (int i = 0; i < QuestLog.Instance().quests.Count; i++)
+        //{
+        //    if (QuestLog.Instance().quests[i].questID == 0 && QuestLog.Instance().quests[i].ended)
+        //    {
+        //        canISleep = true;
+        //    }
+        //}
+
+        foreach (QuestInstance quest in QuestLog.Instance().quests)
+        {
+            if (quest.questID == 0 && quest.ended)
+            {
+                canISleep = true;
+                return canISleep;
+            }
+        }
+        return canISleep;
+    }
 
     public void EnableButtons()
     {
