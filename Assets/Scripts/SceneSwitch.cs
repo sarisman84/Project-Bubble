@@ -19,11 +19,24 @@ public class SceneSwitch : MonoBehaviour //Dejan, Erik, must be on the same obje
         StartCoroutine("DelayedSceneSwitch", sceneName);
     }
 
+    public void SwitchScene(int index)
+    {
+        Time.timeScale = 1;
+        StartCoroutine("DelayedSceneSwitch", index);
+    }
+
     IEnumerator DelayedSceneSwitch(string sceneName) //applies delay and transition
     {
         fadeTransition.Fade(false);
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator DelayedSceneSwitch(int index) //applies delay and transition
+    {
+        fadeTransition.Fade(false);
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(index);
     }
 
     public void QuitGame()
