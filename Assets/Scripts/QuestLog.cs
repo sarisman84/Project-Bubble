@@ -29,12 +29,15 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
     #endregion
 
     public Objectives objectivesWindow; //a reference to the Objectives.cs
-    [SerializeField] TextMeshProUGUI questAdded = null; //a reference to the canvas text showing added or finished quests
+    [SerializeField] TextMeshProUGUI questDisplay = null; //a reference to the canvas text showing added or finished quests
     public List<QuestInstance> quests = new List<QuestInstance>(); //a list of all the quests
+
+    List<string> questsToDisplay = new List<string>(); //contains all string messages to be displayed
+    bool coroutineIsRunning; //is coroutine FadeInText running?
 
     private void Start()
     {
-        questAdded.CrossFadeAlpha(0, 0, true); //sets the quests added/finished text to transparent
+        questDisplay.CrossFadeAlpha(0, 0, true); //sets the quests added/finished text to transparent
     }
 
     public void ActivateQuest(int questID) //activates quest with given questID and updates GUI
@@ -44,8 +47,11 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             if (quest.questID == questID && !quest.started)
             {
                 quest.started = true;
-                questAdded.text = $"Quest Added: {quest.questName}";
-                StartCoroutine("FadeInText", questAdded);
+                questsToDisplay.Add($"Quest Added: {quest.questName}");
+                if (!coroutineIsRunning)
+                {
+                    StartCoroutine("FadeInText");
+                }
                 UpdateObjectives();
             }
         }
@@ -58,8 +64,11 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             if (quest.questID == questID && quest.started && !quest.ended)
             {
                 quest.ended = true;
-                questAdded.text = $"Quest Finished: {quest.questName}";
-                StartCoroutine("FadeInText", questAdded);
+                questsToDisplay.Add($"Quest Finished: {quest.questName}");
+                if (!coroutineIsRunning)
+                {
+                    StartCoroutine("FadeInText");
+                }
                 UpdateObjectives();
             }
         }
@@ -86,11 +95,23 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
         }
     }
 
-    IEnumerator FadeInText(TextMeshProUGUI textMeshProUGUI) //fades in/fades out quest added/finished text
+    IEnumerator FadeInText() //fades in/fades out quest added/finished texts
     {
-        textMeshProUGUI.CrossFadeAlpha(1, 1, true);
-        yield return new WaitForSeconds(3);
-        textMeshProUGUI.CrossFadeAlpha(0, 1, true);
+        if (questsToDisplay.Count > 0)
+        {
+            coroutineIsRunning = true;
+            questDisplay.text = questsToDisplay[0];
+            questsToDisplay.Remove(questsToDisplay[0]);
+            questDisplay.CrossFadeAlpha(1, 1, true);
+            yield return new WaitForSeconds(3);
+            questDisplay.CrossFadeAlpha(0, 1, true);
+            yield return new WaitForSeconds(1);
+            StartCoroutine("FadeInText");
+        }
+        else
+        {
+            coroutineIsRunning = false;
+        }
     }
 }
 
