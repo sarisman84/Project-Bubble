@@ -6,23 +6,36 @@ using TMPro;
 public class InnerMonologue : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI monologueField;
-    [SerializeField] string[] Lines;
+    [SerializeField] string[] lines;
     [SerializeField] public static int currentIndex = 0;
 
+    public static InnerMonologue instance;
+    public void Awake()
+    {
+        if (instance == null)
+        {
+        instance = this;
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     private void Start()
     {
         PrintCurrentObjective();
-        StartCoroutine("TimeBetweenLines");
+        
     }
 
     public void Update()
     {
-        monologueField.text = Lines[currentIndex].ToString();
+        monologueField.text = lines[currentIndex].ToString();
     }
 
     void PrintCurrentObjective()
     {
-        monologueField.text = Lines[currentIndex].ToString();
+        monologueField.text = lines[currentIndex].ToString();
     }
 
     public void IncreaseCurrentIndex(int index)
@@ -30,22 +43,23 @@ public class InnerMonologue : MonoBehaviour
         currentIndex = index;
     }
     
-    IEnumerator TimeBetweenLines()
+
+    public void PrintThis(List<string>Lines, List<float> delay)
     {
-        yield return new WaitForSeconds(4);
-        currentIndex = 1;
-        monologueField.text = Lines[currentIndex].ToString();
-        yield return new WaitForSeconds(2);
-        currentIndex = 2;
-        monologueField.text = Lines[currentIndex].ToString();
-        yield return new WaitForSeconds(2);
-        currentIndex = 3;
-        monologueField.text = Lines[currentIndex].ToString();
-        yield return new WaitForSeconds(2);
-        currentIndex = 4;
-        monologueField.text = Lines[currentIndex].ToString();
-        monologueField.text = Lines[currentIndex].ToString();
+        StartCoroutine(TimeBetweenLines(Lines,delay));
     }
+    IEnumerator TimeBetweenLines(List<string> Lines,List<float>delay)
+    {
+        for (int i = 0; i < Lines.Count; i++)
+        {
+            monologueField.text = Lines[i];
+            yield return new WaitForSeconds(delay[i]);
+
+             
+        }
+        monologueField.text = "";
+    }
+
            
         
 
