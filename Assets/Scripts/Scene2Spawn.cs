@@ -8,6 +8,9 @@ public class Scene2Spawn : MonoBehaviour
     public Transform door = null;
     public Transform bed = null;
 
+    //public GameObject goOutSideButton = null;
+    //public GameObject stayInside = null;
+
     string firstTime = "First Time";
 
     private void Start()
@@ -23,6 +26,13 @@ public class Scene2Spawn : MonoBehaviour
             SpawnPlayerAt(door);
         }
     }
+
+    //public void InOut()
+    //{
+    //    goOutSideButton.SetActive(true);
+    //    stayInside.SetActive(true);
+    //}
+
     private void LateUpdate()
     {
         if (Input.GetKey(KeyCode.F11))
