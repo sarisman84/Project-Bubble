@@ -53,7 +53,7 @@ public class Lock : MonoBehaviour, IInteractable //Dejan, updates unlocked boole
                 int children = Inventory.instance.itemSpaceTransform.childCount;
                 for (int i = 0; i < children; i++)
                 {
-                    if (Inventory.instance.itemSpaceTransform.GetChild(i).GetComponent<InventoryItem>().itemID == keyItem)
+                    if (Inventory.instance.itemSpaceTransform.GetChild(i).GetComponent<IItemIcon>().ItemID() == keyItem)
                     {
                         unlocked = true;
                         return true;
