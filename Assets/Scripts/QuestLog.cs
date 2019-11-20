@@ -32,7 +32,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
     [SerializeField] TextMeshProUGUI questDisplay = null; //a reference to the canvas text showing added or finished quests
     public List<QuestInstance> quests = new List<QuestInstance>(); //a list of all the quests
 
-    List<string> questsToDisplay = new List<string>(); //contains all string messages to be displayed
+    Queue<string> questsToDisplay = new Queue<string>(); //contains all string messages to be displayed
     bool coroutineIsRunning; //is coroutine FadeInText running?
 
     private void Start()
@@ -45,7 +45,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             {
                 if (quest.started)
                 {
-                    questsToDisplay.Add($"Quest Added: {quest.questName}");
+                    questsToDisplay.Enqueue($"Quest Added: {quest.questName}");
                     if (!coroutineIsRunning)
                     {
                         StartCoroutine("FadeInText");
@@ -63,7 +63,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             if (quest.questID == questID && !quest.started)
             {
                 quest.started = true;
-                questsToDisplay.Add($"Quest Added: {quest.questName}");
+                questsToDisplay.Enqueue($"Quest Added: {quest.questName}");
                 if (!coroutineIsRunning)
                 {
                     StartCoroutine("FadeInText");
@@ -80,7 +80,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             if (quest.questID == questID && quest.started && !quest.ended)
             {
                 quest.ended = true;
-                questsToDisplay.Add($"Quest Finished: {quest.questName}");
+                questsToDisplay.Enqueue($"Quest Finished: {quest.questName}");
                 if (!coroutineIsRunning)
                 {
                     StartCoroutine("FadeInText");
@@ -116,8 +116,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
         if (questsToDisplay.Count > 0)
         {
             coroutineIsRunning = true;
-            questDisplay.text = questsToDisplay[0];
-            questsToDisplay.Remove(questsToDisplay[0]);
+            questDisplay.text = questsToDisplay.Dequeue();
             questDisplay.CrossFadeAlpha(1, 1, true);
             yield return new WaitForSeconds(3);
             questDisplay.CrossFadeAlpha(0, 1, true);
