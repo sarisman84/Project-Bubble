@@ -7,7 +7,6 @@ using UnityEditor;
 public class Scenario : ScriptableObject
 {
     public Event startEvent = null;
-    //public List<Node> editorNodes = new List<Node>();
     public List<ChoiceNode> editorChoiceNodes = new List<ChoiceNode>();
     public List<EventNode> editorEventNodes = new List<EventNode>();
     public List<Connection> editorConnections = new List<Connection>();
@@ -36,12 +35,18 @@ public class Choice
     public string choiceText = "";
     public Characteristics skillType;
 
+    public ItemTransfer itemtransfer;
+    public int itemID;
+
+    public Characteristics requiredSkill;
+    public int requiredSkillNumber;
+
     public NPC_DataContainer affectedNPC;
+
     public RelationshipAttribute relationshipAttributeToChange;
     public int relationshipAttributeChangeNumber = 0;
 
-    public ItemTransfer itemtransfer;
-    public int itemID;
+    public RelationshipLevel minimumRelationshiplevel;
 
     public Event nextEvent = null;
     public Scenario nextScenario = null;

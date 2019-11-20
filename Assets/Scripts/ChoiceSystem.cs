@@ -15,6 +15,14 @@ public class ChoiceSystem : MonoBehaviour
 
     private void Start()
     {
+        if (!Inventory.instance)
+        {
+            Debug.LogError("Inventory is missing");
+        }
+        if (!PlayerCharacteristics.instance)
+        {
+            Debug.LogError("Playercharacteristics is missing");
+        }
         currentEvent = scenario.startEvent;
         DisplayGUI(currentEvent);
     }
@@ -49,10 +57,26 @@ public class ChoiceSystem : MonoBehaviour
     private void AffectPlayer(Choice usedChoice)
     {
         PlayerCharacteristics.instance.IncreaseStat(usedChoice.skillType);
-        //CONNECTED NPC ?
+
         //AFFECT Relationship
+        if (usedChoice.affectedNPC)
+        {
+            usedChoice.affectedNPC.AffectAttribute(usedChoice.relationshipAttributeToChange, usedChoice.relationshipAttributeChangeNumber);
+
+        }
 
         //Give take item
+        switch (usedChoice.itemtransfer)
+        {
+            case ItemTransfer.Off:
+                break;
+            case ItemTransfer.PlayerGetItem:
+                Inventory.instance.AddItemToInventory(usedChoice.itemID);
+                break;
+            case ItemTransfer.PlayerLoseItem:
+                Inventory.instance.RemoveItemFromInventory(usedChoice.itemID);
+                break;
+        }
     }
 
     private void DisplayGUI(Event input)
@@ -63,10 +87,44 @@ public class ChoiceSystem : MonoBehaviour
         }
         for (int i = 0; i < input.choices.Count; i++)
         {
-            choiceButtons[i].SetActive(true);
-            choiceButtonTexts[i].text = currentEvent.choices[i].choiceText;
+            DrawChoice(input.choices[i], i);
         }
         background.sprite = currentEvent.image;
         description.text = currentEvent.description;
+    }
+
+    private void DrawChoice(Choice choice, int choiceIndex)
+    {
+        bool isAllowed = true;
+        string fault = "";
+        if (choice.itemtransfer == ItemTransfer.PlayerLoseItem && !Inventory.instance.CheckIfItemIsInInventory(choice.itemID))
+        {
+            fault = " - you don't have the item";
+            isAllowed = false;
+        }
+
+        if (choice.affectedNPC != null && (int)choice.minimumRelationshiplevel > (int)choice.affectedNPC.CalculateAndCheckRelationshipLevel())
+        {
+            fault = " - you don't know the person well enough";
+            isAllowed = false;
+        }
+        if (choice.requiredSkill != Characteristics.None && choice.requiredSkillNumber > PlayerCharacteristics.instance.GetCharacteristic(choice.requiredSkill))
+        {
+            fault = " - you don't have the required skill";
+            isAllowed = false;
+        }
+
+        if (isAllowed)
+        {
+            choiceButtons[choiceIndex].GetComponent<Button>().interactable = true;
+            choiceButtons[choiceIndex].SetActive(true);
+            choiceButtonTexts[choiceIndex].text = choice.choiceText;
+        }
+        else
+        {
+            choiceButtons[choiceIndex].GetComponent<Button>().interactable = false;
+            choiceButtons[choiceIndex].SetActive(true);
+            choiceButtonTexts[choiceIndex].text = choice.choiceText + fault;
+        }
     }
 }

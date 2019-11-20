@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856872bfc33a798498afe9e5173a72e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenario: {fileID: 11400000, guid: cd521e614c229da4b88635638e7f6a28, type: 2}
+  scenario: {fileID: 11400000, guid: 7227caf41a00b43488df9f85d3f261da, type: 2}
   currentEvent:
     title: 
     description: 
@@ -1854,11 +1854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233228988}
     m_Modifications:
-    - target: {fileID: 595184936344110923, guid: f6cb8f4209daede4f9786a8b64fc5260,
-        type: 3}
-      propertyPath: m_Name
-      value: Inventory
-      objectReference: {fileID: 0}
     - target: {fileID: 595184936344110920, guid: f6cb8f4209daede4f9786a8b64fc5260,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1963,6 +1958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 595184936344110923, guid: f6cb8f4209daede4f9786a8b64fc5260,
+        type: 3}
+      propertyPath: m_Name
+      value: Inventory
       objectReference: {fileID: 0}
     - target: {fileID: 595184936344110921, guid: f6cb8f4209daede4f9786a8b64fc5260,
         type: 3}
@@ -3078,11 +3078,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233228988}
     m_Modifications:
-    - target: {fileID: 1306835711861741911, guid: 67048dbf4a66d4c4abc124db88ed5ab6,
-        type: 3}
-      propertyPath: m_Name
-      value: Message Panel
-      objectReference: {fileID: 0}
     - target: {fileID: 1306835711861741910, guid: 67048dbf4a66d4c4abc124db88ed5ab6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3187,6 +3182,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306835711861741911, guid: 67048dbf4a66d4c4abc124db88ed5ab6,
+        type: 3}
+      propertyPath: m_Name
+      value: Message Panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67048dbf4a66d4c4abc124db88ed5ab6, type: 3}
@@ -3809,16 +3809,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 233228988}
     m_Modifications:
-    - target: {fileID: 9116313937897739907, guid: 24a9ae6d905c81049b76140fb7c8aab4,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialogue Panel
-      objectReference: {fileID: 0}
-    - target: {fileID: 9116313937897739907, guid: 24a9ae6d905c81049b76140fb7c8aab4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9116313937897739906, guid: 24a9ae6d905c81049b76140fb7c8aab4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3923,6 +3913,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116313937897739907, guid: 24a9ae6d905c81049b76140fb7c8aab4,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116313937897739907, guid: 24a9ae6d905c81049b76140fb7c8aab4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9116313937938037575, guid: 24a9ae6d905c81049b76140fb7c8aab4,
         type: 3}

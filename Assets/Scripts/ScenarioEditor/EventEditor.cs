@@ -277,7 +277,6 @@ public class EventEditor : EditorWindow
 
     private void OnClickInPoint(ConnectionPoint inPoint)
     {
-        Debug.Log("Clicked on Inpoint");
         selectedNodeInPoint = inPoint;
 
         if (selectedNodeOutPoint != null)
@@ -296,7 +295,6 @@ public class EventEditor : EditorWindow
 
     private void OnClickOutPoint(ConnectionPoint outPoint)
     {
-        Debug.Log("Clicked on Outpoint");
         selectedNodeOutPoint = outPoint;
 
         if (selectedNodeInPoint != null)
@@ -497,7 +495,6 @@ public class EventEditor : EditorWindow
                             ChoiceNode newChhoiceNode = allConnections[i].outPoint.node as ChoiceNode;
                             newChoiceNodes.Add(newChhoiceNode);
                             inputEvent.choices.Add(newChhoiceNode.myChoice);
-                            Debug.Log("Choice added and saved");
                             break;
                         case Node.NodeType.EventNode:
                             Debug.LogError("EventNode connected to EventNode in Save");
@@ -517,6 +514,7 @@ public class EventEditor : EditorWindow
     //New method that saves the output from choicenodes
     private void SaveOutputsFromChoiceNode(Choice inputChoice, ChoiceNode choiceNode)
     {
+        ScenarioEndNode newEndNode = null;
         EventNode newEventNode = null;
         Event newEvent = null;
         for (int i = 0; i < allConnections.Count; i++)
@@ -535,10 +533,9 @@ public class EventEditor : EditorWindow
                             newEventNode.myEvent.choices.Clear();
                             newEvent = newEventNode.myEvent;
                             inputChoice.nextEvent = newEvent;
-                            Debug.Log("Event added and saved");
                             break;
                         case Node.NodeType.ScenarioEndNode:
-                            ScenarioEndNode newEndNode = allConnections[i].outPoint.node as ScenarioEndNode;
+                            newEndNode = allConnections[i].outPoint.node as ScenarioEndNode;
                             inputChoice.nextScenario = newEndNode.nextScenario;
                             inputChoice.nextScene = newEndNode.nextScene;
                             break;
@@ -551,6 +548,10 @@ public class EventEditor : EditorWindow
         if (newEventNode != null && newEvent != null)
         {
             SaveOutputsFromEvent(newEvent, newEventNode);
+        }
+        else if (newEndNode == null)
+        {
+            Debug.LogWarning("A choice node exists without any further events or ends, this is not intended and will hardstuck the player. Please check node: " + inputChoice.choiceText);
         }
     }
 

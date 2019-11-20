@@ -58,4 +58,35 @@ public class PlayerCharacteristics : MonoBehaviour
                 " Intimidation: " + intimidation);
         }
     }
+
+    public int GetCharacteristic(Characteristics charactersitsticsToCheck)
+    {
+        switch (charactersitsticsToCheck)
+        {
+            case Characteristics.Charming:
+                return charm;
+            case Characteristics.Intimidation:
+                return intimidation;
+            case Characteristics.Logical:
+                return intelligence;
+            default:
+            case Characteristics.None:
+                Debug.LogWarning("Checking for non-existing skill");
+                return -1;
+        }
+    }
+
+    public int GetCharm()
+    {
+        return charm;
+    }
+
+    public int GetIntimidation()
+    {
+        return intimidation;
+    }
+    public int GetIntelligence()
+    {
+        return intelligence;
+    }
 }

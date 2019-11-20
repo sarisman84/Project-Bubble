@@ -110,11 +110,11 @@ public class EventNode : Node
         boxHeight = 180;
 
     //Small boxes and graphics
-    Rect imageRect;
-    Rect titleRect;
-    Rect descriptionRect;
+    public Rect imageRect;
+    public Rect titleRect;
+    public Rect descriptionRect;
 
-    Rect isStartNodeRect;
+    public Rect isStartNodeRect;
 
 
     public EventNode(Vector2 position, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
@@ -190,21 +190,24 @@ public class ChoiceNode : Node
     //Sizes and Positions
     public const float
         boxWidth = 250,
-        boxHeight = 150;
+        boxHeight = 200;
 
 
-    Rect choiceTextRect;
+    public Rect choiceTextRect;
 
-    Rect skillTypeRect;
+    public Rect skillTypeRect;
 
-    Rect npcRect;
-    Rect relationshipTypeChangeRect;
-    Rect relationshipNumberChangeRect;
+    public Rect itemTransferTypeRect;
+    public Rect itemTransferIDRect;
 
-    Rect itemTransferTypeRect;
-    Rect itemTransferIDRect;
+    public Rect requiredSkillTypeRect;
+    public Rect requiredSkillNumberRect;
 
+    public Rect npcRect;
+    public Rect relationshipTypeChangeRect;
+    public Rect relationshipNumberChangeRect;
 
+    public Rect requiredRelationshiplevelRect;
 
     public override void Drag(Vector2 delta)
     {
@@ -214,12 +217,17 @@ public class ChoiceNode : Node
 
         skillTypeRect.position += delta;
 
+        itemTransferTypeRect.position += delta;
+        itemTransferIDRect.position += delta;
+
+        requiredSkillTypeRect.position += delta;
+        requiredSkillNumberRect.position += delta;
+
         npcRect.position += delta;
         relationshipTypeChangeRect.position += delta;
         relationshipNumberChangeRect.position += delta;
 
-        itemTransferTypeRect.position += delta;
-        itemTransferIDRect.position += delta;
+        requiredRelationshiplevelRect.position += delta;
     }
 
     public override void Draw()
@@ -242,12 +250,19 @@ public class ChoiceNode : Node
             myChoice.itemID = EditorGUI.IntField(itemTransferIDRect, "Item ID", myChoice.itemID);
         }
 
+        myChoice.requiredSkill = (Characteristics)EditorGUI.EnumPopup(requiredSkillTypeRect, "Required skill", myChoice.requiredSkill);
+        if (myChoice.requiredSkill != Characteristics.None)
+        {
+            myChoice.requiredSkillNumber = EditorGUI.IntField(requiredSkillNumberRect, "Number of skillpoints", myChoice.requiredSkillNumber);
+        }
 
         myChoice.affectedNPC = (NPC_DataContainer)EditorGUI.ObjectField(npcRect, "AffectedNPC", myChoice.affectedNPC, typeof(NPC_DataContainer), false);
         if (myChoice.affectedNPC)
         {
             myChoice.relationshipAttributeToChange = (RelationshipAttribute)EditorGUI.EnumPopup(relationshipTypeChangeRect, "Change", myChoice.relationshipAttributeToChange);
             myChoice.relationshipAttributeChangeNumber = EditorGUI.IntField(relationshipNumberChangeRect, "Change Number", myChoice.relationshipAttributeChangeNumber);
+
+            myChoice.minimumRelationshiplevel = (RelationshipLevel)EditorGUI.EnumPopup(requiredRelationshiplevelRect, "Required relationship", myChoice.minimumRelationshiplevel);
         }
     }
 
@@ -264,9 +279,6 @@ public class ChoiceNode : Node
         choiceTextRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT * 2);
         adaptiveY += TEXTSQUAREHEIGHT * 2;
 
-        //skillTypeInfoRect = new Rect(xLeft, choiceTextRect.y + choiceTextRect.height + SPACING, boxWidth / 2 - PADDING, TEXTSQUAREHEIGHT);
-        //adaptiveY += TEXTSQUAREHEIGHT;
-
         skillTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
@@ -274,6 +286,12 @@ public class ChoiceNode : Node
         adaptiveY += TEXTSQUAREHEIGHT;
 
         itemTransferIDRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        requiredSkillTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        requiredSkillNumberRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
         npcRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
@@ -285,8 +303,8 @@ public class ChoiceNode : Node
         relationshipNumberChangeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
-
-
+        requiredRelationshiplevelRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
 
 
 
@@ -318,8 +336,8 @@ public class ScenarioEndNode : Node
         boxHeight = 70;
 
     //More squares
-    Rect newScenarioRect;
-    Rect newSceneRect;
+    public Rect newScenarioRect;
+    public Rect newSceneRect;
 
 
     //Connected class or logic
