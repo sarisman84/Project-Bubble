@@ -6,23 +6,24 @@ public enum Characteristics { None, Charming, Intimidation, Logical }
 
 
 //Simon Voss
-public class PlayerCharacteristics : MonoBehaviour
+[CreateAssetMenu(menuName = "Character/Player")]
+public class PlayerCharacteristics : ScriptableObject
 {
-    #region Singleton
-    public static PlayerCharacteristics instance;
-    private void Awake()
-    {
-        if (PlayerCharacteristics.instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Debug.LogWarning("Another instance of: " + this + " , was tried to be instantiated, but was destroyed! This instance was tried to be instantiated on: " + this.gameObject);
-            Destroy(this);
-        }
-    }
-    #endregion
+    //#region Singleton
+    //public static PlayerCharacteristics instance;
+    //private void Awake()
+    //{
+    //    if (PlayerCharacteristics.instance == null)
+    //    {
+    //        instance = this;
+    //    }
+    //    else
+    //    {
+    //        Debug.LogWarning("Another instance of: " + this + " , was tried to be instantiated, but was destroyed! This instance was tried to be instantiated on: " + this.gameObject);
+    //        Destroy(this);
+    //    }
+    //}
+    //#endregion
 
 
     [SerializeField] int charm;

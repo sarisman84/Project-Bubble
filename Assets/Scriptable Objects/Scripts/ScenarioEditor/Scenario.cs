@@ -36,12 +36,13 @@ public class Choice
     public Characteristics skillType;
 
     public ItemTransfer itemtransfer;
-    public int itemID;
+    public ScriptableInventoryItem item;
+    //public int itemID;
 
     public Characteristics requiredSkill;
     public int requiredSkillNumber;
 
-    public NPC_DataContainer affectedNPC;
+    public ScriptableNpc affectedNPC;
 
     public RelationshipAttribute relationshipAttributeToChange;
     public int relationshipAttributeChangeNumber = 0;

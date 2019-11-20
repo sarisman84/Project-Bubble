@@ -198,7 +198,7 @@ public class ChoiceNode : Node
     public Rect skillTypeRect;
 
     public Rect itemTransferTypeRect;
-    public Rect itemTransferIDRect;
+    public Rect itemTransferRect;
 
     public Rect requiredSkillTypeRect;
     public Rect requiredSkillNumberRect;
@@ -218,7 +218,7 @@ public class ChoiceNode : Node
         skillTypeRect.position += delta;
 
         itemTransferTypeRect.position += delta;
-        itemTransferIDRect.position += delta;
+        itemTransferRect.position += delta;
 
         requiredSkillTypeRect.position += delta;
         requiredSkillNumberRect.position += delta;
@@ -247,7 +247,8 @@ public class ChoiceNode : Node
         myChoice.itemtransfer = (ItemTransfer)EditorGUI.EnumPopup(itemTransferTypeRect, "Give/Take item", myChoice.itemtransfer);
         if (myChoice.itemtransfer != ItemTransfer.Off)
         {
-            myChoice.itemID = EditorGUI.IntField(itemTransferIDRect, "Item ID", myChoice.itemID);
+            myChoice.item = (ScriptableInventoryItem)EditorGUI.ObjectField(itemTransferRect, "Item to give/take", myChoice.item, typeof(ScriptableInventoryItem), false);
+            //myChoice.itemID = EditorGUI.IntField(itemTransferRect, "Item ID", myChoice.itemID);
         }
 
         myChoice.requiredSkill = (Characteristics)EditorGUI.EnumPopup(requiredSkillTypeRect, "Required skill", myChoice.requiredSkill);
@@ -256,7 +257,7 @@ public class ChoiceNode : Node
             myChoice.requiredSkillNumber = EditorGUI.IntField(requiredSkillNumberRect, "Number of skillpoints", myChoice.requiredSkillNumber);
         }
 
-        myChoice.affectedNPC = (NPC_DataContainer)EditorGUI.ObjectField(npcRect, "AffectedNPC", myChoice.affectedNPC, typeof(NPC_DataContainer), false);
+        myChoice.affectedNPC = (ScriptableNpc)EditorGUI.ObjectField(npcRect, "AffectedNPC", myChoice.affectedNPC, typeof(ScriptableNpc), false);
         if (myChoice.affectedNPC)
         {
             myChoice.relationshipAttributeToChange = (RelationshipAttribute)EditorGUI.EnumPopup(relationshipTypeChangeRect, "Change", myChoice.relationshipAttributeToChange);
@@ -285,7 +286,7 @@ public class ChoiceNode : Node
         itemTransferTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
-        itemTransferIDRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        itemTransferRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
         requiredSkillTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);

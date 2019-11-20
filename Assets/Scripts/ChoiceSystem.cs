@@ -12,14 +12,17 @@ public class ChoiceSystem : MonoBehaviour
     [SerializeField] Text description = null;
     [SerializeField] GameObject[] choiceButtons = null;
     [SerializeField] Text[] choiceButtonTexts = null;
+    [SerializeField] PlayerCharacteristics playerStats;
+    [SerializeField] ScriptableInventory inventory;
 
+    //Simon Vos - Handles the 2d choice system logic
     private void Start()
     {
-        if (!Inventory.instance)
+        if (!inventory)
         {
             Debug.LogError("Inventory is missing");
         }
-        if (!PlayerCharacteristics.instance)
+        if (!playerStats)
         {
             Debug.LogError("Playercharacteristics is missing");
         }
@@ -56,7 +59,7 @@ public class ChoiceSystem : MonoBehaviour
 
     private void AffectPlayer(Choice usedChoice)
     {
-        PlayerCharacteristics.instance.IncreaseStat(usedChoice.skillType);
+        playerStats.IncreaseStat(usedChoice.skillType);
 
         //AFFECT Relationship
         if (usedChoice.affectedNPC)
@@ -71,10 +74,13 @@ public class ChoiceSystem : MonoBehaviour
             case ItemTransfer.Off:
                 break;
             case ItemTransfer.PlayerGetItem:
-                Inventory.instance.AddItemToInventory(usedChoice.itemID);
+                //inventory.AddItemToInventory(usedChoice.itemID);
+                inventory.AddItemToInventory(usedChoice.item);
+
                 break;
             case ItemTransfer.PlayerLoseItem:
-                Inventory.instance.RemoveItemFromInventory(usedChoice.itemID);
+                //inventory.RemoveItemFromInventory(usedChoice.itemID);
+                inventory.RemoveItemFromInventory(usedChoice.item);
                 break;
         }
     }
@@ -97,7 +103,7 @@ public class ChoiceSystem : MonoBehaviour
     {
         bool isAllowed = true;
         string fault = "";
-        if (choice.itemtransfer == ItemTransfer.PlayerLoseItem && !Inventory.instance.CheckIfItemIsInInventory(choice.itemID))
+        if (choice.itemtransfer == ItemTransfer.PlayerLoseItem && !inventory.CheckIfItemIsInInventory(choice.item))
         {
             fault = " - you don't have the item";
             isAllowed = false;
@@ -108,7 +114,7 @@ public class ChoiceSystem : MonoBehaviour
             fault = " - you don't know the person well enough";
             isAllowed = false;
         }
-        if (choice.requiredSkill != Characteristics.None && choice.requiredSkillNumber > PlayerCharacteristics.instance.GetCharacteristic(choice.requiredSkill))
+        if (choice.requiredSkill != Characteristics.None && choice.requiredSkillNumber > playerStats.GetCharacteristic(choice.requiredSkill))
         {
             fault = " - you don't have the required skill";
             isAllowed = false;

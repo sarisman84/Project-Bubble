@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "NPC/NPC")]
-public class NPC_DataContainer : ScriptableObject
+//Simon Voss
+[CreateAssetMenu(menuName = "Character/NPC")]
+public class ScriptableNpc : ScriptableObject
 {
     [SerializeField] RelationshipLevel relationship;
     [SerializeField] int trust = 0;
