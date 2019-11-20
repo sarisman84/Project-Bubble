@@ -17,6 +17,9 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField] List<DialogueChoice> dialogueChoices = new List<DialogueChoice>();
     public List<Quest> quests = new List<Quest>();
 
+    [SerializeField] SceneSwitch switchScene = null;
+    [SerializeField] int ifCompletedSwitchSceneToIndex = 0;
+
     bool firstTimeTalkingWith = true;
     
 
@@ -59,6 +62,11 @@ public class NPC : MonoBehaviour, IInteractable
     {
         dialogueChoices = new List<DialogueChoice>();
         DialogueChoice newChoice = new DialogueChoice();
+
+        if (switchScene)
+        {
+            switchScene.SwitchScene(ifCompletedSwitchSceneToIndex);
+        }
     }
 
     public bool InteractWith()
