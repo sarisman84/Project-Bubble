@@ -38,6 +38,22 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
     private void Start()
     {
         questDisplay.CrossFadeAlpha(0, 0, true); //sets the quests added/finished text to transparent
+
+        if (quests.Count > 0) //displays text for any quests that auto-started on load
+        {
+            foreach (QuestInstance quest in quests)
+            {
+                if (quest.started)
+                {
+                    questsToDisplay.Add($"Quest Added: {quest.questName}");
+                    if (!coroutineIsRunning)
+                    {
+                        StartCoroutine("FadeInText");
+                    }
+                    UpdateObjectives();
+                }
+            }
+        }
     }
 
     public void ActivateQuest(int questID) //activates quest with given questID and updates GUI
