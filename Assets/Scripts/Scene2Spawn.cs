@@ -8,6 +8,7 @@ public class Scene2Spawn : MonoBehaviour
     public Transform door = null;
     public Transform bed = null;
 
+    int first = 2;
     //public GameObject goOutSideButton = null;
     //public GameObject stayInside = null;
 
