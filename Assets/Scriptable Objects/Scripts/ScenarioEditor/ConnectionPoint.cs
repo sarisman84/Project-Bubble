@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Simon Voss
 [System.Serializable]
 public class ConnectionPoint
 {

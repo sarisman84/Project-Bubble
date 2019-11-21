@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 
-
+//Simon Voss
 [System.Serializable]
 abstract public class Node
 {
@@ -148,7 +148,7 @@ public class EventNode : Node
         typeOfNode = NodeType.EventNode;
         allowedConnectionTypes.Add(NodeType.ChoiceNode);
 
-        myEvent = new Event("Title Text", "Event Text");
+        myEvent = new Event("Location Text", "Event Text");
     }
 
 
@@ -172,7 +172,7 @@ public class EventNode : Node
         }
         GUI.Box(rect, "", style);
 
-        myEvent.title = EditorGUI.TextField(titleRect, myEvent.title);
+        myEvent.locationText = EditorGUI.TextField(titleRect, myEvent.locationText);
         myEvent.image = (Sprite)EditorGUI.ObjectField(imageRect, myEvent.image, typeof(Sprite), false);
         myEvent.description = EditorGUI.TextField(descriptionRect, myEvent.description);
         EditorGUI.DrawRect(isStartNodeRect, Color.grey);
@@ -190,7 +190,7 @@ public class ChoiceNode : Node
     //Sizes and Positions
     public const float
         boxWidth = 250,
-        boxHeight = 200;
+        boxHeight = 260;
 
 
     public Rect choiceTextRect;
@@ -198,7 +198,11 @@ public class ChoiceNode : Node
     public Rect skillTypeRect;
 
     public Rect itemTransferTypeRect;
-    public Rect itemTransferIDRect;
+    public Rect itemTransferRect;
+
+    public Rect questRect;
+    public Rect questProcessRect;
+    public Rect requiredCompletedQuestRect;
 
     public Rect requiredSkillTypeRect;
     public Rect requiredSkillNumberRect;
@@ -218,7 +222,11 @@ public class ChoiceNode : Node
         skillTypeRect.position += delta;
 
         itemTransferTypeRect.position += delta;
-        itemTransferIDRect.position += delta;
+        itemTransferRect.position += delta;
+
+        questRect.position += delta; ;
+        questProcessRect.position += delta; ;
+        requiredCompletedQuestRect.position += delta; ;
 
         requiredSkillTypeRect.position += delta;
         requiredSkillNumberRect.position += delta;
@@ -247,7 +255,15 @@ public class ChoiceNode : Node
         myChoice.itemtransfer = (ItemTransfer)EditorGUI.EnumPopup(itemTransferTypeRect, "Give/Take item", myChoice.itemtransfer);
         if (myChoice.itemtransfer != ItemTransfer.Off)
         {
-            myChoice.itemID = EditorGUI.IntField(itemTransferIDRect, "Item ID", myChoice.itemID);
+            myChoice.item = (ScriptableInventoryItem)EditorGUI.ObjectField(itemTransferRect, "Item to give/take", myChoice.item, typeof(ScriptableInventoryItem), false);
+        }
+
+        myChoice.requiredCompletedQuest = (ScriptableQuest)EditorGUI.ObjectField(requiredCompletedQuestRect, "Quest Requirement (Completed)", myChoice.requiredCompletedQuest, typeof(ScriptableQuest), false);
+        
+        myChoice.connectedQuest = (ScriptableQuest)EditorGUI.ObjectField(questRect, "Connected Quest", myChoice.connectedQuest, typeof(ScriptableQuest), false);
+        if (myChoice.connectedQuest)
+        {
+            myChoice.processQuest = (QuestProcessing)EditorGUI.EnumPopup(questProcessRect, "What do to with quest?", myChoice.processQuest);
         }
 
         myChoice.requiredSkill = (Characteristics)EditorGUI.EnumPopup(requiredSkillTypeRect, "Required skill", myChoice.requiredSkill);
@@ -256,7 +272,7 @@ public class ChoiceNode : Node
             myChoice.requiredSkillNumber = EditorGUI.IntField(requiredSkillNumberRect, "Number of skillpoints", myChoice.requiredSkillNumber);
         }
 
-        myChoice.affectedNPC = (NPC_DataContainer)EditorGUI.ObjectField(npcRect, "AffectedNPC", myChoice.affectedNPC, typeof(NPC_DataContainer), false);
+        myChoice.affectedNPC = (ScriptableNpc)EditorGUI.ObjectField(npcRect, "AffectedNPC", myChoice.affectedNPC, typeof(ScriptableNpc), false);
         if (myChoice.affectedNPC)
         {
             myChoice.relationshipAttributeToChange = (RelationshipAttribute)EditorGUI.EnumPopup(relationshipTypeChangeRect, "Change", myChoice.relationshipAttributeToChange);
@@ -285,7 +301,16 @@ public class ChoiceNode : Node
         itemTransferTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
-        itemTransferIDRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        itemTransferRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        questRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        questProcessRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        requiredCompletedQuestRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
         requiredSkillTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
