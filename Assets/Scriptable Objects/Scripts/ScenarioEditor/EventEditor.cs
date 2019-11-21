@@ -7,7 +7,7 @@ using UnityEditor;
 //http://gram.gs/gramlog/creating-node-based-editor-unity/
 
 public enum ConnectionPointType { In, Out }
-
+//Simon Voss
 public class EventEditor : EditorWindow
 {
     public static List<Node> allNodes = new List<Node>();
