@@ -189,6 +189,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe6a6f367c435e43840ec2d0eaf5a2e, type: 3}
+--- !u!1 &509847740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7114849300944566488, guid: 5fe6a6f367c435e43840ec2d0eaf5a2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 509847739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &509847741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509847740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ca930234d57b74292db848df3ca727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monologueField: {fileID: 1617060632083332971}
+  monologueStorer: {fileID: 1617060632083332970}
+  delay:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  lines:
+  - Wow a mask!
+  - Could this belong to Gilad?
+  - But why would leave he leave it here?!
+  - I got a bad feeling about this..
+  - I should head back..
 --- !u!1001 &534766337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,5 +953,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7371460395777218236, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371460395777218236, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8ecc2e3297fa6d42bd4da0a3888393a, type: 3}
+--- !u!1 &1617060632083332970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6820193380924281165, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617060632083332969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1617060632083332971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508664194397677515, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617060632083332969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617060632083332970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
