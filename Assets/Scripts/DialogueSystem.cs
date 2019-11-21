@@ -30,11 +30,17 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] GameObject choicePanel = null;
     [SerializeField] GameObject subtitlesPanel = null;
     TextMeshProUGUI subtitleText;
+    [SerializeField] PlayerCharacteristics playerStats = null;
     public bool dialogueOpen = false;
 
     //Sets up the references needed
     private void Start()
     {
+        if (!playerStats)
+        {
+            Debug.LogError("Playercharacteristics is missing");
+        }
+
         choiceButtons = new GameObject[choicePanel.transform.childCount];
         choiceTexts = new TextMeshProUGUI[choicePanel.transform.childCount];
 
@@ -70,18 +76,18 @@ public class DialogueSystem : MonoBehaviour
         {
             case DialogueChoice.TypeOfChoice.Dialogue:
                 ContinueDialogue(choice.responseText, choice.continuedChoices);
-                PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
+                playerStats.IncreaseStat(choice.characteristics);
                 break;
             case DialogueChoice.TypeOfChoice.PlayerGetsItem:
                 Inventory.instance.AddItemToInventory(choice.getItemID);
                 ContinueDialogue(choice.responseText, choice.continuedChoices);
-                PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
+                playerStats.IncreaseStat(choice.characteristics);
                 break;
             case DialogueChoice.TypeOfChoice.PlayerLosesItem:
                 if (Inventory.instance.RemoveItemFromInventory(choice.loseItemID))
                 {
                     ContinueDialogue(choice.responseText, choice.continuedChoices);
-                    PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
+                    playerStats.IncreaseStat(choice.characteristics);
                 }
                 else
                 {
@@ -89,7 +95,7 @@ public class DialogueSystem : MonoBehaviour
                 }
                 break;
             case DialogueChoice.TypeOfChoice.EndDialogue:
-                PlayerCharacteristics.instance.IncreaseStat(choice.characteristics);
+                playerStats.IncreaseStat(choice.characteristics);
                 EndDialogue();
                 break;
         }
