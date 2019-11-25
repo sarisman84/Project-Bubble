@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 821919206275329881}
   - component: {fileID: 8873054388694978539}
   - component: {fileID: 5073073151894421258}
+  - component: {fileID: 5809626456770086522}
   m_Layer: 0
   m_Name: ToiletRoll
   m_TagString: Untagged
@@ -115,6 +116,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5809626456770086522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122884624191879487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.2546, y: 58.68473, z: 63.115944}
+  m_Center: {x: 0, y: 18.206717, z: 20.967358}
 --- !u!1 &4610273858127537648
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,6 +218,7 @@ GameObject:
   - component: {fileID: 3487300535332178179}
   - component: {fileID: 5748024741919040285}
   - component: {fileID: 6323493929641723780}
+  - component: {fileID: 7410766295585619174}
   m_Layer: 0
   m_Name: ToilettRollHolder
   m_TagString: Untagged
@@ -271,6 +286,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7410766295585619174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704665826706825477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 33.28827, y: 22.32853, z: 26.101206}
+  m_Center: {x: -0.00012207031, y: 0, z: 0}
 --- !u!1 &4944810718312918378
 GameObject:
   m_ObjectHideFlags: 0
