@@ -21,6 +21,7 @@ public class MonologueTrigger : MonoBehaviour
         {
             Debug.Log(lines[0]);
         InnerMonologue.instance.PrintThis(lines,delay);
+            Destroy(this.gameObject);
         }
     }
    

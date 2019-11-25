@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2081578594466077378}
   - component: {fileID: 2960481054589157087}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Subtitle Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,8 +67,6 @@ MonoBehaviour:
 
     Dialogue
 
-    Dialogue
-
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -97,8 +95,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -114,7 +112,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 9
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -138,13 +136,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2960481054589157087}
-    characterCount: 0
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -173,14 +171,13 @@ GameObject:
   - component: {fileID: 6156068912235128292}
   - component: {fileID: 28754842401831195}
   - component: {fileID: 6170812686577572004}
-  - component: {fileID: 2304154372472116468}
   m_Layer: 5
   m_Name: Choice Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8762291927308889944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -196,10 +193,10 @@ RectTransform:
   m_Father: {fileID: 7709384417484734093}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -210}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6156068912235128292
 CanvasRenderer:
@@ -280,43 +277,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2304154372472116468}
-        m_MethodName: UseChoice
-        m_Mode: 1
+      - m_Target: {fileID: 3381074863824783952}
+        m_MethodName: MakeChoice
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2304154372472116468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852012627724145597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5800bf0e4c4ed4cb74ac4b7290ed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mychoice:
-    choiceText: 
-    optionAction: 0
-    characteristics: 0
-    getItemID: 0
-    loseItemID: 0
-    responseText: 
-    attributesToChange: 
-    attributeChanges: 
-    canBeReused: 0
-    connectedQuest:
-      description: 
-      id: 0
-    continuedChoices: []
 --- !u!1 &2643653253702518755
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +300,7 @@ GameObject:
   - component: {fileID: 5903878295320219206}
   - component: {fileID: 1906917086375410207}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,8 +381,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -451,13 +422,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1906917086375410207}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -486,7 +457,7 @@ GameObject:
   - component: {fileID: 8345059143852863645}
   - component: {fileID: 26360946812719796}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,8 +538,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -608,13 +579,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 26360946812719796}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -664,10 +635,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3381074863824783952
 MonoBehaviour:
@@ -681,8 +652,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9956a9c065a2b3a48bb300ece8800256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choicePanel: {fileID: 9062701071017358344}
+  subtitleText: {fileID: 2960481054589157087}
   subtitlesPanel: {fileID: 4223854569757121841}
+  choiceButtons:
+  - {fileID: 5620134733885894016}
+  - {fileID: 9037185603870238791}
+  - {fileID: 1852012627724145597}
+  - {fileID: 8986203409943283476}
+  - {fileID: 4120512676886819474}
+  choiceButtonTexts:
+  - {fileID: 6237769657426824382}
+  - {fileID: 6516997248005122001}
+  - {fileID: 4875523786353689080}
+  - {fileID: 26360946812719796}
+  - {fileID: 1906917086375410207}
+  playerStats: {fileID: 11400000, guid: 1a0dfc62a4b85894fb2cb95d95e109e0, type: 2}
+  inventory: {fileID: 11400000, guid: e37a02adb03ebfc41a8709c00b123219, type: 2}
   dialogueOpen: 0
 --- !u!1 &4120512676886819474
 GameObject:
@@ -696,14 +681,13 @@ GameObject:
   - component: {fileID: 2026052254733929337}
   - component: {fileID: 4509774370349944925}
   - component: {fileID: 1328267254330631536}
-  - component: {fileID: 6111966298430451272}
   m_Layer: 5
   m_Name: Choice Button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6006894785920519318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -719,10 +703,10 @@ RectTransform:
   m_Father: {fileID: 7709384417484734093}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -50}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2026052254733929337
 CanvasRenderer:
@@ -803,43 +787,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6111966298430451272}
-        m_MethodName: UseChoice
-        m_Mode: 1
+      - m_Target: {fileID: 3381074863824783952}
+        m_MethodName: MakeChoice
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6111966298430451272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4120512676886819474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5800bf0e4c4ed4cb74ac4b7290ed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mychoice:
-    choiceText: 
-    optionAction: 0
-    characteristics: 0
-    getItemID: 0
-    loseItemID: 0
-    responseText: 
-    attributesToChange: 
-    attributeChanges: 
-    canBeReused: 0
-    connectedQuest:
-      description: 
-      id: 0
-    continuedChoices: []
 --- !u!1 &4223854569757121841
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,7 +815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &163927555000739563
 RectTransform:
   m_ObjectHideFlags: 0
@@ -873,11 +831,11 @@ RectTransform:
   m_Father: {fileID: 7812350797647807511}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 1400, y: 100}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.1, y: 0.05}
+  m_AnchorMax: {x: 0.9, y: 0.12}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8054938426882935311
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -926,7 +884,7 @@ GameObject:
   - component: {fileID: 114329227167324860}
   - component: {fileID: 6237769657426824382}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,8 +965,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1048,13 +1006,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6237769657426824382}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1083,14 +1041,13 @@ GameObject:
   - component: {fileID: 9133288399285383506}
   - component: {fileID: 2223004635540830192}
   - component: {fileID: 2477140612639548476}
-  - component: {fileID: 1193331426415607754}
   m_Layer: 5
   m_Name: Choice Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1722759804581836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1106,10 +1063,10 @@ RectTransform:
   m_Father: {fileID: 7709384417484734093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -370}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9133288399285383506
 CanvasRenderer:
@@ -1190,9 +1147,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1193331426415607754}
-        m_MethodName: UseChoice
-        m_Mode: 1
+      - m_Target: {fileID: 3381074863824783952}
+        m_MethodName: MakeChoice
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1201,32 +1158,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1193331426415607754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5620134733885894016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5800bf0e4c4ed4cb74ac4b7290ed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mychoice:
-    choiceText: 
-    optionAction: 0
-    characteristics: 0
-    getItemID: 0
-    loseItemID: 0
-    responseText: 
-    attributesToChange: 
-    attributeChanges: 
-    canBeReused: 0
-    connectedQuest:
-      description: 
-      id: 0
-    continuedChoices: []
 --- !u!1 &5924774442923986732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1170,7 @@ GameObject:
   - component: {fileID: 3413743654147838571}
   - component: {fileID: 4875523786353689080}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1320,8 +1251,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1361,13 +1292,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 4875523786353689080}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1396,7 +1327,7 @@ GameObject:
   - component: {fileID: 5603800159681282948}
   - component: {fileID: 6516997248005122001}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Choice Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,8 +1408,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1518,13 +1449,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6516997248005122001}
-    characterCount: 0
+    characterCount: 23
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 2
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1553,14 +1484,13 @@ GameObject:
   - component: {fileID: 6827867441659130856}
   - component: {fileID: 1626310783902982710}
   - component: {fileID: 5607745720642293284}
-  - component: {fileID: 943579013012040347}
   m_Layer: 5
   m_Name: Choice Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8686026430202569324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1576,10 +1506,10 @@ RectTransform:
   m_Father: {fileID: 7709384417484734093}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -130}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6827867441659130856
 CanvasRenderer:
@@ -1660,43 +1590,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 943579013012040347}
-        m_MethodName: UseChoice
-        m_Mode: 1
+      - m_Target: {fileID: 3381074863824783952}
+        m_MethodName: MakeChoice
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &943579013012040347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8986203409943283476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5800bf0e4c4ed4cb74ac4b7290ed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mychoice:
-    choiceText: 
-    optionAction: 0
-    characteristics: 0
-    getItemID: 0
-    loseItemID: 0
-    responseText: 
-    attributesToChange: 
-    attributeChanges: 
-    canBeReused: 0
-    connectedQuest:
-      description: 
-      id: 0
-    continuedChoices: []
 --- !u!1 &9037185603870238791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,14 +1613,13 @@ GameObject:
   - component: {fileID: 6572342961359063979}
   - component: {fileID: 7252905439066433781}
   - component: {fileID: 5473779248113556031}
-  - component: {fileID: 5887932110184674252}
   m_Layer: 5
   m_Name: Choice Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3002096032020785368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1732,10 +1635,10 @@ RectTransform:
   m_Father: {fileID: 7709384417484734093}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -290}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6572342961359063979
 CanvasRenderer:
@@ -1816,43 +1719,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5887932110184674252}
-        m_MethodName: UseChoice
-        m_Mode: 1
+      - m_Target: {fileID: 3381074863824783952}
+        m_MethodName: MakeChoice
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5887932110184674252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9037185603870238791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5800bf0e4c4ed4cb74ac4b7290ed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mychoice:
-    choiceText: 
-    optionAction: 0
-    characteristics: 0
-    getItemID: 0
-    loseItemID: 0
-    responseText: 
-    attributesToChange: 
-    attributeChanges: 
-    canBeReused: 0
-    connectedQuest:
-      description: 
-      id: 0
-    continuedChoices: []
 --- !u!1 &9062701071017358344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7709384417484734093}
+  - component: {fileID: 1051776242858242144}
   m_Layer: 5
   m_Name: Choices Panel
   m_TagString: Untagged
@@ -1888,8 +1766,32 @@ RectTransform:
   m_Father: {fileID: 7812350797647807511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 800, y: 400}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.2, y: 0.2}
+  m_AnchorMax: {x: 0.8, y: 0.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1051776242858242144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062701071017358344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 7
+  m_StartCorner: 2
+  m_StartAxis: 1
+  m_CellSize: {x: 400, y: 50}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
