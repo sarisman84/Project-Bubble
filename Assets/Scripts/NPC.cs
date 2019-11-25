@@ -9,13 +9,16 @@ public enum RelationshipLevel { None, Familiar, Friend, Ally }
 public class NPC : MonoBehaviour, IInteractable
 {
     private string currentGreeting = "";
-    [SerializeField] string firstGreeting = "";
-    [SerializeField] string defaultGreeting = "";
+    //[SerializeField] string firstGreeting = "";
+    //[SerializeField] string defaultGreeting = "";
     [SerializeField] List<string> greetings = new List<string>();
 
     [SerializeField] bool willingToTalk = true;
-    [SerializeField] List<DialogueChoice> dialogueChoices = new List<DialogueChoice>();
-    public List<Quest> quests = new List<Quest>();
+    //[SerializeField] List<DialogueChoice> dialogueChoices = new List<DialogueChoice>();
+    //public List<Quest> quests = new List<Quest>();
+    [SerializeField] Scenario dialogue = null;
+    public List<ScriptableQuest> quests = new List<ScriptableQuest>();
+
 
     [SerializeField] SceneSwitch switchScene = null;
     [SerializeField] int ifCompletedSwitchSceneToIndex = 0;
@@ -30,14 +33,14 @@ public class NPC : MonoBehaviour, IInteractable
             //Set greeting
             if (firstTimeTalkingWith)
             {
-                currentGreeting = firstGreeting;
+                currentGreeting = dialogue.startEvent.description;
                 firstTimeTalkingWith = false;
             }
             else
             {
                 if (quests.Count > 0)
                 {
-                    currentGreeting = defaultGreeting;
+                    currentGreeting = dialogue.startEvent.description;
                 }
                 else
                 {
@@ -48,7 +51,8 @@ public class NPC : MonoBehaviour, IInteractable
 
             GameManager.Instance().SetFPSInput(false);
             Debug.Log("NPC talked with");
-            DialogueSystem.instance.StartDialogue(this, currentGreeting, dialogueChoices);
+            //DialogueSystem.instance.StartDialogue(this, currentGreeting, dialogueChoices);
+            DialogueSystem.instance.StartDialogue(this, dialogue);
             return true;
         }
         else
@@ -60,8 +64,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void CharacterCompleted()
     {
-        dialogueChoices = new List<DialogueChoice>();
-        DialogueChoice newChoice = new DialogueChoice();
+        dialogue = null;
 
         if (switchScene)
         {
