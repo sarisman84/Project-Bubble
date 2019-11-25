@@ -3,28 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
+//Simon Vos - Handles the 2d choice system logic
 public class ChoiceSystem : MonoBehaviour
 {
     [SerializeField] Scenario scenario = null;
     [SerializeField] Event currentEvent = null;
+    [SerializeField] TextMeshProUGUI locationText = null;
     [SerializeField] Image background = null;
     [SerializeField] Text description = null;
     [SerializeField] GameObject[] choiceButtons = null;
     [SerializeField] Text[] choiceButtonTexts = null;
+    [SerializeField] PlayerCharacteristics playerStats = null;
+    [SerializeField] ScriptableInventory inventory = null;
 
     private void Start()
     {
-        if (!Inventory.instance)
+        if (inventory == null)
         {
             Debug.LogError("Inventory is missing");
         }
-        if (!PlayerCharacteristics.instance)
+        if (playerStats == null)
         {
             Debug.LogError("Playercharacteristics is missing");
         }
-        currentEvent = scenario.startEvent;
-        DisplayGUI(currentEvent);
+        if (scenario.startEvent != null)
+        {
+            currentEvent = scenario.startEvent;
+            DisplayGUI(currentEvent);
+        }
+        else
+        {
+            Debug.LogError("No event set in inspector of Choice System as start");
+        }
     }
 
     public void MakeChoice(int index)
@@ -48,7 +60,8 @@ public class ChoiceSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No further events or endnodes found, check setup of scenario from node: " + currentEvent.title);
+            Debug.LogError("No further events or endnodes found, check setup of scenario from node: " + currentEvent.locationText);
+            return;
         }
         AffectPlayer(usedChoice);
         DisplayGUI(currentEvent);
@@ -56,7 +69,7 @@ public class ChoiceSystem : MonoBehaviour
 
     private void AffectPlayer(Choice usedChoice)
     {
-        PlayerCharacteristics.instance.IncreaseStat(usedChoice.skillType);
+        playerStats.IncreaseStat(usedChoice.skillType);
 
         //AFFECT Relationship
         if (usedChoice.affectedNPC)
@@ -71,16 +84,52 @@ public class ChoiceSystem : MonoBehaviour
             case ItemTransfer.Off:
                 break;
             case ItemTransfer.PlayerGetItem:
-                Inventory.instance.AddItemToInventory(usedChoice.itemID);
+                inventory.AddItemToInventory(usedChoice.item);
                 break;
             case ItemTransfer.PlayerLoseItem:
-                Inventory.instance.RemoveItemFromInventory(usedChoice.itemID);
+                inventory.RemoveItemFromInventory(usedChoice.item);
                 break;
+        }
+
+        if (usedChoice.connectedQuest != null)
+        {
+            switch (usedChoice.processQuest)
+            {
+                case QuestProcessing.GiveQuest:
+                    playerStats.activeQuests.Add(usedChoice.connectedQuest);
+                    Debug.Log("Quest added: " + usedChoice.connectedQuest.questName);
+                    break;
+                case QuestProcessing.CompleteQuest:
+                    if (playerStats.activeQuests.Contains(usedChoice.connectedQuest))
+                    {
+                        playerStats.activeQuests.Remove(usedChoice.connectedQuest);
+                        playerStats.completedQuests.Add(usedChoice.connectedQuest);
+                        Debug.Log("Quest completed: " + usedChoice.connectedQuest.questName);
+                    }
+                    else
+                    {
+                        Debug.LogError("Tried to complete a quest not given to the player");
+                    }
+                    break;
+                case QuestProcessing.Failquest:
+                    if (playerStats.activeQuests.Contains(usedChoice.connectedQuest))
+                    {
+                        playerStats.activeQuests.Remove(usedChoice.connectedQuest);
+                        playerStats.failedQuests.Add(usedChoice.connectedQuest);
+                        Debug.Log("Quest failed: " + usedChoice.connectedQuest.questName);
+                    }
+                    else
+                    {
+                        Debug.LogError("Tried to fail a quest not given to the player");
+                    }
+                    break;
+            }
         }
     }
 
     private void DisplayGUI(Event input)
     {
+        locationText.text = input.locationText;
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             choiceButtons[i].SetActive(false);
@@ -97,7 +146,7 @@ public class ChoiceSystem : MonoBehaviour
     {
         bool isAllowed = true;
         string fault = "";
-        if (choice.itemtransfer == ItemTransfer.PlayerLoseItem && !Inventory.instance.CheckIfItemIsInInventory(choice.itemID))
+        if (choice.itemtransfer == ItemTransfer.PlayerLoseItem && !inventory.CheckIfItemIsInInventory(choice.item))
         {
             fault = " - you don't have the item";
             isAllowed = false;
@@ -108,10 +157,28 @@ public class ChoiceSystem : MonoBehaviour
             fault = " - you don't know the person well enough";
             isAllowed = false;
         }
-        if (choice.requiredSkill != Characteristics.None && choice.requiredSkillNumber > PlayerCharacteristics.instance.GetCharacteristic(choice.requiredSkill))
+        if (choice.requiredSkill != Characteristics.None && choice.requiredSkillNumber > playerStats.GetCharacteristic(choice.requiredSkill))
         {
             fault = " - you don't have the required skill";
             isAllowed = false;
+        }
+
+        if (choice.requiredStartedQuest != null)
+        {
+            if (!playerStats.activeQuests.Contains(choice.requiredStartedQuest))
+            {
+                fault = " - you have not started the needed quest";
+                isAllowed = false;
+            }
+        }
+
+        if (choice.requiredCompletedQuest != null)
+        {
+            if (!playerStats.completedQuests.Contains(choice.requiredCompletedQuest))
+            {
+                fault = " - you have not completed the needed quest";
+                isAllowed = false;
+            }
         }
 
         if (isAllowed)
@@ -122,9 +189,9 @@ public class ChoiceSystem : MonoBehaviour
         }
         else
         {
-            choiceButtons[choiceIndex].GetComponent<Button>().interactable = false;
-            choiceButtons[choiceIndex].SetActive(true);
-            choiceButtonTexts[choiceIndex].text = choice.choiceText + fault;
+            //choiceButtons[choiceIndex].GetComponent<Button>().interactable = false;
+            //choiceButtons[choiceIndex].SetActive(true);
+            //choiceButtonTexts[choiceIndex].text = choice.choiceText + fault;
         }
     }
 }
