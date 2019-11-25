@@ -45,6 +45,7 @@ public class Choice
     public ScriptableQuest connectedQuest;
     public QuestProcessing processQuest;
 
+    public ScriptableQuest requiredStartedQuest;
     public ScriptableQuest requiredCompletedQuest;
 
     public Characteristics requiredSkill;

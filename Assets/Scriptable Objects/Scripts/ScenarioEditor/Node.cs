@@ -202,7 +202,9 @@ public class ChoiceNode : Node
 
     public Rect questRect;
     public Rect questProcessRect;
+    public Rect requiredStartedQuestRect;
     public Rect requiredCompletedQuestRect;
+
 
     public Rect requiredSkillTypeRect;
     public Rect requiredSkillNumberRect;
@@ -224,9 +226,10 @@ public class ChoiceNode : Node
         itemTransferTypeRect.position += delta;
         itemTransferRect.position += delta;
 
-        questRect.position += delta; ;
-        questProcessRect.position += delta; ;
-        requiredCompletedQuestRect.position += delta; ;
+        questRect.position += delta;
+        questProcessRect.position += delta;
+        requiredStartedQuestRect.position += delta;
+        requiredCompletedQuestRect.position += delta;
 
         requiredSkillTypeRect.position += delta;
         requiredSkillNumberRect.position += delta;
@@ -258,8 +261,10 @@ public class ChoiceNode : Node
             myChoice.item = (ScriptableInventoryItem)EditorGUI.ObjectField(itemTransferRect, "Item to give/take", myChoice.item, typeof(ScriptableInventoryItem), false);
         }
 
-        myChoice.requiredCompletedQuest = (ScriptableQuest)EditorGUI.ObjectField(requiredCompletedQuestRect, "Quest Requirement (Completed)", myChoice.requiredCompletedQuest, typeof(ScriptableQuest), false);
-        
+        myChoice.requiredStartedQuest = (ScriptableQuest)EditorGUI.ObjectField(requiredStartedQuestRect, "Q Started REQ", myChoice.requiredStartedQuest, typeof(ScriptableQuest), false);
+        myChoice.requiredCompletedQuest = (ScriptableQuest)EditorGUI.ObjectField(requiredCompletedQuestRect, "Q Completed REQ", myChoice.requiredCompletedQuest, typeof(ScriptableQuest), false);
+
+
         myChoice.connectedQuest = (ScriptableQuest)EditorGUI.ObjectField(questRect, "Connected Quest", myChoice.connectedQuest, typeof(ScriptableQuest), false);
         if (myChoice.connectedQuest)
         {
@@ -308,6 +313,9 @@ public class ChoiceNode : Node
         adaptiveY += TEXTSQUAREHEIGHT;
 
         questProcessRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        requiredStartedQuestRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
         requiredCompletedQuestRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
