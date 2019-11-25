@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4304443345848594683}
   - component: {fileID: 5109178565184080589}
   - component: {fileID: 1575129290626676276}
+  - component: {fileID: 7003963400925394846}
   m_Layer: 0
   m_Name: Kitchen_Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4304443345848594683
 Transform:
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7003963400925394846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001819685287592680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 316.5999, y: 103.12875, z: 136.06834}
+  m_Center: {x: 0, y: 0, z: 0}

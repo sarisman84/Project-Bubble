@@ -4,13 +4,15 @@
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] GameObject[] pauseMenuObjectsToOpen = null;
-    [SerializeField] GameObject helpPage = null;
+    [SerializeField] GameObject helpPage = null; // Set Reference to Help Page in Inspector
 
-    bool isActive = false;
+    public bool canPause;
+    private bool isActive = false;
+
+    CursorLockMode originalLockMode;
 
     void Start()
     {
-        //pauseMenu.SetActive(false);
         foreach (GameObject obj in pauseMenuObjectsToOpen)
         {
             obj.SetActive(false);
@@ -25,29 +27,34 @@ public class PauseGame : MonoBehaviour
 
     public void EnableGamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && isActive == false)
+        if (canPause)
         {
-            Time.timeScale = 0;
-            foreach (GameObject obj in pauseMenuObjectsToOpen)
+            if (Input.GetKeyDown(KeyCode.Escape) && isActive == false) // Pauses the Game
             {
-                obj.SetActive(true);
+                originalLockMode = Cursor.lockState;
+                Time.timeScale = 0;
+                foreach (GameObject obj in pauseMenuObjectsToOpen)
+                {
+                    obj.SetActive(true);
+                }
+                isActive = true;
+                Cursor.lockState = CursorLockMode.None;
             }
-            isActive = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isActive == true)
-        {
-            Time.timeScale = 1;
-            foreach (GameObject obj in pauseMenuObjectsToOpen)
+            
+            else if (Input.GetKeyDown(KeyCode.Escape) && isActive == true) // Unpauses the Game
             {
-                obj.SetActive(false);
+                Time.timeScale = 1;
+                foreach (GameObject obj in pauseMenuObjectsToOpen)
+                {
+                    obj.SetActive(false);
+                }
+                isActive = false;
+                Cursor.lockState = originalLockMode;
             }
-            isActive = false;
-            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
-    public void OpenHelp()
+    public void OpenHelp() // Opens Help Page For Gameplay Controlls
     {
         helpPage.SetActive(!helpPage.activeSelf);
     }
