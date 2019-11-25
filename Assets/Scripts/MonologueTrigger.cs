@@ -7,8 +7,8 @@ public class MonologueTrigger : MonoBehaviour
 {
    [SerializeField] TextMeshProUGUI monologueField; //Dra in dialogfältet här
    [SerializeField] GameObject monologueStorer; //och dra in monolog grejen här
-   [SerializeField] int length; //Hur länge linen ska vara aktiv
-   [SerializeField] int LineNumber; //Vilken line som ska visas
+   [SerializeField] List<float> delay; //Hur länge linen ska vara aktiv
+   [SerializeField] List<string> lines; //Vilken line som ska visas
 
     public void Start()
     {
@@ -17,12 +17,12 @@ public class MonologueTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StartCoroutine("TimeBetweenLines");     
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log(lines[0]);
+        InnerMonologue.instance.PrintThis(lines,delay);
+            Destroy(this.gameObject);
+        }
     }
-    IEnumerator TimeBetweenLines()
-    {
-        InnerMonologue.currentIndex = LineNumber;
-        yield return new WaitForSeconds(length);
-        InnerMonologue.currentIndex = 9;
-    }
+   
 }
