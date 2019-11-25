@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7458905204075669818}
   - component: {fileID: 7458905204075669821}
   - component: {fileID: 9121607404381717815}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 0
   start: 0
+  debug: 1
 --- !u!1 &7458905204654491707
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7458905204654491704}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Quest Log Triggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +153,7 @@ GameObject:
   - component: {fileID: 7458905204869532630}
   - component: {fileID: 7458905204869532585}
   - component: {fileID: 6902318089423593507}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,3 +247,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questID: 0
   start: 0
+  debug: 1
