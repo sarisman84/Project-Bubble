@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 799720300155725504}
   - component: {fileID: 4708214976167198179}
   - component: {fileID: 2210960918497118542}
+  - component: {fileID: 750036848476979009}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -386,7 +387,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 1000
+  far clip plane: 40000
   field of view: 80
   orthographic: 0
   orthographic size: 5
@@ -398,8 +399,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -413,6 +414,105 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6711734888570540122}
   m_Enabled: 1
+--- !u!114 &750036848476979009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711734888570540122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clearColorMode: 0
+  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
+  clearDepth: 1
+  volumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  volumeAnchorOverride: {fileID: 0}
+  antialiasing: 0
+  SMAAQuality: 2
+  dithering: 0
+  stopNaNs: 0
+  physicalParameters:
+    m_Iso: 200
+    m_ShutterSpeed: 0.005
+    m_Aperture: 16
+    m_BladeCount: 5
+    m_Curvature: {x: 2, y: 11}
+    m_BarrelClipping: 0.25
+    m_Anamorphism: 0
+  flipYMode: 0
+  fullscreenPassthrough: 0
+  allowDynamicResolution: 0
+  customRenderingSettings: 0
+  invertFaceCulling: 0
+  probeLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPathCustomFrameSettings:
+    bitDatas:
+      data1: 69456063627037
+      data2: 4539628424389459968
+    lodBias: 1
+    lodBiasMode: 0
+    maximumLODLevel: 0
+    maximumLODLevelMode: 0
+  renderingPathCustomFrameSettingsOverrideMask:
+    mask:
+      data1: 0
+      data2: 0
+  defaultFrameSettings: 0
+  m_Version: 6
+  m_ObsoleteRenderingPath: 0
+  m_ObsoleteFrameSettings:
+    overrides: 0
+    enableShadow: 0
+    enableContactShadows: 0
+    enableShadowMask: 0
+    enableSSR: 0
+    enableSSAO: 0
+    enableSubsurfaceScattering: 0
+    enableTransmission: 0
+    enableAtmosphericScattering: 0
+    enableVolumetrics: 0
+    enableReprojectionForVolumetrics: 0
+    enableLightLayers: 0
+    enableExposureControl: 1
+    diffuseGlobalDimmer: 0
+    specularGlobalDimmer: 0
+    shaderLitMode: 0
+    enableDepthPrepassWithDeferredRendering: 0
+    enableTransparentPrepass: 0
+    enableMotionVectors: 0
+    enableObjectMotionVectors: 0
+    enableDecals: 0
+    enableRoughRefraction: 0
+    enableTransparentPostpass: 0
+    enableDistortion: 0
+    enablePostprocess: 0
+    enableOpaqueObjects: 0
+    enableTransparentObjects: 0
+    enableRealtimePlanarReflection: 0
+    enableMSAA: 0
+    enableAsyncCompute: 0
+    runLightListAsync: 0
+    runSSRAsync: 0
+    runSSAOAsync: 0
+    runContactShadowsAsync: 0
+    runVolumeVoxelizationAsync: 0
+    lightLoopSettings:
+      overrides: 0
+      enableDeferredTileAndCluster: 0
+      enableComputeLightEvaluation: 0
+      enableComputeLightVariants: 0
+      enableComputeMaterialVariants: 0
+      enableFptlForForwardOpaque: 0
+      enableBigTilePrepass: 0
+      isFptlEnabled: 0
 --- !u!1001 &4347128579991229040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,6 +578,11 @@ PrefabInstance:
     - target: {fileID: 3797190380880622101, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797190379022022065, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2663312055586370045, guid: 63eeb40658673734ea5b67d47e15575c,
@@ -625,6 +730,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1196461693237831626, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196461693237831626, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 525.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1196461693237831626, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 63.9
+      objectReference: {fileID: 0}
     - target: {fileID: 104092656481092617, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -665,15 +785,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0.54
       objectReference: {fileID: 0}
+    - target: {fileID: 4155003710230462419, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3797190379337238537, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: m_fontSize
       value: 47.65
       objectReference: {fileID: 0}
+    - target: {fileID: 3797190379186317765, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 47.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3797190379977532721, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: m_fontSize
-      value: 47.65
+      value: 48.3
       objectReference: {fileID: 0}
     - target: {fileID: 3070956769989265978, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
@@ -798,7 +928,7 @@ PrefabInstance:
     - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: quests.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
@@ -807,17 +937,42 @@ PrefabInstance:
       objectReference: {fileID: 8015611257026269764}
     - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
+      propertyPath: quests.Array.data[0].questID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
       propertyPath: quests.Array.data[0].questName
-      value: Test
+      value: Go home
       objectReference: {fileID: 0}
     - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: quests.Array.data[0].questDescription
-      value: Find Gilad.
+      value: Return home after a long hard day at work
       objectReference: {fileID: 0}
     - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: quests.Array.data[0].started
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: quests.Array.data[1].questID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: quests.Array.data[1].questName
+      value: Optional - Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: quests.Array.data[1].questDescription
+      value: (Optional - Talk to people on the way home)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824032663534046045, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: quests.Array.data[1].started
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5794842431921827444, guid: 63eeb40658673734ea5b67d47e15575c,
@@ -870,11 +1025,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 414034793976749819, guid: 63eeb40658673734ea5b67d47e15575c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9105474612913392293, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}
       propertyPath: m_IsActive
@@ -884,6 +1034,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010389676878135348, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -3.3923702
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010389676878135348, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010389676878135348, guid: 63eeb40658673734ea5b67d47e15575c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 50.95
       objectReference: {fileID: 0}
     - target: {fileID: 5677093293350293346, guid: 63eeb40658673734ea5b67d47e15575c,
         type: 3}

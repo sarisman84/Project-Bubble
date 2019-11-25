@@ -45,7 +45,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             {
                 if (quest.started)
                 {
-                    questsToDisplay.Enqueue($"Quest Added: {quest.questName}");
+                    questsToDisplay.Enqueue($"Uppdrag tillagt: {quest.questName}");
                     if (!coroutineIsRunning)
                     {
                         StartCoroutine("FadeInText");
@@ -63,7 +63,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             if (quest.questID == questID && !quest.started)
             {
                 quest.started = true;
-                questsToDisplay.Enqueue($"Quest Added: {quest.questName}");
+                questsToDisplay.Enqueue($"Uppdrag tillagt: {quest.questName}");
                 if (!coroutineIsRunning)
                 {
                     StartCoroutine("FadeInText");
@@ -80,7 +80,7 @@ public class QuestLog : MonoBehaviour //Dejan, this script keeps track of quests
             if (quest.questID == questID && quest.started && !quest.ended)
             {
                 quest.ended = true;
-                questsToDisplay.Enqueue($"Quest Finished: {quest.questName}");
+                questsToDisplay.Enqueue($"Uppdrag slutfört: {quest.questName}");
                 if (!coroutineIsRunning)
                 {
                     StartCoroutine("FadeInText");
