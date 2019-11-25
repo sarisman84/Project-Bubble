@@ -100,7 +100,7 @@ public class ChoiceSystem : MonoBehaviour
                     Debug.Log("Quest added: " + usedChoice.connectedQuest.questName);
                     break;
                 case QuestProcessing.CompleteQuest:
-                    if (playerStats.completedQuests.Contains(usedChoice.connectedQuest))
+                    if (playerStats.activeQuests.Contains(usedChoice.connectedQuest))
                     {
                         playerStats.activeQuests.Remove(usedChoice.connectedQuest);
                         playerStats.completedQuests.Add(usedChoice.connectedQuest);
@@ -112,7 +112,7 @@ public class ChoiceSystem : MonoBehaviour
                     }
                     break;
                 case QuestProcessing.Failquest:
-                    if (playerStats.completedQuests.Contains(usedChoice.connectedQuest))
+                    if (playerStats.activeQuests.Contains(usedChoice.connectedQuest))
                     {
                         playerStats.activeQuests.Remove(usedChoice.connectedQuest);
                         playerStats.failedQuests.Add(usedChoice.connectedQuest);
@@ -163,7 +163,16 @@ public class ChoiceSystem : MonoBehaviour
             isAllowed = false;
         }
 
-        if (choice.requiredCompletedQuest)
+        if (choice.requiredStartedQuest != null)
+        {
+            if (!playerStats.activeQuests.Contains(choice.requiredStartedQuest))
+            {
+                fault = " - you have not started the needed quest";
+                isAllowed = false;
+            }
+        }
+
+        if (choice.requiredCompletedQuest != null)
         {
             if (!playerStats.completedQuests.Contains(choice.requiredCompletedQuest))
             {
@@ -180,9 +189,9 @@ public class ChoiceSystem : MonoBehaviour
         }
         else
         {
-            choiceButtons[choiceIndex].GetComponent<Button>().interactable = false;
-            choiceButtons[choiceIndex].SetActive(true);
-            choiceButtonTexts[choiceIndex].text = choice.choiceText + fault;
+            //choiceButtons[choiceIndex].GetComponent<Button>().interactable = false;
+            //choiceButtons[choiceIndex].SetActive(true);
+            //choiceButtonTexts[choiceIndex].text = choice.choiceText + fault;
         }
     }
 }
