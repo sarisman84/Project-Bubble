@@ -21,17 +21,33 @@ public class FPSInput : MonoBehaviour
     float characterHeightDefault;
 
     public bool canMove = true;
+    bool isWalking = false;
+    bool isCrouching = false;
+
+    [SerializeField] AudioClip[] footSteps = null;
+    AudioSource audioPlayer;
+    float footstepTimer;
+    float footstepCooldown = 0.5f;
+    [SerializeField] float defaultFootstepCooldown = 0.5f;
+    float minMovementToPlaySound = 2f;
+    float defaultMovementMagnitude = 4;
+    float defaultFootstepVolume;
+
 
     void Start()
     {
+        audioPlayer = GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
         headHeightDefault = FPSCamera.transform.localPosition.y;
         characterHeightDefault = controller.height;
+        defaultFootstepVolume = audioPlayer.volume;
     }
-    
+
     void Update()
     {
         RaycastHit hit;
+
+        isCrouching = false;
 
         if (controller.isGrounded && canMove)
         {
@@ -45,6 +61,7 @@ public class FPSInput : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.LeftControl)) //crouch
             {
+                isCrouching = true;
                 controller.height = controller.height * 0.5f;
                 FPSCamera.transform.localPosition = new Vector3(0f, headHeightCrouch, 0f);
                 jumpSpeed = defaultJumpSpeed * 0.5f;
@@ -73,16 +90,51 @@ public class FPSInput : MonoBehaviour
                 moveDirection.y = -jumpSpeed * 5;
             }*/
 
-        if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 speed = defaultMoveSpeed * 1.5f;
             }
-        else
+            else
             {
                 speed = defaultMoveSpeed;
             }
         }
         moveDirection.y -= (gravity * Time.deltaTime);
         controller.Move(Vector3.ClampMagnitude(moveDirection, speed) * Time.deltaTime); //Clamped to disallow quicker diagonal movement than straight - Simon Voss
+
+        isWalking = false;
+        Vector3 movementIn2D = new Vector3(moveDirection.x, 0, moveDirection.z);
+        float movementMagnitude = movementIn2D.magnitude;
+        if (movementMagnitude > minMovementToPlaySound)
+        {
+            isWalking = true;
+        }
+
+        footstepCooldown = defaultFootstepCooldown * (defaultMovementMagnitude / movementMagnitude);
+        if (isCrouching)
+        {
+            footstepCooldown *= 2;
+        }
+
+
+        //play footstep sounds
+        if (isWalking && footSteps.Length > 0 && controller.isGrounded)
+        {
+            footstepTimer -= Time.deltaTime;
+
+            if (footstepTimer < 0)
+            {
+                if (isCrouching)
+                {
+                    audioPlayer.volume = defaultFootstepVolume * 0.5f;
+                }
+                else
+                {
+                    audioPlayer.volume = defaultFootstepVolume;
+                }
+                footstepTimer = footstepCooldown;
+                audioPlayer.PlayOneShot(footSteps[Random.Range(0, footSteps.Length)]);
+            }
+        }
     }
 }
