@@ -8,7 +8,7 @@ public enum RelationshipLevel { None, Familiar, Friend, Ally }
 //Simon Voss
 public class NPC : MonoBehaviour, IInteractable
 {
-    private string currentGreeting = "";
+    public string currentGreeting = "";
     //[SerializeField] string firstGreeting = "";
     //[SerializeField] string defaultGreeting = "";
     [SerializeField] List<string> greetings = new List<string>();
@@ -24,7 +24,7 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField] int ifCompletedSwitchSceneToIndex = 0;
 
     bool firstTimeTalkingWith = true;
-    
+
 
     public bool TryStartTalking()
     {
@@ -49,7 +49,6 @@ public class NPC : MonoBehaviour, IInteractable
             }
 
 
-            GameManager.Instance().SetFPSInput(false);
             Debug.Log("NPC talked with");
             //DialogueSystem.instance.StartDialogue(this, currentGreeting, dialogueChoices);
             DialogueSystem.instance.StartDialogue(this, dialogue);
@@ -79,7 +78,14 @@ public class NPC : MonoBehaviour, IInteractable
 
     public string MessageOnDetection()
     {
-        return "Click E To Talk";
+        if (willingToTalk)
+        {
+            return "Tryck på E för att prata";
+        }
+        else
+        {
+            return "Du kan inte interagera med denna person";
+        }
     }
 
     public bool CanBeInteractedWith()
@@ -119,7 +125,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     public void AffectAttribute(List<RelationshipAttribute> attributes, List<int> changes)
     {
-        if(attributes.Count != changes.Count)
+        if (attributes.Count != changes.Count)
         {
             Debug.LogWarning("Attributes of NPC wont change since the attributes changes are not correctly set up");
             return;

@@ -104,6 +104,7 @@ public class ChoiceSystem : MonoBehaviour
                     {
                         playerStats.activeQuests.Remove(usedChoice.connectedQuest);
                         playerStats.completedQuests.Add(usedChoice.connectedQuest);
+                        QuestLog.Instance().EndQuest(usedChoice.connectedQuest.id);
                         Debug.Log("Quest completed: " + usedChoice.connectedQuest.questName);
                     }
                     else

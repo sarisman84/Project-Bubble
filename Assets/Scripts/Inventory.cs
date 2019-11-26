@@ -53,27 +53,27 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Tab) && inventoryIsOpen) //closes inventory and locks the mouse
-        {
-            CloseInvetory();
-        }
-        else if (Input.GetKeyUp(KeyCode.Tab) && !inventoryIsOpen) //opens inventory and unlocks the mouse
-        {
-            OpenInventory();
-        }
+        //if (Input.GetKeyUp(KeyCode.Tab) && inventoryIsOpen) //closes inventory and locks the mouse
+        //{
+        //    CloseInvetory();
+        //}
+        //else if (Input.GetKeyUp(KeyCode.Tab) && !inventoryIsOpen) //opens inventory and unlocks the mouse
+        //{
+        //    OpenInventory();
+        //}
 
-        if (selectedObject != null) //make throw button not interactable when an item is not selected
-        {
-            throwButton.interactable = true;
-            useButton.interactable = true;
-            itemName.text = selectedObject.GetComponent<IItemIcon>().ItemName();
-        }
-        else
-        {
-            throwButton.interactable = false;
-            useButton.interactable = false;
-            itemName.text = "";
-        }
+        //if (selectedObject != null) //make throw button not interactable when an item is not selected
+        //{
+        //    throwButton.interactable = true;
+        //    useButton.interactable = true;
+        //    itemName.text = selectedObject.GetComponent<IItemIcon>().ItemName();
+        //}
+        //else
+        //{
+        //    throwButton.interactable = false;
+        //    useButton.interactable = false;
+        //    itemName.text = "";
+        //}
     }
 
     public void OnPointerClick(PointerEventData eventData) //defines last inventory item selected and makes it a little bit transparent
