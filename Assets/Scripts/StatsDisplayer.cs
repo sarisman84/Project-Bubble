@@ -5,22 +5,6 @@ using UnityEngine.UI;
 
 public class StatsDisplayer : MonoBehaviour
 {
-    #region Singleton
-    public static StatsDisplayer instance;
-    private void Awake()
-    {
-        if (StatsDisplayer.instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Debug.LogWarning("Another instance of: " + this + " , was tried to be instantiated, but was destroyed! This instance was tried to be instantiated on: " + this.gameObject);
-            Destroy(this);
-        }
-    }
-    #endregion
-
     public PlayerCharacteristics characteristics;
 
     public Transform slugStatHolder = null;
