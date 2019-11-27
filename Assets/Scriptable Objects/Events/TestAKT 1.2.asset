@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 976e319c5acb690469247d6cbc5e2b24, type: 3}
-  m_Name: AKT 1.2
+  m_Name: TestAKT 1.2
   m_EditorClassIdentifier: 
   startEvent:
     locationText: Hemma
@@ -19,6 +19,7 @@ MonoBehaviour:
     choices:
     - choiceText: Ta en tupplur
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -40,6 +41,7 @@ MonoBehaviour:
       nextScene: {fileID: 102900000, guid: 9de6758095312294784601d2b84baaa1, type: 3}
     - choiceText: Prata med gilad
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -59,6 +61,7 @@ MonoBehaviour:
         choices:
         - choiceText: "Ber\xE4tta om din insikt kring propagandan"
           skillType: 3
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180,
@@ -82,6 +85,7 @@ MonoBehaviour:
             choices:
             - choiceText: "Ni g\xE5r och l\xE4gger er"
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -106,6 +110,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Lyssna p\xE5 problemen"
           skillType: 1
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -127,6 +132,7 @@ MonoBehaviour:
             choices:
             - choiceText: "Ni g\xE5r och l\xE4gger er"
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -151,6 +157,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Ber\xE4tta om din dag"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -170,6 +177,7 @@ MonoBehaviour:
             choices:
             - choiceText: "Ni g\xE5r och l\xE4gger er"
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -570,6 +578,7 @@ MonoBehaviour:
     myChoice:
       choiceText: Prata med gilad
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -589,6 +598,7 @@ MonoBehaviour:
         choices:
         - choiceText: "Ber\xE4tta om din insikt kring propagandan"
           skillType: 3
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180,
@@ -612,6 +622,7 @@ MonoBehaviour:
             choices:
             - choiceText: "Ni g\xE5r och l\xE4gger er"
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -636,6 +647,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Lyssna p\xE5 problemen"
           skillType: 1
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -657,6 +669,7 @@ MonoBehaviour:
             choices:
             - choiceText: "Ni g\xE5r och l\xE4gger er"
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -681,6 +694,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Ber\xE4tta om din dag"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -700,6 +714,7 @@ MonoBehaviour:
             choices:
             - choiceText: "Ni g\xE5r och l\xE4gger er"
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -736,6 +751,12 @@ MonoBehaviour:
       y: 61
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: -46
@@ -1183,6 +1204,7 @@ MonoBehaviour:
     myChoice:
       choiceText: Ta en tupplur
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -1214,6 +1236,12 @@ MonoBehaviour:
       y: 391
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: -47
@@ -1661,6 +1689,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Ber\xE4tta om din insikt kring propagandan"
       skillType: 3
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180, type: 2}
@@ -1682,6 +1711,7 @@ MonoBehaviour:
         choices:
         - choiceText: "Ni g\xE5r och l\xE4gger er"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -1715,6 +1745,12 @@ MonoBehaviour:
       y: -204
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 625
@@ -2162,6 +2198,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Lyssna p\xE5 problemen"
       skillType: 1
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -2182,6 +2219,7 @@ MonoBehaviour:
         choices:
         - choiceText: "Ni g\xE5r och l\xE4gger er"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -2215,6 +2253,12 @@ MonoBehaviour:
       y: 47
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 626
@@ -2662,6 +2706,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Ber\xE4tta om din dag"
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -2681,6 +2726,7 @@ MonoBehaviour:
         choices:
         - choiceText: "Ni g\xE5r och l\xE4gger er"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -2714,6 +2760,12 @@ MonoBehaviour:
       y: 302
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 610
@@ -3161,6 +3213,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Ni g\xE5r och l\xE4gger er"
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -3192,6 +3245,12 @@ MonoBehaviour:
       y: 224
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 1342
@@ -3878,6 +3937,7 @@ MonoBehaviour:
       choices:
       - choiceText: Ta en tupplur
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -3899,6 +3959,7 @@ MonoBehaviour:
         nextScene: {fileID: 102900000, guid: 9de6758095312294784601d2b84baaa1, type: 3}
       - choiceText: Prata med gilad
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -3918,6 +3979,7 @@ MonoBehaviour:
           choices:
           - choiceText: "Ber\xE4tta om din insikt kring propagandan"
             skillType: 3
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180,
@@ -3941,6 +4003,7 @@ MonoBehaviour:
               choices:
               - choiceText: "Ni g\xE5r och l\xE4gger er"
                 skillType: 0
+                skillNumberIncrease: 0
                 itemtransfer: 0
                 item: {fileID: 0}
                 connectedQuest: {fileID: 0}
@@ -3963,6 +4026,7 @@ MonoBehaviour:
             nextScene: {fileID: 0}
           - choiceText: "Lyssna p\xE5 problemen"
             skillType: 1
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -3984,6 +4048,7 @@ MonoBehaviour:
               choices:
               - choiceText: "Ni g\xE5r och l\xE4gger er"
                 skillType: 0
+                skillNumberIncrease: 0
                 itemtransfer: 0
                 item: {fileID: 0}
                 connectedQuest: {fileID: 0}
@@ -4006,6 +4071,7 @@ MonoBehaviour:
             nextScene: {fileID: 0}
           - choiceText: "Ber\xE4tta om din dag"
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -4025,6 +4091,7 @@ MonoBehaviour:
               choices:
               - choiceText: "Ni g\xE5r och l\xE4gger er"
                 skillType: 0
+                skillNumberIncrease: 0
                 itemtransfer: 0
                 item: {fileID: 0}
                 connectedQuest: {fileID: 0}
@@ -4685,6 +4752,7 @@ MonoBehaviour:
       choices:
       - choiceText: "Ber\xE4tta om din insikt kring propagandan"
         skillType: 3
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180,
@@ -4708,6 +4776,7 @@ MonoBehaviour:
           choices:
           - choiceText: "Ni g\xE5r och l\xE4gger er"
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -4732,6 +4801,7 @@ MonoBehaviour:
         nextScene: {fileID: 0}
       - choiceText: "Lyssna p\xE5 problemen"
         skillType: 1
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -4753,6 +4823,7 @@ MonoBehaviour:
           choices:
           - choiceText: "Ni g\xE5r och l\xE4gger er"
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -4777,6 +4848,7 @@ MonoBehaviour:
         nextScene: {fileID: 0}
       - choiceText: "Ber\xE4tta om din dag"
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -4796,6 +4868,7 @@ MonoBehaviour:
           choices:
           - choiceText: "Ni g\xE5r och l\xE4gger er"
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -5457,6 +5530,7 @@ MonoBehaviour:
       choices:
       - choiceText: "Ni g\xE5r och l\xE4gger er"
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -6114,6 +6188,7 @@ MonoBehaviour:
       choices:
       - choiceText: "Ni g\xE5r och l\xE4gger er"
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}

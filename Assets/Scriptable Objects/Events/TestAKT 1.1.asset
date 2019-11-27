@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 976e319c5acb690469247d6cbc5e2b24, type: 3}
-  m_Name: AKT 1.1
+  m_Name: TestAKT 1.1
   m_EditorClassIdentifier: 
   startEvent:
     locationText: "P\xE5 v\xE4g hem"
@@ -20,6 +20,7 @@ MonoBehaviour:
     choices:
     - choiceText: Stanna och lyssna
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -39,6 +40,7 @@ MonoBehaviour:
         choices:
         - choiceText: "G\xE5 hem"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -63,6 +65,7 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     - choiceText: "Ignorera, detta har du h\xF6rt 1000 g\xE5nger f\xF6rr. "
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180, type: 2}
@@ -83,6 +86,7 @@ MonoBehaviour:
         choices:
         - choiceText: "G\xE5 hem"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -120,8 +124,8 @@ MonoBehaviour:
       id: 0.21167430710591112
       rect:
         serializedVersion: 2
-        x: 451
-        y: 180
+        x: 576
+        y: 320
         width: 10
         height: 20
       type: 0
@@ -199,8 +203,8 @@ MonoBehaviour:
     - id: 0.5704793341320378
       rect:
         serializedVersion: 2
-        x: 695
-        y: 190
+        x: 820
+        y: 320
         width: 10
         height: 20
       type: 1
@@ -481,6 +485,7 @@ MonoBehaviour:
     myChoice:
       choiceText: Stanna och lyssna
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -500,6 +505,7 @@ MonoBehaviour:
         choices:
         - choiceText: "G\xE5 hem"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -534,6 +540,12 @@ MonoBehaviour:
       y: 105
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 468
@@ -620,8 +632,8 @@ MonoBehaviour:
       id: 0.26360761200245825
       rect:
         serializedVersion: 2
-        x: 445
-        y: 490
+        x: 570
+        y: 630
         width: 10
         height: 20
       type: 0
@@ -699,8 +711,8 @@ MonoBehaviour:
     - id: 0.09998732483945197
       rect:
         serializedVersion: 2
-        x: 689
-        y: 500
+        x: 814
+        y: 630
         width: 10
         height: 20
       type: 1
@@ -981,6 +993,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Ignorera, detta har du h\xF6rt 1000 g\xE5nger f\xF6rr. "
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180, type: 2}
@@ -1001,6 +1014,7 @@ MonoBehaviour:
         choices:
         - choiceText: "G\xE5 hem"
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -1035,6 +1049,12 @@ MonoBehaviour:
       y: 415
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 462
@@ -1121,8 +1141,8 @@ MonoBehaviour:
       id: 0.3580520620374251
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 436
+        x: 1308
+        y: 576
         width: 10
         height: 20
       type: 0
@@ -1200,8 +1220,8 @@ MonoBehaviour:
     - id: 0.7168570890635518
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 446
+        x: 1552
+        y: 576
         width: 10
         height: 20
       type: 1
@@ -1482,6 +1502,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "G\xE5 hem"
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -1513,6 +1534,12 @@ MonoBehaviour:
       y: 361
       width: 220
       height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     itemTransferTypeRect:
       serializedVersion: 2
       x: 1200
@@ -1600,8 +1627,8 @@ MonoBehaviour:
       id: 0.44622478654897996
       rect:
         serializedVersion: 2
-        x: 2
-        y: 326
+        x: 152
+        y: 416
         width: 10
         height: 20
       type: 0
@@ -1679,8 +1706,8 @@ MonoBehaviour:
     - id: 0.8050298135751066
       rect:
         serializedVersion: 2
-        x: 296
-        y: 282
+        x: 446
+        y: 372
         width: 10
         height: 20
       type: 1
@@ -1757,8 +1784,8 @@ MonoBehaviour:
     - id: 0.6414095264121004
       rect:
         serializedVersion: 2
-        x: 296
-        y: 318
+        x: 446
+        y: 408
         width: 10
         height: 20
       type: 1
@@ -1835,8 +1862,8 @@ MonoBehaviour:
     - id: 0.0002145534382269501
       rect:
         serializedVersion: 2
-        x: 296
-        y: 354
+        x: 446
+        y: 444
         width: 10
         height: 20
       type: 1
@@ -1913,8 +1940,8 @@ MonoBehaviour:
     - id: 0.3590195804643536
       rect:
         serializedVersion: 2
-        x: 296
-        y: 390
+        x: 446
+        y: 480
         width: 10
         height: 20
       type: 1
@@ -2200,6 +2227,7 @@ MonoBehaviour:
       choices:
       - choiceText: Stanna och lyssna
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -2219,6 +2247,7 @@ MonoBehaviour:
           choices:
           - choiceText: "G\xE5 hem"
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -2243,6 +2272,7 @@ MonoBehaviour:
         nextScene: {fileID: 0}
       - choiceText: "Ignorera, detta har du h\xF6rt 1000 g\xE5nger f\xF6rr. "
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 11400000, guid: 4eca88ef58cc37e40aaf30d3a40f2180,
@@ -2264,6 +2294,7 @@ MonoBehaviour:
           choices:
           - choiceText: "G\xE5 hem"
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -2325,8 +2356,8 @@ MonoBehaviour:
       id: 0.299187619378412
       rect:
         serializedVersion: 2
-        x: 792
-        y: 198
+        x: 942
+        y: 288
         width: 10
         height: 20
       type: 0
@@ -2404,8 +2435,8 @@ MonoBehaviour:
     - id: 0.6579926464045386
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 154
+        x: 1236
+        y: 244
         width: 10
         height: 20
       type: 1
@@ -2482,8 +2513,8 @@ MonoBehaviour:
     - id: 0.49437235924153233
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 190
+        x: 1236
+        y: 280
         width: 10
         height: 20
       type: 1
@@ -2560,8 +2591,8 @@ MonoBehaviour:
     - id: 0.8531773862676589
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 226
+        x: 1236
+        y: 316
         width: 10
         height: 20
       type: 1
@@ -2638,8 +2669,8 @@ MonoBehaviour:
     - id: 0.21198241329378562
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 262
+        x: 1236
+        y: 352
         width: 10
         height: 20
       type: 1
@@ -2924,6 +2955,7 @@ MonoBehaviour:
       choices:
       - choiceText: "G\xE5 hem"
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -2982,8 +3014,8 @@ MonoBehaviour:
       id: 0.0446546776428142
       rect:
         serializedVersion: 2
-        x: 797
-        y: 481
+        x: 947
+        y: 571
         width: 10
         height: 20
       type: 0
@@ -3061,8 +3093,8 @@ MonoBehaviour:
     - id: 0.4034597046689408
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 437
+        x: 1241
+        y: 527
         width: 10
         height: 20
       type: 1
@@ -3139,8 +3171,8 @@ MonoBehaviour:
     - id: 0.23983941750593457
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 473
+        x: 1241
+        y: 563
         width: 10
         height: 20
       type: 1
@@ -3217,8 +3249,8 @@ MonoBehaviour:
     - id: 0.5986444445320612
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 509
+        x: 1241
+        y: 599
         width: 10
         height: 20
       type: 1
@@ -3295,8 +3327,8 @@ MonoBehaviour:
     - id: 0.9574494715581878
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 545
+        x: 1241
+        y: 635
         width: 10
         height: 20
       type: 1
@@ -3581,6 +3613,7 @@ MonoBehaviour:
       choices:
       - choiceText: "G\xE5 hem"
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -3630,8 +3663,8 @@ MonoBehaviour:
       id: 0.8050298135751066
       rect:
         serializedVersion: 2
-        x: 296
-        y: 282
+        x: 446
+        y: 372
         width: 10
         height: 20
       type: 1
@@ -3709,8 +3742,8 @@ MonoBehaviour:
       id: 0.21167430710591112
       rect:
         serializedVersion: 2
-        x: 451
-        y: 180
+        x: 576
+        y: 320
         width: 10
         height: 20
       type: 0
@@ -3788,8 +3821,8 @@ MonoBehaviour:
       id: 0.0002145534382269501
       rect:
         serializedVersion: 2
-        x: 296
-        y: 354
+        x: 446
+        y: 444
         width: 10
         height: 20
       type: 1
@@ -3867,8 +3900,8 @@ MonoBehaviour:
       id: 0.26360761200245825
       rect:
         serializedVersion: 2
-        x: 445
-        y: 490
+        x: 570
+        y: 630
         width: 10
         height: 20
       type: 0
@@ -3946,8 +3979,8 @@ MonoBehaviour:
       id: 0.5704793341320378
       rect:
         serializedVersion: 2
-        x: 695
-        y: 190
+        x: 820
+        y: 320
         width: 10
         height: 20
       type: 1
@@ -4025,8 +4058,8 @@ MonoBehaviour:
       id: 0.299187619378412
       rect:
         serializedVersion: 2
-        x: 792
-        y: 198
+        x: 942
+        y: 288
         width: 10
         height: 20
       type: 0
@@ -4104,8 +4137,8 @@ MonoBehaviour:
       id: 0.6579926464045386
       rect:
         serializedVersion: 2
-        x: 1086
-        y: 154
+        x: 1236
+        y: 244
         width: 10
         height: 20
       type: 1
@@ -4183,8 +4216,8 @@ MonoBehaviour:
       id: 0.3580520620374251
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 436
+        x: 1308
+        y: 576
         width: 10
         height: 20
       type: 0
@@ -4262,8 +4295,8 @@ MonoBehaviour:
       id: 0.09998732483945197
       rect:
         serializedVersion: 2
-        x: 689
-        y: 500
+        x: 814
+        y: 630
         width: 10
         height: 20
       type: 1
@@ -4341,8 +4374,8 @@ MonoBehaviour:
       id: 0.0446546776428142
       rect:
         serializedVersion: 2
-        x: 797
-        y: 481
+        x: 947
+        y: 571
         width: 10
         height: 20
       type: 0
@@ -4420,8 +4453,8 @@ MonoBehaviour:
       id: 0.23983941750593457
       rect:
         serializedVersion: 2
-        x: 1091
-        y: 473
+        x: 1241
+        y: 563
         width: 10
         height: 20
       type: 1
@@ -4499,8 +4532,8 @@ MonoBehaviour:
       id: 0.3580520620374251
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 436
+        x: 1308
+        y: 576
         width: 10
         height: 20
       type: 0
@@ -4578,8 +4611,8 @@ MonoBehaviour:
       id: 0.7168570890635518
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 446
+        x: 1552
+        y: 576
         width: 10
         height: 20
       type: 1
@@ -4657,8 +4690,8 @@ MonoBehaviour:
       id: 0.37112144304957306
       rect:
         serializedVersion: 2
-        x: 1488
-        y: 447
+        x: 1588
+        y: 482
         width: 10
         height: 20
       type: 0
@@ -4747,8 +4780,8 @@ MonoBehaviour:
       id: 0.37112144304957306
       rect:
         serializedVersion: 2
-        x: 1488
-        y: 447
+        x: 1588
+        y: 482
         width: 10
         height: 20
       type: 0
