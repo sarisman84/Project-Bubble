@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Characteristics { None, Charming, Intimidation, Logical }
+public enum Characteristics { None, Diplomatisk, Hotfull, Slug }
 
 
 //Simon Voss
 [CreateAssetMenu(menuName = "Character/Player")]
 public class PlayerCharacteristics : ScriptableObject
 {
-    [SerializeField] int charm;
-    [SerializeField] int intimidation;
-    [SerializeField] int intelligence;
+    [SerializeField] int diplomatisk;
+    [SerializeField] int hotfull;
+    [SerializeField] int slug;
     public List<ScriptableQuest> activeQuests = new List<ScriptableQuest>();
     public List<ScriptableQuest> completedQuests = new List<ScriptableQuest>();
     public List<ScriptableQuest> failedQuests = new List<ScriptableQuest>();
@@ -24,25 +24,25 @@ public class PlayerCharacteristics : ScriptableObject
             case Characteristics.None:
                 Debug.Log("No increase in player stat");
                 break;
-            case Characteristics.Charming:
-                charm++;
+            case Characteristics.Diplomatisk:
+                diplomatisk++;
                 statIncreased = true;
                 break;
-            case Characteristics.Intimidation:
-                intimidation++;
+            case Characteristics.Hotfull:
+                hotfull++;
                 statIncreased = true;
                 break;
-            case Characteristics.Logical:
-                intelligence++;
+            case Characteristics.Slug:
+                slug++;
                 statIncreased = true;
                 break;
         }
         if (statIncreased)
         {
             Debug.Log("Stats are now at: \n " +
-                "Charm: " + charm +
-                " Intelligence: " + intelligence +
-                " Intimidation: " + intimidation);
+                "Diplomatisk: " + diplomatisk +
+                " Slug: " + slug +
+                " Hotfull: " + hotfull);
         }
     }
 
@@ -50,12 +50,12 @@ public class PlayerCharacteristics : ScriptableObject
     {
         switch (charactersitsticsToCheck)
         {
-            case Characteristics.Charming:
-                return charm;
-            case Characteristics.Intimidation:
-                return intimidation;
-            case Characteristics.Logical:
-                return intelligence;
+            case Characteristics.Diplomatisk:
+                return diplomatisk;
+            case Characteristics.Hotfull:
+                return hotfull;
+            case Characteristics.Slug:
+                return slug;
             default:
             case Characteristics.None:
                 Debug.LogWarning("Checking for non-existing skill");
@@ -63,17 +63,17 @@ public class PlayerCharacteristics : ScriptableObject
         }
     }
 
-    public int GetCharm()
+    public int GetDiplomatisk()
     {
-        return charm;
+        return diplomatisk;
     }
 
-    public int GetIntimidation()
+    public int GetHotfull()
     {
-        return intimidation;
+        return hotfull;
     }
-    public int GetIntelligence()
+    public int GetSlug()
     {
-        return intelligence;
+        return slug;
     }
 }
