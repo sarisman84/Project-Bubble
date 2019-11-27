@@ -86,7 +86,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &912577588910377895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8199458576981460437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6419250186527521075
 RectTransform:
   m_ObjectHideFlags: 0
@@ -441,6 +441,8 @@ GameObject:
   - component: {fileID: 6141374359579513865}
   - component: {fileID: 1111267321932381508}
   - component: {fileID: 7776503747874548470}
+  - component: {fileID: 8615767124655763114}
+  - component: {fileID: 4152938161755872384}
   m_Layer: 5
   m_Name: PlayerStatsPanel
   m_TagString: Untagged
@@ -491,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.03529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -527,3 +529,41 @@ MonoBehaviour:
   hotfullColor: {r: 0.735849, g: 0, b: 0, a: 1}
   statImage: {fileID: 7619622310401224531, guid: 635fc83b9a3321641afbfe0f26fbc354,
     type: 3}
+--- !u!114 &8615767124655763114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193702979783454743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c1e11bd613f2841b314e28f19b064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characteristics: {fileID: 11400000, guid: 1a0dfc62a4b85894fb2cb95d95e109e0, type: 2}
+  animationParent: {fileID: 0}
+  statIncreaseGraphics: {fileID: 5804460655767546308, guid: 3dac5c10d91f8ac4ca55d82c55c976ae,
+    type: 3}
+  slugImage: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  hotfullImage: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  diplomatiskImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!95 &4152938161755872384
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8193702979783454743}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fbe234aa73be18e48915096448257eb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

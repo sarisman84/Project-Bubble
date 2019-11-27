@@ -19,6 +19,7 @@ MonoBehaviour:
     choices:
     - choiceText: Vad menar du?
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -38,6 +39,7 @@ MonoBehaviour:
         choices:
         - choiceText: Var hittade du den?
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -60,6 +62,7 @@ MonoBehaviour:
             choices:
             - choiceText: (Avsluta dialog)
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -83,6 +86,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Ge hit din j\xE4vel!"
           skillType: 2
+          skillNumberIncrease: 5
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -102,6 +106,7 @@ MonoBehaviour:
             choices:
             - choiceText: (Avsluta dialog)
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -125,6 +130,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Varf\xF6r har du den?"
           skillType: 2
+          skillNumberIncrease: 3
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -147,6 +153,7 @@ MonoBehaviour:
             choices:
             - choiceText: (Avsluta dialog)
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -173,10 +180,10 @@ MonoBehaviour:
   editorChoiceNodes:
   - rect:
       serializedVersion: 2
-      x: -18
-      y: 207
+      x: 15
+      y: 294
       width: 250
-      height: 260
+      height: 280
     typeOfNode: 0
     allowedConnectionTypes: 0100000002000000
     isDragged: 0
@@ -185,8 +192,8 @@ MonoBehaviour:
       id: 0.8051828256832356
       rect:
         serializedVersion: 2
-        x: -20
-        y: 327
+        x: 13
+        y: 424
         width: 10
         height: 20
       type: 0
@@ -264,8 +271,8 @@ MonoBehaviour:
     - id: 0.16398785270936223
       rect:
         serializedVersion: 2
-        x: 224
-        y: 337
+        x: 257
+        y: 424
         width: 10
         height: 20
       type: 1
@@ -546,6 +553,7 @@ MonoBehaviour:
     myChoice:
       choiceText: Vad menar du?
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -565,6 +573,7 @@ MonoBehaviour:
         choices:
         - choiceText: Var hittade du den?
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -587,6 +596,7 @@ MonoBehaviour:
             choices:
             - choiceText: (Avsluta dialog)
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -610,6 +620,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Ge hit din j\xE4vel!"
           skillType: 2
+          skillNumberIncrease: 5
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -629,6 +640,7 @@ MonoBehaviour:
             choices:
             - choiceText: (Avsluta dialog)
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -652,6 +664,7 @@ MonoBehaviour:
           nextScene: {fileID: 0}
         - choiceText: "Varf\xF6r har du den?"
           skillType: 2
+          skillNumberIncrease: 3
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -674,6 +687,7 @@ MonoBehaviour:
             choices:
             - choiceText: (Avsluta dialog)
               skillType: 0
+              skillNumberIncrease: 0
               itemtransfer: 0
               item: {fileID: 0}
               connectedQuest: {fileID: 0}
@@ -699,94 +713,100 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -3
-      y: 222
+      x: 30
+      y: 309
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -3
-      y: 252
+      x: 30
+      y: 339
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 30
+      y: 354
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -3
-      y: 267
+      x: 30
+      y: 369
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -3
-      y: 282
+      x: 30
+      y: 384
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -3
-      y: 297
+      x: 30
+      y: 399
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -3
-      y: 312
+      x: 30
+      y: 414
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -3
-      y: 327
+      x: 30
+      y: 429
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -3
-      y: 342
+      x: 30
+      y: 444
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -3
-      y: 357
+      x: 30
+      y: 459
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -3
-      y: 372
+      x: 30
+      y: 474
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -3
-      y: 387
+      x: 30
+      y: 489
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -3
-      y: 402
+      x: 30
+      y: 504
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -3
-      y: 417
+      x: 30
+      y: 519
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -3
-      y: 432
+      x: 30
+      y: 534
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 724
-      y: 64
+      x: 757
+      y: 151
       width: 250
-      height: 260
+      height: 280
     typeOfNode: 0
     allowedConnectionTypes: 0100000002000000
     isDragged: 0
@@ -795,8 +815,8 @@ MonoBehaviour:
       id: 0.03549866379960378
       rect:
         serializedVersion: 2
-        x: 722
-        y: 184
+        x: 755
+        y: 281
         width: 10
         height: 20
       type: 0
@@ -874,8 +894,8 @@ MonoBehaviour:
     - id: 0.3943036908257304
       rect:
         serializedVersion: 2
-        x: 966
-        y: 194
+        x: 999
+        y: 281
         width: 10
         height: 20
       type: 1
@@ -1156,6 +1176,7 @@ MonoBehaviour:
     myChoice:
       choiceText: Var hittade du den?
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -1178,6 +1199,7 @@ MonoBehaviour:
         choices:
         - choiceText: (Avsluta dialog)
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -1201,94 +1223,100 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 739
-      y: 79
+      x: 772
+      y: 166
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 739
-      y: 109
+      x: 772
+      y: 196
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 772
+      y: 211
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 739
-      y: 124
+      x: 772
+      y: 226
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 739
-      y: 139
+      x: 772
+      y: 241
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 739
-      y: 154
+      x: 772
+      y: 256
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 739
-      y: 169
+      x: 772
+      y: 271
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 739
-      y: 184
+      x: 772
+      y: 286
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 739
-      y: 199
+      x: 772
+      y: 301
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 739
-      y: 214
+      x: 772
+      y: 316
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 739
-      y: 229
+      x: 772
+      y: 331
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 739
-      y: 244
+      x: 772
+      y: 346
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 739
-      y: 259
+      x: 772
+      y: 361
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 739
-      y: 274
+      x: 772
+      y: 376
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 739
-      y: 289
+      x: 772
+      y: 391
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 718
-      y: 584
+      x: 751
+      y: 671
       width: 250
-      height: 260
+      height: 280
     typeOfNode: 0
     allowedConnectionTypes: 0100000002000000
     isDragged: 0
@@ -1297,8 +1325,8 @@ MonoBehaviour:
       id: 0.6798019002563329
       rect:
         serializedVersion: 2
-        x: 716
-        y: 704
+        x: 749
+        y: 801
         width: 10
         height: 20
       type: 0
@@ -1376,8 +1404,8 @@ MonoBehaviour:
     - id: 0.5161816130933267
       rect:
         serializedVersion: 2
-        x: 960
-        y: 714
+        x: 993
+        y: 801
         width: 10
         height: 20
       type: 1
@@ -1658,6 +1686,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Ge hit din j\xE4vel!"
       skillType: 2
+      skillNumberIncrease: 5
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -1677,6 +1706,7 @@ MonoBehaviour:
         choices:
         - choiceText: (Avsluta dialog)
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -1700,104 +1730,110 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 733
-      y: 599
+      x: 766
+      y: 686
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 733
-      y: 629
+      x: 766
+      y: 716
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 766
+      y: 731
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 733
-      y: 644
+      x: 766
+      y: 746
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 733
-      y: 659
+      x: 766
+      y: 761
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 733
-      y: 674
+      x: 766
+      y: 776
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 733
-      y: 689
+      x: 766
+      y: 791
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 733
-      y: 704
+      x: 766
+      y: 806
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 733
-      y: 719
+      x: 766
+      y: 821
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 733
-      y: 734
+      x: 766
+      y: 836
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 733
-      y: 749
+      x: 766
+      y: 851
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 733
-      y: 764
+      x: 766
+      y: 866
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 733
-      y: 779
+      x: 766
+      y: 881
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 733
-      y: 794
+      x: 766
+      y: 896
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 733
-      y: 809
+      x: 766
+      y: 911
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1387
-      y: 291
+      x: 1420
+      y: 378
       width: 250
-      height: 260
+      height: 280
     typeOfNode: 0
     allowedConnectionTypes: 0100000002000000
     isDragged: 0
-    isSelected: 1
+    isSelected: 0
     inPoint:
       id: 0.6811507799109214
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 411
+        x: 1418
+        y: 508
         width: 10
         height: 20
       type: 0
@@ -1875,8 +1911,8 @@ MonoBehaviour:
     - id: 0.03995580693704812
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 421
+        x: 1662
+        y: 508
         width: 10
         height: 20
       type: 1
@@ -1953,7 +1989,7 @@ MonoBehaviour:
     style:
       m_Name: 
       m_Normal:
-        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
           type: 0}
         m_ScaledBackgrounds: []
         m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -2157,6 +2193,7 @@ MonoBehaviour:
     myChoice:
       choiceText: (Avsluta dialog)
       skillType: 0
+      skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -2178,94 +2215,100 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 1402
-      y: 306
+      x: 1435
+      y: 393
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 1402
-      y: 336
+      x: 1435
+      y: 423
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 1435
+      y: 438
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 1402
-      y: 351
+      x: 1435
+      y: 453
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 1402
-      y: 366
+      x: 1435
+      y: 468
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 1402
-      y: 381
+      x: 1435
+      y: 483
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 1402
-      y: 396
+      x: 1435
+      y: 498
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 1402
-      y: 411
+      x: 1435
+      y: 513
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 1402
-      y: 426
+      x: 1435
+      y: 528
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 1402
-      y: 441
+      x: 1435
+      y: 543
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 1402
-      y: 456
+      x: 1435
+      y: 558
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 1402
-      y: 471
+      x: 1435
+      y: 573
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 1402
-      y: 486
+      x: 1435
+      y: 588
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 1402
-      y: 501
+      x: 1435
+      y: 603
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 1402
-      y: 516
+      x: 1435
+      y: 618
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 722
-      y: 317
+      x: 755
+      y: 404
       width: 250
-      height: 260
+      height: 280
     typeOfNode: 0
     allowedConnectionTypes: 0100000002000000
     isDragged: 0
@@ -2274,8 +2317,8 @@ MonoBehaviour:
       id: 0.539018402127092
       rect:
         serializedVersion: 2
-        x: 720
-        y: 437
+        x: 753
+        y: 534
         width: 10
         height: 20
       type: 0
@@ -2353,8 +2396,8 @@ MonoBehaviour:
     - id: 0.8978234291532186
       rect:
         serializedVersion: 2
-        x: 964
-        y: 447
+        x: 997
+        y: 534
         width: 10
         height: 20
       type: 1
@@ -2635,6 +2678,7 @@ MonoBehaviour:
     myChoice:
       choiceText: "Varf\xF6r har du den?"
       skillType: 2
+      skillNumberIncrease: 3
       itemtransfer: 0
       item: {fileID: 0}
       connectedQuest: {fileID: 0}
@@ -2657,6 +2701,7 @@ MonoBehaviour:
         choices:
         - choiceText: (Avsluta dialog)
           skillType: 0
+          skillNumberIncrease: 0
           itemtransfer: 0
           item: {fileID: 0}
           connectedQuest: {fileID: 0}
@@ -2680,93 +2725,99 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 737
-      y: 332
+      x: 770
+      y: 419
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 737
-      y: 362
+      x: 770
+      y: 449
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 770
+      y: 464
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 737
-      y: 377
+      x: 770
+      y: 479
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 737
-      y: 392
+      x: 770
+      y: 494
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 737
-      y: 407
+      x: 770
+      y: 509
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 737
-      y: 422
+      x: 770
+      y: 524
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 737
-      y: 437
+      x: 770
+      y: 539
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 737
-      y: 452
+      x: 770
+      y: 554
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 737
-      y: 467
+      x: 770
+      y: 569
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 737
-      y: 482
+      x: 770
+      y: 584
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 737
-      y: 497
+      x: 770
+      y: 599
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 737
-      y: 512
+      x: 770
+      y: 614
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 737
-      y: 527
+      x: 770
+      y: 629
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 737
-      y: 542
+      x: 770
+      y: 644
       width: 220
       height: 15
   editorEventNodes:
   - rect:
       serializedVersion: 2
-      x: -357
-      y: 269
+      x: -299
+      y: 316
       width: 300
       height: 180
     typeOfNode: 1
@@ -2777,8 +2828,8 @@ MonoBehaviour:
       id: 0.6432075256682968
       rect:
         serializedVersion: 2
-        x: -359
-        y: 349
+        x: -301
+        y: 396
         width: 10
         height: 20
       type: 0
@@ -2856,8 +2907,8 @@ MonoBehaviour:
     - id: 0.0020125526944233816
       rect:
         serializedVersion: 2
-        x: -65
-        y: 305
+        x: -7
+        y: 352
         width: 10
         height: 20
       type: 1
@@ -2934,8 +2985,8 @@ MonoBehaviour:
     - id: 0.36081757972055
       rect:
         serializedVersion: 2
-        x: -65
-        y: 341
+        x: -7
+        y: 388
         width: 10
         height: 20
       type: 1
@@ -3012,8 +3063,8 @@ MonoBehaviour:
     - id: 0.19719729255754376
       rect:
         serializedVersion: 2
-        x: -65
-        y: 377
+        x: -7
+        y: 424
         width: 10
         height: 20
       type: 1
@@ -3090,8 +3141,8 @@ MonoBehaviour:
     - id: 0.5560023195836704
       rect:
         serializedVersion: 2
-        x: -65
-        y: 413
+        x: -7
+        y: 460
         width: 10
         height: 20
       type: 1
@@ -3376,6 +3427,7 @@ MonoBehaviour:
       choices:
       - choiceText: Vad menar du?
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -3395,6 +3447,7 @@ MonoBehaviour:
           choices:
           - choiceText: Var hittade du den?
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -3417,6 +3470,7 @@ MonoBehaviour:
               choices:
               - choiceText: (Avsluta dialog)
                 skillType: 0
+                skillNumberIncrease: 0
                 itemtransfer: 0
                 item: {fileID: 0}
                 connectedQuest: {fileID: 0}
@@ -3438,6 +3492,7 @@ MonoBehaviour:
             nextScene: {fileID: 0}
           - choiceText: "Ge hit din j\xE4vel!"
             skillType: 2
+            skillNumberIncrease: 5
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -3457,6 +3512,7 @@ MonoBehaviour:
               choices:
               - choiceText: (Avsluta dialog)
                 skillType: 0
+                skillNumberIncrease: 0
                 itemtransfer: 0
                 item: {fileID: 0}
                 connectedQuest: {fileID: 0}
@@ -3478,6 +3534,7 @@ MonoBehaviour:
             nextScene: {fileID: 0}
           - choiceText: "Varf\xF6r har du den?"
             skillType: 2
+            skillNumberIncrease: 3
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -3500,6 +3557,7 @@ MonoBehaviour:
               choices:
               - choiceText: (Avsluta dialog)
                 skillType: 0
+                skillNumberIncrease: 0
                 itemtransfer: 0
                 item: {fileID: 0}
                 connectedQuest: {fileID: 0}
@@ -3524,32 +3582,32 @@ MonoBehaviour:
     isStartNode: 1
     imageRect:
       serializedVersion: 2
-      x: -207
-      y: 284
+      x: -149
+      y: 331
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -342
-      y: 304
+      x: -284
+      y: 351
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -342
-      y: 359
+      x: -284
+      y: 406
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -342
-      y: 284
+      x: -284
+      y: 331
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 318
-      y: 179
+      x: 376
+      y: 226
       width: 300
       height: 180
     typeOfNode: 1
@@ -3560,8 +3618,8 @@ MonoBehaviour:
       id: 0.7702910228494048
       rect:
         serializedVersion: 2
-        x: 316
-        y: 259
+        x: 374
+        y: 306
         width: 10
         height: 20
       type: 0
@@ -3639,8 +3697,8 @@ MonoBehaviour:
     - id: 0.6066707356863984
       rect:
         serializedVersion: 2
-        x: 610
-        y: 215
+        x: 668
+        y: 262
         width: 10
         height: 20
       type: 1
@@ -3717,8 +3775,8 @@ MonoBehaviour:
     - id: 0.9654757627125251
       rect:
         serializedVersion: 2
-        x: 610
-        y: 251
+        x: 668
+        y: 298
         width: 10
         height: 20
       type: 1
@@ -3795,8 +3853,8 @@ MonoBehaviour:
     - id: 0.3242807897386517
       rect:
         serializedVersion: 2
-        x: 610
-        y: 287
+        x: 668
+        y: 334
         width: 10
         height: 20
       type: 1
@@ -3873,8 +3931,8 @@ MonoBehaviour:
     - id: 0.16066050257564546
       rect:
         serializedVersion: 2
-        x: 610
-        y: 323
+        x: 668
+        y: 370
         width: 10
         height: 20
       type: 1
@@ -4159,6 +4217,7 @@ MonoBehaviour:
       choices:
       - choiceText: Var hittade du den?
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -4181,6 +4240,7 @@ MonoBehaviour:
           choices:
           - choiceText: (Avsluta dialog)
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -4204,6 +4264,7 @@ MonoBehaviour:
         nextScene: {fileID: 0}
       - choiceText: "Ge hit din j\xE4vel!"
         skillType: 2
+        skillNumberIncrease: 5
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -4223,6 +4284,7 @@ MonoBehaviour:
           choices:
           - choiceText: (Avsluta dialog)
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -4246,6 +4308,7 @@ MonoBehaviour:
         nextScene: {fileID: 0}
       - choiceText: "Varf\xF6r har du den?"
         skillType: 2
+        skillNumberIncrease: 3
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -4268,6 +4331,7 @@ MonoBehaviour:
           choices:
           - choiceText: (Avsluta dialog)
             skillType: 0
+            skillNumberIncrease: 0
             itemtransfer: 0
             item: {fileID: 0}
             connectedQuest: {fileID: 0}
@@ -4292,32 +4356,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 468
-      y: 194
+      x: 526
+      y: 241
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 333
-      y: 214
+      x: 391
+      y: 261
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 333
-      y: 269
+      x: 391
+      y: 316
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 333
-      y: 194
+      x: 391
+      y: 241
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1026
-      y: 614
+      x: 1084
+      y: 661
       width: 300
       height: 180
     typeOfNode: 1
@@ -4328,8 +4392,8 @@ MonoBehaviour:
       id: 0.2602395644691957
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 694
+        x: 1082
+        y: 741
         width: 10
         height: 20
       type: 0
@@ -4407,8 +4471,8 @@ MonoBehaviour:
     - id: 0.6190445914953223
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 650
+        x: 1376
+        y: 697
         width: 10
         height: 20
       type: 1
@@ -4485,8 +4549,8 @@ MonoBehaviour:
     - id: 0.977849618521449
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 686
+        x: 1376
+        y: 733
         width: 10
         height: 20
       type: 1
@@ -4563,8 +4627,8 @@ MonoBehaviour:
     - id: 0.8142293313584427
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 722
+        x: 1376
+        y: 769
         width: 10
         height: 20
       type: 1
@@ -4641,8 +4705,8 @@ MonoBehaviour:
     - id: 0.17303435838456935
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 758
+        x: 1376
+        y: 805
         width: 10
         height: 20
       type: 1
@@ -4927,6 +4991,7 @@ MonoBehaviour:
       choices:
       - choiceText: (Avsluta dialog)
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -4949,32 +5014,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 1176
-      y: 629
+      x: 1234
+      y: 676
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 1041
-      y: 649
+      x: 1099
+      y: 696
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 1041
-      y: 704
+      x: 1099
+      y: 751
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 1041
-      y: 629
+      x: 1099
+      y: 676
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1024
-      y: 170
+      x: 1082
+      y: 217
       width: 300
       height: 180
     typeOfNode: 1
@@ -4985,8 +5050,8 @@ MonoBehaviour:
       id: 0.27491176187755156
       rect:
         serializedVersion: 2
-        x: 1022
-        y: 250
+        x: 1080
+        y: 297
         width: 10
         height: 20
       type: 0
@@ -5064,8 +5129,8 @@ MonoBehaviour:
     - id: 0.6337167889036782
       rect:
         serializedVersion: 2
-        x: 1316
-        y: 206
+        x: 1374
+        y: 253
         width: 10
         height: 20
       type: 1
@@ -5142,8 +5207,8 @@ MonoBehaviour:
     - id: 0.9925218159298048
       rect:
         serializedVersion: 2
-        x: 1316
-        y: 242
+        x: 1374
+        y: 289
         width: 10
         height: 20
       type: 1
@@ -5220,8 +5285,8 @@ MonoBehaviour:
     - id: 0.8289015287667986
       rect:
         serializedVersion: 2
-        x: 1316
-        y: 278
+        x: 1374
+        y: 325
         width: 10
         height: 20
       type: 1
@@ -5298,8 +5363,8 @@ MonoBehaviour:
     - id: 0.1877065557929252
       rect:
         serializedVersion: 2
-        x: 1316
-        y: 314
+        x: 1374
+        y: 361
         width: 10
         height: 20
       type: 1
@@ -5587,6 +5652,7 @@ MonoBehaviour:
       choices:
       - choiceText: (Avsluta dialog)
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -5609,32 +5675,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 1174
-      y: 185
+      x: 1232
+      y: 232
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 1039
-      y: 205
+      x: 1097
+      y: 252
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 1039
-      y: 260
+      x: 1097
+      y: 307
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 1039
-      y: 185
+      x: 1097
+      y: 232
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1026
-      y: 372
+      x: 1084
+      y: 419
       width: 300
       height: 180
     typeOfNode: 1
@@ -5645,8 +5711,8 @@ MonoBehaviour:
       id: 0.3501053877873837
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 452
+        x: 1082
+        y: 499
         width: 10
         height: 20
       type: 0
@@ -5724,8 +5790,8 @@ MonoBehaviour:
     - id: 0.7089104148135104
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 408
+        x: 1376
+        y: 455
         width: 10
         height: 20
       type: 1
@@ -5802,8 +5868,8 @@ MonoBehaviour:
     - id: 0.5452901276505041
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 444
+        x: 1376
+        y: 491
         width: 10
         height: 20
       type: 1
@@ -5880,8 +5946,8 @@ MonoBehaviour:
     - id: 0.9040951546766307
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 480
+        x: 1376
+        y: 527
         width: 10
         height: 20
       type: 1
@@ -5958,8 +6024,8 @@ MonoBehaviour:
     - id: 0.26290018170275736
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 516
+        x: 1376
+        y: 563
         width: 10
         height: 20
       type: 1
@@ -6247,6 +6313,7 @@ MonoBehaviour:
       choices:
       - choiceText: (Avsluta dialog)
         skillType: 0
+        skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
         connectedQuest: {fileID: 0}
@@ -6269,26 +6336,26 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 1176
-      y: 387
+      x: 1234
+      y: 434
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 1041
-      y: 407
+      x: 1099
+      y: 454
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 1041
-      y: 462
+      x: 1099
+      y: 509
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 1041
-      y: 387
+      x: 1099
+      y: 434
       width: 130
       height: 15
   editorConnections:
@@ -6296,8 +6363,8 @@ MonoBehaviour:
       id: 0.0020125526944233816
       rect:
         serializedVersion: 2
-        x: -65
-        y: 305
+        x: -7
+        y: 352
         width: 10
         height: 20
       type: 1
@@ -6375,8 +6442,8 @@ MonoBehaviour:
       id: 0.8051828256832356
       rect:
         serializedVersion: 2
-        x: -20
-        y: 327
+        x: 13
+        y: 424
         width: 10
         height: 20
       type: 0
@@ -6454,8 +6521,8 @@ MonoBehaviour:
       id: 0.16398785270936223
       rect:
         serializedVersion: 2
-        x: 224
-        y: 337
+        x: 257
+        y: 424
         width: 10
         height: 20
       type: 1
@@ -6533,8 +6600,8 @@ MonoBehaviour:
       id: 0.7702910228494048
       rect:
         serializedVersion: 2
-        x: 316
-        y: 259
+        x: 374
+        y: 306
         width: 10
         height: 20
       type: 0
@@ -6612,8 +6679,8 @@ MonoBehaviour:
       id: 0.6066707356863984
       rect:
         serializedVersion: 2
-        x: 610
-        y: 215
+        x: 668
+        y: 262
         width: 10
         height: 20
       type: 1
@@ -6691,8 +6758,8 @@ MonoBehaviour:
       id: 0.03549866379960378
       rect:
         serializedVersion: 2
-        x: 722
-        y: 184
+        x: 755
+        y: 281
         width: 10
         height: 20
       type: 0
@@ -6770,8 +6837,8 @@ MonoBehaviour:
       id: 0.5161816130933267
       rect:
         serializedVersion: 2
-        x: 960
-        y: 714
+        x: 993
+        y: 801
         width: 10
         height: 20
       type: 1
@@ -6849,8 +6916,8 @@ MonoBehaviour:
       id: 0.2602395644691957
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 694
+        x: 1082
+        y: 741
         width: 10
         height: 20
       type: 0
@@ -6928,8 +6995,8 @@ MonoBehaviour:
       id: 0.3943036908257304
       rect:
         serializedVersion: 2
-        x: 966
-        y: 194
+        x: 999
+        y: 281
         width: 10
         height: 20
       type: 1
@@ -7007,8 +7074,8 @@ MonoBehaviour:
       id: 0.27491176187755156
       rect:
         serializedVersion: 2
-        x: 1022
-        y: 250
+        x: 1080
+        y: 297
         width: 10
         height: 20
       type: 0
@@ -7086,8 +7153,8 @@ MonoBehaviour:
       id: 0.16066050257564546
       rect:
         serializedVersion: 2
-        x: 610
-        y: 323
+        x: 668
+        y: 370
         width: 10
         height: 20
       type: 1
@@ -7165,8 +7232,8 @@ MonoBehaviour:
       id: 0.6798019002563329
       rect:
         serializedVersion: 2
-        x: 716
-        y: 704
+        x: 749
+        y: 801
         width: 10
         height: 20
       type: 0
@@ -7244,8 +7311,8 @@ MonoBehaviour:
       id: 0.9654757627125251
       rect:
         serializedVersion: 2
-        x: 610
-        y: 251
+        x: 668
+        y: 298
         width: 10
         height: 20
       type: 1
@@ -7323,8 +7390,8 @@ MonoBehaviour:
       id: 0.539018402127092
       rect:
         serializedVersion: 2
-        x: 720
-        y: 437
+        x: 753
+        y: 534
         width: 10
         height: 20
       type: 0
@@ -7402,8 +7469,8 @@ MonoBehaviour:
       id: 0.8978234291532186
       rect:
         serializedVersion: 2
-        x: 964
-        y: 447
+        x: 997
+        y: 534
         width: 10
         height: 20
       type: 1
@@ -7481,8 +7548,8 @@ MonoBehaviour:
       id: 0.3501053877873837
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 452
+        x: 1082
+        y: 499
         width: 10
         height: 20
       type: 0
@@ -7560,8 +7627,8 @@ MonoBehaviour:
       id: 0.7089104148135104
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 408
+        x: 1376
+        y: 455
         width: 10
         height: 20
       type: 1
@@ -7639,8 +7706,8 @@ MonoBehaviour:
       id: 0.6811507799109214
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 411
+        x: 1418
+        y: 508
         width: 10
         height: 20
       type: 0
@@ -7718,8 +7785,8 @@ MonoBehaviour:
       id: 0.6337167889036782
       rect:
         serializedVersion: 2
-        x: 1316
-        y: 206
+        x: 1374
+        y: 253
         width: 10
         height: 20
       type: 1
@@ -7797,8 +7864,8 @@ MonoBehaviour:
       id: 0.6811507799109214
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 411
+        x: 1418
+        y: 508
         width: 10
         height: 20
       type: 0
@@ -7876,8 +7943,8 @@ MonoBehaviour:
       id: 0.6190445914953223
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 650
+        x: 1376
+        y: 697
         width: 10
         height: 20
       type: 1
@@ -7955,8 +8022,8 @@ MonoBehaviour:
       id: 0.6811507799109214
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 411
+        x: 1418
+        y: 508
         width: 10
         height: 20
       type: 0
@@ -8034,8 +8101,8 @@ MonoBehaviour:
       id: 0.03995580693704812
       rect:
         serializedVersion: 2
-        x: 1629
-        y: 421
+        x: 1662
+        y: 508
         width: 10
         height: 20
       type: 1
@@ -8113,8 +8180,8 @@ MonoBehaviour:
       id: 0.06575767047040056
       rect:
         serializedVersion: 2
-        x: 1708
-        y: 345
+        x: 1716
+        y: 337
         width: 10
         height: 20
       type: 0
@@ -8191,8 +8258,8 @@ MonoBehaviour:
   editorScenarioEndNodes:
   - rect:
       serializedVersion: 2
-      x: 1710
-      y: 320
+      x: 1718
+      y: 312
       width: 200
       height: 70
     typeOfNode: 2
@@ -8203,8 +8270,8 @@ MonoBehaviour:
       id: 0.06575767047040056
       rect:
         serializedVersion: 2
-        x: 1708
-        y: 345
+        x: 1716
+        y: 337
         width: 10
         height: 20
       type: 0
@@ -8485,14 +8552,14 @@ MonoBehaviour:
       m_StretchHeight: 0
     newScenarioRect:
       serializedVersion: 2
-      x: 1725
-      y: 335
+      x: 1733
+      y: 327
       width: 170
       height: 15
     newSceneRect:
       serializedVersion: 2
-      x: 1725
-      y: 355
+      x: 1733
+      y: 347
       width: 170
       height: 15
     nextScenario: {fileID: 0}

@@ -565,19 +565,28 @@ public class EventEditor : EditorWindow
         //Load all editor event nodes
         for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
         {
-            allNodes.Add(openScenario.editorEventNodes[i]);
+            //allNodes.Add(openScenario.editorEventNodes[i]);
+            allNodes.Add(new EventNode(openScenario.editorEventNodes[i].rect.center, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+            EventNode loadedNode = allNodes[allNodes.Count - 1] as EventNode;
+            loadedNode.LoadEventNode(openScenario.editorEventNodes[i]);
         }
 
         //Load all editor schoice nodes
         for (int i = 0; i < openScenario.editorChoiceNodes.Count; i++)
         {
-            allNodes.Add(openScenario.editorChoiceNodes[i]);
+            //allNodes.Add(openScenario.editorChoiceNodes[i]);
+            allNodes.Add(new ChoiceNode(openScenario.editorChoiceNodes[i].rect.center, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+            ChoiceNode loadedNode = allNodes[allNodes.Count - 1] as ChoiceNode;
+            loadedNode.LoadChoiceNode(openScenario.editorChoiceNodes[i]);
         }
 
         //Load all editor scenarioEndNodes
         for (int i = 0; i < openScenario.editorScenarioEndNodes.Count; i++)
         {
-            allNodes.Add(openScenario.editorScenarioEndNodes[i]);
+            //allNodes.Add(openScenario.editorScenarioEndNodes[i]);
+            allNodes.Add(new ScenarioEndNode(openScenario.editorScenarioEndNodes[i].rect.center, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+            ScenarioEndNode loadedNode = allNodes[allNodes.Count - 1] as ScenarioEndNode;
+            loadedNode.LoadScenarioEndNode(openScenario.editorScenarioEndNodes[i]);
         }
 
         //Add RemoveMethods to all Nodes

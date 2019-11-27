@@ -16,7 +16,7 @@ public class PlayerCharacteristics : ScriptableObject
     public List<ScriptableQuest> completedQuests = new List<ScriptableQuest>();
     public List<ScriptableQuest> failedQuests = new List<ScriptableQuest>();
 
-    public void IncreaseStat(Characteristics typeOfStat)
+    public void IncreaseStat(Characteristics typeOfStat, int increase)
     {
         bool statIncreased = false;
         switch (typeOfStat)
@@ -25,15 +25,15 @@ public class PlayerCharacteristics : ScriptableObject
                 Debug.Log("No increase in player stat");
                 break;
             case Characteristics.Diplomatisk:
-                diplomatisk++;
+                diplomatisk+= increase;
                 statIncreased = true;
                 break;
             case Characteristics.Hotfull:
-                hotfull++;
+                hotfull+= increase;
                 statIncreased = true;
                 break;
             case Characteristics.Slug:
-                slug++;
+                slug+= increase;
                 statIncreased = true;
                 break;
         }

@@ -38,6 +38,7 @@ public class Choice
 
     //Reward/skillincrease
     public Characteristics skillType;
+    public int skillNumberIncrease;
 
     public ItemTransfer itemtransfer;
     public ScriptableInventoryItem item;

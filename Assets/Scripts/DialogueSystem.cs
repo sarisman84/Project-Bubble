@@ -115,7 +115,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void AffectPlayer(Choice usedChoice)
     {
-        playerStats.IncreaseStat(usedChoice.skillType);
+        playerStats.IncreaseStat(usedChoice.skillType, usedChoice.skillNumberIncrease);
 
         //AFFECT Relationship
         if (usedChoice.affectedNPC)
