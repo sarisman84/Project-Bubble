@@ -349,12 +349,12 @@ public class EventEditor : EditorWindow
             {
                 for (int j = 0; j < node.outPoints.Count; j++)
                 {
-                    if (allConnections[i].outPoint == node.outPoints[j])
+                    if (allConnections[i].inPoint == node.outPoints[j])
                     {
                         connectionsToRemove.Add(allConnections[i]);
                     }
                 }
-                if (allConnections[i].inPoint == node.inPoint)
+                if (allConnections[i].outPoint == node.inPoint)
                 {
                     connectionsToRemove.Add(allConnections[i]);
                 }
@@ -532,7 +532,8 @@ public class EventEditor : EditorWindow
                             newEventNode = allConnections[i].outPoint.node as EventNode;
                             newEventNode.myEvent.choices.Clear();
                             newEvent = newEventNode.myEvent;
-                            inputChoice.nextEvent = newEvent;
+                            //inputChoice.nextEvent = newEvent;
+                            inputChoice.nextEventID = newEvent.id;
                             break;
                         case Node.NodeType.ScenarioEndNode:
                             newEndNode = allConnections[i].outPoint.node as ScenarioEndNode;

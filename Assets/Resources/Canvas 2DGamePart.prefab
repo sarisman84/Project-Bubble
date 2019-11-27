@@ -280,6 +280,9 @@ MonoBehaviour:
     description: 
     image: {fileID: 0}
     choices: []
+    id: 0
+    usedIDs: []
+  locationText: {fileID: 3031634552223286419}
   background: {fileID: 9119780459512634421}
   description: {fileID: 9119780459245763538}
   choiceButtons:
@@ -294,7 +297,6 @@ MonoBehaviour:
   - {fileID: 9119780458755760915}
   playerStats: {fileID: 0}
   inventory: {fileID: 0}
-  locationText: {fileID: 3031634552223286419}
 --- !u!1 &9119780458487555118
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +659,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -863,7 +865,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -940,7 +942,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1017,10 +1019,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 45
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1029,6 +1031,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Description of Event or Location
+
+    Description of Event or Location
 
     Description of Event or Location
 
@@ -1404,7 +1408,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2

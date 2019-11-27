@@ -39,13 +39,21 @@ public class ChoiceSystem : MonoBehaviour
         }
     }
 
+
+
     public void MakeChoice(int index)
     {
         Choice usedChoice = currentEvent.choices[index];
-        if (currentEvent.choices[index].nextEvent.choices.Count > 0)
+        //if (currentEvent.choices[index].nextEvent.choices.Count > 0)
+        //{
+        //    Debug.Log("Changing event");
+        //    currentEvent = currentEvent.choices[index].nextEvent;
+        //}
+        Event newEvent = scenario.FindNextEvent(usedChoice);
+        if (newEvent != null && newEvent.choices.Count > 0)
         {
-            Debug.Log("Changing event");
-            currentEvent = currentEvent.choices[index].nextEvent;
+            //Debug.Log("Changing event");
+            currentEvent = newEvent;
         }
         else if (currentEvent.choices[index].nextScenario != null)
         {
@@ -130,7 +138,10 @@ public class ChoiceSystem : MonoBehaviour
 
     private void DisplayGUI(Event input)
     {
-        locationText.text = input.locationText;
+        if (input.locationText != "Location Text")
+        {
+            locationText.text = input.locationText;
+        }
         for (int i = 0; i < choiceButtons.Length; i++)
         {
             choiceButtons[i].SetActive(false);
@@ -139,28 +150,31 @@ public class ChoiceSystem : MonoBehaviour
         {
             DrawChoice(input.choices[i], i);
         }
-        background.sprite = currentEvent.image;
+        if (currentEvent.image)
+        {
+            background.sprite = currentEvent.image;
+        }
         description.text = currentEvent.description;
     }
 
     private void DrawChoice(Choice choice, int choiceIndex)
     {
         bool isAllowed = true;
-        string fault = "";
+        //string fault = "";
         if (choice.itemtransfer == ItemTransfer.PlayerLoseItem && !inventory.CheckIfItemIsInInventory(choice.item))
         {
-            fault = " - you don't have the item";
+            //fault = " - you don't have the item";
             isAllowed = false;
         }
 
         if (choice.affectedNPC != null && (int)choice.minimumRelationshiplevel > (int)choice.affectedNPC.CalculateAndCheckRelationshipLevel())
         {
-            fault = " - you don't know the person well enough";
+            // fault = " - you don't know the person well enough";
             isAllowed = false;
         }
         if (choice.requiredSkill != Characteristics.None && choice.requiredSkillNumber > playerStats.GetCharacteristic(choice.requiredSkill))
         {
-            fault = " - you don't have the required skill";
+            //fault = " - you don't have the required skill";
             isAllowed = false;
         }
 
@@ -168,7 +182,7 @@ public class ChoiceSystem : MonoBehaviour
         {
             if (!playerStats.activeQuests.Contains(choice.requiredStartedQuest))
             {
-                fault = " - you have not started the needed quest";
+                //fault = " - you have not started the needed quest";
                 isAllowed = false;
             }
         }
@@ -177,7 +191,7 @@ public class ChoiceSystem : MonoBehaviour
         {
             if (!playerStats.completedQuests.Contains(choice.requiredCompletedQuest))
             {
-                fault = " - you have not completed the needed quest";
+                //fault = " - you have not completed the needed quest";
                 isAllowed = false;
             }
         }

@@ -22,7 +22,6 @@ public class PlayerCharacteristics : ScriptableObject
         switch (typeOfStat)
         {
             case Characteristics.None:
-                Debug.Log("No increase in player stat");
                 break;
             case Characteristics.Diplomatisk:
                 diplomatisk+= increase;

@@ -88,11 +88,19 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
         Choice usedChoice = currentEvent.choices[index];
+        Event nextEvent = dialogue.FindNextEvent(usedChoice);
 
-        if (currentEvent.choices[index].nextEvent != null && currentEvent.choices[index].nextEvent.choices.Count > 0)
+        //if (currentEvent.choices[index].nextEvent != null && currentEvent.choices[index].nextEvent.choices.Count > 0)
+        //{
+        //    Debug.Log("Changing event");
+        //    currentEvent = currentEvent.choices[index].nextEvent;
+        //    AffectPlayer(usedChoice);
+        //    DisplayGUI(currentEvent);
+        //}
+        if (nextEvent != null && nextEvent.choices.Count > 0)
         {
             Debug.Log("Changing event");
-            currentEvent = currentEvent.choices[index].nextEvent;
+            currentEvent = nextEvent;
             AffectPlayer(usedChoice);
             DisplayGUI(currentEvent);
         }
