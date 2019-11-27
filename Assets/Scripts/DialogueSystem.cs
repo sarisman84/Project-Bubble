@@ -51,19 +51,45 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(NPC npcTalking, Scenario dialogue)
     {
+        Cursor.lockState = CursorLockMode.None;
+        GameManager.Instance().SetFPSInput(false);
         dialogueOpen = true;
         npcTalkedTo = npcTalking;
-        this.dialogue = dialogue;
-        currentEvent = dialogue.startEvent;
-        DisplayGUI(currentEvent);
-        Cursor.lockState = CursorLockMode.None;
+        if (dialogue == null)
+        {
+            ShowDefault();
+        }
+        else
+        {
+            this.dialogue = dialogue;
+            currentEvent = dialogue.startEvent;
+            DisplayGUI(currentEvent);
+        }
+    }
+
+    public void ShowDefault()
+    {
+        subtitlesPanel.SetActive(true);
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            choiceButtons[i].SetActive(false);
+        }
+        Choice defaultChoice = new Choice("Hej hej");
+        DrawChoice(defaultChoice, 0);
+        //background.sprite = currentEvent.image;
+        subtitleText.text = npcTalkedTo.currentGreeting;
     }
 
     public void MakeChoice(int index)
     {
+        if (currentEvent == null)
+        {
+            EndDialogue();
+            return;
+        }
         Choice usedChoice = currentEvent.choices[index];
 
-        if (currentEvent.choices[index].nextEvent.choices.Count > 0)
+        if (currentEvent.choices[index].nextEvent != null && currentEvent.choices[index].nextEvent.choices.Count > 0)
         {
             Debug.Log("Changing event");
             currentEvent = currentEvent.choices[index].nextEvent;
@@ -80,9 +106,9 @@ public class DialogueSystem : MonoBehaviour
         }
         else
         {
+            Debug.Log("No further events or endnodes found, check setup of scenario from node. Dialogue will close from node: " + currentEvent.locationText);
             AffectPlayer(usedChoice);
             EndDialogue();
-            Debug.Log("No further events or endnodes found, check setup of scenario from node. Dialogue will close from node: " + currentEvent.locationText);
             //return;
         }
     }
@@ -124,10 +150,11 @@ public class DialogueSystem : MonoBehaviour
                         if (npcTalkedTo.quests.Contains(usedChoice.connectedQuest))
                         {
                             npcTalkedTo.quests.Remove(usedChoice.connectedQuest);
-                            
+
                         }
                         playerStats.activeQuests.Remove(usedChoice.connectedQuest);
                         playerStats.completedQuests.Add(usedChoice.connectedQuest);
+                        QuestLog.Instance().EndQuest(usedChoice.connectedQuest.id);
                         Debug.Log("Quest completed: " + usedChoice.connectedQuest.questName);
                     }
                     else
@@ -226,6 +253,8 @@ public class DialogueSystem : MonoBehaviour
 
     private void EndDialogue()
     {
+        currentEvent = null;
+        dialogue = null;
         subtitlesPanel.SetActive(false);
         for (int i = 0; i < choiceButtons.Length; i++)
         {
@@ -233,6 +262,8 @@ public class DialogueSystem : MonoBehaviour
         }
         dialogueOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
+        GameManager.Instance().SetFPSInput(true);
+        GameManager.Instance().SetMouseLook(true);
         if (npcTalkedTo.quests.Count == 0)
         {
             npcTalkedTo.CharacterCompleted();

@@ -16,7 +16,7 @@ public class GiladsMaskItem : MonoBehaviour, IInteractable //Dejan, gillads mask
 
     public string MessageOnDetection() //displays on hover
     {
-        return "Gilad's Mask";
+        return "Gilads Mask. Tryck på E för att plocka upp";
     }
 
     public bool CanBeInteractedWith() //can always be interacted with
