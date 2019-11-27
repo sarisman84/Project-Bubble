@@ -10,7 +10,7 @@ public class SleepCheck : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("canISleep = " + canISleep);
+        
     }
 
     private void OnTriggerEnter(Collider other)
