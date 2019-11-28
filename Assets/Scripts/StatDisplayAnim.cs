@@ -7,8 +7,9 @@ public class StatDisplayAnim : MonoBehaviour
 {
     public PlayerCharacteristics characteristics;
 
-    public GameObject statIndicator;
-
+    //public GameObject statIndicator;
+    public Transform animationParent;
+    public GameObject statIncreaseGraphics;
 
     public Sprite slugImage;
     public Sprite hotfullImage;
@@ -45,38 +46,94 @@ public class StatDisplayAnim : MonoBehaviour
 
         if (numberOfSlugToSpawn + numberOfDiploToSpawn + numberOfHotfullToSpawn > 0)
         {
-            for (int i = 0; i < numberOfSlugToSpawn; i++)
+            if (numberOfSlugToSpawn > 0)
             {
-                LevelUpStat(Characteristics.Slug);
+                leveledUpCharacteristics.Add(Characteristics.Slug);
             }
-            for (int i = 0; i < numberOfDiploToSpawn; i++)
+
+            if (numberOfDiploToSpawn > 0)
             {
-                LevelUpStat(Characteristics.Diplomatisk);
+                leveledUpCharacteristics.Add(Characteristics.Diplomatisk);
             }
-            for (int i = 0; i < numberOfHotfullToSpawn; i++)
+
+            if (numberOfHotfullToSpawn > 0)
             {
-                LevelUpStat(Characteristics.Hotfull);
+                leveledUpCharacteristics.Add(Characteristics.Hotfull);
             }
+
+            if (!coroutineIsOn)
+            {
+                StartCoroutine(PlayAnimation());
+            }
+
+            //for (int i = 0; i < numberOfSlugToSpawn; i++)
+            //{
+            //    LevelUpStat(Characteristics.Slug);
+            //}
+            //for (int i = 0; i < numberOfDiploToSpawn; i++)
+            //{
+            //    LevelUpStat(Characteristics.Diplomatisk);
+            //}
+            //for (int i = 0; i < numberOfHotfullToSpawn; i++)
+            //{
+            //    LevelUpStat(Characteristics.Hotfull);
+            //}
+
         }
     }
 
-    public void LevelUpStat(Characteristics type)
+    //public void LevelUpStat(Characteristics type)
+    //{
+    //    switch (type)
+    //    {
+    //        default:
+    //        case Characteristics.None:
+    //            break;
+    //        case Characteristics.Diplomatisk:
+    //            statIndicator.GetComponent<Image>().sprite = diplomatiskImage;
+    //            break;
+    //        case Characteristics.Hotfull:
+    //            statIndicator.GetComponent<Image>().sprite = hotfullImage;
+    //            break;
+    //        case Characteristics.Slug:
+    //            statIndicator.GetComponent<Image>().sprite = slugImage;
+    //            break;
+    //    }
+    //    statIndicator.GetComponent<Animator>().SetTrigger("Show");
+    //}
+
+    List<Characteristics> leveledUpCharacteristics = new List<Characteristics>();
+    bool coroutineIsOn = false;
+    float timeBetweenDisplays = 0.25f;
+
+    IEnumerator PlayAnimation()
     {
-        switch (type)
+        GetComponent<Animator>().SetTrigger("Show");
+        coroutineIsOn = true;
+
+        while (leveledUpCharacteristics.Count > 0)
         {
-            default:
-            case Characteristics.None:
-                break;
-            case Characteristics.Diplomatisk:
-                statIndicator.GetComponent<Image>().sprite = diplomatiskImage;
-                break;
-            case Characteristics.Hotfull:
-                statIndicator.GetComponent<Image>().sprite = hotfullImage;
-                break;
-            case Characteristics.Slug:
-                statIndicator.GetComponent<Image>().sprite = slugImage;
-                break;
+            GameObject spawnedIndicator = Instantiate(statIncreaseGraphics, animationParent);
+            switch (leveledUpCharacteristics[0])
+            {
+                default:
+                case Characteristics.None:
+                    break;
+                case Characteristics.Diplomatisk:
+                    spawnedIndicator.GetComponent<Image>().sprite = diplomatiskImage;
+                    break;
+                case Characteristics.Hotfull:
+                    spawnedIndicator.GetComponent<Image>().sprite = hotfullImage;
+                    break;
+                case Characteristics.Slug:
+                    spawnedIndicator.GetComponent<Image>().sprite = slugImage;
+                    break;
+            }
+            spawnedIndicator.GetComponent<Animator>().SetTrigger("Show");
+            leveledUpCharacteristics.RemoveAt(0);
+            Destroy(spawnedIndicator, 2);
+            yield return new WaitForSeconds(timeBetweenDisplays);
         }
-        statIndicator.GetComponent<Animator>().SetTrigger("Show");
+        coroutineIsOn = false;
     }
 }
