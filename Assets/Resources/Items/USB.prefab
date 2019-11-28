@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1970335883708040449}
   - component: {fileID: 4548275598074943185}
-  - component: {fileID: 1970335883708040462}
+  - component: {fileID: 7032155316961023071}
   m_Layer: 0
   m_Name: USB
   m_TagString: Untagged
@@ -46,7 +46,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.05, z: 0.1}
   m_Center: {x: 0, y: 0.025, z: 0}
---- !u!114 &1970335883708040462
+--- !u!114 &7032155316961023071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,10 +55,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1970335883708040448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a45905ec2b6e20f49ae104cb7959b9fd, type: 3}
+  m_Script: {fileID: 11500000, guid: f6f30ded0801e3c4e8d06632a41ad698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneSwitch: {fileID: 0}
+  messageOnHover: USB-minne
+  itemID: 0
 --- !u!1 &5135798716166285150
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d362b444d555b414997720c4655da419, type: 2}
+  - {fileID: 2100000, guid: 46c84c9a68840dc469c480c2baec1b61, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

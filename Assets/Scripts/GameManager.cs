@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     public PlayerCharacter playerCharacter;
+    public bool USBPickedUp = false;
 
     public void SetFPSInput(bool enabled)
     {
