@@ -151,6 +151,13 @@ public class EventNode : Node
         myEvent = new Event("Location Text", "Event Text");
     }
 
+    public void LoadEventNode(EventNode node)
+    {
+        myEvent = node.myEvent;
+        inPoint = node.inPoint;
+        outPoints = node.outPoints;
+        isStartNode = node.isStartNode;
+    }
 
     public override void Drag(Vector2 delta)
     {
@@ -190,12 +197,13 @@ public class ChoiceNode : Node
     //Sizes and Positions
     public const float
         boxWidth = 250,
-        boxHeight = 260;
+        boxHeight = 280;
 
 
     public Rect choiceTextRect;
 
     public Rect skillTypeRect;
+    public Rect skillIncreaseNumberRect;
 
     public Rect itemTransferTypeRect;
     public Rect itemTransferRect;
@@ -222,6 +230,7 @@ public class ChoiceNode : Node
         choiceTextRect.position += delta;
 
         skillTypeRect.position += delta;
+        skillIncreaseNumberRect.position += delta;
 
         itemTransferTypeRect.position += delta;
         itemTransferRect.position += delta;
@@ -254,6 +263,10 @@ public class ChoiceNode : Node
         myChoice.choiceText = EditorGUI.TextField(choiceTextRect, myChoice.choiceText);
 
         myChoice.skillType = (Characteristics)EditorGUI.EnumPopup(skillTypeRect, "Skill increase", myChoice.skillType);
+        if (myChoice.skillType != Characteristics.None)
+        {
+            myChoice.skillNumberIncrease = EditorGUI.IntField(skillIncreaseNumberRect, "Skill inc. number", myChoice.skillNumberIncrease);
+        }
 
         myChoice.itemtransfer = (ItemTransfer)EditorGUI.EnumPopup(itemTransferTypeRect, "Give/Take item", myChoice.itemtransfer);
         if (myChoice.itemtransfer != ItemTransfer.Off)
@@ -301,6 +314,9 @@ public class ChoiceNode : Node
         adaptiveY += TEXTSQUAREHEIGHT * 2;
 
         skillTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
+        adaptiveY += TEXTSQUAREHEIGHT;
+
+        skillIncreaseNumberRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
         adaptiveY += TEXTSQUAREHEIGHT;
 
         itemTransferTypeRect = new Rect(xLeft, adaptiveY, fullWidth, TEXTSQUAREHEIGHT);
@@ -355,6 +371,13 @@ public class ChoiceNode : Node
 
 
         myChoice = new Choice("New Choice");
+    }
+
+    public void LoadChoiceNode(ChoiceNode node)
+    {
+        myChoice = node.myChoice;
+        inPoint = node.inPoint;
+        outPoints = node.outPoints;
     }
 }
 
@@ -417,5 +440,13 @@ public class ScenarioEndNode : Node
 
         //Base need
         typeOfNode = NodeType.ScenarioEndNode;
+    }
+
+    public void LoadScenarioEndNode(ScenarioEndNode node)
+    {
+        nextScenario = node.nextScenario;
+        nextScene = node.nextScene;
+        inPoint = node.inPoint;
+        outPoints = node.outPoints;
     }
 }
