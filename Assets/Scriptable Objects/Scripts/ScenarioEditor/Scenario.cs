@@ -12,6 +12,19 @@ public class Scenario : ScriptableObject
     public List<EventNode> editorEventNodes = new List<EventNode>();
     public List<Connection> editorConnections = new List<Connection>();
     public List<ScenarioEndNode> editorScenarioEndNodes = new List<ScenarioEndNode>();
+
+    public Event FindNextEvent(Choice usedChoice)
+    {
+        for (int i = 0; i < editorEventNodes.Count; i++)
+        {
+            if (usedChoice.nextEventID == editorEventNodes[i].myEvent.id)
+            {
+                return editorEventNodes[i].myEvent;
+            }
+        }
+        Debug.Log("New event not found");
+        return null;
+    }
 }
 
 [System.Serializable]
@@ -21,10 +34,30 @@ public class Event
     public string description;
     public Sprite image;
     public List<Choice> choices = new List<Choice>();
+
+    public double id;
+    public List<double> usedIDs = new List<double>();
+
     public Event(string locationText, string description)
     {
         this.locationText = locationText;
         this.description = description;
+        id = GetUniqueID();
+    }
+
+    public double GetUniqueID()
+    {
+        System.Random rng = new System.Random();
+        double newID = rng.NextDouble();
+        if (!usedIDs.Contains(newID))
+        {
+            usedIDs.Add(newID);
+            return newID;
+        }
+        else
+        {
+            return GetUniqueID();
+        }
     }
 }
 
@@ -38,6 +71,7 @@ public class Choice
 
     //Reward/skillincrease
     public Characteristics skillType;
+    public int skillNumberIncrease;
 
     public ItemTransfer itemtransfer;
     public ScriptableInventoryItem item;
@@ -57,7 +91,8 @@ public class Choice
     public RelationshipLevel minimumRelationshiplevel;
 
     //outputs
-    public Event nextEvent = null;
+    //public Event nextEvent = null;
+    public double nextEventID;
     public Scenario nextScenario = null;
     public SceneAsset nextScene;
 
