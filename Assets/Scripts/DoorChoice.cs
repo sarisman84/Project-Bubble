@@ -11,6 +11,8 @@ public class DoorChoice : MonoBehaviour
     [SerializeField]
     public GameObject buttons;
     private bool hasGottenChoice = false;
+    [SerializeField]
+    public GameObject goToWorkButton;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,14 @@ public class DoorChoice : MonoBehaviour
             hasGottenChoice = true;
             GameManager.Instance().SetFPSInput(false);
             Cursor.lockState = CursorLockMode.None;
+            EnableButtons();
+        }
+        else if (other.gameObject.CompareTag("Player") && hasGottenChoice == true)
+        {
+            hasGottenChoice = true;
+            GameManager.Instance().SetFPSInput(false);
+            Cursor.lockState = CursorLockMode.None;
+            Destroy(goToWorkButton);
             EnableButtons();
         }
     }
