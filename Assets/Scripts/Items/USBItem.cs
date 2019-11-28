@@ -11,6 +11,10 @@ public class USBItem : MonoBehaviour, IInteractable //Dejan, usb 3d object
 
     public bool InteractWith() //executes when interacted with, changes scene to main menu
     {
+        if (GetComponent<AudioSource>() != null)
+        {
+            GetComponent<AudioSource>().Play();
+        }
         sceneSwitch.SwitchScene(buildIndex);
         return false;
     }

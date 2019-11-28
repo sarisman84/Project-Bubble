@@ -58,24 +58,38 @@ public class StatsDisplayer : MonoBehaviour
                 {
                     GameObject spawn = Instantiate(statImage, diplomaticStatHolder);
                     spawn.GetComponent<Image>().color = diplomaticColor;
+                    StartCoroutine(StartNewStatAnimation(spawn));
                     break;
                 }
             case Characteristics.Hotfull:
                 {
                     GameObject spawn = Instantiate(statImage, hotfullStatHolder);
                     spawn.GetComponent<Image>().color = hotfullColor;
+                    StartCoroutine(StartNewStatAnimation(spawn));
                     break;
                 }
             case Characteristics.Slug:
                 {
                     GameObject spawn = Instantiate(statImage, slugStatHolder);
                     spawn.GetComponent<Image>().color = slugColor;
+                    StartCoroutine(StartNewStatAnimation(spawn));
                     break;
                 }
             default:
             case Characteristics.None:
                 Debug.LogWarning("Tried to spawn a nonexisting stat");
                 break;
+        }
+    }
+
+    IEnumerator StartNewStatAnimation(GameObject objectToAnimate)
+    {
+        yield return new WaitForSeconds(1.1f);
+        
+        if (objectToAnimate.activeInHierarchy)
+        {
+            objectToAnimate.GetComponent<Animator>().SetTrigger("New");
+            Debug.Log("Playing animation");
         }
     }
 }
