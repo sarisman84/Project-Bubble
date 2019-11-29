@@ -14,17 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
     locationText: Byn Coille
-    description: "Du kommer tillbaka till Coille d\xE4r Mrs. Maisie  ber\xE4ttar att
-      under en l\xE4ngre tid har saker mystiskt f\xF6rsvunnit. Vapen och mat. Hon
-      undrar om du kan hitta vem det \xE4r som stj\xE4l deras saker."
+    description: "Du kommer tillbaka till Coille d\xE4r Mrs. Maisie m\xF6ter dig."
     image: {fileID: 0}
     choices:
-    - choiceText: Acceptera uppdraget
+    - choiceText: "(Forts\xE4tt)"
       skillType: 0
       skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
-      connectedQuest: {fileID: 0}
+      connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86, type: 2}
       processQuest: 0
       requiredStartedQuest: {fileID: 0}
       requiredCompletedQuest: {fileID: 0}
@@ -34,26 +32,7 @@ MonoBehaviour:
       relationshipAttributeToChange: 0
       relationshipAttributeChangeNumber: 0
       minimumRelationshiplevel: 0
-      nextEventID: 0.6648024658974272
-      nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
-    - choiceText: "\"Jag har inte tid f\xF6r s\xE5nt, jag har n\xE5got viktigare att
-        prata om\""
-      skillType: 0
-      skillNumberIncrease: 0
-      itemtransfer: 0
-      item: {fileID: 0}
-      connectedQuest: {fileID: 0}
-      processQuest: 0
-      requiredStartedQuest: {fileID: 0}
-      requiredCompletedQuest: {fileID: 0}
-      requiredSkill: 0
-      requiredSkillNumber: 0
-      affectedNPC: {fileID: 0}
-      relationshipAttributeToChange: 0
-      relationshipAttributeChangeNumber: 0
-      minimumRelationshiplevel: 0
-      nextEventID: 0
+      nextEventID: 0.3442075179629994
       nextScenario: {fileID: 0}
       nextScene: {fileID: 0}
     id: 0.27860613739053075
@@ -62,8 +41,8 @@ MonoBehaviour:
   editorChoiceNodes:
   - rect:
       serializedVersion: 2
-      x: -3204
-      y: 228
+      x: -3391
+      y: 60
       width: 250
       height: 280
     typeOfNode: 0
@@ -74,8 +53,8 @@ MonoBehaviour:
       id: 0.16012149963533576
       rect:
         serializedVersion: 2
-        x: -3206
-        y: 358
+        x: -3393
+        y: 190
         width: 10
         height: 20
       type: 0
@@ -153,8 +132,8 @@ MonoBehaviour:
     - id: 0.5189265266614624
       rect:
         serializedVersion: 2
-        x: -2962
-        y: 368
+        x: -3149
+        y: 200
         width: 10
         height: 20
       type: 1
@@ -453,580 +432,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -3189
-      y: 243
+      x: -3376
+      y: 75
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -3189
-      y: 273
+      x: -3376
+      y: 105
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -3189
-      y: 288
+      x: -3376
+      y: 120
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -3189
-      y: 303
+      x: -3376
+      y: 135
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -3189
-      y: 318
+      x: -3376
+      y: 150
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -3189
-      y: 333
+      x: -3376
+      y: 165
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -3189
-      y: 348
+      x: -3376
+      y: 180
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -3189
-      y: 363
+      x: -3376
+      y: 195
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -3189
-      y: 378
+      x: -3376
+      y: 210
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -3189
-      y: 393
+      x: -3376
+      y: 225
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -3189
-      y: 408
+      x: -3376
+      y: 240
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -3189
-      y: 423
+      x: -3376
+      y: 255
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -3189
-      y: 438
+      x: -3376
+      y: 270
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -3189
-      y: 453
+      x: -3376
+      y: 285
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -3189
-      y: 468
+      x: -3376
+      y: 300
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -2069
-      y: 861
-      width: 250
-      height: 280
-    typeOfNode: 0
-    allowedConnectionTypes: 0100000002000000
-    isDragged: 0
-    isSelected: 0
-    inPoint:
-      id: 0.24319572525247732
-      rect:
-        serializedVersion: 2
-        x: -2071
-        y: 991
-        width: 10
-        height: 20
-      type: 0
-      style:
-        m_Name: 
-        m_Normal:
-          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Hover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Active:
-          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Focused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnNormal:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnHover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnActive:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnFocused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Border:
-          m_Left: 4
-          m_Right: 4
-          m_Top: 12
-          m_Bottom: 12
-        m_Margin:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Padding:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Overflow:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Font: {fileID: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_Alignment: 0
-        m_WordWrap: 0
-        m_RichText: 1
-        m_TextClipping: 0
-        m_ImagePosition: 0
-        m_ContentOffset: {x: 0, y: 0}
-        m_FixedWidth: 0
-        m_FixedHeight: 0
-        m_StretchWidth: 1
-        m_StretchHeight: 0
-      YOffset: 0
-    outPoints:
-    - id: 0.602000752278604
-      rect:
-        serializedVersion: 2
-        x: -1827
-        y: 1001
-        width: 10
-        height: 20
-      type: 1
-      style:
-        m_Name: 
-        m_Normal:
-          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Hover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Active:
-          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Focused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnNormal:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnHover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnActive:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnFocused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Border:
-          m_Left: 4
-          m_Right: 4
-          m_Top: 12
-          m_Bottom: 12
-        m_Margin:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Padding:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Overflow:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Font: {fileID: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_Alignment: 0
-        m_WordWrap: 0
-        m_RichText: 1
-        m_TextClipping: 0
-        m_ImagePosition: 0
-        m_ContentOffset: {x: 0, y: 0}
-        m_FixedWidth: 0
-        m_FixedHeight: 0
-        m_StretchWidth: 1
-        m_StretchHeight: 0
-      YOffset: 140
-    style:
-      m_Name: 
-      m_Normal:
-        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
-          type: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Hover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Active:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Focused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnNormal:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnHover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnActive:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnFocused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Border:
-        m_Left: 12
-        m_Right: 12
-        m_Top: 12
-        m_Bottom: 12
-      m_Margin:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Padding:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Overflow:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Font: {fileID: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_Alignment: 0
-      m_WordWrap: 0
-      m_RichText: 1
-      m_TextClipping: 0
-      m_ImagePosition: 0
-      m_ContentOffset: {x: 0, y: 0}
-      m_FixedWidth: 0
-      m_FixedHeight: 0
-      m_StretchWidth: 1
-      m_StretchHeight: 0
-    defaultNodeStyle:
-      m_Name: 
-      m_Normal:
-        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
-          type: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Hover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Active:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Focused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnNormal:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnHover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnActive:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnFocused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Border:
-        m_Left: 12
-        m_Right: 12
-        m_Top: 12
-        m_Bottom: 12
-      m_Margin:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Padding:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Overflow:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Font: {fileID: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_Alignment: 0
-      m_WordWrap: 0
-      m_RichText: 1
-      m_TextClipping: 0
-      m_ImagePosition: 0
-      m_ContentOffset: {x: 0, y: 0}
-      m_FixedWidth: 0
-      m_FixedHeight: 0
-      m_StretchWidth: 1
-      m_StretchHeight: 0
-    selectedNodeStyle:
-      m_Name: 
-      m_Normal:
-        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
-          type: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Hover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Active:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Focused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnNormal:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnHover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnActive:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnFocused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Border:
-        m_Left: 12
-        m_Right: 12
-        m_Top: 12
-        m_Bottom: 12
-      m_Margin:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Padding:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Overflow:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Font: {fileID: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_Alignment: 0
-      m_WordWrap: 0
-      m_RichText: 1
-      m_TextClipping: 0
-      m_ImagePosition: 0
-      m_ContentOffset: {x: 0, y: 0}
-      m_FixedWidth: 0
-      m_FixedHeight: 0
-      m_StretchWidth: 1
-      m_StretchHeight: 0
-    myChoice:
-      choiceText: "\"Jag har inte tid f\xF6r s\xE5nt, jag har n\xE5got viktigare att
-        prata om\""
-      skillType: 0
-      skillNumberIncrease: 0
-      itemtransfer: 0
-      item: {fileID: 0}
-      connectedQuest: {fileID: 0}
-      processQuest: 0
-      requiredStartedQuest: {fileID: 0}
-      requiredCompletedQuest: {fileID: 0}
-      requiredSkill: 0
-      requiredSkillNumber: 0
-      affectedNPC: {fileID: 0}
-      relationshipAttributeToChange: 0
-      relationshipAttributeChangeNumber: 0
-      minimumRelationshiplevel: 0
-      nextEventID: 0
-      nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
-    choiceTextRect:
-      serializedVersion: 2
-      x: -2054
-      y: 876
-      width: 220
-      height: 30
-    skillTypeRect:
-      serializedVersion: 2
-      x: -2054
-      y: 906
-      width: 220
-      height: 15
-    skillIncreaseNumberRect:
-      serializedVersion: 2
-      x: -2054
-      y: 921
-      width: 220
-      height: 15
-    itemTransferTypeRect:
-      serializedVersion: 2
-      x: -2054
-      y: 936
-      width: 220
-      height: 15
-    itemTransferRect:
-      serializedVersion: 2
-      x: -2054
-      y: 951
-      width: 220
-      height: 15
-    questRect:
-      serializedVersion: 2
-      x: -2054
-      y: 966
-      width: 220
-      height: 15
-    questProcessRect:
-      serializedVersion: 2
-      x: -2054
-      y: 981
-      width: 220
-      height: 15
-    requiredStartedQuestRect:
-      serializedVersion: 2
-      x: -2054
-      y: 996
-      width: 220
-      height: 15
-    requiredCompletedQuestRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1011
-      width: 220
-      height: 15
-    requiredSkillTypeRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1026
-      width: 220
-      height: 15
-    requiredSkillNumberRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1041
-      width: 220
-      height: 15
-    npcRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1056
-      width: 220
-      height: 15
-    relationshipTypeChangeRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1071
-      width: 220
-      height: 15
-    relationshipNumberChangeRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1086
-      width: 220
-      height: 15
-    requiredRelationshiplevelRect:
-      serializedVersion: 2
-      x: -2054
-      y: 1101
-      width: 220
-      height: 15
-  - rect:
-      serializedVersion: 2
-      x: -2477
-      y: -86
+      x: -2754
+      y: -208
       width: 250
       height: 280
     typeOfNode: 0
@@ -1037,8 +534,8 @@ MonoBehaviour:
       id: 0.248850209288695
       rect:
         serializedVersion: 2
-        x: -2479
-        y: 44
+        x: -2756
+        y: -78
         width: 10
         height: 20
       type: 0
@@ -1116,8 +613,8 @@ MonoBehaviour:
     - id: 0.08522992212568872
       rect:
         serializedVersion: 2
-        x: -2235
-        y: 54
+        x: -2512
+        y: -68
         width: 10
         height: 20
       type: 1
@@ -1416,98 +913,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -2462
-      y: -71
+      x: -2739
+      y: -193
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -2462
-      y: -41
+      x: -2739
+      y: -163
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -2462
-      y: -26
+      x: -2739
+      y: -148
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -2462
-      y: -11
+      x: -2739
+      y: -133
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -2462
-      y: 4
+      x: -2739
+      y: -118
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -2462
-      y: 19
+      x: -2739
+      y: -103
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -2462
-      y: 34
+      x: -2739
+      y: -88
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -2462
-      y: 49
+      x: -2739
+      y: -73
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -2462
-      y: 64
+      x: -2739
+      y: -58
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -2462
-      y: 79
+      x: -2739
+      y: -43
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -2462
-      y: 94
+      x: -2739
+      y: -28
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -2462
-      y: 109
+      x: -2739
+      y: -13
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -2462
-      y: 124
+      x: -2739
+      y: 2
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -2462
-      y: 139
+      x: -2739
+      y: 17
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -2462
-      y: 154
+      x: -2739
+      y: 32
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -2476
-      y: 187
+      x: -2753
+      y: 65
       width: 250
       height: 280
     typeOfNode: 0
@@ -1518,8 +1015,8 @@ MonoBehaviour:
       id: 0.6439307688939994
       rect:
         serializedVersion: 2
-        x: -2478
-        y: 317
+        x: -2755
+        y: 195
         width: 10
         height: 20
       type: 0
@@ -1597,8 +1094,8 @@ MonoBehaviour:
     - id: 0.4803104817309931
       rect:
         serializedVersion: 2
-        x: -2234
-        y: 327
+        x: -2511
+        y: 205
         width: 10
         height: 20
       type: 1
@@ -1897,98 +1394,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -2461
-      y: 202
+      x: -2738
+      y: 80
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -2461
-      y: 232
+      x: -2738
+      y: 110
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -2461
-      y: 247
+      x: -2738
+      y: 125
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -2461
-      y: 262
+      x: -2738
+      y: 140
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -2461
-      y: 277
+      x: -2738
+      y: 155
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -2461
-      y: 292
+      x: -2738
+      y: 170
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -2461
-      y: 307
+      x: -2738
+      y: 185
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -2461
-      y: 322
+      x: -2738
+      y: 200
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -2461
-      y: 337
+      x: -2738
+      y: 215
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -2461
-      y: 352
+      x: -2738
+      y: 230
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -2461
-      y: 367
+      x: -2738
+      y: 245
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -2461
-      y: 382
+      x: -2738
+      y: 260
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -2461
-      y: 397
+      x: -2738
+      y: 275
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -2461
-      y: 412
+      x: -2738
+      y: 290
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -2461
-      y: 427
+      x: -2738
+      y: 305
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -2478
-      y: 455
+      x: -2755
+      y: 333
       width: 250
       height: 280
     typeOfNode: 0
@@ -1999,8 +1496,8 @@ MonoBehaviour:
       id: 0.3116519229075182
       rect:
         serializedVersion: 2
-        x: -2480
-        y: 585
+        x: -2757
+        y: 463
         width: 10
         height: 20
       type: 0
@@ -2078,8 +1575,8 @@ MonoBehaviour:
     - id: 0.6704569499336448
       rect:
         serializedVersion: 2
-        x: -2236
-        y: 595
+        x: -2513
+        y: 473
         width: 10
         height: 20
       type: 1
@@ -2378,98 +1875,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -2463
-      y: 470
+      x: -2740
+      y: 348
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -2463
-      y: 500
+      x: -2740
+      y: 378
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -2463
-      y: 515
+      x: -2740
+      y: 393
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -2463
-      y: 530
+      x: -2740
+      y: 408
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -2463
-      y: 545
+      x: -2740
+      y: 423
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -2463
-      y: 560
+      x: -2740
+      y: 438
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -2463
-      y: 575
+      x: -2740
+      y: 453
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -2463
-      y: 590
+      x: -2740
+      y: 468
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -2463
-      y: 605
+      x: -2740
+      y: 483
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -2463
-      y: 620
+      x: -2740
+      y: 498
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -2463
-      y: 635
+      x: -2740
+      y: 513
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -2463
-      y: 650
+      x: -2740
+      y: 528
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -2463
-      y: 665
+      x: -2740
+      y: 543
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -2463
-      y: 680
+      x: -2740
+      y: 558
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -2463
-      y: 695
+      x: -2740
+      y: 573
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -1784
-      y: 201
+      x: -2061
+      y: 79
       width: 250
       height: 280
     typeOfNode: 0
@@ -2480,8 +1977,8 @@ MonoBehaviour:
       id: 0.7377158066899123
       rect:
         serializedVersion: 2
-        x: -1786
-        y: 331
+        x: -2063
+        y: 209
         width: 10
         height: 20
       type: 0
@@ -2559,8 +2056,8 @@ MonoBehaviour:
     - id: 0.5740955195269061
       rect:
         serializedVersion: 2
-        x: -1542
-        y: 341
+        x: -1819
+        y: 219
         width: 10
         height: 20
       type: 1
@@ -2859,98 +2356,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -1769
-      y: 216
+      x: -2046
+      y: 94
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -1769
-      y: 246
+      x: -2046
+      y: 124
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -1769
-      y: 261
+      x: -2046
+      y: 139
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -1769
-      y: 276
+      x: -2046
+      y: 154
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -1769
-      y: 291
+      x: -2046
+      y: 169
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -1769
-      y: 306
+      x: -2046
+      y: 184
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -1769
-      y: 321
+      x: -2046
+      y: 199
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -1769
-      y: 336
+      x: -2046
+      y: 214
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -1769
-      y: 351
+      x: -2046
+      y: 229
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -1769
-      y: 366
+      x: -2046
+      y: 244
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -1769
-      y: 381
+      x: -2046
+      y: 259
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -1769
-      y: 396
+      x: -2046
+      y: 274
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -1769
-      y: 411
+      x: -2046
+      y: 289
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -1769
-      y: 426
+      x: -2046
+      y: 304
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -1769
-      y: 441
+      x: -2046
+      y: 319
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -1152
-      y: -74
+      x: -1429
+      y: -196
       width: 250
       height: 280
     typeOfNode: 0
@@ -2961,8 +2458,8 @@ MonoBehaviour:
       id: 0.362671878823392
       rect:
         serializedVersion: 2
-        x: -1154
-        y: 56
+        x: -1431
+        y: -66
         width: 10
         height: 20
       type: 0
@@ -3040,8 +2537,8 @@ MonoBehaviour:
     - id: 0.19905159166038577
       rect:
         serializedVersion: 2
-        x: -910
-        y: 66
+        x: -1187
+        y: -56
         width: 10
         height: 20
       type: 1
@@ -3340,98 +2837,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -1137
-      y: -59
+      x: -1414
+      y: -181
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -1137
-      y: -29
+      x: -1414
+      y: -151
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -1137
-      y: -14
+      x: -1414
+      y: -136
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -1137
-      y: 1
+      x: -1414
+      y: -121
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -1137
-      y: 16
+      x: -1414
+      y: -106
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -1137
-      y: 31
+      x: -1414
+      y: -91
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -1137
-      y: 46
+      x: -1414
+      y: -76
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -1137
-      y: 61
+      x: -1414
+      y: -61
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -1137
-      y: 76
+      x: -1414
+      y: -46
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -1137
-      y: 91
+      x: -1414
+      y: -31
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -1137
-      y: 106
+      x: -1414
+      y: -16
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -1137
-      y: 121
+      x: -1414
+      y: -1
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -1137
-      y: 136
+      x: -1414
+      y: 14
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -1137
-      y: 151
+      x: -1414
+      y: 29
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -1137
-      y: 166
+      x: -1414
+      y: 44
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -1109
-      y: 221
+      x: -1386
+      y: 99
       width: 250
       height: 280
     typeOfNode: 0
@@ -3442,8 +2939,8 @@ MonoBehaviour:
       id: 0.7903024660378241
       rect:
         serializedVersion: 2
-        x: -1111
-        y: 351
+        x: -1388
+        y: 229
         width: 10
         height: 20
       type: 0
@@ -3521,8 +3018,8 @@ MonoBehaviour:
     - id: 0.6266821788748178
       rect:
         serializedVersion: 2
-        x: -867
-        y: 361
+        x: -1144
+        y: 239
         width: 10
         height: 20
       type: 1
@@ -3821,98 +3318,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -1094
-      y: 236
+      x: -1371
+      y: 114
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -1094
-      y: 266
+      x: -1371
+      y: 144
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -1094
-      y: 281
+      x: -1371
+      y: 159
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -1094
-      y: 296
+      x: -1371
+      y: 174
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -1094
-      y: 311
+      x: -1371
+      y: 189
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -1094
-      y: 326
+      x: -1371
+      y: 204
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -1094
-      y: 341
+      x: -1371
+      y: 219
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -1094
-      y: 356
+      x: -1371
+      y: 234
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -1094
-      y: 371
+      x: -1371
+      y: 249
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -1094
-      y: 386
+      x: -1371
+      y: 264
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -1094
-      y: 401
+      x: -1371
+      y: 279
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -1094
-      y: 416
+      x: -1371
+      y: 294
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -1094
-      y: 431
+      x: -1371
+      y: 309
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -1094
-      y: 446
+      x: -1371
+      y: 324
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -1094
-      y: 461
+      x: -1371
+      y: 339
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -1150
-      y: 501
+      x: -1427
+      y: 379
       width: 250
       height: 280
     typeOfNode: 0
@@ -3923,8 +3420,8 @@ MonoBehaviour:
       id: 0.7230194950117821
       rect:
         serializedVersion: 2
-        x: -1152
-        y: 631
+        x: -1429
+        y: 509
         width: 10
         height: 20
       type: 0
@@ -4002,8 +3499,8 @@ MonoBehaviour:
     - id: 0.08182452203790867
       rect:
         serializedVersion: 2
-        x: -908
-        y: 641
+        x: -1185
+        y: 519
         width: 10
         height: 20
       type: 1
@@ -4298,103 +3795,103 @@ MonoBehaviour:
       relationshipAttributeToChange: 0
       relationshipAttributeChangeNumber: 0
       minimumRelationshiplevel: 0
-      nextEventID: 0
+      nextEventID: 0.0715914112849121
       nextScenario: {fileID: 0}
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -1135
-      y: 516
+      x: -1412
+      y: 394
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -1135
-      y: 546
+      x: -1412
+      y: 424
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -1135
-      y: 561
+      x: -1412
+      y: 439
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -1135
-      y: 576
+      x: -1412
+      y: 454
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -1135
-      y: 591
+      x: -1412
+      y: 469
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -1135
-      y: 606
+      x: -1412
+      y: 484
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -1135
-      y: 621
+      x: -1412
+      y: 499
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -1135
-      y: 636
+      x: -1412
+      y: 514
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -1135
-      y: 651
+      x: -1412
+      y: 529
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -1135
-      y: 666
+      x: -1412
+      y: 544
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -1135
-      y: 681
+      x: -1412
+      y: 559
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -1135
-      y: 696
+      x: -1412
+      y: 574
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -1135
-      y: 711
+      x: -1412
+      y: 589
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -1135
-      y: 726
+      x: -1412
+      y: 604
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -1135
-      y: 741
+      x: -1412
+      y: 619
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: -497
-      y: 49
+      x: -774
+      y: -73
       width: 250
       height: 280
     typeOfNode: 0
@@ -4405,8 +3902,8 @@ MonoBehaviour:
       id: 0.6851592025184814
       rect:
         serializedVersion: 2
-        x: -499
-        y: 179
+        x: -776
+        y: 57
         width: 10
         height: 20
       type: 0
@@ -4484,8 +3981,8 @@ MonoBehaviour:
     - id: 0.5215389153554751
       rect:
         serializedVersion: 2
-        x: -255
-        y: 189
+        x: -532
+        y: 67
         width: 10
         height: 20
       type: 1
@@ -4784,98 +4281,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: -482
-      y: 64
+      x: -759
+      y: -58
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: -482
-      y: 94
+      x: -759
+      y: -28
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: -482
-      y: 109
+      x: -759
+      y: -13
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: -482
-      y: 124
+      x: -759
+      y: 2
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: -482
-      y: 139
+      x: -759
+      y: 17
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: -482
-      y: 154
+      x: -759
+      y: 32
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: -482
-      y: 169
+      x: -759
+      y: 47
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: -482
-      y: 184
+      x: -759
+      y: 62
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: -482
-      y: 199
+      x: -759
+      y: 77
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: -482
-      y: 214
+      x: -759
+      y: 92
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: -482
-      y: 229
+      x: -759
+      y: 107
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: -482
-      y: 244
+      x: -759
+      y: 122
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: -482
-      y: 259
+      x: -759
+      y: 137
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: -482
-      y: 274
+      x: -759
+      y: 152
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: -482
-      y: 289
+      x: -759
+      y: 167
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 98
-      y: 272
+      x: -179
+      y: 150
       width: 250
       height: 280
     typeOfNode: 0
@@ -4886,8 +4383,8 @@ MonoBehaviour:
       id: 0.3631315237670818
       rect:
         serializedVersion: 2
-        x: 96
-        y: 402
+        x: -181
+        y: 280
         width: 10
         height: 20
       type: 0
@@ -4965,8 +4462,8 @@ MonoBehaviour:
     - id: 0.19951123660407552
       rect:
         serializedVersion: 2
-        x: 340
-        y: 412
+        x: 63
+        y: 290
         width: 10
         height: 20
       type: 1
@@ -5265,98 +4762,98 @@ MonoBehaviour:
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 113
-      y: 287
+      x: -164
+      y: 165
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 113
-      y: 317
+      x: -164
+      y: 195
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 113
-      y: 332
+      x: -164
+      y: 210
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 113
-      y: 347
+      x: -164
+      y: 225
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 113
-      y: 362
+      x: -164
+      y: 240
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 113
-      y: 377
+      x: -164
+      y: 255
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 113
-      y: 392
+      x: -164
+      y: 270
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 113
-      y: 407
+      x: -164
+      y: 285
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 113
-      y: 422
+      x: -164
+      y: 300
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 113
-      y: 437
+      x: -164
+      y: 315
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 113
-      y: 452
+      x: -164
+      y: 330
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 113
-      y: 467
+      x: -164
+      y: 345
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 113
-      y: 482
+      x: -164
+      y: 360
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 113
-      y: 497
+      x: -164
+      y: 375
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 113
-      y: 512
+      x: -164
+      y: 390
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 786
-      y: 79
+      x: 509
+      y: -43
       width: 250
       height: 280
     typeOfNode: 0
@@ -5367,8 +4864,8 @@ MonoBehaviour:
       id: 0.06954094863941006
       rect:
         serializedVersion: 2
-        x: 784
-        y: 209
+        x: 507
+        y: 87
         width: 10
         height: 20
       type: 0
@@ -5446,8 +4943,8 @@ MonoBehaviour:
     - id: 0.9059206614764038
       rect:
         serializedVersion: 2
-        x: 1028
-        y: 219
+        x: 751
+        y: 97
         width: 10
         height: 20
       type: 1
@@ -5732,8 +5229,8 @@ MonoBehaviour:
       skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
-      connectedQuest: {fileID: 0}
-      processQuest: 0
+      connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86, type: 2}
+      processQuest: 1
       requiredStartedQuest: {fileID: 0}
       requiredCompletedQuest: {fileID: 0}
       requiredSkill: 0
@@ -5742,103 +5239,103 @@ MonoBehaviour:
       relationshipAttributeToChange: 0
       relationshipAttributeChangeNumber: 0
       minimumRelationshiplevel: 0
-      nextEventID: 0
+      nextEventID: 0.4826023920823831
       nextScenario: {fileID: 0}
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 801
-      y: 94
+      x: 524
+      y: -28
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 801
-      y: 124
+      x: 524
+      y: 2
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 801
-      y: 139
+      x: 524
+      y: 17
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 801
-      y: 154
+      x: 524
+      y: 32
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 801
-      y: 169
+      x: 524
+      y: 47
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 801
-      y: 184
+      x: 524
+      y: 62
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 801
-      y: 199
+      x: 524
+      y: 77
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 801
-      y: 214
+      x: 524
+      y: 92
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 801
-      y: 229
+      x: 524
+      y: 107
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 801
-      y: 244
+      x: 524
+      y: 122
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 801
-      y: 259
+      x: 524
+      y: 137
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 801
-      y: 274
+      x: 524
+      y: 152
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 801
-      y: 289
+      x: 524
+      y: 167
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 801
-      y: 304
+      x: 524
+      y: 182
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 801
-      y: 319
+      x: 524
+      y: 197
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 793
-      y: 351
+      x: 516
+      y: 229
       width: 250
       height: 280
     typeOfNode: 0
@@ -5849,8 +5346,8 @@ MonoBehaviour:
       id: 0.5180793458214399
       rect:
         serializedVersion: 2
-        x: 791
-        y: 481
+        x: 514
+        y: 359
         width: 10
         height: 20
       type: 0
@@ -5928,8 +5425,8 @@ MonoBehaviour:
     - id: 0.8768843728475666
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 491
+        x: 758
+        y: 369
         width: 10
         height: 20
       type: 1
@@ -6214,8 +5711,8 @@ MonoBehaviour:
       skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
-      connectedQuest: {fileID: 0}
-      processQuest: 0
+      connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86, type: 2}
+      processQuest: 1
       requiredStartedQuest: {fileID: 0}
       requiredCompletedQuest: {fileID: 0}
       requiredSkill: 0
@@ -6224,103 +5721,103 @@ MonoBehaviour:
       relationshipAttributeToChange: 0
       relationshipAttributeChangeNumber: 0
       minimumRelationshiplevel: 0
-      nextEventID: 0
+      nextEventID: 0.4826023920823831
       nextScenario: {fileID: 0}
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 808
-      y: 366
+      x: 531
+      y: 244
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 808
-      y: 396
+      x: 531
+      y: 274
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 808
-      y: 411
+      x: 531
+      y: 289
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 808
-      y: 426
+      x: 531
+      y: 304
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 808
-      y: 441
+      x: 531
+      y: 319
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 808
-      y: 456
+      x: 531
+      y: 334
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 808
-      y: 471
+      x: 531
+      y: 349
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 808
-      y: 486
+      x: 531
+      y: 364
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 808
-      y: 501
+      x: 531
+      y: 379
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 808
-      y: 516
+      x: 531
+      y: 394
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 808
-      y: 531
+      x: 531
+      y: 409
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 808
-      y: 546
+      x: 531
+      y: 424
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 808
-      y: 561
+      x: 531
+      y: 439
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 808
-      y: 576
+      x: 531
+      y: 454
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 808
-      y: 591
+      x: 531
+      y: 469
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 794
-      y: 638
+      x: 517
+      y: 516
       width: 250
       height: 280
     typeOfNode: 0
@@ -6331,8 +5828,8 @@ MonoBehaviour:
       id: 0.8907827613366688
       rect:
         serializedVersion: 2
-        x: 792
-        y: 768
+        x: 515
+        y: 646
         width: 10
         height: 20
       type: 0
@@ -6410,8 +5907,8 @@ MonoBehaviour:
     - id: 0.24958778836279538
       rect:
         serializedVersion: 2
-        x: 1036
-        y: 778
+        x: 759
+        y: 656
         width: 10
         height: 20
       type: 1
@@ -6695,8 +6192,489 @@ MonoBehaviour:
       skillNumberIncrease: 0
       itemtransfer: 0
       item: {fileID: 0}
-      connectedQuest: {fileID: 0}
-      processQuest: 0
+      connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86, type: 2}
+      processQuest: 1
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0.4826023920823831
+      nextScenario: {fileID: 0}
+      nextScene: {fileID: 0}
+    choiceTextRect:
+      serializedVersion: 2
+      x: 532
+      y: 531
+      width: 220
+      height: 30
+    skillTypeRect:
+      serializedVersion: 2
+      x: 532
+      y: 561
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: 532
+      y: 576
+      width: 220
+      height: 15
+    itemTransferTypeRect:
+      serializedVersion: 2
+      x: 532
+      y: 591
+      width: 220
+      height: 15
+    itemTransferRect:
+      serializedVersion: 2
+      x: 532
+      y: 606
+      width: 220
+      height: 15
+    questRect:
+      serializedVersion: 2
+      x: 532
+      y: 621
+      width: 220
+      height: 15
+    questProcessRect:
+      serializedVersion: 2
+      x: 532
+      y: 636
+      width: 220
+      height: 15
+    requiredStartedQuestRect:
+      serializedVersion: 2
+      x: 532
+      y: 651
+      width: 220
+      height: 15
+    requiredCompletedQuestRect:
+      serializedVersion: 2
+      x: 532
+      y: 666
+      width: 220
+      height: 15
+    requiredSkillTypeRect:
+      serializedVersion: 2
+      x: 532
+      y: 681
+      width: 220
+      height: 15
+    requiredSkillNumberRect:
+      serializedVersion: 2
+      x: 532
+      y: 696
+      width: 220
+      height: 15
+    npcRect:
+      serializedVersion: 2
+      x: 532
+      y: 711
+      width: 220
+      height: 15
+    relationshipTypeChangeRect:
+      serializedVersion: 2
+      x: 532
+      y: 726
+      width: 220
+      height: 15
+    relationshipNumberChangeRect:
+      serializedVersion: 2
+      x: 532
+      y: 741
+      width: 220
+      height: 15
+    requiredRelationshiplevelRect:
+      serializedVersion: 2
+      x: 532
+      y: 756
+      width: 220
+      height: 15
+  - rect:
+      serializedVersion: 2
+      x: 1240
+      y: 253
+      width: 250
+      height: 280
+    typeOfNode: 0
+    allowedConnectionTypes: 0100000002000000
+    isDragged: 0
+    isSelected: 0
+    inPoint:
+      id: 0.10514572593623107
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 383
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+    outPoints:
+    - id: 0.4639507529623577
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 393
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 140
+    style:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    defaultNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    selectedNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    myChoice:
+      choiceText: "L\xE4mna byn"
+      skillType: 0
+      skillNumberIncrease: 0
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 11400000, guid: d9c5c9f9bfd217c4aae3f892a4abbecc, type: 2}
+      processQuest: 1
       requiredStartedQuest: {fileID: 0}
       requiredCompletedQuest: {fileID: 0}
       requiredSkill: 0
@@ -6706,103 +6684,584 @@ MonoBehaviour:
       relationshipAttributeChangeNumber: 0
       minimumRelationshiplevel: 0
       nextEventID: 0
-      nextScenario: {fileID: 0}
+      nextScenario: {fileID: 11400000, guid: 6f224deddd218a146aaeb1a1995ed314, type: 2}
       nextScene: {fileID: 0}
     choiceTextRect:
       serializedVersion: 2
-      x: 809
-      y: 653
+      x: 1255
+      y: 268
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 809
-      y: 683
+      x: 1255
+      y: 298
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 809
-      y: 698
+      x: 1255
+      y: 313
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 809
-      y: 713
+      x: 1255
+      y: 328
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 809
-      y: 728
+      x: 1255
+      y: 343
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 809
-      y: 743
+      x: 1255
+      y: 358
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 809
-      y: 758
+      x: 1255
+      y: 373
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 809
-      y: 773
+      x: 1255
+      y: 388
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 809
-      y: 788
+      x: 1255
+      y: 403
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 809
-      y: 803
+      x: 1255
+      y: 418
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 809
-      y: 818
+      x: 1255
+      y: 433
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 809
-      y: 833
+      x: 1255
+      y: 448
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 809
-      y: 848
+      x: 1255
+      y: 463
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 809
-      y: 863
+      x: 1255
+      y: 478
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 809
-      y: 878
+      x: 1255
+      y: 493
+      width: 220
+      height: 15
+  - rect:
+      serializedVersion: 2
+      x: -3966
+      y: 268
+      width: 250
+      height: 280
+    typeOfNode: 0
+    allowedConnectionTypes: 0100000002000000
+    isDragged: 0
+    isSelected: 0
+    inPoint:
+      id: 0.6207673268489388
+      rect:
+        serializedVersion: 2
+        x: -3968
+        y: 398
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+    outPoints:
+    - id: 0.9795723538750654
+      rect:
+        serializedVersion: 2
+        x: -3724
+        y: 408
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 140
+    style:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    defaultNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    selectedNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    myChoice:
+      choiceText: "(Forts\xE4tt)"
+      skillType: 0
+      skillNumberIncrease: 0
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86, type: 2}
+      processQuest: 0
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0.3442075179629994
+      nextScenario: {fileID: 0}
+      nextScene: {fileID: 0}
+    choiceTextRect:
+      serializedVersion: 2
+      x: -3951
+      y: 283
+      width: 220
+      height: 30
+    skillTypeRect:
+      serializedVersion: 2
+      x: -3951
+      y: 313
+      width: 220
+      height: 15
+    skillIncreaseNumberRect:
+      serializedVersion: 2
+      x: -3951
+      y: 328
+      width: 220
+      height: 15
+    itemTransferTypeRect:
+      serializedVersion: 2
+      x: -3951
+      y: 343
+      width: 220
+      height: 15
+    itemTransferRect:
+      serializedVersion: 2
+      x: -3951
+      y: 358
+      width: 220
+      height: 15
+    questRect:
+      serializedVersion: 2
+      x: -3951
+      y: 373
+      width: 220
+      height: 15
+    questProcessRect:
+      serializedVersion: 2
+      x: -3951
+      y: 388
+      width: 220
+      height: 15
+    requiredStartedQuestRect:
+      serializedVersion: 2
+      x: -3951
+      y: 403
+      width: 220
+      height: 15
+    requiredCompletedQuestRect:
+      serializedVersion: 2
+      x: -3951
+      y: 418
+      width: 220
+      height: 15
+    requiredSkillTypeRect:
+      serializedVersion: 2
+      x: -3951
+      y: 433
+      width: 220
+      height: 15
+    requiredSkillNumberRect:
+      serializedVersion: 2
+      x: -3951
+      y: 448
+      width: 220
+      height: 15
+    npcRect:
+      serializedVersion: 2
+      x: -3951
+      y: 463
+      width: 220
+      height: 15
+    relationshipTypeChangeRect:
+      serializedVersion: 2
+      x: -3951
+      y: 478
+      width: 220
+      height: 15
+    relationshipNumberChangeRect:
+      serializedVersion: 2
+      x: -3951
+      y: 493
+      width: 220
+      height: 15
+    requiredRelationshiplevelRect:
+      serializedVersion: 2
+      x: -3951
+      y: 508
       width: 220
       height: 15
   editorEventNodes:
   - rect:
       serializedVersion: 2
-      x: -3616
-      y: 504
+      x: -4321
+      y: 290
       width: 300
       height: 180
     typeOfNode: 1
@@ -6813,8 +7272,8 @@ MonoBehaviour:
       id: 0.3658113434751571
       rect:
         serializedVersion: 2
-        x: -3618
-        y: 584
+        x: -4323
+        y: 370
         width: 10
         height: 20
       type: 0
@@ -6892,8 +7351,8 @@ MonoBehaviour:
     - id: 0.7246163705012837
       rect:
         serializedVersion: 2
-        x: -3324
-        y: 540
+        x: -4029
+        y: 326
         width: 10
         height: 20
       type: 1
@@ -6970,8 +7429,8 @@ MonoBehaviour:
     - id: 0.5609960833382774
       rect:
         serializedVersion: 2
-        x: -3324
-        y: 576
+        x: -4029
+        y: 362
         width: 10
         height: 20
       type: 1
@@ -7048,8 +7507,8 @@ MonoBehaviour:
     - id: 0.919801110364404
       rect:
         serializedVersion: 2
-        x: -3324
-        y: 612
+        x: -4029
+        y: 398
         width: 10
         height: 20
       type: 1
@@ -7126,8 +7585,8 @@ MonoBehaviour:
     - id: 0.27860613739053075
       rect:
         serializedVersion: 2
-        x: -3324
-        y: 648
+        x: -4029
+        y: 434
         width: 10
         height: 20
       type: 1
@@ -7407,17 +7866,16 @@ MonoBehaviour:
       m_StretchHeight: 0
     myEvent:
       locationText: Byn Coille
-      description: "Du kommer tillbaka till Coille d\xE4r Mrs. Maisie  ber\xE4ttar
-        att under en l\xE4ngre tid har saker mystiskt f\xF6rsvunnit. Vapen och mat.
-        Hon undrar om du kan hitta vem det \xE4r som stj\xE4l deras saker."
+      description: "Du kommer tillbaka till Coille d\xE4r Mrs. Maisie m\xF6ter dig."
       image: {fileID: 0}
       choices:
-      - choiceText: Acceptera uppdraget
+      - choiceText: "(Forts\xE4tt)"
         skillType: 0
         skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
-        connectedQuest: {fileID: 0}
+        connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86,
+          type: 2}
         processQuest: 0
         requiredStartedQuest: {fileID: 0}
         requiredCompletedQuest: {fileID: 0}
@@ -7427,26 +7885,7 @@ MonoBehaviour:
         relationshipAttributeToChange: 0
         relationshipAttributeChangeNumber: 0
         minimumRelationshiplevel: 0
-        nextEventID: 0.6648024658974272
-        nextScenario: {fileID: 0}
-        nextScene: {fileID: 0}
-      - choiceText: "\"Jag har inte tid f\xF6r s\xE5nt, jag har n\xE5got viktigare
-          att prata om\""
-        skillType: 0
-        skillNumberIncrease: 0
-        itemtransfer: 0
-        item: {fileID: 0}
-        connectedQuest: {fileID: 0}
-        processQuest: 0
-        requiredStartedQuest: {fileID: 0}
-        requiredCompletedQuest: {fileID: 0}
-        requiredSkill: 0
-        requiredSkillNumber: 0
-        affectedNPC: {fileID: 0}
-        relationshipAttributeToChange: 0
-        relationshipAttributeChangeNumber: 0
-        minimumRelationshiplevel: 0
-        nextEventID: 0
+        nextEventID: 0.3442075179629994
         nextScenario: {fileID: 0}
         nextScene: {fileID: 0}
       id: 0.27860613739053075
@@ -7455,32 +7894,32 @@ MonoBehaviour:
     isStartNode: 1
     imageRect:
       serializedVersion: 2
-      x: -3466
-      y: 519
+      x: -4171
+      y: 305
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -3601
-      y: 539
+      x: -4306
+      y: 325
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -3601
-      y: 594
+      x: -4306
+      y: 380
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -3601
-      y: 519
+      x: -4306
+      y: 305
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: -2860
-      y: 232
+      x: -3062
+      y: -40
       width: 300
       height: 180
     typeOfNode: 1
@@ -7491,8 +7930,8 @@ MonoBehaviour:
       id: 0.27443298617118644
       rect:
         serializedVersion: 2
-        x: -2862
-        y: 312
+        x: -3064
+        y: 40
         width: 10
         height: 20
       type: 0
@@ -7570,8 +8009,8 @@ MonoBehaviour:
     - id: 0.11081269900818015
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 268
+        x: -2770
+        y: -4
         width: 10
         height: 20
       type: 1
@@ -7648,8 +8087,8 @@ MonoBehaviour:
     - id: 0.4696177260343068
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 304
+        x: -2770
+        y: 32
         width: 10
         height: 20
       type: 1
@@ -7726,8 +8165,8 @@ MonoBehaviour:
     - id: 0.8284227530604334
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 340
+        x: -2770
+        y: 68
         width: 10
         height: 20
       type: 1
@@ -7804,8 +8243,8 @@ MonoBehaviour:
     - id: 0.6648024658974272
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 376
+        x: -2770
+        y: 104
         width: 10
         height: 20
       type: 1
@@ -8152,32 +8591,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: -2710
-      y: 247
+      x: -2912
+      y: -25
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -2845
-      y: 267
+      x: -3047
+      y: -5
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -2845
-      y: 322
+      x: -3047
+      y: 50
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -2845
-      y: 247
+      x: -3047
+      y: -25
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: -2135
-      y: 138
+      x: -2337
+      y: -134
       width: 300
       height: 180
     typeOfNode: 1
@@ -8188,8 +8627,8 @@ MonoBehaviour:
       id: 0.6948182716475885
       rect:
         serializedVersion: 2
-        x: -2137
-        y: 218
+        x: -2339
+        y: -54
         width: 10
         height: 20
       type: 0
@@ -8267,8 +8706,8 @@ MonoBehaviour:
     - id: 0.05362329867371512
       rect:
         serializedVersion: 2
-        x: -1843
-        y: 174
+        x: -2045
+        y: -98
         width: 10
         height: 20
       type: 1
@@ -8345,8 +8784,8 @@ MonoBehaviour:
     - id: 0.4124283256998418
       rect:
         serializedVersion: 2
-        x: -1843
-        y: 210
+        x: -2045
+        y: -62
         width: 10
         height: 20
       type: 1
@@ -8423,8 +8862,8 @@ MonoBehaviour:
     - id: 0.24880803853683547
       rect:
         serializedVersion: 2
-        x: -1843
-        y: 246
+        x: -2045
+        y: -26
         width: 10
         height: 20
       type: 1
@@ -8501,8 +8940,8 @@ MonoBehaviour:
     - id: 0.6076130655629621
       rect:
         serializedVersion: 2
-        x: -1843
-        y: 282
+        x: -2045
+        y: 10
         width: 10
         height: 20
       type: 1
@@ -8811,32 +9250,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: -1985
-      y: 153
+      x: -2187
+      y: -119
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -2120
-      y: 173
+      x: -2322
+      y: -99
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -2120
-      y: 228
+      x: -2322
+      y: -44
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -2120
-      y: 153
+      x: -2322
+      y: -119
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: -2137
-      y: 336
+      x: -2339
+      y: 64
       width: 300
       height: 180
     typeOfNode: 1
@@ -8847,8 +9286,8 @@ MonoBehaviour:
       id: 0.6636773509269941
       rect:
         serializedVersion: 2
-        x: -2139
-        y: 416
+        x: -2341
+        y: 144
         width: 10
         height: 20
       type: 0
@@ -8926,8 +9365,8 @@ MonoBehaviour:
     - id: 0.022482377953120684
       rect:
         serializedVersion: 2
-        x: -1845
-        y: 372
+        x: -2047
+        y: 100
         width: 10
         height: 20
       type: 1
@@ -9004,8 +9443,8 @@ MonoBehaviour:
     - id: 0.8588620907901144
       rect:
         serializedVersion: 2
-        x: -1845
-        y: 408
+        x: -2047
+        y: 136
         width: 10
         height: 20
       type: 1
@@ -9082,8 +9521,8 @@ MonoBehaviour:
     - id: 0.21766711781624104
       rect:
         serializedVersion: 2
-        x: -1845
-        y: 444
+        x: -2047
+        y: 172
         width: 10
         height: 20
       type: 1
@@ -9160,8 +9599,8 @@ MonoBehaviour:
     - id: 0.5764721448423676
       rect:
         serializedVersion: 2
-        x: -1845
-        y: 480
+        x: -2047
+        y: 208
         width: 10
         height: 20
       type: 1
@@ -9469,32 +9908,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: -1987
-      y: 351
+      x: -2189
+      y: 79
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -2122
-      y: 371
+      x: -2324
+      y: 99
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -2122
-      y: 426
+      x: -2324
+      y: 154
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -2122
-      y: 351
+      x: -2324
+      y: 79
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: -1487
-      y: 275
+      x: -1689
+      y: 3
       width: 300
       height: 180
     typeOfNode: 1
@@ -9505,8 +9944,8 @@ MonoBehaviour:
       id: 0.852354485007168
       rect:
         serializedVersion: 2
-        x: -1489
-        y: 355
+        x: -1691
+        y: 83
         width: 10
         height: 20
       type: 0
@@ -9584,8 +10023,8 @@ MonoBehaviour:
     - id: 0.21115951203329467
       rect:
         serializedVersion: 2
-        x: -1195
-        y: 311
+        x: -1397
+        y: 39
         width: 10
         height: 20
       type: 1
@@ -9662,8 +10101,8 @@ MonoBehaviour:
     - id: 0.5699645390594213
       rect:
         serializedVersion: 2
-        x: -1195
-        y: 347
+        x: -1397
+        y: 75
         width: 10
         height: 20
       type: 1
@@ -9740,8 +10179,8 @@ MonoBehaviour:
     - id: 0.40634425189641504
       rect:
         serializedVersion: 2
-        x: -1195
-        y: 383
+        x: -1397
+        y: 111
         width: 10
         height: 20
       type: 1
@@ -9818,8 +10257,8 @@ MonoBehaviour:
     - id: 0.7651492789225417
       rect:
         serializedVersion: 2
-        x: -1195
-        y: 419
+        x: -1397
+        y: 147
         width: 10
         height: 20
       type: 1
@@ -10141,38 +10580,57 @@ MonoBehaviour:
         nextEventID: 0.0715914112849121
         nextScenario: {fileID: 0}
         nextScene: {fileID: 0}
+      - choiceText: "\"Vi kan g\xF6ra detta p\xE5 det l\xE4tta s\xE4ttet eller det
+          sv\xE5ra s\xE4ttet, du v\xE4ljer.\""
+        skillType: 0
+        skillNumberIncrease: 0
+        itemtransfer: 0
+        item: {fileID: 0}
+        connectedQuest: {fileID: 0}
+        processQuest: 0
+        requiredStartedQuest: {fileID: 0}
+        requiredCompletedQuest: {fileID: 0}
+        requiredSkill: 0
+        requiredSkillNumber: 0
+        affectedNPC: {fileID: 0}
+        relationshipAttributeToChange: 0
+        relationshipAttributeChangeNumber: 0
+        minimumRelationshiplevel: 0
+        nextEventID: 0.0715914112849121
+        nextScenario: {fileID: 0}
+        nextScene: {fileID: 0}
       id: 0.7651492789225417
       usedIDs:
       - 0.7651492789225417
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: -1337
-      y: 290
+      x: -1539
+      y: 18
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -1472
-      y: 310
+      x: -1674
+      y: 38
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -1472
-      y: 365
+      x: -1674
+      y: 93
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -1472
-      y: 290
+      x: -1674
+      y: 18
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: -804
-      y: 255
+      x: -1082
+      y: -40
       width: 300
       height: 180
     typeOfNode: 1
@@ -10183,8 +10641,8 @@ MonoBehaviour:
       id: 0.15879661736953846
       rect:
         serializedVersion: 2
-        x: -806
-        y: 335
+        x: -1084
+        y: 40
         width: 10
         height: 20
       type: 0
@@ -10262,8 +10720,8 @@ MonoBehaviour:
     - id: 0.5176016443956651
       rect:
         serializedVersion: 2
-        x: -512
-        y: 291
+        x: -790
+        y: -4
         width: 10
         height: 20
       type: 1
@@ -10340,8 +10798,8 @@ MonoBehaviour:
     - id: 0.8764066714217917
       rect:
         serializedVersion: 2
-        x: -512
-        y: 327
+        x: -790
+        y: 32
         width: 10
         height: 20
       type: 1
@@ -10418,8 +10876,8 @@ MonoBehaviour:
     - id: 0.7127863842587855
       rect:
         serializedVersion: 2
-        x: -512
-        y: 363
+        x: -790
+        y: 68
         width: 10
         height: 20
       type: 1
@@ -10496,8 +10954,8 @@ MonoBehaviour:
     - id: 0.0715914112849121
       rect:
         serializedVersion: 2
-        x: -512
-        y: 399
+        x: -790
+        y: 104
         width: 10
         height: 20
       type: 1
@@ -10805,32 +11263,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: -654
-      y: 270
+      x: -932
+      y: -25
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -789
-      y: 290
+      x: -1067
+      y: -5
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -789
-      y: 345
+      x: -1067
+      y: 50
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -789
-      y: 270
+      x: -1067
+      y: -25
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: -239
-      y: 327
+      x: -441
+      y: 55
       width: 300
       height: 180
     typeOfNode: 1
@@ -10841,8 +11299,8 @@ MonoBehaviour:
       id: 0.9568925057337119
       rect:
         serializedVersion: 2
-        x: -241
-        y: 407
+        x: -443
+        y: 135
         width: 10
         height: 20
       type: 0
@@ -10920,8 +11378,8 @@ MonoBehaviour:
     - id: 0.7932722185707056
       rect:
         serializedVersion: 2
-        x: 53
-        y: 363
+        x: -149
+        y: 91
         width: 10
         height: 20
       type: 1
@@ -10998,8 +11456,8 @@ MonoBehaviour:
     - id: 0.15207724559683225
       rect:
         serializedVersion: 2
-        x: 53
-        y: 399
+        x: -149
+        y: 127
         width: 10
         height: 20
       type: 1
@@ -11076,8 +11534,8 @@ MonoBehaviour:
     - id: 0.5108822726229589
       rect:
         serializedVersion: 2
-        x: 53
-        y: 435
+        x: -149
+        y: 163
         width: 10
         height: 20
       type: 1
@@ -11154,8 +11612,8 @@ MonoBehaviour:
     - id: 0.3472619854599526
       rect:
         serializedVersion: 2
-        x: 53
-        y: 471
+        x: -149
+        y: 199
         width: 10
         height: 20
       type: 1
@@ -11463,32 +11921,32 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: -89
-      y: 342
+      x: -291
+      y: 70
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: -224
-      y: 362
+      x: -426
+      y: 90
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: -224
-      y: 417
+      x: -426
+      y: 145
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: -224
-      y: 342
+      x: -426
+      y: 70
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 418
-      y: 361
+      x: 163
+      y: 106
       width: 300
       height: 180
     typeOfNode: 1
@@ -11499,8 +11957,8 @@ MonoBehaviour:
       id: 0.15329264297769063
       rect:
         serializedVersion: 2
-        x: 416
-        y: 441
+        x: 161
+        y: 186
         width: 10
         height: 20
       type: 0
@@ -11578,8 +12036,8 @@ MonoBehaviour:
     - id: 0.9896723558146844
       rect:
         serializedVersion: 2
-        x: 710
-        y: 397
+        x: 455
+        y: 142
         width: 10
         height: 20
       type: 1
@@ -11656,8 +12114,8 @@ MonoBehaviour:
     - id: 0.348477382840811
       rect:
         serializedVersion: 2
-        x: 710
-        y: 433
+        x: 455
+        y: 178
         width: 10
         height: 20
       type: 1
@@ -11734,8 +12192,8 @@ MonoBehaviour:
     - id: 0.1848570956778047
       rect:
         serializedVersion: 2
-        x: 710
-        y: 469
+        x: 455
+        y: 214
         width: 10
         height: 20
       type: 1
@@ -11812,8 +12270,8 @@ MonoBehaviour:
     - id: 0.5436621227039313
       rect:
         serializedVersion: 2
-        x: 710
-        y: 505
+        x: 455
+        y: 250
         width: 10
         height: 20
       type: 1
@@ -12105,8 +12563,9 @@ MonoBehaviour:
         skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
-        connectedQuest: {fileID: 0}
-        processQuest: 0
+        connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86,
+          type: 2}
+        processQuest: 1
         requiredStartedQuest: {fileID: 0}
         requiredCompletedQuest: {fileID: 0}
         requiredSkill: 0
@@ -12115,7 +12574,7 @@ MonoBehaviour:
         relationshipAttributeToChange: 0
         relationshipAttributeChangeNumber: 0
         minimumRelationshiplevel: 0
-        nextEventID: 0
+        nextEventID: 0.4826023920823831
         nextScenario: {fileID: 0}
         nextScene: {fileID: 0}
       - choiceText: "Inte f\xF6rl\xE5ta tjuven och ta med dig st\xF6ldgodset tillbaka
@@ -12124,8 +12583,9 @@ MonoBehaviour:
         skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
-        connectedQuest: {fileID: 0}
-        processQuest: 0
+        connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86,
+          type: 2}
+        processQuest: 1
         requiredStartedQuest: {fileID: 0}
         requiredCompletedQuest: {fileID: 0}
         requiredSkill: 0
@@ -12134,7 +12594,7 @@ MonoBehaviour:
         relationshipAttributeToChange: 0
         relationshipAttributeChangeNumber: 0
         minimumRelationshiplevel: 0
-        nextEventID: 0
+        nextEventID: 0.4826023920823831
         nextScenario: {fileID: 0}
         nextScene: {fileID: 0}
       - choiceText: "F\xF6rl\xE5ta tjuven och l\xE5ter tjuven beh\xE5lla st\xF6ldgodset."
@@ -12142,8 +12602,9 @@ MonoBehaviour:
         skillNumberIncrease: 0
         itemtransfer: 0
         item: {fileID: 0}
-        connectedQuest: {fileID: 0}
-        processQuest: 0
+        connectedQuest: {fileID: 11400000, guid: b92c68e661db72d4d83ea5d179f6ce86,
+          type: 2}
+        processQuest: 1
         requiredStartedQuest: {fileID: 0}
         requiredCompletedQuest: {fileID: 0}
         requiredSkill: 0
@@ -12152,7 +12613,7 @@ MonoBehaviour:
         relationshipAttributeToChange: 0
         relationshipAttributeChangeNumber: 0
         minimumRelationshiplevel: 0
-        nextEventID: 0
+        nextEventID: 0.4826023920823831
         nextScenario: {fileID: 0}
         nextScene: {fileID: 0}
       id: 0.5436621227039313
@@ -12161,35 +12622,123 @@ MonoBehaviour:
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 568
-      y: 376
+      x: 313
+      y: 121
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 433
-      y: 396
+      x: 178
+      y: 141
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 433
-      y: 451
+      x: 178
+      y: 196
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 433
-      y: 376
+      x: 178
+      y: 121
       width: 130
       height: 15
-  editorConnections:
-  - inPoint:
-      id: 0.7246163705012837
+  - rect:
+      serializedVersion: 2
+      x: 935
+      y: 177
+      width: 300
+      height: 180
+    typeOfNode: 1
+    allowedConnectionTypes: 00000000
+    isDragged: 0
+    isSelected: 0
+    inPoint:
+      id: 0.5698075981670094
       rect:
         serializedVersion: 2
-        x: -3324
-        y: 540
+        x: 933
+        y: 257
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+    outPoints:
+    - id: 0.9286126251931361
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 213
         width: 10
         height: 20
       type: 1
@@ -12263,91 +12812,11 @@ MonoBehaviour:
         m_StretchWidth: 1
         m_StretchHeight: 0
       YOffset: 36
-    outPoint:
-      id: 0.16012149963533576
+    - id: 0.7649923380301298
       rect:
         serializedVersion: 2
-        x: -3206
-        y: 358
-        width: 10
-        height: 20
-      type: 0
-      style:
-        m_Name: 
-        m_Normal:
-          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Hover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Active:
-          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Focused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnNormal:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnHover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnActive:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnFocused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Border:
-          m_Left: 4
-          m_Right: 4
-          m_Top: 12
-          m_Bottom: 12
-        m_Margin:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Padding:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Overflow:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Font: {fileID: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_Alignment: 0
-        m_WordWrap: 0
-        m_RichText: 1
-        m_TextClipping: 0
-        m_ImagePosition: 0
-        m_ContentOffset: {x: 0, y: 0}
-        m_FixedWidth: 0
-        m_FixedHeight: 0
-        m_StretchWidth: 1
-        m_StretchHeight: 0
-      YOffset: 0
-  - inPoint:
-      id: 0.5609960833382774
-      rect:
-        serializedVersion: 2
-        x: -3324
-        y: 576
+        x: 1227
+        y: 249
         width: 10
         height: 20
       type: 1
@@ -12421,12 +12890,434 @@ MonoBehaviour:
         m_StretchWidth: 1
         m_StretchHeight: 0
       YOffset: 72
-    outPoint:
-      id: 0.24319572525247732
+    - id: 0.12379736505625646
       rect:
         serializedVersion: 2
-        x: -2071
-        y: 991
+        x: 1227
+        y: 285
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 108
+    - id: 0.4826023920823831
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 321
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 144
+    style:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    defaultNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    selectedNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    myEvent:
+      locationText: Location Text
+      description: "Du k\xE4nner att du har gjort allt du kan h\xE4r."
+      image: {fileID: 0}
+      choices:
+      - choiceText: "L\xE4mna byn"
+        skillType: 0
+        skillNumberIncrease: 0
+        itemtransfer: 0
+        item: {fileID: 0}
+        connectedQuest: {fileID: 11400000, guid: d9c5c9f9bfd217c4aae3f892a4abbecc,
+          type: 2}
+        processQuest: 1
+        requiredStartedQuest: {fileID: 0}
+        requiredCompletedQuest: {fileID: 0}
+        requiredSkill: 0
+        requiredSkillNumber: 0
+        affectedNPC: {fileID: 0}
+        relationshipAttributeToChange: 0
+        relationshipAttributeChangeNumber: 0
+        minimumRelationshiplevel: 0
+        nextEventID: 0
+        nextScenario: {fileID: 11400000, guid: 6f224deddd218a146aaeb1a1995ed314, type: 2}
+        nextScene: {fileID: 0}
+      id: 0.4826023920823831
+      usedIDs:
+      - 0.4826023920823831
+    isStartNode: 0
+    imageRect:
+      serializedVersion: 2
+      x: 1085
+      y: 192
+      width: 135
+      height: 70
+    titleRect:
+      serializedVersion: 2
+      x: 950
+      y: 212
+      width: 130
+      height: 45
+    descriptionRect:
+      serializedVersion: 2
+      x: 950
+      y: 267
+      width: 270
+      height: 75
+    isStartNodeRect:
+      serializedVersion: 2
+      x: 950
+      y: 192
+      width: 130
+      height: 15
+  - rect:
+      serializedVersion: 2
+      x: -3623
+      y: 365
+      width: 300
+      height: 180
+    typeOfNode: 1
+    allowedConnectionTypes: 00000000
+    isDragged: 0
+    isSelected: 0
+    inPoint:
+      id: 0.43141272404762576
+      rect:
+        serializedVersion: 2
+        x: -3625
+        y: 445
         width: 10
         height: 20
       type: 0
@@ -12500,12 +13391,583 @@ MonoBehaviour:
         m_StretchWidth: 1
         m_StretchHeight: 0
       YOffset: 0
+    outPoints:
+    - id: 0.7902177510737524
+      rect:
+        serializedVersion: 2
+        x: -3331
+        y: 401
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 36
+    - id: 0.6265974639107461
+      rect:
+        serializedVersion: 2
+        x: -3331
+        y: 437
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 72
+    - id: 0.9854024909368728
+      rect:
+        serializedVersion: 2
+        x: -3331
+        y: 473
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 108
+    - id: 0.3442075179629994
+      rect:
+        serializedVersion: 2
+        x: -3331
+        y: 509
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 144
+    style:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    defaultNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    selectedNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
+          type: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 0
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    myEvent:
+      locationText: Location Text
+      description: "Mrs. Maisie  ber\xE4ttar att under en l\xE4ngre tid har saker
+        mystiskt f\xF6rsvunnit. Vapen och mat. Hon undrar om du kan hitta vem det
+        \xE4r som stj\xE4l deras saker."
+      image: {fileID: 0}
+      choices:
+      - choiceText: Acceptera uppdraget
+        skillType: 0
+        skillNumberIncrease: 0
+        itemtransfer: 0
+        item: {fileID: 0}
+        connectedQuest: {fileID: 0}
+        processQuest: 0
+        requiredStartedQuest: {fileID: 0}
+        requiredCompletedQuest: {fileID: 0}
+        requiredSkill: 0
+        requiredSkillNumber: 0
+        affectedNPC: {fileID: 0}
+        relationshipAttributeToChange: 0
+        relationshipAttributeChangeNumber: 0
+        minimumRelationshiplevel: 0
+        nextEventID: 0.6648024658974272
+        nextScenario: {fileID: 0}
+        nextScene: {fileID: 0}
+      id: 0.3442075179629994
+      usedIDs:
+      - 0.3442075179629994
+    isStartNode: 0
+    imageRect:
+      serializedVersion: 2
+      x: -3473
+      y: 380
+      width: 135
+      height: 70
+    titleRect:
+      serializedVersion: 2
+      x: -3608
+      y: 400
+      width: 130
+      height: 45
+    descriptionRect:
+      serializedVersion: 2
+      x: -3608
+      y: 455
+      width: 270
+      height: 75
+    isStartNodeRect:
+      serializedVersion: 2
+      x: -3608
+      y: 380
+      width: 130
+      height: 15
+  editorConnections:
   - inPoint:
       id: 0.5189265266614624
       rect:
         serializedVersion: 2
-        x: -2962
-        y: 368
+        x: -3149
+        y: 200
         width: 10
         height: 20
       type: 1
@@ -12583,8 +14045,8 @@ MonoBehaviour:
       id: 0.27443298617118644
       rect:
         serializedVersion: 2
-        x: -2862
-        y: 312
+        x: -3064
+        y: 40
         width: 10
         height: 20
       type: 0
@@ -12662,8 +14124,8 @@ MonoBehaviour:
       id: 0.11081269900818015
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 268
+        x: -2770
+        y: -4
         width: 10
         height: 20
       type: 1
@@ -12741,8 +14203,8 @@ MonoBehaviour:
       id: 0.248850209288695
       rect:
         serializedVersion: 2
-        x: -2479
-        y: 44
+        x: -2756
+        y: -78
         width: 10
         height: 20
       type: 0
@@ -12820,8 +14282,8 @@ MonoBehaviour:
       id: 0.4696177260343068
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 304
+        x: -2770
+        y: 32
         width: 10
         height: 20
       type: 1
@@ -12899,8 +14361,8 @@ MonoBehaviour:
       id: 0.6439307688939994
       rect:
         serializedVersion: 2
-        x: -2478
-        y: 317
+        x: -2755
+        y: 195
         width: 10
         height: 20
       type: 0
@@ -12978,8 +14440,8 @@ MonoBehaviour:
       id: 0.8284227530604334
       rect:
         serializedVersion: 2
-        x: -2568
-        y: 340
+        x: -2770
+        y: 68
         width: 10
         height: 20
       type: 1
@@ -13057,8 +14519,8 @@ MonoBehaviour:
       id: 0.3116519229075182
       rect:
         serializedVersion: 2
-        x: -2480
-        y: 585
+        x: -2757
+        y: 463
         width: 10
         height: 20
       type: 0
@@ -13136,8 +14598,8 @@ MonoBehaviour:
       id: 0.08522992212568872
       rect:
         serializedVersion: 2
-        x: -2235
-        y: 54
+        x: -2512
+        y: -68
         width: 10
         height: 20
       type: 1
@@ -13215,8 +14677,8 @@ MonoBehaviour:
       id: 0.6948182716475885
       rect:
         serializedVersion: 2
-        x: -2137
-        y: 218
+        x: -2339
+        y: -54
         width: 10
         height: 20
       type: 0
@@ -13294,8 +14756,8 @@ MonoBehaviour:
       id: 0.4803104817309931
       rect:
         serializedVersion: 2
-        x: -2234
-        y: 327
+        x: -2511
+        y: 205
         width: 10
         height: 20
       type: 1
@@ -13373,8 +14835,8 @@ MonoBehaviour:
       id: 0.6948182716475885
       rect:
         serializedVersion: 2
-        x: -2137
-        y: 218
+        x: -2339
+        y: -54
         width: 10
         height: 20
       type: 0
@@ -13452,8 +14914,8 @@ MonoBehaviour:
       id: 0.6704569499336448
       rect:
         serializedVersion: 2
-        x: -2236
-        y: 595
+        x: -2513
+        y: 473
         width: 10
         height: 20
       type: 1
@@ -13531,8 +14993,8 @@ MonoBehaviour:
       id: 0.6636773509269941
       rect:
         serializedVersion: 2
-        x: -2139
-        y: 416
+        x: -2341
+        y: 144
         width: 10
         height: 20
       type: 0
@@ -13610,8 +15072,8 @@ MonoBehaviour:
       id: 0.05362329867371512
       rect:
         serializedVersion: 2
-        x: -1843
-        y: 174
+        x: -2045
+        y: -98
         width: 10
         height: 20
       type: 1
@@ -13689,8 +15151,8 @@ MonoBehaviour:
       id: 0.7377158066899123
       rect:
         serializedVersion: 2
-        x: -1786
-        y: 331
+        x: -2063
+        y: 209
         width: 10
         height: 20
       type: 0
@@ -13768,8 +15230,8 @@ MonoBehaviour:
       id: 0.022482377953120684
       rect:
         serializedVersion: 2
-        x: -1845
-        y: 372
+        x: -2047
+        y: 100
         width: 10
         height: 20
       type: 1
@@ -13847,8 +15309,8 @@ MonoBehaviour:
       id: 0.7377158066899123
       rect:
         serializedVersion: 2
-        x: -1786
-        y: 331
+        x: -2063
+        y: 209
         width: 10
         height: 20
       type: 0
@@ -13926,8 +15388,8 @@ MonoBehaviour:
       id: 0.5740955195269061
       rect:
         serializedVersion: 2
-        x: -1542
-        y: 341
+        x: -1819
+        y: 219
         width: 10
         height: 20
       type: 1
@@ -14005,8 +15467,8 @@ MonoBehaviour:
       id: 0.852354485007168
       rect:
         serializedVersion: 2
-        x: -1489
-        y: 355
+        x: -1691
+        y: 83
         width: 10
         height: 20
       type: 0
@@ -14084,8 +15546,8 @@ MonoBehaviour:
       id: 0.21115951203329467
       rect:
         serializedVersion: 2
-        x: -1195
-        y: 311
+        x: -1397
+        y: 39
         width: 10
         height: 20
       type: 1
@@ -14163,8 +15625,8 @@ MonoBehaviour:
       id: 0.362671878823392
       rect:
         serializedVersion: 2
-        x: -1154
-        y: 56
+        x: -1431
+        y: -66
         width: 10
         height: 20
       type: 0
@@ -14242,8 +15704,8 @@ MonoBehaviour:
       id: 0.5699645390594213
       rect:
         serializedVersion: 2
-        x: -1195
-        y: 347
+        x: -1397
+        y: 75
         width: 10
         height: 20
       type: 1
@@ -14321,8 +15783,8 @@ MonoBehaviour:
       id: 0.7903024660378241
       rect:
         serializedVersion: 2
-        x: -1111
-        y: 351
+        x: -1388
+        y: 229
         width: 10
         height: 20
       type: 0
@@ -14400,8 +15862,8 @@ MonoBehaviour:
       id: 0.19905159166038577
       rect:
         serializedVersion: 2
-        x: -910
-        y: 66
+        x: -1187
+        y: -56
         width: 10
         height: 20
       type: 1
@@ -14479,8 +15941,8 @@ MonoBehaviour:
       id: 0.15879661736953846
       rect:
         serializedVersion: 2
-        x: -806
-        y: 335
+        x: -1084
+        y: 40
         width: 10
         height: 20
       type: 0
@@ -14558,8 +16020,8 @@ MonoBehaviour:
       id: 0.6266821788748178
       rect:
         serializedVersion: 2
-        x: -867
-        y: 361
+        x: -1144
+        y: 239
         width: 10
         height: 20
       type: 1
@@ -14637,8 +16099,8 @@ MonoBehaviour:
       id: 0.15879661736953846
       rect:
         serializedVersion: 2
-        x: -806
-        y: 335
+        x: -1084
+        y: 40
         width: 10
         height: 20
       type: 0
@@ -14716,8 +16178,8 @@ MonoBehaviour:
       id: 0.08182452203790867
       rect:
         serializedVersion: 2
-        x: -908
-        y: 641
+        x: -1185
+        y: 519
         width: 10
         height: 20
       type: 1
@@ -14795,8 +16257,8 @@ MonoBehaviour:
       id: 0.15879661736953846
       rect:
         serializedVersion: 2
-        x: -806
-        y: 335
+        x: -1084
+        y: 40
         width: 10
         height: 20
       type: 0
@@ -14874,8 +16336,8 @@ MonoBehaviour:
       id: 0.5176016443956651
       rect:
         serializedVersion: 2
-        x: -512
-        y: 291
+        x: -790
+        y: -4
         width: 10
         height: 20
       type: 1
@@ -14953,8 +16415,8 @@ MonoBehaviour:
       id: 0.6851592025184814
       rect:
         serializedVersion: 2
-        x: -499
-        y: 179
+        x: -776
+        y: 57
         width: 10
         height: 20
       type: 0
@@ -15032,8 +16494,8 @@ MonoBehaviour:
       id: 0.5215389153554751
       rect:
         serializedVersion: 2
-        x: -255
-        y: 189
+        x: -532
+        y: 67
         width: 10
         height: 20
       type: 1
@@ -15111,8 +16573,8 @@ MonoBehaviour:
       id: 0.9568925057337119
       rect:
         serializedVersion: 2
-        x: -241
-        y: 407
+        x: -443
+        y: 135
         width: 10
         height: 20
       type: 0
@@ -15190,8 +16652,8 @@ MonoBehaviour:
       id: 0.7932722185707056
       rect:
         serializedVersion: 2
-        x: 53
-        y: 363
+        x: -149
+        y: 91
         width: 10
         height: 20
       type: 1
@@ -15269,8 +16731,8 @@ MonoBehaviour:
       id: 0.3631315237670818
       rect:
         serializedVersion: 2
-        x: 96
-        y: 402
+        x: -181
+        y: 280
         width: 10
         height: 20
       type: 0
@@ -15348,8 +16810,8 @@ MonoBehaviour:
       id: 0.19951123660407552
       rect:
         serializedVersion: 2
-        x: 340
-        y: 412
+        x: 63
+        y: 290
         width: 10
         height: 20
       type: 1
@@ -15427,8 +16889,8 @@ MonoBehaviour:
       id: 0.15329264297769063
       rect:
         serializedVersion: 2
-        x: 416
-        y: 441
+        x: 161
+        y: 186
         width: 10
         height: 20
       type: 0
@@ -15506,8 +16968,8 @@ MonoBehaviour:
       id: 0.9896723558146844
       rect:
         serializedVersion: 2
-        x: 710
-        y: 397
+        x: 455
+        y: 142
         width: 10
         height: 20
       type: 1
@@ -15585,8 +17047,8 @@ MonoBehaviour:
       id: 0.06954094863941006
       rect:
         serializedVersion: 2
-        x: 784
-        y: 209
+        x: 507
+        y: 87
         width: 10
         height: 20
       type: 0
@@ -15664,8 +17126,8 @@ MonoBehaviour:
       id: 0.348477382840811
       rect:
         serializedVersion: 2
-        x: 710
-        y: 433
+        x: 455
+        y: 178
         width: 10
         height: 20
       type: 1
@@ -15743,8 +17205,8 @@ MonoBehaviour:
       id: 0.5180793458214399
       rect:
         serializedVersion: 2
-        x: 791
-        y: 481
+        x: 514
+        y: 359
         width: 10
         height: 20
       type: 0
@@ -15822,8 +17284,8 @@ MonoBehaviour:
       id: 0.1848570956778047
       rect:
         serializedVersion: 2
-        x: 710
-        y: 469
+        x: 455
+        y: 214
         width: 10
         height: 20
       type: 1
@@ -15901,8 +17363,8 @@ MonoBehaviour:
       id: 0.8907827613366688
       rect:
         serializedVersion: 2
-        x: 792
-        y: 768
+        x: 515
+        y: 646
         width: 10
         height: 20
       type: 0
@@ -15977,11 +17439,11 @@ MonoBehaviour:
         m_StretchHeight: 0
       YOffset: 0
   - inPoint:
-      id: 0.602000752278604
+      id: 0.9059206614764038
       rect:
         serializedVersion: 2
-        x: -1827
-        y: 1001
+        x: 751
+        y: 97
         width: 10
         height: 20
       type: 1
@@ -16056,11 +17518,1275 @@ MonoBehaviour:
         m_StretchHeight: 0
       YOffset: 140
     outPoint:
-      id: 0.9361904039681844
+      id: 0.5698075981670094
       rect:
         serializedVersion: 2
-        x: -1646
-        y: 992
+        x: 933
+        y: 257
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.8768843728475666
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 369
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 140
+    outPoint:
+      id: 0.5698075981670094
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 257
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.24958778836279538
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 656
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 140
+    outPoint:
+      id: 0.5698075981670094
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 257
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.9286126251931361
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 213
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 36
+    outPoint:
+      id: 0.10514572593623107
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 383
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.4639507529623577
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 393
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 140
+    outPoint:
+      id: 0.8244191970789895
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 190
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.7246163705012837
+      rect:
+        serializedVersion: 2
+        x: -4029
+        y: 326
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 36
+    outPoint:
+      id: 0.6207673268489388
+      rect:
+        serializedVersion: 2
+        x: -3968
+        y: 398
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.9795723538750654
+      rect:
+        serializedVersion: 2
+        x: -3724
+        y: 408
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 140
+    outPoint:
+      id: 0.43141272404762576
+      rect:
+        serializedVersion: 2
+        x: -3625
+        y: 445
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.7902177510737524
+      rect:
+        serializedVersion: 2
+        x: -3331
+        y: 401
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 36
+    outPoint:
+      id: 0.16012149963533576
+      rect:
+        serializedVersion: 2
+        x: -3393
+        y: 190
+        width: 10
+        height: 20
+      type: 0
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 0
+  - inPoint:
+      id: 0.7651492789225417
+      rect:
+        serializedVersion: 2
+        x: -1397
+        y: 147
+        width: 10
+        height: 20
+      type: 1
+      style:
+        m_Name: 
+        m_Normal:
+          m_Background: {fileID: 5361632866341858327, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Hover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Active:
+          m_Background: {fileID: 4979192565147231929, guid: 0000000000000000d000000000000000,
+            type: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Focused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnNormal:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnHover:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnActive:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_OnFocused:
+          m_Background: {fileID: 0}
+          m_ScaledBackgrounds: []
+          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+        m_Border:
+          m_Left: 4
+          m_Right: 4
+          m_Top: 12
+          m_Bottom: 12
+        m_Margin:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Padding:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Overflow:
+          m_Left: 0
+          m_Right: 0
+          m_Top: 0
+          m_Bottom: 0
+        m_Font: {fileID: 0}
+        m_FontSize: 0
+        m_FontStyle: 0
+        m_Alignment: 0
+        m_WordWrap: 0
+        m_RichText: 1
+        m_TextClipping: 0
+        m_ImagePosition: 0
+        m_ContentOffset: {x: 0, y: 0}
+        m_FixedWidth: 0
+        m_FixedHeight: 0
+        m_StretchWidth: 1
+        m_StretchHeight: 0
+      YOffset: 144
+    outPoint:
+      id: 0.7230194950117821
+      rect:
+        serializedVersion: 2
+        x: -1429
+        y: 509
         width: 10
         height: 20
       type: 0
@@ -16137,8 +18863,8 @@ MonoBehaviour:
   editorScenarioEndNodes:
   - rect:
       serializedVersion: 2
-      x: 1268
-      y: 467
+      x: 1535
+      y: 165
       width: 200
       height: 70
     typeOfNode: 2
@@ -16149,8 +18875,8 @@ MonoBehaviour:
       id: 0.8244191970789895
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 492
+        x: 1533
+        y: 190
         width: 10
         height: 20
       type: 0
@@ -16431,323 +19157,15 @@ MonoBehaviour:
       m_StretchHeight: 0
     newScenarioRect:
       serializedVersion: 2
-      x: 1283
-      y: 482
+      x: 1550
+      y: 180
       width: 170
       height: 15
     newSceneRect:
       serializedVersion: 2
-      x: 1283
-      y: 502
+      x: 1550
+      y: 200
       width: 170
       height: 15
-    nextScenario: {fileID: 0}
-    nextScene: {fileID: 0}
-  - rect:
-      serializedVersion: 2
-      x: -1644
-      y: 967
-      width: 200
-      height: 70
-    typeOfNode: 2
-    allowedConnectionTypes: 
-    isDragged: 0
-    isSelected: 0
-    inPoint:
-      id: 0.9361904039681844
-      rect:
-        serializedVersion: 2
-        x: -1646
-        y: 992
-        width: 10
-        height: 20
-      type: 0
-      style:
-        m_Name: 
-        m_Normal:
-          m_Background: {fileID: -137945306764144326, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Hover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Active:
-          m_Background: {fileID: 7748859771797447999, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Focused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnNormal:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnHover:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnActive:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_OnFocused:
-          m_Background: {fileID: 0}
-          m_ScaledBackgrounds: []
-          m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-        m_Border:
-          m_Left: 4
-          m_Right: 4
-          m_Top: 12
-          m_Bottom: 12
-        m_Margin:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Padding:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Overflow:
-          m_Left: 0
-          m_Right: 0
-          m_Top: 0
-          m_Bottom: 0
-        m_Font: {fileID: 0}
-        m_FontSize: 0
-        m_FontStyle: 0
-        m_Alignment: 0
-        m_WordWrap: 0
-        m_RichText: 1
-        m_TextClipping: 0
-        m_ImagePosition: 0
-        m_ContentOffset: {x: 0, y: 0}
-        m_FixedWidth: 0
-        m_FixedHeight: 0
-        m_StretchWidth: 1
-        m_StretchHeight: 0
-      YOffset: 0
-    outPoints: []
-    style:
-      m_Name: 
-      m_Normal:
-        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
-          type: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Hover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Active:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Focused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnNormal:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnHover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnActive:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnFocused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Border:
-        m_Left: 12
-        m_Right: 12
-        m_Top: 12
-        m_Bottom: 12
-      m_Margin:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Padding:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Overflow:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Font: {fileID: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_Alignment: 0
-      m_WordWrap: 0
-      m_RichText: 1
-      m_TextClipping: 0
-      m_ImagePosition: 0
-      m_ContentOffset: {x: 0, y: 0}
-      m_FixedWidth: 0
-      m_FixedHeight: 0
-      m_StretchWidth: 1
-      m_StretchHeight: 0
-    defaultNodeStyle:
-      m_Name: 
-      m_Normal:
-        m_Background: {fileID: -3453378117783705200, guid: 0000000000000000d000000000000000,
-          type: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Hover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Active:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Focused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnNormal:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnHover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnActive:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnFocused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Border:
-        m_Left: 12
-        m_Right: 12
-        m_Top: 12
-        m_Bottom: 12
-      m_Margin:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Padding:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Overflow:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Font: {fileID: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_Alignment: 0
-      m_WordWrap: 0
-      m_RichText: 1
-      m_TextClipping: 0
-      m_ImagePosition: 0
-      m_ContentOffset: {x: 0, y: 0}
-      m_FixedWidth: 0
-      m_FixedHeight: 0
-      m_StretchWidth: 1
-      m_StretchHeight: 0
-    selectedNodeStyle:
-      m_Name: 
-      m_Normal:
-        m_Background: {fileID: 7126082630596479001, guid: 0000000000000000d000000000000000,
-          type: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Hover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Active:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Focused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnNormal:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnHover:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnActive:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_OnFocused:
-        m_Background: {fileID: 0}
-        m_ScaledBackgrounds: []
-        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-      m_Border:
-        m_Left: 12
-        m_Right: 12
-        m_Top: 12
-        m_Bottom: 12
-      m_Margin:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Padding:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Overflow:
-        m_Left: 0
-        m_Right: 0
-        m_Top: 0
-        m_Bottom: 0
-      m_Font: {fileID: 0}
-      m_FontSize: 0
-      m_FontStyle: 0
-      m_Alignment: 0
-      m_WordWrap: 0
-      m_RichText: 1
-      m_TextClipping: 0
-      m_ImagePosition: 0
-      m_ContentOffset: {x: 0, y: 0}
-      m_FixedWidth: 0
-      m_FixedHeight: 0
-      m_StretchWidth: 1
-      m_StretchHeight: 0
-    newScenarioRect:
-      serializedVersion: 2
-      x: -1629
-      y: 982
-      width: 170
-      height: 15
-    newSceneRect:
-      serializedVersion: 2
-      x: -1629
-      y: 1002
-      width: 170
-      height: 15
-    nextScenario: {fileID: 0}
+    nextScenario: {fileID: 11400000, guid: 6f224deddd218a146aaeb1a1995ed314, type: 2}
     nextScene: {fileID: 0}
