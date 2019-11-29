@@ -4,15 +4,10 @@ using UnityEngine;
 public class SoundAutoplay : MonoBehaviour
 {
     [SerializeField] List<AudioClip> sounds = new List<AudioClip>();
-    [SerializeField] float interval;
+    [SerializeField] float interval = 0;
+    [SerializeField] AudioSource audioSource = null;
 
-    AudioSource audioSource;
-    float nextTime;
-
-    private void Start()
-    {
-        audioSource = gameObject.AddComponent<AudioSource>();
-    }
+    float nextTime = 0.7f;
 
     private void Update()
     {
