@@ -51,4 +51,10 @@ public class ScriptableNpc : ScriptableObject
         relationship = (RelationshipLevel)Mathf.FloorToInt(trust / trustPerLevel);
         return relationship;
     }
+
+    public void Reset()
+    {
+        trust = 0;
+        fear = 0;
+    }
 }
