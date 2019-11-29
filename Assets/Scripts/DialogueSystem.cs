@@ -34,6 +34,7 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] choiceButtonTexts = null;
     [SerializeField] PlayerCharacteristics playerStats = null;
     [SerializeField] ScriptableInventory inventory = null;
+    [SerializeField] SceneSwitch sceneSwitch = null;
     public bool dialogueOpen = false;
 
 
@@ -110,7 +111,7 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentEvent.choices[index].nextScene != null)
         {
-            Debug.LogWarning("Not implemented scenechange");
+            sceneSwitch.SwitchScene(currentEvent.choices[index].nextScene.name);
         }
         else
         {
