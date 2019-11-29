@@ -43,6 +43,7 @@ public class CutsceneManager : MonoBehaviour
             yield return new WaitForSeconds(cameraQueue.Peek().GetComponent<Animation>().clip.length - fadeTransitionObject.effectDuration);
             if (cameraQueue.Count == 1)
             {
+                sceneSwitch.delay = 5;
                 sceneSwitch.SwitchScene(sceneIndex);
             }
             else
