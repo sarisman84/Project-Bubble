@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Erik Neuhohofer
 public class Scene2Spawn : MonoBehaviour
 {
     public Transform player = null;
@@ -9,8 +10,6 @@ public class Scene2Spawn : MonoBehaviour
     public Transform bed = null;
 
     int first = 2;
-    //public GameObject goOutSideButton = null;
-    //public GameObject stayInside = null;
 
     string firstTime = "First Time";
 
@@ -28,15 +27,9 @@ public class Scene2Spawn : MonoBehaviour
         }
     }
 
-    //public void InOut()
-    //{
-    //    goOutSideButton.SetActive(true);
-    //    stayInside.SetActive(true);
-    //}
-
     private void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.F11))
+        if (Input.GetKey(KeyCode.F11)) // To Delete PlayerPrefs Save Spawning Happens Correctly
         {
             PlayerPrefs.DeleteKey(firstTime);
             Debug.Log("Deleted PlayerPrefs");

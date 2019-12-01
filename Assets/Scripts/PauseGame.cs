@@ -4,9 +4,7 @@
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] GameObject[] pauseMenuObjectsToOpen = null;
-    [SerializeField] GameObject helpPage = null; // Set Reference to Help Page in Inspector
 
-    public bool canPause;
     private bool isActive = false;
 
     CursorLockMode originalLockMode;
@@ -17,7 +15,6 @@ public class PauseGame : MonoBehaviour
         {
             obj.SetActive(false);
         }
-        helpPage.SetActive(false);
     }
 
     void LateUpdate()
@@ -27,35 +24,27 @@ public class PauseGame : MonoBehaviour
 
     public void EnableGamePause()
     {
-        if (canPause)
+        if (Input.GetKeyDown(KeyCode.Escape) && isActive == false) // Pauses the Game
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && isActive == false) // Pauses the Game
+            originalLockMode = Cursor.lockState;
+            Time.timeScale = 0;
+            foreach (GameObject obj in pauseMenuObjectsToOpen)
             {
-                originalLockMode = Cursor.lockState;
-                Time.timeScale = 0;
-                foreach (GameObject obj in pauseMenuObjectsToOpen)
-                {
-                    obj.SetActive(true);
-                }
-                isActive = true;
-                Cursor.lockState = CursorLockMode.None;
+                obj.SetActive(true);
             }
-            
-            else if (Input.GetKeyDown(KeyCode.Escape) && isActive == true) // Unpauses the Game
-            {
-                Time.timeScale = 1;
-                foreach (GameObject obj in pauseMenuObjectsToOpen)
-                {
-                    obj.SetActive(false);
-                }
-                isActive = false;
-                Cursor.lockState = originalLockMode;
-            }
+            isActive = true;
+            Cursor.lockState = CursorLockMode.None;
         }
-    }
 
-    public void OpenHelp() // Opens Help Page For Gameplay Controlls
-    {
-        helpPage.SetActive(!helpPage.activeSelf);
+        else if (Input.GetKeyDown(KeyCode.Escape) && isActive == true) // Unpauses the Game
+        {
+            Time.timeScale = 1;
+            foreach (GameObject obj in pauseMenuObjectsToOpen)
+            {
+                obj.SetActive(false);
+            }
+            isActive = false;
+            Cursor.lockState = originalLockMode;
+        }
     }
 }
