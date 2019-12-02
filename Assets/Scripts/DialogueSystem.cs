@@ -110,9 +110,13 @@ public class DialogueSystem : MonoBehaviour
         {
             Debug.LogWarning("Not implemented scenario change");
         }
-        else if (currentEvent.choices[index].nextScene != null)
+        //else if (currentEvent.choices[index].nextSceneIndex != null)
+        //{
+        //    sceneSwitch.SwitchScene(currentEvent.choices[index].nextSceneIndex.name);
+        //}
+        else if (currentEvent.choices[index].nextScene != "")
         {
-            sceneSwitch.SwitchScene(currentEvent.choices[index].nextScene.name);
+            sceneSwitch.SwitchScene((currentEvent.choices[index].nextScene));
         }
         else
         {

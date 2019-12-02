@@ -61,10 +61,14 @@ public class ChoiceSystem : MonoBehaviour
             scenario = currentEvent.choices[index].nextScenario;
             currentEvent = scenario.startEvent;
         }
-        else if (currentEvent.choices[index].nextScene != null)
+        //else if (currentEvent.choices[index].nextSceneIndex != null)
+        //{
+        //    Debug.Log("Changing scene");
+        //    SceneManager.LoadScene(currentEvent.choices[index].nextSceneIndex.name);
+        //}
+        else if (currentEvent.choices[index].nextScene != "")
         {
-            Debug.Log("Changing scene");
-            SceneManager.LoadScene(currentEvent.choices[index].nextScene.name);
+            SceneManager.LoadScene(currentEvent.choices[index].nextScene);
         }
         else
         {

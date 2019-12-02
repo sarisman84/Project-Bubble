@@ -2,6 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public enum ConnectionPointType { In, Out }
+
+#if UNITY_EDITOR
+
 //Simon Voss
 [System.Serializable]
 public class ConnectionPoint
@@ -73,3 +78,4 @@ public class ConnectionPoint
         }
     }
 }
+#endif

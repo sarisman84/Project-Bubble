@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+
+#if UNITY_EDITOR
 //Simon Voss
 [System.Serializable]
 public class Connection
@@ -39,3 +41,4 @@ public class Connection
         }
     }
 }
+#endif
