@@ -75,4 +75,15 @@ public class PlayerCharacteristics : ScriptableObject
     {
         return slug;
     }
+
+
+    public void Reset()
+    {
+        activeQuests.Clear();
+        completedQuests.Clear();
+        failedQuests.Clear();
+        diplomatisk = 0;
+        hotfull = 0;
+        slug = 0;
+    }
 }

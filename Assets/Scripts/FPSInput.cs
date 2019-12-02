@@ -77,8 +77,8 @@ public class FPSInput : MonoBehaviour
                     jumpSpeed = defaultJumpSpeed;
                     speed = defaultMoveSpeed;
                 }
-                else
-                    Debug.Log("You cant stand up right now");
+                //else
+                    //Debug.Log("You cant stand up right now");
             }
             // PRONE OM DET BEHOVS!
             /*if (Input.GetKey(KeyCode.Z))  
