@@ -4,50 +4,27 @@ using UnityEngine;
 
 public class CutsceneManager : MonoBehaviour
 {
-    [SerializeField] bool playOnStart = true;
-    [SerializeField] FadeTransition fadeTransition = null;
     [SerializeField] int sceneIndex = 0;
     [SerializeField] SceneSwitch sceneSwitch = null;
-    [SerializeField] List<GameObject> cameras = new List<GameObject>();
+    [SerializeField] FadeTransition fadeTransition = null;
+    [SerializeField] GameObject camera = null;
 
     private void Start()
     {
-        if (playOnStart)
-        {
-            StartCoroutine("PlayCutscene");
-        }
-    }
-    public void CallPlayCutscene()
-    {
+        camera.GetComponent<Animation>().PlayQueued("Second Camera");
         StartCoroutine("PlayCutscene");
     }
 
     IEnumerator PlayCutscene()
     {
-        while (cameras.Count > 0)
-        {
-            fadeTransition.Fade(true);
-            cameras[0].SetActive(true);
-            yield return new WaitForSeconds(cameras[0].GetComponent<Animation>().clip.length - fadeTransition.effectDuration);
-            if (cameras.Count == 1)
-            {
-                sceneSwitch.delay = 5;
-                sceneSwitch.SwitchScene(sceneIndex);
-            }
-            else
-            {
-                fadeTransition.Fade(false);
-            }
-            yield return new WaitForSeconds(fadeTransition.effectDuration);
-            if (cameras.Count == 1)
-            {
-                cameras.Remove(cameras[0]);
-            }
-            else
-            {
-                cameras[0].SetActive(false);
-                cameras.Remove(cameras[0]);;
-            }
-        }
+        fadeTransition.Fade(true);
+        yield return new WaitForSeconds(camera.GetComponent<Animation>().GetClip("First Camera").length - fadeTransition.effectDuration);
+        fadeTransition.Fade(false);
+        yield return new WaitForSeconds(fadeTransition.effectDuration);
+        fadeTransition.Fade(true);
+        yield return new WaitForSeconds(camera.GetComponent<Animation>().GetClip("Second Camera").length - fadeTransition.effectDuration);
+        fadeTransition.Fade(false);
+        yield return new WaitForSeconds(4);
+        sceneSwitch.SwitchScene(sceneIndex);
     }
 }
