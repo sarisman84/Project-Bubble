@@ -21,6 +21,7 @@ public class DoorChoice : MonoBehaviour
             hasGottenChoice = true;
             GameManager.Instance().SetFPSInput(false);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             EnableButtons();
         }
         else if (other.gameObject.CompareTag("Player") && hasGottenChoice == true)
@@ -28,6 +29,7 @@ public class DoorChoice : MonoBehaviour
             hasGottenChoice = true;
             GameManager.Instance().SetFPSInput(false);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             Destroy(goToWorkButton);
             EnableButtons();
         }
@@ -43,5 +45,6 @@ public class DoorChoice : MonoBehaviour
         buttons.SetActive(false);
         GameManager.Instance().SetFPSInput(true);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

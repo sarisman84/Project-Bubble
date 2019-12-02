@@ -36,6 +36,7 @@ public class TextPaper : MonoBehaviour, IInteractable //Dejan, an example script
     {
         animator.SetBool("show", false);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         GameManager.Instance().SetFPSInput(true);
         GameManager.Instance().SetMouseLook(true);
         yield return new WaitForSeconds(0.2f);
@@ -51,5 +52,6 @@ public class TextPaper : MonoBehaviour, IInteractable //Dejan, an example script
         Inventory.instance.AddItemToInventory(1);
         yield return new WaitForSeconds(1);
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

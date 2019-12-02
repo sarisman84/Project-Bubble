@@ -20,6 +20,7 @@ public class Lock : MonoBehaviour, IInteractable //Dejan, updates unlocked boole
         {
             passwordPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             EndInteration();
             unlocked = true;
             passwordPanelOpen = false;
@@ -29,6 +30,7 @@ public class Lock : MonoBehaviour, IInteractable //Dejan, updates unlocked boole
         {
             passwordPanel.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             EndInteration();
             passwordPanelOpen = false;
         }
@@ -70,6 +72,7 @@ public class Lock : MonoBehaviour, IInteractable //Dejan, updates unlocked boole
                     passwordPanel.SetActive(true);
                     passwordPanelOpen = true;
                     Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
                     GameManager.Instance().SetFPSInput(false);
                     GameManager.Instance().SetMouseLook(false);
                     return false;
