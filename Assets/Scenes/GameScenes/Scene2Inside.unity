@@ -935,6 +935,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59414057}
   m_CullTransparentMesh: 0
+--- !u!1 &72888026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72888027}
+  m_Layer: 0
+  m_Name: Monologue (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72888027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72888026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.682, y: 1.617, z: -10.731}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 766788934}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75067771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1748,159 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 161411562}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &177719165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 528583492}
+    m_Modifications:
+    - target: {fileID: 5075126927559541715, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_Name
+      value: Monologue trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.247725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10278219
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.29385
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: monologueStorer
+      value: 
+      objectReference: {fileID: 1807500845}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: monologueField
+      value: 
+      objectReference: {fileID: 1732010399}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "F\xF6rsta g\xE5ngen jag och Gilad gick ut tillsammans."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Han ville ta mig till parken f\xF6r att ha en picknick,"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "jag tog m\xE5nga bilder den dagen p\xE5 honom, men detta fotot \xE4r
+        den enda han gillade."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "Dagen v\xE5r relation blev officiellt nedskrivet p\xE5 papper, och vi
+        fick v\xE5ra partner masker."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: "Kommer ih\xE5g som om det var ig\xE5r, Gilads hand skakade lite n\xE4r
+        han skrev sitt namn."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[5]
+      value: "Han har alltid varit lite annorlunda \xE4n de andra, men det \xE4r vad
+        som alltid drog mig mot honom."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[5]
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87bccb46253975a4da1f01a6af73d21a, type: 3}
 --- !u!1 &178054275
 GameObject:
   m_ObjectHideFlags: 0
@@ -3932,6 +4116,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507781888}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &528583491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528583492}
+  m_Layer: 0
+  m_Name: Monologue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &528583492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528583491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.665, y: 5.785, z: -23.492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1339668118}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529536564
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,6 +5294,154 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752446486}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &766788933
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 72888027}
+    m_Modifications:
+    - target: {fileID: 5075126927559541715, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_Name
+      value: Monologue trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.247725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10278219
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.29385
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: monologueStorer
+      value: 
+      objectReference: {fileID: 1807500845}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: monologueField
+      value: 
+      objectReference: {fileID: 1732010399}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Vad \xE4r det h\xE4r?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Jag har aldrig sett den h\xE4r f\xF6rut, kan detta vara vad Gilad h\xF6ll
+        p\xE5 med ig\xE5r kv\xE4ll?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "Vad h\xE5ller han p\xE5 med? Varf\xF6r g\xF6mmer han saker f\xF6r mig?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "Jag m\xE5ste fr\xE5ga honom n\xE4r han kommer hem, han kan inte forts\xE4tta
+        s\xE5h\xE4r, n\xE5gon kanske anm\xE4ler honom till att bli hj\xE4lpt."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: "jag tog m\xE5nga bilder den dagen p\xE5 honom, men detta fotot \xE4r
+        den enda han gillade."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87bccb46253975a4da1f01a6af73d21a, type: 3}
+--- !u!4 &766788934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+    type: 3}
+  m_PrefabInstance: {fileID: 766788933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &772776181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7263,6 +7626,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048636504}
   m_CullTransparentMesh: 0
+--- !u!114 &1050285089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!1001 &1053088159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7666,6 +8105,157 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133179438}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1150805674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1482407016}
+    m_Modifications:
+    - target: {fileID: 5075126927559541715, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_Name
+      value: Monologue trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.247725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10278219
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.29385
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: monologueStorer
+      value: 
+      objectReference: {fileID: 1807500845}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: monologueField
+      value: 
+      objectReference: {fileID: 1732010399}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "Det var en s\xE5dan sk\xF6n kv\xE4ll att vi best\xE4mde oss f\xF6r att
+        g\xE5 p\xE5 en promenad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Vi pratade om v\xE5r dag, och vad vi gjort. Men mitt i promenaden tog
+        vi en paus."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[2]
+      value: "Gilad ville kolla upp mot himlen och se stj\xE4rnorna som syntes igenom
+        kupolen, jag vet aldrig vad som f\xF6rsigg\xE5r i hans huvud, hoppas bara
+        att han inte f\xE5r ... hj\xE4lp."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[1]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: delay.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[3]
+      value: "jag tog m\xE5nga bilder den dagen p\xE5 honom, men detta fotot \xE4r
+        den enda han gillade."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5075126927559541725, guid: 87bccb46253975a4da1f01a6af73d21a,
+        type: 3}
+      propertyPath: lines.Array.data[4]
+      value: "jag tog m\xE5nga bilder den dagen p\xE5 honom, men detta fotot \xE4r
+        den enda han gillade."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87bccb46253975a4da1f01a6af73d21a, type: 3}
+--- !u!4 &1150805675 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150805674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1154714680
 GameObject:
   m_ObjectHideFlags: 0
@@ -8362,6 +8952,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300570526}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1339668118 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5075126927559541714, guid: 87bccb46253975a4da1f01a6af73d21a,
+    type: 3}
+  m_PrefabInstance: {fileID: 177719165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1350173921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9170,82 +9766,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1473006095}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1488128601
-MonoBehaviour:
+--- !u!1 &1482407015
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 0
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 1
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482407016}
+  m_Layer: 0
+  m_Name: Monologue (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1482407016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482407015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.016, y: 1.617, z: -10.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1150805675}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494786822
 GameObject:
   m_ObjectHideFlags: 0
@@ -9601,7 +10152,7 @@ PrefabInstance:
     - target: {fileID: 6285288593495687301, guid: 4106a8569b1727845b13c2ae47d872a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.168
+      value: 1.101
       objectReference: {fileID: 0}
     - target: {fileID: 6285288593495687301, guid: 4106a8569b1727845b13c2ae47d872a5,
         type: 3}
@@ -9671,7 +10222,7 @@ PrefabInstance:
     - target: {fileID: 1315137102297086618, guid: 4106a8569b1727845b13c2ae47d872a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.097
+      value: 0.079
       objectReference: {fileID: 0}
     - target: {fileID: 1315137102297086618, guid: 4106a8569b1727845b13c2ae47d872a5,
         type: 3}
@@ -10935,6 +11486,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1732010399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8508664194397677515, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+    type: 3}
+  m_PrefabInstance: {fileID: 329113787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1764359406
 GameObject:
   m_ObjectHideFlags: 0
@@ -11027,6 +11590,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764359406}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1807500845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 842258172812309380, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+    type: 3}
+  m_PrefabInstance: {fileID: 329113787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1817298592
 GameObject:
   m_ObjectHideFlags: 0
@@ -12772,6 +13341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SkySettings
       value: 
-      objectReference: {fileID: 1488128601}
+      objectReference: {fileID: 1050285089}
+    - target: {fileID: 3987339620471449191, guid: d88ade20e08645b4ba0f15fbd0cd8df3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d88ade20e08645b4ba0f15fbd0cd8df3, type: 3}
