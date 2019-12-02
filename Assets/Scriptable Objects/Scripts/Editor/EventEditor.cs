@@ -449,6 +449,7 @@ public class EventEditor : EditorWindow
         openScenario.editorChoiceNodes.Clear();
         openScenario.editorEventNodes.Clear();
         openScenario.editorScenarioEndNodes.Clear();
+        openScenario.events.Clear();
 
         for (int i = 0; i < allNodes.Count; i++)
         {
