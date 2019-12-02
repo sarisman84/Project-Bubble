@@ -53,6 +53,7 @@ public class DialogueSystem : MonoBehaviour
     public void StartDialogue(NPC npcTalking, Scenario dialogue)
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         GameManager.Instance().SetFPSInput(false);
         dialogueOpen = true;
         npcTalkedTo = npcTalking;
@@ -271,6 +272,7 @@ public class DialogueSystem : MonoBehaviour
         }
         dialogueOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         GameManager.Instance().SetFPSInput(true);
         GameManager.Instance().SetMouseLook(true);
         if (npcTalkedTo.quests.Count == 0)
