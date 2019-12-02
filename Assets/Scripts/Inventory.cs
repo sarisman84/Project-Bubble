@@ -100,6 +100,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
             inventory.SetActive(true);
             inventoryIsOpen = true;
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             GameManager.Instance().SetFPSInput(false);
             GameManager.Instance().SetMouseLook(false);
         }
@@ -110,6 +111,7 @@ public class Inventory : MonoBehaviour, IPointerClickHandler //Dejan
         inventory.SetActive(false);
         inventoryIsOpen = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         GameManager.Instance().SetFPSInput(true);
         GameManager.Instance().SetMouseLook(true);
     }
