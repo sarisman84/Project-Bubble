@@ -1702,6 +1702,7 @@ GameObject:
   - component: {fileID: 1315137103887830913}
   - component: {fileID: 8006072500576630199}
   - component: {fileID: 4334646395357055310}
+  - component: {fileID: 745809681159694184}
   m_Layer: 0
   m_Name: desk
   m_TagString: Untagged
@@ -1769,6 +1770,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &745809681159694184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601699471511092626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 211.4348, y: 77.5174, z: 77.5174}
+  m_Center: {x: 0, y: 0, z: -0.00024414062}
 --- !u!1 &2601699472192688016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1794,7 @@ GameObject:
   - component: {fileID: 1315137103747300739}
   - component: {fileID: 8006072499941148597}
   - component: {fileID: 4334646394344176460}
+  - component: {fileID: 3722339288527411201}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -1847,6 +1862,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3722339288527411201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601699472192688016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 46.794697, y: 86.10657, z: 56.551136}
+  m_Center: {x: 0, y: 0, z: -0.000045776367}
 --- !u!1 &2601699473105897609
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,11 +5732,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6285288593495687301}
     m_Modifications:
-    - target: {fileID: 1364280695689710748, guid: d7f233653b835604795b20f01792a386,
-        type: 3}
-      propertyPath: m_Name
-      value: Gilad_mask
-      objectReference: {fileID: 0}
     - target: {fileID: 2645231223728045711, guid: d7f233653b835604795b20f01792a386,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5763,6 +5786,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364280695689710748, guid: d7f233653b835604795b20f01792a386,
+        type: 3}
+      propertyPath: m_Name
+      value: Gilad_mask
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f233653b835604795b20f01792a386, type: 3}
