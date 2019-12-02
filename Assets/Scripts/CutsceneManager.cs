@@ -5,61 +5,49 @@ using UnityEngine;
 public class CutsceneManager : MonoBehaviour
 {
     [SerializeField] bool playOnStart = true;
-    [SerializeField] FadeTransition fadeTransitionObject = null;
+    [SerializeField] FadeTransition fadeTransition = null;
     [SerializeField] int sceneIndex = 0;
     [SerializeField] SceneSwitch sceneSwitch = null;
     [SerializeField] List<GameObject> cameras = new List<GameObject>();
-    private Queue<GameObject> cameraQueue = new Queue<GameObject>();
-    private Queue<GameObject> CameraQueue()
-    {
-        if (cameras.Count > 0)
-        {
-            foreach (GameObject camera in cameras)
-            {
-                cameraQueue.Enqueue(camera);
-            }
-        }
-        return cameraQueue;
-    }
 
     private void Start()
     {
-        if (playOnStart && CameraQueue().Count > 0)
+        if (playOnStart)
         {
             StartCoroutine("PlayCutscene");
         }
     }
-
     public void CallPlayCutscene()
     {
         StartCoroutine("PlayCutscene");
     }
+
     IEnumerator PlayCutscene()
     {
-        if (cameraQueue.Count > 0)
+        while (cameras.Count > 0)
         {
-            fadeTransitionObject.Fade(true);
-            cameraQueue.Peek().SetActive(true);
-            yield return new WaitForSeconds(cameraQueue.Peek().GetComponent<Animation>().clip.length - fadeTransitionObject.effectDuration);
-            if (cameraQueue.Count == 1)
+            fadeTransition.Fade(true);
+            cameras[0].SetActive(true);
+            yield return new WaitForSeconds(cameras[0].GetComponent<Animation>().clip.length - fadeTransition.effectDuration);
+            if (cameras.Count == 1)
             {
                 sceneSwitch.delay = 5;
                 sceneSwitch.SwitchScene(sceneIndex);
             }
             else
             {
-                fadeTransitionObject.Fade(false);
+                fadeTransition.Fade(false);
             }
-            yield return new WaitForSeconds(fadeTransitionObject.effectDuration);
-            if (cameraQueue.Count == 1)
+            yield return new WaitForSeconds(fadeTransition.effectDuration);
+            if (cameras.Count == 1)
             {
-                cameraQueue.Dequeue();
+                cameras.Remove(cameras[0]);
             }
             else
             {
-                cameraQueue.Dequeue().SetActive(false);
+                cameras[0].SetActive(false);
+                cameras.Remove(cameras[0]);;
             }
-            StartCoroutine("PlayCutscene");
         }
     }
 }
