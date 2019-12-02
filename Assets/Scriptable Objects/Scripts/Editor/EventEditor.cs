@@ -473,6 +473,11 @@ public class EventEditor : EditorWindow
             openScenario.editorConnections.Add(allConnections[i]);
         }
 
+        for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
+        {
+            openScenario.events.Add(openScenario.editorEventNodes[i].myEvent);
+        }
+
         EditorUtility.SetDirty(openScenario);
         Debug.Log("Save successfull");
     }
