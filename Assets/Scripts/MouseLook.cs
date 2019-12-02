@@ -28,6 +28,7 @@ public class MouseLook : MonoBehaviour
             body.freezeRotation = true;
         }
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()

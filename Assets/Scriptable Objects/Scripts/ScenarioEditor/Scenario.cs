@@ -18,13 +18,26 @@ public class Scenario : ScriptableObject
 #endif
     public List<Event> events = new List<Event>();
 
+    //public Event FindNextEvent(Choice usedChoice)
+    //{
+    //    for (int i = 0; i < editorEventNodes.Count; i++)
+    //    {
+    //        if (usedChoice.nextEventID == editorEventNodes[i].myEvent.id)
+    //        {
+    //            return editorEventNodes[i].myEvent;
+    //        }
+    //    }
+    //    Debug.Log("New event not found");
+    //    return null;
+    //}
+
     public Event FindNextEvent(Choice usedChoice)
     {
-        for (int i = 0; i < editorEventNodes.Count; i++)
+        for (int i = 0; i < events.Count; i++)
         {
-            if (usedChoice.nextEventID == editorEventNodes[i].myEvent.id)
+            if (usedChoice.nextEventID == events[i].id)
             {
-                return editorEventNodes[i].myEvent;
+                return events[i];
             }
         }
         Debug.Log("New event not found");
