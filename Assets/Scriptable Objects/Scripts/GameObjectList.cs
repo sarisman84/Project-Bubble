@@ -14,13 +14,4 @@ public class ItemPairs //class wrap for pairs of items
     public List<GameObject> pair;
 }
 
-[CustomEditor(typeof(GameObjectList))]
-public class InspectorCustomizer : Editor //allows for children of elements to be visivle in the editor
-{
-    public override void OnInspectorGUI()
-    {
-        serializedObject.Update();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("list"), true);
-        serializedObject.ApplyModifiedProperties();
-    }
-}
+
