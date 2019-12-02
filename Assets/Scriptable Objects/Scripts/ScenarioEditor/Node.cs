@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
 
+#if UNITY_EDITOR
+
 //Simon Voss
 [System.Serializable]
 abstract public class Node
@@ -37,6 +39,7 @@ abstract public class Node
     public abstract void Drag(Vector2 delta);
     public abstract void Draw();
 
+#if UNITY_EDITOR
     public bool ProcessEvents(UnityEngine.Event e)
     {
         switch (e.type)
@@ -94,6 +97,7 @@ abstract public class Node
             OnRemoveNode(this);
         }
     }
+#endif
 }
 
 
@@ -223,6 +227,7 @@ public class ChoiceNode : Node
 
     public Rect requiredRelationshiplevelRect;
 
+#if UNITY_EDITOR
     public override void Drag(Vector2 delta)
     {
         rect.position += delta;
@@ -379,6 +384,7 @@ public class ChoiceNode : Node
         inPoint = node.inPoint;
         outPoints = node.outPoints;
     }
+#endif
 }
 
 //ScenarioEndNode
@@ -398,8 +404,11 @@ public class ScenarioEndNode : Node
 
     //Connected class or logic
     public Scenario nextScenario = null;
-    public SceneAsset nextScene;
+    //public SceneAsset nextScene;
+    public string nextScene = "";
 
+
+#if UNITY_EDITOR
     public override void Drag(Vector2 delta)
     {
         //Base need
@@ -417,7 +426,8 @@ public class ScenarioEndNode : Node
         GUI.Box(rect, "", style);
 
         nextScenario = (Scenario)EditorGUI.ObjectField(newScenarioRect, nextScenario, typeof(Scenario), false);
-        nextScene = (SceneAsset)EditorGUI.ObjectField(newSceneRect, nextScene, typeof(SceneAsset), false);
+        //nextScene = (SceneAsset)EditorGUI.ObjectField(newSceneRect, nextScene, typeof(SceneAsset), false);
+        nextScene = EditorGUI.TextField(newSceneRect, nextScene);
     }
 
 
@@ -445,8 +455,11 @@ public class ScenarioEndNode : Node
     public void LoadScenarioEndNode(ScenarioEndNode node)
     {
         nextScenario = node.nextScenario;
+        //nextScene = node.nextScene;
         nextScene = node.nextScene;
         inPoint = node.inPoint;
         outPoints = node.outPoints;
     }
+#endif
 }
+#endif
