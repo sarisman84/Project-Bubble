@@ -6,7 +6,6 @@ using UnityEditor;
 
 //http://gram.gs/gramlog/creating-node-based-editor-unity/
 
-public enum ConnectionPointType { In, Out }
 //Simon Voss
 public class EventEditor : EditorWindow
 {
@@ -538,6 +537,7 @@ public class EventEditor : EditorWindow
                         case Node.NodeType.ScenarioEndNode:
                             newEndNode = allConnections[i].outPoint.node as ScenarioEndNode;
                             inputChoice.nextScenario = newEndNode.nextScenario;
+                            //inputChoice.nextSceneIndex = newEndNode.nextScene;
                             inputChoice.nextScene = newEndNode.nextScene;
                             break;
                     }
