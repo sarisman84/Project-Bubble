@@ -8,10 +8,15 @@ using UnityEditor;
 public class Scenario : ScriptableObject
 {
     public Event startEvent = null;
+
+#if UNITY_EDITOR
+
     public List<ChoiceNode> editorChoiceNodes = new List<ChoiceNode>();
     public List<EventNode> editorEventNodes = new List<EventNode>();
     public List<Connection> editorConnections = new List<Connection>();
     public List<ScenarioEndNode> editorScenarioEndNodes = new List<ScenarioEndNode>();
+#endif
+    public List<Event> events = new List<Event>();
 
     public Event FindNextEvent(Choice usedChoice)
     {
@@ -94,7 +99,7 @@ public class Choice
     //public Event nextEvent = null;
     public double nextEventID;
     public Scenario nextScenario = null;
-    public SceneAsset nextScene;
+    public string nextScene = "";
 
     public Choice(string choiceText)
     {
