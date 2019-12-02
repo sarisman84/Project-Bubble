@@ -25,6 +25,7 @@ public class NPC : MonoBehaviour, IInteractable
 
     bool firstTimeTalkingWith = true;
 
+    [SerializeField] Animator animator = null;
 
     public bool TryStartTalking()
     {
@@ -35,6 +36,8 @@ public class NPC : MonoBehaviour, IInteractable
             {
                 currentGreeting = dialogue.startEvent.description;
                 firstTimeTalkingWith = false;
+
+                if (animator) { animator.SetTrigger("greeting"); }
             }
             else
             {
