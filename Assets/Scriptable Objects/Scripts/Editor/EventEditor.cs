@@ -449,6 +449,7 @@ public class EventEditor : EditorWindow
         openScenario.editorChoiceNodes.Clear();
         openScenario.editorEventNodes.Clear();
         openScenario.editorScenarioEndNodes.Clear();
+        openScenario.events.Clear();
 
         for (int i = 0; i < allNodes.Count; i++)
         {
@@ -471,6 +472,11 @@ public class EventEditor : EditorWindow
         for (int i = 0; i < allConnections.Count; i++)
         {
             openScenario.editorConnections.Add(allConnections[i]);
+        }
+
+        for (int i = 0; i < openScenario.editorEventNodes.Count; i++)
+        {
+            openScenario.events.Add(openScenario.editorEventNodes[i].myEvent);
         }
 
         EditorUtility.SetDirty(openScenario);
