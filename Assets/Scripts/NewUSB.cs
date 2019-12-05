@@ -10,6 +10,14 @@ public class NewUSB : MonoBehaviour, IInteractable
     public bool CanBeInteractedWith() { return true; }
     public void EndInteration() { }
 
+    private void Start()
+    {
+        if (GameManager.Instance().USBPickedUp == true)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public bool InteractWith()
     {
         GameManager.Instance().USBPickedUp = true;

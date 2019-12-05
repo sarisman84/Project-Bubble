@@ -15,6 +15,7 @@ public class NewGame : MonoBehaviour
             npcs[i].Reset();
         }
         PlayerPrefs.DeleteAll();
+        GameManager.Instance().USBPickedUp = false;
         Debug.Log("Started new game and resetted stats");
     }
 }
