@@ -522,6 +522,104 @@ MonoBehaviour:
   sceneSwitch: {fileID: 688243589}
   buildIndex: 5
   message: "Tryck E f\xF6r att g\xE5 in"
+  typeOfRequirement: 1
+  questIDsToOpenDoor: 000000005948906b
+--- !u!82 &534766341
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534766338}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 81780d4792e4bbf42b0da335b46ee2ea, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &641777812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1777,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5391729093932735015, guid: 3f0e5286df2e67a42879fa42c777767e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860257435024982597, guid: 3f0e5286df2e67a42879fa42c777767e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e1bdfd3cc464c9a42829b15eda774455, type: 2}
+    - target: {fileID: 1529809039055032928, guid: 3f0e5286df2e67a42879fa42c777767e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5959399991586126103, guid: 3f0e5286df2e67a42879fa42c777767e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1969,21 +2082,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 46c84c9a68840dc469c480c2baec1b61, type: 2}
-    - target: {fileID: 5391729093932735015, guid: 3f0e5286df2e67a42879fa42c777767e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4860257435024982597, guid: 3f0e5286df2e67a42879fa42c777767e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e1bdfd3cc464c9a42829b15eda774455, type: 2}
-    - target: {fileID: 1529809039055032928, guid: 3f0e5286df2e67a42879fa42c777767e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f0e5286df2e67a42879fa42c777767e, type: 3}
 --- !u!1 &1942405114 stripped
@@ -2235,7 +2333,7 @@ PrefabInstance:
     - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
       propertyPath: quests.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
@@ -2250,7 +2348,7 @@ PrefabInstance:
     - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
       propertyPath: quests.Array.data[0].questDescription
-      value: 'Valfritt: Utforska och prata med folk'
+      value: "Utforska omr\xE5det"
       objectReference: {fileID: 0}
     - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
@@ -2273,15 +2371,25 @@ PrefabInstance:
       propertyPath: quests.Array.data[0].started
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8015611257026269764, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+    - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
-      propertyPath: m_fontSize
-      value: 24.2
+      propertyPath: quests.Array.data[2].questName
+      value: Folk
       objectReference: {fileID: 0}
-    - target: {fileID: 8015611257026269764, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+    - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
-      propertyPath: m_margin.z
-      value: 0.58622634
+      propertyPath: quests.Array.data[2].questDescription
+      value: Prata med folk.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: quests.Array.data[2].questID
+      value: 1804617817
+      objectReference: {fileID: 0}
+    - target: {fileID: 7126893513745062189, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: quests.Array.data[2].started
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3904873153203197430, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
@@ -2348,11 +2456,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 46c84c9a68840dc469c480c2baec1b61, type: 2}
-    - target: {fileID: 641286726654896064, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4708214976167198179, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
       propertyPath: m_HDR
@@ -2367,6 +2470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: far clip plane
       value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 641286726654896064, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3228718074519549370, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}
@@ -2597,6 +2705,16 @@ PrefabInstance:
         type: 3}
       propertyPath: lines.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015611257026269764, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 24.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015611257026269764, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 0.58622634
       objectReference: {fileID: 0}
     - target: {fileID: 4109322884347235440, guid: b8ecc2e3297fa6d42bd4da0a3888393a,
         type: 3}

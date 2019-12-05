@@ -449,7 +449,7 @@ PrefabInstance:
     - target: {fileID: 4967449983745711820, guid: 5e412a2663fa5054fa5e9b43831339f4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -12.900055
+      value: -12.900085
       objectReference: {fileID: 0}
     - target: {fileID: 9119780458487555117, guid: 5e412a2663fa5054fa5e9b43831339f4,
         type: 3}
@@ -557,20 +557,15 @@ PrefabInstance:
       propertyPath: pauseMenuObjectsToOpen.Array.data[1]
       value: 
       objectReference: {fileID: 1823138467}
+    - target: {fileID: 2622679268883767479, guid: 2d98d7d71c325cd48824b502917e6ec0,
+        type: 3}
+      propertyPath: mouseStartVisibility
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7661338522276751219, guid: 2d98d7d71c325cd48824b502917e6ec0,
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8069083571954696110, guid: 2d98d7d71c325cd48824b502917e6ec0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8693143339959082491, guid: 2d98d7d71c325cd48824b502917e6ec0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 313
       objectReference: {fileID: 0}
     - target: {fileID: 4010586376230006064, guid: 2d98d7d71c325cd48824b502917e6ec0,
         type: 3}
@@ -586,6 +581,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693143339959082491, guid: 2d98d7d71c325cd48824b502917e6ec0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 313
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069083571954696110, guid: 2d98d7d71c325cd48824b502917e6ec0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d98d7d71c325cd48824b502917e6ec0, type: 3}
