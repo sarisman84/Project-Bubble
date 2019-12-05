@@ -73,14 +73,15 @@ public class PauseGame : MonoBehaviour
     {
         //if (canPause)
         //{
-            originalLockMode = Cursor.lockState;
-            Time.timeScale = 0;
-            foreach (GameObject obj in pauseMenuObjectsToOpen)
-            {
-                obj.SetActive(true);
-            }
-            isActive = true;
-            Cursor.lockState = CursorLockMode.None;
+        originalLockMode = Cursor.lockState;
+        Time.timeScale = 0;
+        foreach (GameObject obj in pauseMenuObjectsToOpen)
+        {
+            obj.SetActive(true);
+        }
+        isActive = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         isPaused = true;
         //}
     }

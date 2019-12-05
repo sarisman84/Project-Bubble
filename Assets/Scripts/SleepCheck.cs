@@ -20,6 +20,7 @@ public class SleepCheck : MonoBehaviour
         {
             GameManager.Instance().SetFPSInput(false);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             EnableButtons();
         }
     }
@@ -55,5 +56,6 @@ public class SleepCheck : MonoBehaviour
         buttons.SetActive(false);
         GameManager.Instance().SetFPSInput(true);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

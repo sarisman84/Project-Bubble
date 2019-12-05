@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
     locationText: Location Text
-    description: "Gilad: \"Varf\xF6r \xE4r du uppe?! Smyger du dig p\xE5 mig?\""
+    description: "Gilad: \"Varf\xF6r \xE4r du uppe?! Smyger du dig p\xE5 mig?!\""
     image: {fileID: 0}
     choices:
     - choiceText: "\"Vad g\xF6r du?\""
@@ -34,7 +34,7 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0.29610989210014693
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
+      nextScene: 
     - choiceText: "\"Jag smyger inte det \xE4r DU som smyger bakom ryggen p\xE5 mig.\""
       skillType: 2
       skillNumberIncrease: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0.9043493619674581
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
+      nextScene: 
     - choiceText: "\"Vad d\xF6ljer du f\xF6r mig!?\" "
       skillType: 2
       skillNumberIncrease: 2
@@ -70,15 +70,15 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0.9043493619674581
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
+      nextScene: 
     id: 0.3594688537341863
     usedIDs:
     - 0.3594688537341863
   editorChoiceNodes:
   - rect:
       serializedVersion: 2
-      x: 573
-      y: 65
+      x: 63
+      y: 694
       width: 250
       height: 280
     typeOfNode: 0
@@ -89,8 +89,8 @@ MonoBehaviour:
       id: 0.6101006374741442
       rect:
         serializedVersion: 2
-        x: 571
-        y: 195
+        x: 61
+        y: 824
         width: 10
         height: 20
       type: 0
@@ -168,8 +168,8 @@ MonoBehaviour:
     - id: 0.4464803503111379
       rect:
         serializedVersion: 2
-        x: 815
-        y: 205
+        x: 305
+        y: 834
         width: 10
         height: 20
       type: 1
@@ -465,101 +465,101 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0.29610989210014693
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
+      nextScene: 
     choiceTextRect:
       serializedVersion: 2
-      x: 588
-      y: 80
+      x: 78
+      y: 709
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 588
-      y: 110
+      x: 78
+      y: 739
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 588
-      y: 125
+      x: 78
+      y: 754
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 588
-      y: 140
+      x: 78
+      y: 769
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 588
-      y: 155
+      x: 78
+      y: 784
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 588
-      y: 170
+      x: 78
+      y: 799
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 588
-      y: 185
+      x: 78
+      y: 814
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 588
-      y: 200
+      x: 78
+      y: 829
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 588
-      y: 215
+      x: 78
+      y: 844
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 588
-      y: 230
+      x: 78
+      y: 859
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 588
-      y: 245
+      x: 78
+      y: 874
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 588
-      y: 260
+      x: 78
+      y: 889
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 588
-      y: 275
+      x: 78
+      y: 904
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 588
-      y: 290
+      x: 78
+      y: 919
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 588
-      y: 305
+      x: 78
+      y: 934
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 570
-      y: 346
+      x: 60
+      y: 975
       width: 250
       height: 280
     typeOfNode: 0
@@ -570,8 +570,8 @@ MonoBehaviour:
       id: 0.7259366566901732
       rect:
         serializedVersion: 2
-        x: 568
-        y: 476
+        x: 58
+        y: 1105
         width: 10
         height: 20
       type: 0
@@ -649,8 +649,8 @@ MonoBehaviour:
     - id: 0.0847416837162998
       rect:
         serializedVersion: 2
-        x: 812
-        y: 486
+        x: 302
+        y: 1115
         width: 10
         height: 20
       type: 1
@@ -946,101 +946,101 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0.9043493619674581
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
+      nextScene: 
     choiceTextRect:
       serializedVersion: 2
-      x: 585
-      y: 361
+      x: 75
+      y: 990
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 585
-      y: 391
+      x: 75
+      y: 1020
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 585
-      y: 406
+      x: 75
+      y: 1035
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 585
-      y: 421
+      x: 75
+      y: 1050
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 585
-      y: 436
+      x: 75
+      y: 1065
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 585
-      y: 451
+      x: 75
+      y: 1080
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 585
-      y: 466
+      x: 75
+      y: 1095
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 585
-      y: 481
+      x: 75
+      y: 1110
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 585
-      y: 496
+      x: 75
+      y: 1125
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 585
-      y: 511
+      x: 75
+      y: 1140
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 585
-      y: 526
+      x: 75
+      y: 1155
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 585
-      y: 541
+      x: 75
+      y: 1170
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 585
-      y: 556
+      x: 75
+      y: 1185
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 585
-      y: 571
+      x: 75
+      y: 1200
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 585
-      y: 586
+      x: 75
+      y: 1215
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 570
-      y: 620
+      x: 60
+      y: 1249
       width: 250
       height: 280
     typeOfNode: 0
@@ -1051,8 +1051,8 @@ MonoBehaviour:
       id: 0.4239697239473321
       rect:
         serializedVersion: 2
-        x: 568
-        y: 750
+        x: 58
+        y: 1379
         width: 10
         height: 20
       type: 0
@@ -1130,8 +1130,8 @@ MonoBehaviour:
     - id: 0.2603494367843258
       rect:
         serializedVersion: 2
-        x: 812
-        y: 760
+        x: 302
+        y: 1389
         width: 10
         height: 20
       type: 1
@@ -1427,101 +1427,101 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0.9043493619674581
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 0}
+      nextScene: 
     choiceTextRect:
       serializedVersion: 2
-      x: 585
-      y: 635
+      x: 75
+      y: 1264
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 585
-      y: 665
+      x: 75
+      y: 1294
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 585
-      y: 680
+      x: 75
+      y: 1309
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 585
-      y: 695
+      x: 75
+      y: 1324
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 585
-      y: 710
+      x: 75
+      y: 1339
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 585
-      y: 725
+      x: 75
+      y: 1354
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 585
-      y: 740
+      x: 75
+      y: 1369
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 585
-      y: 755
+      x: 75
+      y: 1384
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 585
-      y: 770
+      x: 75
+      y: 1399
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 585
-      y: 785
+      x: 75
+      y: 1414
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 585
-      y: 800
+      x: 75
+      y: 1429
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 585
-      y: 815
+      x: 75
+      y: 1444
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 585
-      y: 830
+      x: 75
+      y: 1459
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 585
-      y: 845
+      x: 75
+      y: 1474
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 585
-      y: 860
+      x: 75
+      y: 1489
       width: 220
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1368
-      y: 220
+      x: 858
+      y: 849
       width: 250
       height: 280
     typeOfNode: 0
@@ -1532,8 +1532,8 @@ MonoBehaviour:
       id: 0.7971556358026134
       rect:
         serializedVersion: 2
-        x: 1366
-        y: 350
+        x: 856
+        y: 979
         width: 10
         height: 20
       type: 0
@@ -1611,8 +1611,8 @@ MonoBehaviour:
     - id: 0.6335353486396071
       rect:
         serializedVersion: 2
-        x: 1610
-        y: 360
+        x: 1100
+        y: 989
         width: 10
         height: 20
       type: 1
@@ -1908,102 +1908,102 @@ MonoBehaviour:
       minimumRelationshiplevel: 0
       nextEventID: 0
       nextScenario: {fileID: 0}
-      nextScene: {fileID: 102900000, guid: 7c85cede6144baf4099d8e82d48f7c5b, type: 3}
+      nextScene: Scene2Inside
     choiceTextRect:
       serializedVersion: 2
-      x: 1383
-      y: 235
+      x: 873
+      y: 864
       width: 220
       height: 30
     skillTypeRect:
       serializedVersion: 2
-      x: 1383
-      y: 265
+      x: 873
+      y: 894
       width: 220
       height: 15
     skillIncreaseNumberRect:
       serializedVersion: 2
-      x: 1383
-      y: 280
+      x: 873
+      y: 909
       width: 220
       height: 15
     itemTransferTypeRect:
       serializedVersion: 2
-      x: 1383
-      y: 295
+      x: 873
+      y: 924
       width: 220
       height: 15
     itemTransferRect:
       serializedVersion: 2
-      x: 1383
-      y: 310
+      x: 873
+      y: 939
       width: 220
       height: 15
     questRect:
       serializedVersion: 2
-      x: 1383
-      y: 325
+      x: 873
+      y: 954
       width: 220
       height: 15
     questProcessRect:
       serializedVersion: 2
-      x: 1383
-      y: 340
+      x: 873
+      y: 969
       width: 220
       height: 15
     requiredStartedQuestRect:
       serializedVersion: 2
-      x: 1383
-      y: 355
+      x: 873
+      y: 984
       width: 220
       height: 15
     requiredCompletedQuestRect:
       serializedVersion: 2
-      x: 1383
-      y: 370
+      x: 873
+      y: 999
       width: 220
       height: 15
     requiredSkillTypeRect:
       serializedVersion: 2
-      x: 1383
-      y: 385
+      x: 873
+      y: 1014
       width: 220
       height: 15
     requiredSkillNumberRect:
       serializedVersion: 2
-      x: 1383
-      y: 400
+      x: 873
+      y: 1029
       width: 220
       height: 15
     npcRect:
       serializedVersion: 2
-      x: 1383
-      y: 415
+      x: 873
+      y: 1044
       width: 220
       height: 15
     relationshipTypeChangeRect:
       serializedVersion: 2
-      x: 1383
-      y: 430
+      x: 873
+      y: 1059
       width: 220
       height: 15
     relationshipNumberChangeRect:
       serializedVersion: 2
-      x: 1383
-      y: 445
+      x: 873
+      y: 1074
       width: 220
       height: 15
     requiredRelationshiplevelRect:
       serializedVersion: 2
-      x: 1383
-      y: 460
+      x: 873
+      y: 1089
       width: 220
       height: 15
   editorEventNodes:
   - rect:
       serializedVersion: 2
-      x: 174
-      y: 253
+      x: -86
+      y: 382
       width: 300
       height: 180
     typeOfNode: 1
@@ -2014,8 +2014,8 @@ MonoBehaviour:
       id: 0.9690993740079455
       rect:
         serializedVersion: 2
-        x: 172
-        y: 333
+        x: -88
+        y: 462
         width: 10
         height: 20
       type: 0
@@ -2093,8 +2093,8 @@ MonoBehaviour:
     - id: 0.8054790868449393
       rect:
         serializedVersion: 2
-        x: 466
-        y: 289
+        x: 206
+        y: 418
         width: 10
         height: 20
       type: 1
@@ -2171,8 +2171,8 @@ MonoBehaviour:
     - id: 0.16428411387106595
       rect:
         serializedVersion: 2
-        x: 466
-        y: 325
+        x: 206
+        y: 454
         width: 10
         height: 20
       type: 1
@@ -2249,8 +2249,8 @@ MonoBehaviour:
     - id: 0.5230891408971926
       rect:
         serializedVersion: 2
-        x: 466
-        y: 361
+        x: 206
+        y: 490
         width: 10
         height: 20
       type: 1
@@ -2327,8 +2327,8 @@ MonoBehaviour:
     - id: 0.3594688537341863
       rect:
         serializedVersion: 2
-        x: 466
-        y: 397
+        x: 206
+        y: 526
         width: 10
         height: 20
       type: 1
@@ -2608,7 +2608,7 @@ MonoBehaviour:
       m_StretchHeight: 0
     myEvent:
       locationText: Location Text
-      description: "Gilad: \"Varf\xF6r \xE4r du uppe?! Smyger du dig p\xE5 mig?\""
+      description: "Gilad: \"Varf\xF6r \xE4r du uppe?! Smyger du dig p\xE5 mig?!\""
       image: {fileID: 0}
       choices:
       - choiceText: "\"Vad g\xF6r du?\""
@@ -2628,7 +2628,7 @@ MonoBehaviour:
         minimumRelationshiplevel: 0
         nextEventID: 0.29610989210014693
         nextScenario: {fileID: 0}
-        nextScene: {fileID: 0}
+        nextScene: 
       - choiceText: "\"Jag smyger inte det \xE4r DU som smyger bakom ryggen p\xE5
           mig.\""
         skillType: 2
@@ -2647,7 +2647,7 @@ MonoBehaviour:
         minimumRelationshiplevel: 0
         nextEventID: 0.9043493619674581
         nextScenario: {fileID: 0}
-        nextScene: {fileID: 0}
+        nextScene: 
       - choiceText: "\"Vad d\xF6ljer du f\xF6r mig!?\" "
         skillType: 2
         skillNumberIncrease: 2
@@ -2665,39 +2665,39 @@ MonoBehaviour:
         minimumRelationshiplevel: 0
         nextEventID: 0.9043493619674581
         nextScenario: {fileID: 0}
-        nextScene: {fileID: 0}
+        nextScene: 
       id: 0.3594688537341863
       usedIDs:
       - 0.3594688537341863
     isStartNode: 1
     imageRect:
       serializedVersion: 2
-      x: 324
-      y: 268
+      x: 64
+      y: 397
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 189
-      y: 288
+      x: -71
+      y: 417
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 189
-      y: 343
+      x: -71
+      y: 472
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 189
-      y: 268
+      x: -71
+      y: 397
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1010
-      y: -9
+      x: 565
+      y: 174
       width: 300
       height: 180
     typeOfNode: 1
@@ -2708,8 +2708,8 @@ MonoBehaviour:
       id: 0.9057404123739062
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 71
+        x: 563
+        y: 254
         width: 10
         height: 20
       type: 0
@@ -2787,8 +2787,8 @@ MonoBehaviour:
     - id: 0.26454543940003283
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 27
+        x: 857
+        y: 210
         width: 10
         height: 20
       type: 1
@@ -2865,8 +2865,8 @@ MonoBehaviour:
     - id: 0.10092515223702656
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 63
+        x: 857
+        y: 246
         width: 10
         height: 20
       type: 1
@@ -2943,8 +2943,8 @@ MonoBehaviour:
     - id: 0.4597301792631532
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 99
+        x: 857
+        y: 282
         width: 10
         height: 20
       type: 1
@@ -3021,8 +3021,8 @@ MonoBehaviour:
     - id: 0.29610989210014693
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 135
+        x: 857
+        y: 318
         width: 10
         height: 20
       type: 1
@@ -3323,39 +3323,39 @@ MonoBehaviour:
         minimumRelationshiplevel: 0
         nextEventID: 0
         nextScenario: {fileID: 0}
-        nextScene: {fileID: 102900000, guid: 7c85cede6144baf4099d8e82d48f7c5b, type: 3}
+        nextScene: Scene2Inside
       id: 0.29610989210014693
       usedIDs:
       - 0.29610989210014693
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 1160
-      y: 6
+      x: 715
+      y: 189
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 1025
-      y: 26
+      x: 580
+      y: 209
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 1025
-      y: 81
+      x: 580
+      y: 264
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 1025
-      y: 6
+      x: 580
+      y: 189
       width: 130
       height: 15
   - rect:
       serializedVersion: 2
-      x: 1028
-      y: 363
+      x: 581
+      y: 503
       width: 300
       height: 180
     typeOfNode: 1
@@ -3366,8 +3366,8 @@ MonoBehaviour:
       id: 0.9915545680520844
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 443
+        x: 579
+        y: 583
         width: 10
         height: 20
       type: 0
@@ -3445,8 +3445,8 @@ MonoBehaviour:
     - id: 0.3503595950782111
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 399
+        x: 873
+        y: 539
         width: 10
         height: 20
       type: 1
@@ -3523,8 +3523,8 @@ MonoBehaviour:
     - id: 0.7091646221043377
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 435
+        x: 873
+        y: 575
         width: 10
         height: 20
       type: 1
@@ -3601,8 +3601,8 @@ MonoBehaviour:
     - id: 0.5455443349413315
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 471
+        x: 873
+        y: 611
         width: 10
         height: 20
       type: 1
@@ -3679,8 +3679,8 @@ MonoBehaviour:
     - id: 0.9043493619674581
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 507
+        x: 873
+        y: 647
         width: 10
         height: 20
       type: 1
@@ -3981,33 +3981,33 @@ MonoBehaviour:
         minimumRelationshiplevel: 0
         nextEventID: 0
         nextScenario: {fileID: 0}
-        nextScene: {fileID: 102900000, guid: 7c85cede6144baf4099d8e82d48f7c5b, type: 3}
+        nextScene: Scene2Inside
       id: 0.9043493619674581
       usedIDs:
       - 0.9043493619674581
     isStartNode: 0
     imageRect:
       serializedVersion: 2
-      x: 1178
-      y: 378
+      x: 731
+      y: 518
       width: 135
       height: 70
     titleRect:
       serializedVersion: 2
-      x: 1043
-      y: 398
+      x: 596
+      y: 538
       width: 130
       height: 45
     descriptionRect:
       serializedVersion: 2
-      x: 1043
-      y: 453
+      x: 596
+      y: 593
       width: 270
       height: 75
     isStartNodeRect:
       serializedVersion: 2
-      x: 1043
-      y: 378
+      x: 596
+      y: 518
       width: 130
       height: 15
   editorConnections:
@@ -4015,8 +4015,8 @@ MonoBehaviour:
       id: 0.8054790868449393
       rect:
         serializedVersion: 2
-        x: 466
-        y: 289
+        x: 206
+        y: 418
         width: 10
         height: 20
       type: 1
@@ -4094,8 +4094,8 @@ MonoBehaviour:
       id: 0.6101006374741442
       rect:
         serializedVersion: 2
-        x: 571
-        y: 195
+        x: 61
+        y: 824
         width: 10
         height: 20
       type: 0
@@ -4173,8 +4173,8 @@ MonoBehaviour:
       id: 0.16428411387106595
       rect:
         serializedVersion: 2
-        x: 466
-        y: 325
+        x: 206
+        y: 454
         width: 10
         height: 20
       type: 1
@@ -4252,8 +4252,8 @@ MonoBehaviour:
       id: 0.7259366566901732
       rect:
         serializedVersion: 2
-        x: 568
-        y: 476
+        x: 58
+        y: 1105
         width: 10
         height: 20
       type: 0
@@ -4331,8 +4331,8 @@ MonoBehaviour:
       id: 0.5230891408971926
       rect:
         serializedVersion: 2
-        x: 466
-        y: 361
+        x: 206
+        y: 490
         width: 10
         height: 20
       type: 1
@@ -4410,8 +4410,8 @@ MonoBehaviour:
       id: 0.4239697239473321
       rect:
         serializedVersion: 2
-        x: 568
-        y: 750
+        x: 58
+        y: 1379
         width: 10
         height: 20
       type: 0
@@ -4489,8 +4489,8 @@ MonoBehaviour:
       id: 0.0847416837162998
       rect:
         serializedVersion: 2
-        x: 812
-        y: 486
+        x: 302
+        y: 1115
         width: 10
         height: 20
       type: 1
@@ -4568,8 +4568,8 @@ MonoBehaviour:
       id: 0.9915545680520844
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 443
+        x: 579
+        y: 583
         width: 10
         height: 20
       type: 0
@@ -4647,8 +4647,8 @@ MonoBehaviour:
       id: 0.2603494367843258
       rect:
         serializedVersion: 2
-        x: 812
-        y: 760
+        x: 302
+        y: 1389
         width: 10
         height: 20
       type: 1
@@ -4726,8 +4726,8 @@ MonoBehaviour:
       id: 0.9915545680520844
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 443
+        x: 579
+        y: 583
         width: 10
         height: 20
       type: 0
@@ -4805,8 +4805,8 @@ MonoBehaviour:
       id: 0.4464803503111379
       rect:
         serializedVersion: 2
-        x: 815
-        y: 205
+        x: 305
+        y: 834
         width: 10
         height: 20
       type: 1
@@ -4884,8 +4884,8 @@ MonoBehaviour:
       id: 0.9057404123739062
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 71
+        x: 563
+        y: 254
         width: 10
         height: 20
       type: 0
@@ -4963,8 +4963,8 @@ MonoBehaviour:
       id: 0.3503595950782111
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 399
+        x: 873
+        y: 539
         width: 10
         height: 20
       type: 1
@@ -5042,8 +5042,8 @@ MonoBehaviour:
       id: 0.7971556358026134
       rect:
         serializedVersion: 2
-        x: 1366
-        y: 350
+        x: 856
+        y: 979
         width: 10
         height: 20
       type: 0
@@ -5121,8 +5121,8 @@ MonoBehaviour:
       id: 0.26454543940003283
       rect:
         serializedVersion: 2
-        x: 1302
-        y: 27
+        x: 857
+        y: 210
         width: 10
         height: 20
       type: 1
@@ -5200,8 +5200,8 @@ MonoBehaviour:
       id: 0.7971556358026134
       rect:
         serializedVersion: 2
-        x: 1366
-        y: 350
+        x: 856
+        y: 979
         width: 10
         height: 20
       type: 0
@@ -5279,8 +5279,8 @@ MonoBehaviour:
       id: 0.6335353486396071
       rect:
         serializedVersion: 2
-        x: 1610
-        y: 360
+        x: 1100
+        y: 989
         width: 10
         height: 20
       type: 1
@@ -5355,11 +5355,11 @@ MonoBehaviour:
         m_StretchHeight: 0
       YOffset: 140
     outPoint:
-      id: 0.9439268675371664
+      id: 0.22712423849251318
       rect:
         serializedVersion: 2
-        x: 1590
-        y: 49
+        x: 1292
+        y: 351
         width: 10
         height: 20
       type: 0
@@ -5436,8 +5436,8 @@ MonoBehaviour:
   editorScenarioEndNodes:
   - rect:
       serializedVersion: 2
-      x: 1592
-      y: 24
+      x: 1294
+      y: 326
       width: 200
       height: 70
     typeOfNode: 2
@@ -5445,11 +5445,11 @@ MonoBehaviour:
     isDragged: 0
     isSelected: 0
     inPoint:
-      id: 0.9439268675371664
+      id: 0.22712423849251318
       rect:
         serializedVersion: 2
-        x: 1590
-        y: 49
+        x: 1292
+        y: 351
         width: 10
         height: 20
       type: 0
@@ -5730,15 +5730,128 @@ MonoBehaviour:
       m_StretchHeight: 0
     newScenarioRect:
       serializedVersion: 2
-      x: 1607
-      y: 39
+      x: 1309
+      y: 341
       width: 170
       height: 15
     newSceneRect:
       serializedVersion: 2
-      x: 1607
-      y: 59
+      x: 1309
+      y: 361
       width: 170
       height: 15
     nextScenario: {fileID: 0}
-    nextScene: {fileID: 102900000, guid: 7c85cede6144baf4099d8e82d48f7c5b, type: 3}
+    nextScene: Scene2Inside
+  events:
+  - locationText: Location Text
+    description: "Gilad: \"Varf\xF6r \xE4r du uppe?! Smyger du dig p\xE5 mig?!\""
+    image: {fileID: 0}
+    choices:
+    - choiceText: "\"Vad g\xF6r du?\""
+      skillType: 0
+      skillNumberIncrease: 0
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 0}
+      processQuest: 0
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0.29610989210014693
+      nextScenario: {fileID: 0}
+      nextScene: 
+    - choiceText: "\"Jag smyger inte det \xE4r DU som smyger bakom ryggen p\xE5 mig.\""
+      skillType: 2
+      skillNumberIncrease: 1
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 0}
+      processQuest: 0
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0.9043493619674581
+      nextScenario: {fileID: 0}
+      nextScene: 
+    - choiceText: "\"Vad d\xF6ljer du f\xF6r mig!?\" "
+      skillType: 2
+      skillNumberIncrease: 2
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 0}
+      processQuest: 0
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0.9043493619674581
+      nextScenario: {fileID: 0}
+      nextScene: 
+    id: 0.3594688537341863
+    usedIDs:
+    - 0.3594688537341863
+  - locationText: Location Text
+    description: "Gilad: \"G\xE5r du i s\xF6mmen igen? \xC4lskling g\xE5 och l\xE4gg
+      dig.\""
+    image: {fileID: 0}
+    choices:
+    - choiceText: "(G\xE5 och l\xE4gg dig)"
+      skillType: 0
+      skillNumberIncrease: 0
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 0}
+      processQuest: 0
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0
+      nextScenario: {fileID: 0}
+      nextScene: Scene2Inside
+    id: 0.29610989210014693
+    usedIDs:
+    - 0.29610989210014693
+  - locationText: Location Text
+    description: "Gilad: \"G\xE5 och l\xE4gg dig du har inget med det h\xE4r att g\xF6ra.\""
+    image: {fileID: 0}
+    choices:
+    - choiceText: "(G\xE5 och l\xE4gg dig)"
+      skillType: 0
+      skillNumberIncrease: 0
+      itemtransfer: 0
+      item: {fileID: 0}
+      connectedQuest: {fileID: 0}
+      processQuest: 0
+      requiredStartedQuest: {fileID: 0}
+      requiredCompletedQuest: {fileID: 0}
+      requiredSkill: 0
+      requiredSkillNumber: 0
+      affectedNPC: {fileID: 0}
+      relationshipAttributeToChange: 0
+      relationshipAttributeChangeNumber: 0
+      minimumRelationshiplevel: 0
+      nextEventID: 0
+      nextScenario: {fileID: 0}
+      nextScene: Scene2Inside
+    id: 0.9043493619674581
+    usedIDs:
+    - 0.9043493619674581
