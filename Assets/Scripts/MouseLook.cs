@@ -20,6 +20,8 @@ public class MouseLook : MonoBehaviour
     public float sensitivityHor = 90f, sensitivityVert = 90f;
     public float _rotationX = 0;
 
+    float sensitivityMultiplier = 4f;
+
     void Start()
     {
         Rigidbody body = GetComponent<Rigidbody>();
@@ -35,11 +37,11 @@ public class MouseLook : MonoBehaviour
     {
         if (axes == RotationAxis.MouseX)
         {
-            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor * sensitivityMultiplier, 0);
         }
         else if (axes == RotationAxis.MouseY)
         {
-            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert * sensitivityMultiplier;
             _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
             float rotationY = transform.localEulerAngles.y;
@@ -48,10 +50,10 @@ public class MouseLook : MonoBehaviour
         }
         else
         {
-            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert * Time.deltaTime;
+            _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert * sensitivityMultiplier * Time.deltaTime;
             _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
-            float delta = Input.GetAxis("Mouse X") * sensitivityHor * Time.deltaTime;
+            float delta = Input.GetAxis("Mouse X") * sensitivityHor * sensitivityMultiplier * Time.deltaTime;
             float rotationY = transform.localEulerAngles.y + delta;
 
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, rotationY, 0);
