@@ -7,24 +7,22 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] int sceneIndex = 0;
     [SerializeField] SceneSwitch sceneSwitch = null;
     [SerializeField] FadeTransition fadeTransition = null;
-    [SerializeField] GameObject camera = null;
+    [SerializeField] AudioSource steps = null;
 
-    private void Start()
+    public void FadeOut()
     {
-        camera.GetComponent<Animation>().PlayQueued("Second Camera");
-        StartCoroutine("PlayCutscene");
+        fadeTransition.Fade(false);
     }
-
-    IEnumerator PlayCutscene()
+    public void FadeIn()
     {
         fadeTransition.Fade(true);
-        yield return new WaitForSeconds(camera.GetComponent<Animation>().GetClip("First Camera").length - fadeTransition.effectDuration);
-        fadeTransition.Fade(false);
-        yield return new WaitForSeconds(fadeTransition.effectDuration);
-        fadeTransition.Fade(true);
-        yield return new WaitForSeconds(camera.GetComponent<Animation>().GetClip("Second Camera").length - fadeTransition.effectDuration);
-        fadeTransition.Fade(false);
-        yield return new WaitForSeconds(4);
+    }
+    public void SwitchScene()
+    {
         sceneSwitch.SwitchScene(sceneIndex);
+    }
+    public void DesableStepsSound()
+    {
+        steps.enabled = false;
     }
 }
