@@ -12,6 +12,7 @@ public class EndOfGame : MonoBehaviour
     {
         if (GameManager.Instance().USBPickedUp)
         {
+            GameManager.Instance().USBPickedUp = false;
             GameManager.Instance().SetFPSInput(false);
             GameManager.Instance().SetMouseLook(false);
             if (playKnockOutAnimation)
