@@ -10,12 +10,17 @@ public class PauseGame : MonoBehaviour
 
     CursorLockMode originalLockMode;
 
+    public bool mouseStartVisibility = false;
+
     void Start()
     {
         foreach (GameObject obj in pauseMenuObjectsToOpen)
         {
             obj.SetActive(false);
         }
+
+        originalCursorVisibility = mouseStartVisibility;
+        Cursor.visible = mouseStartVisibility;
         //helpPage.SetActive(false);
     }
 
@@ -69,6 +74,7 @@ public class PauseGame : MonoBehaviour
     }
 
     bool isPaused = false;
+    bool originalCursorVisibility = false;
     public void DoPause()
     {
         //if (canPause)
@@ -81,6 +87,7 @@ public class PauseGame : MonoBehaviour
         }
         isActive = true;
         Cursor.lockState = CursorLockMode.None;
+        originalCursorVisibility = Cursor.visible;
         Cursor.visible = true;
         isPaused = true;
         //}
@@ -96,6 +103,7 @@ public class PauseGame : MonoBehaviour
         isActive = false;
         Cursor.lockState = originalLockMode;
         isPaused = false;
+        Cursor.visible = originalCursorVisibility;
     }
 
 
