@@ -17,6 +17,7 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
     public bool playerdUncovered; //indicates the player has been uncovered
     public bool playerIsVisible; //Used by navmesh
     [SerializeField] NPC connectedNPC = null; //Eventual connected NPC
+    [SerializeField] Scenario dialogue = null;
 
     int layerMask; //mask for raycasting
     string[] layers = new string[] { "Default", "Player" }; //layers that the raycast can hit
@@ -80,7 +81,7 @@ public class Guard : MonoBehaviour //Dejan, this is ment to be used on guards in
         if (connectedNPC)
         {
             detectionActionTaken = true;
-            connectedNPC.InteractWith();
+            DialogueSystem.instance.StartDialogue(connectedNPC, dialogue);
         }
     }
 }
